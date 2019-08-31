@@ -7,5 +7,12 @@
 }
 
 #donate{
-    font-family: 'full_pack_2025regular'
+    font-family: 'full pack 2025', Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'full pack 2025';
+    src: url('fonts/full Pack 2025.ttf');
 }
