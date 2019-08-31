@@ -1,159 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <link id="favicon" rel="icon" href="img/twrpg_icon.png" type="image/x-icon">
-
-    <title>TWRPG Bot</title>
-
-    <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
-
-    <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
-</head>
+<head id="load_headers"></head>
 
 <body id="page-top">
 
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-        <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon">
-                    <img class="img-fluid" src="img/twrpg_icon_white.png" width="33%">
-                </div>
-            </a>
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Built and maintained by<br>Rock Lee#7769
-            </div>
-            <br>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Jump To...
-            </div>
-
-            <!-- Nav Item - Introduction -->
-            <li class="nav-item">
-                <a class="nav-link" href="#introduction">
-                    <i class="fas fa-info-circle"></i>
-                    <span>Introduction</span>
-                </a>
-            </li>
-
-            <!-- Nav Item - Commands -->
-            <li class="nav-item">
-                <a class="nav-link" href="#commands">
-                    <i class="fas fa-list"></i>
-                    <span>Commands List</span>
-                </a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Quick Links
-            </div>
-
-            <!-- Nav Item - Discord link -->
-            <li class="nav-item">
-                <a class="nav-link" href="https://discord.gg/cEwPJzZ" target="_blank">
-                    <i class="fab fa-discord"></i>
-                    <span>TWRPG Official Discord</span>
-                </a>
-            </li>
-
-            <!-- Nav Item - Discord link -->
-            <li class="nav-item">
-                <a class="nav-link" href="https://discord.gg/hduwajN" target="_blank">
-                    <i class="fab fa-discord"></i>
-                    <span>TWRPG-Bot Support Discord</span>
-                </a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Coming Soon
-            </div>
-
-            <!-- Nav Item - Item Drops -->
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-list"></i>
-                    <span>Item Drops List</span>
-                </a>
-            </li>
-
-            <!-- Nav Item - Item Crafts -->
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-list"></i>
-                    <span>Item Crafts List</span>
-                </a>
-            </li>
-
-            <!-- Nav Item - Heroes and Skills -->
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-list"></i>
-                    <span>Heroes and Skills List</span>
-                </a>
-            </li>
-
-            <!-- PayPal button -->
-            <li class="nav-item">
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-                    <input type="hidden" name="cmd" value="_donations" />
-                    <input type="hidden" name="business" value="ZJWSXUBKHF5ZA" />
-                    <input type="hidden" name="currency_code" value="USD" />
-                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0"
-                        name="submit" title="PayPal - The safer, easier way to pay online!"
-                        alt="Donate with PayPal button" />
-                    <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-                </form>
-            </li>
-
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
-
-        </ul>
-        <!-- End of Sidebar -->
+        <div id="load_sidebar"></div>
 
         <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content-wrapper" class="d-flex flex-column dark_not_black">
 
             <!-- Main Content -->
             <div id="content">
-                <div id="banner"></div>
-                <!-- <header class="p-lg-4 border-bottom" style="background: white">
-                    <img src="img/twrpg_s4_logo.png" class="img-fluid">
-                </header> -->
+                <div id="load_banner"></div>
                 <br>
                 <div class="text-center" id="introduction">
                     <h1>
@@ -167,15 +29,7 @@
             </div>
             <!-- End of Main Content -->
 
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; TWRPG-Bot 2019</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
+            <div id="load_footer"></div>
 
         </div>
         <!-- End of Content Wrapper -->
@@ -201,7 +55,10 @@
 
     <script>
         $(function(){
-            $('#banner').load('banner.html');
+            $('#load_headers').load('headers.html');
+            $('#load_sidebar').load('sidebar.html');
+            $('#load_banner').load('banner.html');
+            $('#load_footer').load('footer.html');
         });
     </script>
 
