@@ -1,12 +1,14 @@
 <!-- Footer -->
 <footer class="sticky-footer bg-white not_quite_black">
     <div class="container my-auto">
-        <span id="donate">Donate</span>
+        <form class="contents" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="cmd" value="_donations" />
+            <input type="hidden" name="business" value="ZJWSXUBKHF5ZA" />
+            <input type="hidden" name="currency_code" value="USD" />
+            <button class="btn" type="submit" name="submit">
+                <span class="fullpackfont rem-2">Donate <i class="fab fa-paypal fa-2_5x"></i></span>
+            </button>
+        </form>
     </div>
-    <!-- <div class="container my-auto">
-        <div class="copyright text-center my-auto">
-            <span>Copyright &copy; TWRPG-Bot 2019</span>
-        </div>
-    </div> -->
 </footer>
 <!-- End of Footer -->

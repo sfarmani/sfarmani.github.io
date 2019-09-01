@@ -6,7 +6,7 @@
     background: #2C2F33 !important;
 }
 
-#donate{
+.fullpackfont{
     font-family: 'full pack 2025', Arial, sans-serif;
     font-weight: normal;
     font-style: normal;
@@ -15,4 +15,30 @@
 @font-face{
     font-family: 'full pack 2025';
     src: url('fonts/full Pack 2025.ttf');
+}
+
+.inline-flex{
+    display: inline-flex !important;
+}
+
+.contents{
+    display: contents;
+}
+
+.fa-2_5x{
+    font-size: 2.5rem !important;
+}
+
+.rem-2{
+    font-size: 2rem;
+}
+
+.embed{
+    background-color: #34363c;
+    border-color: rgba(46,48,54,.6);
+}
+
+.embed-red{
+    border-left: 5px solid red;
+    border-radius: 3px;
 }
