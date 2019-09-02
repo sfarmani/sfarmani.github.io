@@ -7,14 +7,16 @@ $(function () {
     $('#load_footer').load('footer.html');
     $.getJSON("../json/commands.json", function (json) {
         console.log("JSON Data received, name is " + json.name);
+        console.log(json);
+        $('#commands').DataTable({
+            data: json,
+            columns: [
+                { title: "Command" },
+                { title: "Usage" },
+                { title: "Description" },
+                { title: "Aliases" }
+            ]
+        });
     });
-    $('#commands').DataTable({
-        data: dataSet,
-        columns: [
-            { title: "Command" },
-            { title: "Usage" },
-            { title: "Description" },
-            { title: "Aliases" }
-        ]
-    });
+    
 });
