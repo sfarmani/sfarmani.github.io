@@ -1,0 +1,4 @@
+[
+    ["recipe", "-recipe <item name>", "Finds details of a given item.", "item, spawn, 조합법"],
+    ["size", "-size", "Shows you the size of how many items, characters, and bosses are recorded on this bot", "none"]
+]
