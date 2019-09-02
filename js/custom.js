@@ -7,8 +7,10 @@ $(function () {
     $('#load_footer').load('footer.html');
     var data = [];
     $.getJSON("json/commands.json", function (json) {
+        console.log(json);
         data = json;
     });
+    console.log(data);
 
     $('#commands').DataTable({
         data: data,
