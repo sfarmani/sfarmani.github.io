@@ -5,7 +5,7 @@ $(function () {
     $('#load_sidebar').load('sidebar.html');
     $('#load_banner').load('banner.html');
     $('#load_footer').load('footer.html');
-    $.getJSON("../json/commands.json", function (json) {
+    $.getJSON("json/commands.json", function (json) {
         console.log("JSON Data received, name is " + json.name);
         console.log(json);
         $('#commands').DataTable({
