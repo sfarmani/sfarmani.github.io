@@ -36,9 +36,10 @@
 .embed{
     background-color: #34363c;
     border-color: rgba(46,48,54,.6);
+    max-width: 18rem;
 }
 
 .embed-red{
     border-left: 5px solid red;
-    border-radius: 3px;
+    border-radius: 7px;
 }
