@@ -74,7 +74,7 @@ $(function () {
                 { data: "stats", title: "Stats", width: "10%",
                     render: function (data) {
                         if (!data) return "<i>none</i>";
-                        if (diff(possibleStats, Object.keys(item[0].stats)).length <= 0) return "<i>none</i>";
+                        if (diff(possibleStats, Object.keys(data)).length <= 0) return "<i>none</i>";
                         let str = [];
                         Object.keys(data).forEach(function (stat) {
                             let val = data[stat];
