@@ -25,7 +25,11 @@ $(function () {
             columns: [
                 { data: "name", title: "Name", searchable: true },
                 { data: "koreanname", title: "Korean Name", searchable: true, defaultContent: "<i>none</i>" },
-                { data: "droprate", title: "Drop Rate", searchable: false, defaultContent: "<i>none</i>" },
+                { data: "droprate", title: "Drop Rate", searchable: false, defaultContent: "<i>none</i>", 
+                render: function(data){
+                    data = Math.round(data * 10000) / 100;
+                    return data + "%";
+                } },
                 { data: "type", title: "Item Type", searchable: true },
                 { data: "dropped_by", title: "Dropped By", searchable: true, defaultContent: "<i>none</i>" },
                 { data: "required_by", title: "Required By", searchable: false, defaultContent: "<i>none</i>" },
