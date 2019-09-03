@@ -25,7 +25,7 @@ $(function () {
             data: json,
             columns: [
                 { data: "name", title: "Name", searchable: true },
-                { data: "koreanname", title: "Korean Name", searchable: true, defaultContent: "<i>none</i>" },
+                { data: "koreanname", title: "Korean Name", searchable: true, defaultContent: "<i>none</i>", visible: false },
                 { data: "droprate", title: "Drop Rate", searchable: false,
                     render: function (data) {
                         if (!data) return "<i>none</i>";
@@ -34,7 +34,7 @@ $(function () {
                     } 
                 },
                 { data: "type", title: "Item Type", searchable: true },
-                { data: "dropped_by", title: "Dropped By", searchable: true,
+                { data: "dropped_by", title: "Dropped By", searchable: true, visible: false,
                     render: function (data) {
                         if (!data) return "<i>none</i>";
                         return data.join(" / ");
@@ -93,7 +93,7 @@ $(function () {
                         return str.join('<br>');
                     }
                 },
-                { data: "stats.passive", title: "Passive", searchable: true, defaultContent: "<i>none</i>",
+                { data: "stats.passive", title: "Passive", searchable: true, width: "20%",
                     render: function (data) {
                         if (!data) return "<i>none</i>";
                         let str = [];
@@ -103,7 +103,7 @@ $(function () {
                         return str.join("<br>");
                     }
                 },
-                { data: "stats.active", title: "Active", searchable: true, defaultContent: "<i>none</i>",
+                { data: "stats.active", title: "Active", searchable: true, width: "20%",
                     render: function (data) {
                         if (!data) return "<i>none</i>";
                         let str = [];
@@ -111,6 +111,39 @@ $(function () {
                             str.push(as);
                         });
                         return str.join("<br>");
+                    }
+                },
+                { data: "stats.spec", title: "Character Specialties", searchable: true, width: "20%", visible: false,
+                    render: function (data) {
+                        if (!data) return "<i>none</i>";
+                        let str = [];
+                        data.forEach(function (ss, index) {
+                            if (index == 0) { return; }
+                            if (ss.match(/\s-\s/)) {
+                                let specSplit = ss.split(' - ');
+                                str.push(`${specSplit[0]} - ${specSplit[1]}`);
+                            }
+                            else {
+                                str.push(ss);
+                            }
+                        });
+                        return str.join("<br>");
+                    }
+                },
+                { data: "recipe", title: "Recipe", searchable: true, width: "20%",
+                    render: function (data) {
+                        if (!data) return "<i>none</i>";
+                        let str = [];
+                        data.forEach(function (rec) {
+                            if (Object.keys(rec).length > 1) {
+                                str.push(`<b><u>${Object.keys(rec)[0]}/${Object.keys(rec)[1]}</u></b>`);
+                            }
+                            else {
+                                let count = rec[Object.keys(rec)] > 1 ? `x${rec[Object.keys(rec)]}` : '';
+                                str.push(`${Object.keys(rec)} ${count}`);
+                            }
+                        });
+                        return str.join(" + ");
                     }
                 }
             ]
