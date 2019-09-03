@@ -25,8 +25,10 @@ $(function () {
             columns: [
                 { data: "name", title: "Name", searchable: true },
                 { data: "koreanname", title: "Korean Name", searchable: true, defaultContent: "<i>none</i>" },
-                { data: "droprate", title: "Drop Rate", searchable: false, defaultContent: "<i>none</i>", 
+                { data: "droprate", title: "Drop Rate", searchable: false, 
                 render: function(data){
+                    console.log(data);
+                    if (!data) return "<i>none</i>";
                     data = Math.round(data * 10000) / 100;
                     return data + "%";
                 } },
