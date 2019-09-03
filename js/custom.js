@@ -40,7 +40,7 @@ $(function () {
                         return data.join(" / ");
                     }
                 },
-                { data: "required_by", title: "Used In", searchable: false,
+                { data: "required_by", title: "Used In", searchable: false, visible: false,
                     render: function (data) {
                         if (!data) return "<i>none</i>";
                         return data.join(" / ");
