@@ -90,7 +90,7 @@ $(function () {
                             if (stat == 'expreceivedpercent') str.push(`${plusminus}${val}% EXP Received`);
                             if (stat == 'revivaltimepercent') str.push(`${plusminus}${val}% Revival Time`);
                         });
-                        return str.join('\n')
+                        return str.join('<br>');
                     }
                 }
             ]
