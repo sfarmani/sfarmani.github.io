@@ -2,6 +2,13 @@
 // Load different parts of the pages
 $(function () {
     var trolls = ['[HEALED]', '[Air]'];
+    var possibleStats =
+        [
+            'damage', 'armor', 'mainstat', 'allstat', 'strength', 'agility', 'intelligence', 'hp', 'mp', 'attackspeedpercent', 'movespeed', 'movespeedpercent',
+            'dodgechancepercent', 'skilldamagepercent', 'critchancepercent', 'critmultiplier', 'periodicdamagepercent', 'mdpercent', 'drpercent', 'dtpercent',
+            'healingpercent', 'healingreceivedpercent', 'hpregen', 'mpregen', 'affinityiwpercent', 'affinityflamepercent', 'affinityearthpercent', 'affinitywlpercent',
+            'expreceivedpercent', 'revivaltimepercent'
+        ];
     var dom =
         "<'row'<'col-sm-4 col-md-2'i>>" +
         "<'row'<'col-sm-4 col-md-2'f><'col-sm-6 col-md-3'l><'col-sm-4 col-md-7'p>>" +
@@ -67,6 +74,7 @@ $(function () {
                 { data: "stats", title: "Stats", width: "10%",
                     render: function (data) {
                         if (!data) return "<i>none</i>";
+                        if (diff(possibleStats, Object.keys(item[0].stats)).length <= 0) return "<i>none</i>";
                         let str = [];
                         Object.keys(data).forEach(function (stat) {
                             let val = data[stat];
@@ -198,4 +206,14 @@ $(function () {
 
 function isFloat(n) {
     return Number(n) === n && n % 1 !== 0;
+}
+
+function diff(arr1, arr2) {
+    var ret = [];
+    for (var i in arr1) {
+        if (arr2.indexOf(arr1[i]) > -1) {
+            ret.push(arr1[i]);
+        }
+    }
+    return ret;
 }
