@@ -23,7 +23,7 @@ $(function () {
         json = json.filter(x => !trolls.includes(x.type));
         $('#items').DataTable({
             data: json,
-            dom: '<filp<t>p>',
+            dom: '<"row"<"text-left"f>lip<t>p',
             columns: [
                 { data: "name", title: "Name", searchable: true },
                 { data: "koreanname", title: "Korean Name", searchable: true, defaultContent: "<i>none</i>", visible: false },
