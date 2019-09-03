@@ -27,9 +27,27 @@ $(function () {
     });
     $.getJSON("json/items.json", function (json) {
         json = json.filter(x => !trolls.includes(x.type));
-        $('#items').DataTable({
+
+        $('#items thead tr').clone(true).appendTo('#items thead');
+        $('#items thead tr:eq(1) th').each(function (i) {
+            var title = $(this).text();
+            $(this).html('<input type="text" placeholder="Search ' + title + '" />');
+
+            $('input', this).on('keyup change', function () {
+                if (table.column(i).search() !== this.value) {
+                    table
+                        .column(i)
+                        .search(this.value)
+                        .draw();
+                }
+            });
+        });
+
+        var items_table = $('#items').DataTable({
             data: json,
             dom: dom,
+            orderCellsTop: true,
+            fixedHeader: true,
             columns: [
                 { data: "name", title: "Name", searchable: true },
                 { data: "koreanname", title: "Korean Name", searchable: true, defaultContent: "<i>none</i>", visible: false },
