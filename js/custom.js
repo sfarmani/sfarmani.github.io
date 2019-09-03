@@ -19,16 +19,17 @@ $(function () {
         });
     });
     $.getJSON("json/items.json", function (json) {
+        json = json.filter(x => !trolls.includes(x.type));
         $('#items').DataTable({
-            data: json.filter(x => !trolls.includes(x.type)),
+            data: json,
             columns: [
-                { data: "name", title: "Name" },
-                { data: "koreanname", title: "Korean Name" },
-                { data: "droprate", title: "Drop Rate" },
-                { data: "type", title: "Item Type" },
-                { data: "dropped_by", title: "Dropped By" },
-                { data: "required_by", title: "Required By" },
-                { data: "stats", title: "Stats" }
+                { data: "name", title: "Name", searchable: true },
+                { data: "koreanname", title: "Korean Name", searchable: true, defaultContent: "<i>none</i>" },
+                { data: "droprate", title: "Drop Rate", searchable: false, defaultContent: "<i>none</i>" },
+                { data: "type", title: "Item Type", searchable: true },
+                { data: "dropped_by", title: "Dropped By", searchable: true, defaultContent: "<i>none</i>" },
+                { data: "required_by", title: "Required By", searchable: false, defaultContent: "<i>none</i>" },
+                { data: "stats", title: "Stats", searchable: false, defaultContent: "<i>none</i>" }
             ]
         });
     });
