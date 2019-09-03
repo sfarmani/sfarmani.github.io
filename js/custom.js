@@ -46,7 +46,7 @@ $(function () {
                         return data.join(" / ");
                     }
                 },
-                { data: "stats", title: "Stats", searchable: true,
+                { data: "stats", title: "Stats", searchable: true, width: "15%",
                     render: function (data) {
                         if (!data) return "<i>none</i>";
                         let str = [];
