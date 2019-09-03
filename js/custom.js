@@ -12,7 +12,8 @@ $(function () {
                 { data: "command", title: "Command" },
                 { data: "usage", title: "Usage" },
                 { data: "desc", title: "Description" },
-                { data: "aliases", title: "Aliases" }
+                { data: "aliases", title: "Aliases" },
+                { data: "cooldown", title: "Cooldown" }
             ]
         });
     });
