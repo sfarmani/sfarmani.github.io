@@ -42,8 +42,8 @@ $(function () {
             fixedHeader: true,
             columns: [
                 { data: "name", title: "Name" },
-                { data: "koreanname", title: "Korean Name", defaultContent: "<i>none</i>", visible: false },
-                { data: "droprate", title: "Drop Rate", visible: false,
+                { data: "koreanname", title: "Korean Name", defaultContent: "<i>none</i>" },
+                { data: "droprate", title: "Drop Rate",
                     render: function (data) {
                         if (!data) return "<i>none</i>";
                         let str = [];
@@ -59,13 +59,13 @@ $(function () {
                     } 
                 },
                 { data: "type", title: "Item Type" },
-                { data: "dropped_by", title: "Dropped By", visible: false,
+                { data: "dropped_by", title: "Dropped By",
                     render: function (data) {
                         if (!data) return "<i>none</i>";
                         return data.join("<br>");
                     }
                 },
-                { data: "required_by", title: "Used In", visible: false,
+                { data: "required_by", title: "Used In",
                     render: function (data) {
                         if (!data) return "<i>none</i>";
                         return data.join(" / ");
@@ -139,7 +139,7 @@ $(function () {
                         return str.join("<br>");
                     }
                 },
-                { data: "stats.spec", title: "Character Specialties", width: "20%", visible: false,
+                { data: "stats.spec", title: "Character Specialties", width: "20%",
                     render: function (data) {
                         if (!data) return "<i>none</i>";
                         let str = [];
