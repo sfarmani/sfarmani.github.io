@@ -97,7 +97,7 @@ $(function () {
                     render: function (data) {
                         if (!data) return "<i>none</i>";
                         let str = [];
-                        data.passive.forEach(function (ps) {
+                        data.forEach(function (ps) {
                             str.push(ps);
                         });
                         return str.join("<br>");
@@ -105,10 +105,9 @@ $(function () {
                 },
                 { data: "stats.active", title: "Active", searchable: true, defaultContent: "<i>none</i>",
                     render: function (data) {
-                        console.log(data);
                         if (!data) return "<i>none</i>";
                         let str = [];
-                        data.active.forEach(function (as) {
+                        data.forEach(function (as) {
                             str.push(as);
                         });
                         return str.join("<br>");
