@@ -1,14 +1,86 @@
 [
     {
+        "command": "boss",
+        "usage": "-boss <boss name>",
+        "desc": "Finds the searched boss, and gives you a list of items it drops and their droprate",
+        "aliases": "listboss",
+        "cooldown": 3
+    },
+    {
+        "command": "changelog",
+        "usage": "-changelog <version number and letter> or by itself will give you the latest version",
+        "desc": "Displays the changelog in a direct message (since message can be very long)",
+        "aliases": "ch",
+        "cooldown": 3
+    },
+    {
+        "command": "donate",
+        "usage": "-donate",
+        "desc": "Gives a link to donate to the map developer!",
+        "aliases": "none",
+        "cooldown": 5
+    },
+    {
+        "command": "help",
+        "usage": "-help or -help <command name>",
+        "desc": "Lists all commands or info about a specific command.",
+        "aliases": "commands",
+        "cooldown": 5
+    },
+    {
+        "command": "invite",
+        "usage": "-invite",
+        "desc": "Gives you the invite link to TWRPG-BOT",
+        "aliases": "none",
+        "cooldown": 3
+    },
+    {
+        "command": "list",
+        "usage": "-list <category> to search by name and type simultaneously OR can search it individually by adding the category to the end of the command: -listtype, -listname",
+        "desc": "PMs the user with a list of items nearest to the word typed in. It can search by categories: name and type",
+        "aliases": "none",
+        "cooldown": 5
+    },
+    {
+        "command": "post",
+        "usage": "-post",
+        "desc": "(ONLY USEABLE BY OWNER)",
+        "aliases": "none",
+        "cooldown": 3
+    },
+    {
         "command": "recipe",
         "usage": "-recipe <item name>",
-        "desc": "Finds details of a given item.",
-        "aliases": "item, spawn, 조합법"
+        "desc": "Shows you details about an item, such as recipe, stats, droprate, etc.",
+        "aliases": "item, spawn, 조합법",
+        "cooldown": 3
+    },
+    {
+        "command": "roll",
+        "usage": "-roll <from> <to> or nothing to roll the default 1-200",
+        "desc": "Random number generator!",
+        "aliases": "dice",
+        "cooldown": 5
     },
     {
         "command": "size",
         "usage": "-size",
         "desc": "Shows you the size of how many items, characters, and bosses are recorded on this bot",
-        "aliases": "none"
+        "aliases": "none",
+        "cooldown": 3
+    },
+    {
+        "command": "skill",
+        "usage": "-skill <hero name> or -skill <skill name> or -skill <hero name> all",
+        "desc": "Shows the details of a skill name specified, or lists the skill names of a specified class. Can also be used to view all hero skills at the same time by adding the key word \"all\" at the end. (See the usage)",
+        "aliases": "abil, skills, spell, spells, hero, heros, heroes",
+        "cooldown": 3
+    },
+    {
+        "command": "spec",
+        "usage": "-spec <class name>",
+        "desc": "shows a list of spec items for the specified hero",
+        "aliases": "specs",
+        "cooldown": 3
     }
 ]
