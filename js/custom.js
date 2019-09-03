@@ -23,8 +23,9 @@ $(function () {
         json = json.filter(x => !trolls.includes(x.type));
         $('#items').DataTable({
             data: json,
-            dom: 
-            "<'row'<'col-sm-2 col-md-1'f><'col-sm-6 col-md-3'l><'col-sm-4 col-md-8'p>>" +
+            dom:
+            "<'row'<'col-sm-4 col-md-2'i>>" +
+            "<'row'<'col-sm-4 col-md-2'f><'col-sm-6 col-md-3'l><'col-sm-4 col-md-7'p>>" +
             "<'row'<'col-sm-12'tr>>" +
             "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
             columns: [
