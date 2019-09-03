@@ -181,47 +181,26 @@ $(function () {
             $(this).removeAttr('aria-controls');
             $(this).removeAttr('aria-label');
             $(this).removeAttr('aria-sort');
+            var title = $(this).text();
+            $(this).html('<input type="text"class="form-control form-control-sm" placeholder="Search ' + title + '" />');
+
             $(this).on('click', function (e) {
                 e.stopPropagation();
             });
-            var title = $(this).text();
-            $(this).html('<input type="text"class="form-control form-control-sm" placeholder="Search ' + title + '" />');
-        });
-        items_table.columns().every(function(){
-            console.log(this);
-            var that = this;
-
-            $('input', this.header()).on('keyup change clear', function(){
-                if (that.search() !== this.value){
-                    that.search(this.value).draw();
+            $('input', this).on({
+                'keyup change': function () {
+                    if (items_table.column(i).search() !== this.value) {
+                        items_table
+                            .column(i)
+                            .search(this.value)
+                            .draw();
+                    }
+                },
+                'click': function(e){
+                    e.stopPropagation();
                 }
             });
         });
-        // $('#items thead tr:eq(1) th').each(function (i) {
-        //     $(this).removeAttr('class');
-        //     $(this).removeAttr('aria-controls');
-        //     $(this).removeAttr('aria-label');
-        //     $(this).removeAttr('aria-sort');
-        //     var title = $(this).text();
-        //     $(this).html('<input type="text"class="form-control form-control-sm" placeholder="Search ' + title + '" />');
-
-        //     $(this).on('click', function (e) {
-        //         e.stopPropagation();
-        //     });
-        //     $('input', this).on({
-        //         'keyup change': function () {
-        //             if (items_table.column(i).search() !== this.value) {
-        //                 items_table
-        //                     .column(i)
-        //                     .search(this.value)
-        //                     .draw();
-        //             }
-        //         },
-        //         'click': function(e){
-        //             e.stopPropagation();
-        //         }
-        //     });
-        // });
     });
 });
 
