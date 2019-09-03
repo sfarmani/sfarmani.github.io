@@ -2,6 +2,7 @@
 // Load different parts of the pages
 $(function () {
     var trolls = ['[HEALED]', '[Air]'];
+    var bullet = "∴";
     $('#load_headers').load('headers.html');
     $('#load_sidebar').load('sidebar.html');
     $('#load_banner').load('banner.html');
