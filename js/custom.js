@@ -168,6 +168,9 @@ $(function () {
             var title = $(this).text();
             $(this).html('<input type="text"class="form-control form-control-sm" placeholder="Search ' + title + '" />');
 
+            $(this).on('click', function (e) {
+                e.stopPropagation();
+            });
             $('input', this).on({
                 'keyup change': function () {
                     if (items_table.column(i).search() !== this.value) {
