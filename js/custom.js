@@ -34,29 +34,29 @@ $(function () {
             orderCellsTop: false,
             fixedHeader: true,
             columns: [
-                { data: "name", title: "Name", searchable: true },
-                { data: "koreanname", title: "Korean Name", searchable: true, defaultContent: "<i>none</i>", visible: false },
-                { data: "droprate", title: "Drop Rate", searchable: false,
+                { data: "name", title: "Name" },
+                { data: "koreanname", title: "Korean Name", defaultContent: "<i>none</i>", visible: false },
+                { data: "droprate", title: "Drop Rate",
                     render: function (data) {
                         if (!data) return "<i>none</i>";
                         data = Math.round(data * 10000) / 100;
                         return data + "%";
                     } 
                 },
-                { data: "type", title: "Item Type", searchable: true },
-                { data: "dropped_by", title: "Dropped By", searchable: true, visible: false,
+                { data: "type", title: "Item Type" },
+                { data: "dropped_by", title: "Dropped By", visible: false,
                     render: function (data) {
                         if (!data) return "<i>none</i>";
                         return data.join(" / ");
                     }
                 },
-                { data: "required_by", title: "Used In", searchable: false, visible: false,
+                { data: "required_by", title: "Used In", visible: false,
                     render: function (data) {
                         if (!data) return "<i>none</i>";
                         return data.join(" / ");
                     }
                 },
-                { data: "stats", title: "Stats", searchable: true, width: "10%",
+                { data: "stats", title: "Stats", width: "10%",
                     render: function (data) {
                         if (!data) return "<i>none</i>";
                         let str = [];
@@ -103,7 +103,7 @@ $(function () {
                         return str.join('<br>');
                     }
                 },
-                { data: "stats.passive", title: "Passive", searchable: true, width: "20%",
+                { data: "stats.passive", title: "Passive", width: "20%",
                     render: function (data) {
                         if (!data) return "<i>none</i>";
                         let str = [];
@@ -113,7 +113,7 @@ $(function () {
                         return str.join("<br>");
                     }
                 },
-                { data: "stats.active", title: "Active", searchable: true, width: "20%",
+                { data: "stats.active", title: "Active", width: "20%",
                     render: function (data) {
                         if (!data) return "<i>none</i>";
                         let str = [];
@@ -123,7 +123,7 @@ $(function () {
                         return str.join("<br>");
                     }
                 },
-                { data: "stats.spec", title: "Character Specialties", searchable: true, width: "20%", visible: false,
+                { data: "stats.spec", title: "Character Specialties", width: "20%", visible: false,
                     render: function (data) {
                         if (!data) return "<i>none</i>";
                         let str = [];
@@ -140,7 +140,7 @@ $(function () {
                         return str.join("<br>");
                     }
                 },
-                { data: "recipe", title: "Recipe", searchable: true, width: "20%",
+                { data: "recipe", title: "Recipe", width: "20%",
                     render: function (data) {
                         if (!data) return "<i>none</i>";
                         let str = [];
