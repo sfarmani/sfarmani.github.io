@@ -36,7 +36,7 @@ $(function () {
             columns: [
                 { data: "name", title: "Name" },
                 { data: "koreanname", title: "Korean Name", defaultContent: "<i>none</i>", visible: false },
-                { data: "droprate", title: "Drop Rate",
+                { data: "droprate", title: "Drop Rate", visible: false,
                     render: function (data) {
                         if (!data) return "<i>none</i>";
                         let str = [];
