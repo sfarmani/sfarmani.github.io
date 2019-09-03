@@ -43,3 +43,7 @@
     border-left: 5px solid red;
     border-radius: 7px;
 }
+
+#commands{
+    width: 100%;
+}

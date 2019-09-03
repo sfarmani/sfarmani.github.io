@@ -1,4 +1,14 @@
 [
-    ["recipe", "-recipe <item name>", "Finds details of a given item.", "item, spawn, 조합법"],
-    ["size", "-size", "Shows you the size of how many items, characters, and bosses are recorded on this bot", "none"]
+    {
+        "command": "recipe",
+        "usage": "-recipe <item name>",
+        "desc": "Finds details of a given item.",
+        "aliases": "item, spawn, 조합법"
+    },
+    {
+        "command": "size",
+        "usage": "-size",
+        "desc": "Shows you the size of how many items, characters, and bosses are recorded on this bot",
+        "aliases": "none"
+    }
 ]

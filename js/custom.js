@@ -9,10 +9,10 @@ $(function () {
         $('#commands').DataTable({
             data: json,
             columns: [
-                { title: "Command" },
-                { title: "Usage" },
-                { title: "Description" },
-                { title: "Aliases" }
+                { data: "command", title: "Command" },
+                { data: "usage", title: "Usage" },
+                { data: "desc", title: "Description" },
+                { data: "aliases", title: "Aliases" }
             ]
         });
     });
