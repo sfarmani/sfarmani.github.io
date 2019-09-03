@@ -39,15 +39,23 @@ $(function () {
                 { data: "droprate", title: "Drop Rate",
                     render: function (data) {
                         if (!data) return "<i>none</i>";
-                        data = Math.round(data * 10000) / 100;
-                        return data + "%";
+                        let str = [];
+                        if (Array.isArray(data)) {
+                            data.forEach(function(){
+                                str.push((Math.round(data * 10000) / 100) + "%");
+                            });
+                        }
+                        else {
+                            str.push((Math.round(data * 10000) / 100) + "%");
+                        }
+                        return str.join('<br>');
                     } 
                 },
                 { data: "type", title: "Item Type" },
                 { data: "dropped_by", title: "Dropped By", visible: false,
                     render: function (data) {
                         if (!data) return "<i>none</i>";
-                        return data.join(" / ");
+                        return data.join("<br>");
                     }
                 },
                 { data: "required_by", title: "Used In", visible: false,
