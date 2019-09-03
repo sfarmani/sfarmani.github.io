@@ -2,6 +2,11 @@
 // Load different parts of the pages
 $(function () {
     var trolls = ['[HEALED]', '[Air]'];
+    var dom =
+        "<'row'<'col-sm-4 col-md-2'i>>" +
+        "<'row'<'col-sm-4 col-md-2'f><'col-sm-6 col-md-3'l><'col-sm-4 col-md-7'p>>" +
+        "<'row'<'col-sm-12'tr>>" +
+        "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>";
     // var bullet = "∴";
     $('#load_headers').load('headers.html');
     $('#load_sidebar').load('sidebar.html');
@@ -10,6 +15,7 @@ $(function () {
     $.getJSON("json/commands.json", function (json) {
         $('#commands').DataTable({
             data: json,
+            dom: dom,
             columns: [
                 { data: "command", title: "Command" },
                 { data: "usage", title: "Usage" },
@@ -23,11 +29,7 @@ $(function () {
         json = json.filter(x => !trolls.includes(x.type));
         $('#items').DataTable({
             data: json,
-            dom:
-            "<'row'<'col-sm-4 col-md-2'i>>" +
-            "<'row'<'col-sm-4 col-md-2'f><'col-sm-6 col-md-3'l><'col-sm-4 col-md-7'p>>" +
-            "<'row'<'col-sm-12'tr>>" +
-            "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+            dom: dom,
             columns: [
                 { data: "name", title: "Name", searchable: true },
                 { data: "koreanname", title: "Korean Name", searchable: true, defaultContent: "<i>none</i>", visible: false },
