@@ -17,4 +17,18 @@ $(function () {
             ]
         });
     });
+    $.getJSON("json/items.json", function (json) {
+        $('#items').DataTable({
+            data: json,
+            columns: [
+                { data: "name", title: "Name" },
+                { data: "koreanname", title: "Korean Name" },
+                { data: "droprate", title: "Drop Rate" },
+                { data: "type", title: "Item Type" },
+                { data: "dropped_by", title: "Dropped By" },
+                { data: "required_by", title: "Required By" },
+                { data: "stats", title: "Stats" }
+            ]
+        });
+    });
 });
