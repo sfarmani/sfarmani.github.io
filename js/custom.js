@@ -40,13 +40,13 @@ $(function () {
                         return data.join(" / ");
                     }
                 },
-                { data: "required_by", title: "Required By", searchable: false,
+                { data: "required_by", title: "Used In", searchable: false,
                     render: function (data) {
                         if (!data) return "<i>none</i>";
                         return data.join(" / ");
                     }
                 },
-                { data: "stats", title: "Stats", searchable: true, width: "15%",
+                { data: "stats", title: "Stats", searchable: true, width: "10%",
                     render: function (data) {
                         if (!data) return "<i>none</i>";
                         let str = [];
@@ -91,6 +91,26 @@ $(function () {
                             if (stat == 'revivaltimepercent') str.push(`${plusminus}${val}% Revival Time`);
                         });
                         return str.join('<br>');
+                    }
+                },
+                { data: "stats.passive", title: "Passive", searchable: true,
+                    render: function (data) {
+                        if (!data) return "<i>none</i>";
+                        let str = [];
+                        data.passive.forEach(function (ps) {
+                            str.push(ps);
+                        });
+                        return str.join("<br>");
+                    }
+                },
+                { data: "stats.active", title: "Active", searchable: true,
+                    render: function (data) {
+                        if (!data) return "<i>none</i>";
+                        let str = [];
+                        data.active.forEach(function (as) {
+                            str.push(as);
+                        });
+                        return str.join("<br>");
                     }
                 }
             ]
