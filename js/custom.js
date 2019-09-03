@@ -41,8 +41,8 @@ $(function () {
                         if (!data) return "<i>none</i>";
                         let str = [];
                         if (Array.isArray(data)) {
-                            data.forEach(function(){
-                                str.push((Math.round(data * 10000) / 100) + "%");
+                            data.forEach(function(droprate){
+                                str.push((Math.round(droprate * 10000) / 100) + "%");
                             });
                         }
                         else {
