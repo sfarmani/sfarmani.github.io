@@ -161,8 +161,7 @@ $(function () {
 
         $('#items thead tr').clone(true).appendTo('#items thead');
         $('#items thead tr:eq(1) th').each(function (i) {
-            console.log(i);
-            console.log(this);
+            $(this).removeClass();
             var title = $(this).text();
             $(this).html('<input type="text"class="form-control form-control-sm" placeholder="Search ' + title + '" />');
 
