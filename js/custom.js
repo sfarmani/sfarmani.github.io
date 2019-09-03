@@ -159,11 +159,12 @@ $(function () {
             ]
         });
 
-
         $('#items thead tr').clone(true).appendTo('#items thead');
         $('#items thead tr:eq(1) th').each(function (i) {
+            console.log(i);
+            console.log(this);
             var title = $(this).text();
-            $(this).html('<input type="text" placeholder="Search ' + title + '" />');
+            $(this).html('<input type="text"class="form-control form-control-sm" placeholder="Search ' + title + '" />');
 
             $('input', this).on('keyup change', function () {
                 if (table.column(i).search() !== this.value) {
