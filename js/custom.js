@@ -169,8 +169,8 @@ $(function () {
             $(this).html('<input type="text"class="form-control form-control-sm" placeholder="Search ' + title + '" />');
 
             $('input', this).on('keyup change', function () {
-                if (items_table.column(i).search() !== this.value) {
-                    items_table
+                if (table.column(i).search() !== this.value) {
+                    table
                         .column(i)
                         .search(this.value)
                         .draw();
