@@ -176,7 +176,7 @@ $(function () {
         });
 
         $('#items thead tr').clone(true).appendTo('#items thead');
-        items_table.columns().every(function(){
+        $('#items thead tr:eq(1) th').each(function (i) {
             $(this).removeAttr('class');
             $(this).removeAttr('aria-controls');
             $(this).removeAttr('aria-label');
@@ -184,6 +184,10 @@ $(function () {
             $(this).on('click', function (e) {
                 e.stopPropagation();
             });
+            var title = $(this).text();
+            $(this).html('<input type="text"class="form-control form-control-sm" placeholder="Search ' + title + '" />');
+        });
+        items_table.columns().every(function(){
             var that = this;
 
             $('input', this.header()).on('keyup change clear', function(){
