@@ -93,7 +93,7 @@ $(function () {
                         return str.join('<br>');
                     }
                 },
-                { data: "stats.passive", title: "Passive", searchable: true,
+                { data: "stats.passive", title: "Passive", searchable: true, defaultContent: "<i>none</i>",
                     render: function (data) {
                         if (!data) return "<i>none</i>";
                         let str = [];
@@ -103,7 +103,7 @@ $(function () {
                         return str.join("<br>");
                     }
                 },
-                { data: "stats.active", title: "Active", searchable: true,
+                { data: "stats.active", title: "Active", searchable: true, defaultContent: "<i>none</i>",
                     render: function (data) {
                         if (!data) return "<i>none</i>";
                         let str = [];
