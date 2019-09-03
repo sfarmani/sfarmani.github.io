@@ -31,7 +31,7 @@ $(function () {
         var items_table = $('#items').DataTable({
             data: json,
             dom: dom,
-            orderCellsTop: true,
+            orderCellsTop: false,
             fixedHeader: true,
             columns: [
                 { data: "name", title: "Name", searchable: true },
