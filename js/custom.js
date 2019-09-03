@@ -188,6 +188,7 @@ $(function () {
             $(this).html('<input type="text"class="form-control form-control-sm" placeholder="Search ' + title + '" />');
         });
         items_table.columns().every(function(){
+            console.log(this);
             var that = this;
 
             $('input', this.header()).on('keyup change clear', function(){
