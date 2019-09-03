@@ -1,6 +1,7 @@
 
 // Load different parts of the pages
 $(function () {
+    var trolls = ['[HEALED]', '[Air]'];
     $('#load_headers').load('headers.html');
     $('#load_sidebar').load('sidebar.html');
     $('#load_banner').load('banner.html');
@@ -19,7 +20,7 @@ $(function () {
     });
     $.getJSON("json/items.json", function (json) {
         $('#items').DataTable({
-            data: json,
+            data: json.filter(x => !trolls.includes(x.type)),
             columns: [
                 { data: "name", title: "Name" },
                 { data: "koreanname", title: "Korean Name" },
