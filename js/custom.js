@@ -105,6 +105,7 @@ $(function () {
                 },
                 { data: "stats.active", title: "Active", searchable: true, defaultContent: "<i>none</i>",
                     render: function (data) {
+                        console.log(data);
                         if (!data) return "<i>none</i>";
                         let str = [];
                         data.active.forEach(function (as) {
