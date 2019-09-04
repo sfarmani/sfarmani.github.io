@@ -207,7 +207,9 @@ $(function () {
             var column_id = items_table.columns().header().toArray().map(x => x.innerText).indexOf(column_name);
             $('.items-select').append("<option value='" + column_id + "'>" + column_name + "</option>");
         });
-        $('.items-select').selectpicker();
+        $('.items-select').selectpicker({
+            actionsBox: true
+        });
     });
 });
 
