@@ -211,8 +211,8 @@ $(function () {
             actionsBox: true
         });
 
-        $('.items-select').on('click keyup change', function(e){
-            e.preventDefault();
+        $('.items-select').on('change', function(e){
+            console.log($(this).val());
 
             var values = $(this).val().split(',');
             values.forEach(function(id){
