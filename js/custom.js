@@ -3,6 +3,7 @@ $(function () {
     console.log(localStorage);
     if (localStorage.getItem("items_columns") === null){
         localStorage.setItem("items_columns", JSON.stringify([0, 2, 3, 6, 7, 8, 10]));
+        console.log(localStorage);
     }
     var trolls = ['[HEALED]', '[Air]'];
     var possibleStats =
