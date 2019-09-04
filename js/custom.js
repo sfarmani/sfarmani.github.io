@@ -224,7 +224,7 @@ $(function () {
             if (selectedColumns.includes(e.params.data.id)){
                 console.log('removing');
                 console.log("before: " + selectedColumns);
-                selectedColumns = selectedColumns - [e.params.data.id];
+                selectedColumns.splice($.inArray(e.params.data.id, selectedColumns), 1);
                 console.log("after: " + selectedColumns);
                 console.log("before localStorage: " + JSON.parse(localStorage.getItem("items_columns")));
                 localStorage.setItem("items_columns", JSON.stringify(selectedColumns));
