@@ -177,13 +177,22 @@ $(function () {
 
         //// Get column names and populate dropdown. Also create select2 ////
         var item_column_names = items_table.columns().header().toArray().map(x => x.innerText);
-        console.log(item_column_names);
-        item_column_names.forEach(function (column_name) {
-            var column_id = items_table.columns().header().toArray().map(x => x.innerText).indexOf(column_name);
-            $('select.items-select').append("<option value='" + column_id + "' selected>" + column_name + "</option>");
-            items_table.column(column_id).visible(true);
+        var results = [];
+        item_column_names.forEach(function (column_name, index) {
+            results.push({"id": index, "text": column_name, "selected": true});
         });
-        $('select.items-select').select2({theme: "classic"});
+
+        // console.log(item_column_names);
+        // item_column_names.forEach(function (column_name) {
+        //     var column_id = items_table.columns().header().toArray().map(x => x.innerText).indexOf(column_name);
+        //     $('select.items-select').append("<option value='" + column_id + "' selected>" + column_name + "</option>");
+        //     items_table.column(column_id).visible(true);
+        // });
+        $('select.items-select').select2(
+            {
+                theme: "classic",
+                results: results
+            });
 
         //// replace headers with input boxes ////
         $('#items thead th').each(function (i) {
