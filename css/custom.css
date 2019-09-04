@@ -56,3 +56,10 @@ input.select2-search__field{
     background-color: #ddd !important;
     color: #858796 !important;
 }
+
+@media (min-width: 768px){
+    .custom-md-8{
+        flex: 0 0 73.2%;
+        max-width: 73.2%;
+    }
+}
