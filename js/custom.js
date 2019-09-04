@@ -222,7 +222,7 @@ $(function () {
             column.visible(!column.visible());
             var selectedColumns = JSON.parse(localStorage.getItem("items_columns"));
             console.log("is " + e.params.data.id + " in localStorage: " + selectedColumns.includes(e.params.data.id));
-            if (selectedColumns.includes(e.params.data.id)){
+            if (selectedColumns.includes(e.params.data.id.toString())){
                 console.log('removing');
                 console.log("before: " + selectedColumns);
                 selectedColumns.splice($.inArray(e.params.data.id, selectedColumns), 1);
