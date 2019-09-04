@@ -222,12 +222,18 @@ $(function () {
             column.visible(!column.visible());
             var selectedColumns = JSON.parse(localStorage.getItem("items_columns"));
             if (selectedColumns.includes(e.params.data.id)){
+                console.log("before: " + selectedColumns);
                 selectedColumns = selectedColumns - [e.params.data.id];
+                console.log("after: " + selectedColumns);
                 localStorage.setItem("items_columns", JSON.stringify(selectedColumns));
+                console.log("localStorage: " + JSON.parse(localStorage("items_columns")));
             }
-            else{
+            else {
+                console.log("before: " + selectedColumns);
                 selectedColumns.push(e.params.data.id);
+                console.log("after: " + selectedColumns);
                 localStorage.setItem("items_columns", JSON.stringify(selectedColumns));
+                console.log("localStorage: " + JSON.parse(localStorage("items_columns")));
             }
         });
     });
