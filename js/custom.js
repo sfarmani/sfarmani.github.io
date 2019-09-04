@@ -191,7 +191,8 @@ $(function () {
         $('select.items-select').select2(
             {
                 theme: "classic",
-                results: results
+                results: results,
+                width: 'resolve'
             });
 
         //// replace headers with input boxes ////
