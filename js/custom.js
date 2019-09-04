@@ -226,14 +226,14 @@ $(function () {
                 selectedColumns = selectedColumns - [e.params.data.id];
                 console.log("after: " + selectedColumns);
                 localStorage.setItem("items_columns", JSON.stringify(selectedColumns));
-                console.log("localStorage: " + JSON.parse(localStorage("items_columns")));
+                console.log("localStorage: " + JSON.parse(localStorage.getItem("items_columns")));
             }
             else {
                 console.log("before: " + selectedColumns);
                 selectedColumns.push(e.params.data.id);
                 console.log("after: " + selectedColumns);
                 localStorage.setItem("items_columns", JSON.stringify(selectedColumns));
-                console.log("localStorage: " + JSON.parse(localStorage("items_columns")));
+                console.log("localStorage: " + JSON.parse(localStorage.getItem("items_columns")));
             }
         });
     });
