@@ -211,8 +211,12 @@ $(function () {
             actionsBox: true
         });
 
-        $('.items-select').on('click keyup change', function(){
-            alert($(this).val());
+        $('.items-select').on('click keyup change', function(e){
+            e.preventDefault();
+
+            var column = items_table.column($(this).attr('value'));
+
+            column.visible(!column.visible());
         });
     });
 });
