@@ -210,6 +210,10 @@ $(function () {
         $('.items-select').selectpicker({
             actionsBox: true
         });
+
+        $('.items-select').on('click', function(){
+            alert($(this).val());
+        });
     });
 });
 
