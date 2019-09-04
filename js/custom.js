@@ -218,14 +218,15 @@ $(function () {
 
         //// toggle columns from the dropdown menu ////
         $('select.items-select').on('select2:select select2:unselect', function (e) {
+            var column_id = parseInt(e.params.data.id);
             var column = items_table.column(e.params.data.id);
             column.visible(!column.visible());
             var selectedColumns = JSON.parse(localStorage.getItem("items_columns"));
-            console.log("is " + e.params.data.id + " in localStorage: " + selectedColumns.includes(parseInt(e.params.data.id)));
-            if (selectedColumns.includes(parseInt(e.params.data.id))){
+            console.log("is " + e.params.data.id + " in localStorage: " + selectedColumns.includes(column_id));
+            if (selectedColumns.includes(column_id)){
                 console.log('removing');
                 console.log("before: " + selectedColumns);
-                selectedColumns.splice($.inArray(e.params.data.id, selectedColumns), 1);
+                selectedColumns.splice($.inArray(column_id, selectedColumns), 1);
                 console.log("after: " + selectedColumns);
                 console.log("before localStorage: " + JSON.parse(localStorage.getItem("items_columns")));
                 localStorage.setItem("items_columns", JSON.stringify(selectedColumns));
@@ -234,7 +235,7 @@ $(function () {
             else {
                 console.log('adding');
                 console.log("before: " + selectedColumns);
-                selectedColumns.push(e.params.data.id);
+                selectedColumns.push(column_id);
                 console.log("after: " + selectedColumns);
                 console.log("before localStorage: " + JSON.parse(localStorage.getItem("items_columns")));
                 localStorage.setItem("items_columns", JSON.stringify(selectedColumns));
