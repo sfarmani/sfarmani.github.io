@@ -193,7 +193,8 @@ $(function () {
                 theme: "classic",
                 data: results,
                 width: "50%",
-                placeholder: "Select columns to toggle"
+                placeholder: "Select columns to toggle",
+                closeOnSelect: false
             });
 
         //// replace headers with input boxes ////
