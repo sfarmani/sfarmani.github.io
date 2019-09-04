@@ -215,7 +215,7 @@ $(function () {
         });
 
         //// toggle columns from the dropdown menu ////
-        $('select.items-select').on('blur', function(){
+        $('select.items-select').on('change click', function(){
 
             console.log($(this).select2('data'));
 
