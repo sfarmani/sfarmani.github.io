@@ -1,3 +1,5 @@
+$.fn.selectpicker.Constructor.BootstrapVersion = '4';
+
 
 // Load different parts of the pages
 $(function () {
