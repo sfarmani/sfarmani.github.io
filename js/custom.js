@@ -205,7 +205,7 @@ $(function () {
         var item_column_names = items_table.columns().header().toArray().map(x => x.innerText)
         item_column_names.forEach(function(column_name){
             var column_id = items_table.columns().header().toArray().map(x => x.innerText).indexOf(column_name);
-            $('.items-select').append("<option value='" + column_id + "'>" + column_name + "</option>");
+            $('.items-select').append("<option value='" + column_id + "' selected>" + column_name + "</option>");
         });
         $('.items-select').selectpicker({
             actionsBox: true
