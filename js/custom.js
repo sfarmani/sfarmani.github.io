@@ -222,7 +222,7 @@ $(function () {
             actionsBox: true
         });
 
-        $('select.items-select').on('change', function(){
+        $('select.items-select').on('change click keyup clear', function(){
 
             $(this).val().forEach(function(id){
                 var column = items_table.column(id);
