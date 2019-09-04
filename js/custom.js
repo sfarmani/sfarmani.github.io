@@ -222,6 +222,7 @@ $(function () {
             column.visible(!column.visible());
             var selectedColumns = JSON.parse(localStorage.getItem("items_columns"));
             if (selectedColumns.includes(e.params.data.id)){
+                console.log('removing');
                 console.log("before: " + selectedColumns);
                 selectedColumns = selectedColumns - [e.params.data.id];
                 console.log("after: " + selectedColumns);
@@ -229,6 +230,7 @@ $(function () {
                 console.log("localStorage: " + JSON.parse(localStorage.getItem("items_columns")));
             }
             else {
+                console.log('adding');
                 console.log("before: " + selectedColumns);
                 selectedColumns.push(e.params.data.id);
                 console.log("after: " + selectedColumns);
