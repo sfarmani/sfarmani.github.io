@@ -192,7 +192,7 @@ $(function () {
         $('select.items-select').select2(
             {
                 theme: "classic",
-                results: results,
+                data: results,
                 width: "30%"
             });
 
