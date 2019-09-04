@@ -175,36 +175,23 @@ $(function () {
             ]
         });
 
-        var item_column_names = items_table.columns().header().toArray().map(x => x.innerText)
+        //// Get column names and populate dropdown. Also create selectpicker ////
+        var item_column_names = items_table.columns().header().toArray().map(x => x.innerText);
+        item_column_names.forEach(function (column_name) {
+            var column_id = items_table.columns().header().toArray().map(x => x.innerText).indexOf(column_name);
+            $('.items-select').append("<option value='" + column_id + "' selected>" + column_name + "</option>");
+        });
+        $('.items-select').selectpicker();
 
-        // $('#items thead tr').clone(true).appendTo('#items thead');
+        //// replace headers with input boxes ////
         $('#items thead th').each(function (i) {
-            // $(this).removeAttr('class');
-            // $(this).removeAttr('aria-controls');
-            // $(this).removeAttr('aria-label');
-            // $(this).removeAttr('aria-sort');
             var title = $(this).text();
             $(this).html('<input type="text"class="form-control form-control-sm" placeholder="Search ' + title + '" />');
-
-            // $(this).on('click', function (e) {
-            //     e.stopPropagation();
-            // });
-            // $('input', this).on({
-            //     'keyup change': function () {
-            //         if (items_table.column(i).search() !== this.value) {
-            //             items_table
-            //                 .column(i)
-            //                 .search(this.value)
-            //                 .draw();
-            //         }
-            //     },
-            //     'click': function(e){
-            //         e.stopPropagation();
-            //     }
-            // });
         });
 
+        //// enabling searching for individual columns ////
         items_table.columns().every(function () {
+            console.log(this.index);
             var that = this;
 
             $('input', this.header()).on('keyup change clear', function () {
@@ -214,12 +201,7 @@ $(function () {
             });
         });
 
-        item_column_names.forEach(function(column_name){
-            var column_id = items_table.columns().header().toArray().map(x => x.innerText).indexOf(column_name);
-            $('.items-select').append("<option value='" + column_id + "' selected>" + column_name + "</option>");
-        });
-        $('.items-select').selectpicker();
-
+        //// toggle columns from the dropdown menu ////
         $('select.items-select').on('change click keyup clear', function(){
 
             console.log($(this).val());
@@ -231,6 +213,7 @@ $(function () {
                 column.visible(!column.visible());
             });
         });
+        
     });
 });
 
