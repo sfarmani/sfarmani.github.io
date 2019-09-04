@@ -202,20 +202,11 @@ $(function () {
             });
         });
 
-        var item_columns = items_table.settings().init().columns;
-        console.log(items_table.columns().header().toArray().map(x => x.innerText));
-        item_columns.every(function(column_id){
-            console.log(this);
-            console.log(column_id);
-            console.log(item_columns[column_id]);
-            var column_name = item_columns[column_id].name;
+        var item_column_names = items_table.columns().header().toArray().map(x => x.innerText)
+        item_column_names.forEach(function(column_name){
+            var column_id = items_table.columns().header().toArray().map(x => x.innerText).indexOf(column_name);
             $('.items-select').append("<option value='" + column_id + "'>" + column_name + "</option>");
         });
-
-        // item_column_names.forEach(function(column_name){
-        //     var column_id = items_table.columns().names().indexOf(column_name);
-        //     $('.items-select').append("<option value='" + column_id + "'>" + column_name + "</option>");
-        // });
     });
 });
 
