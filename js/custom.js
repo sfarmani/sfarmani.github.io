@@ -214,7 +214,7 @@ $(function () {
         });
 
         //// toggle columns from the dropdown menu ////
-        $('select.items-select').on('change click keyup clear', function(){
+        $('select.items-select').on('keyup', function(){
 
             console.log($(this).select2('data'));
 
