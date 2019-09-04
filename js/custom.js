@@ -193,7 +193,8 @@ $(function () {
             {
                 theme: "classic",
                 data: results,
-                width: "30%"
+                width: "30%",
+                placeholder: "Select columns to toggle"
             });
 
         //// replace headers with input boxes ////
@@ -216,14 +217,16 @@ $(function () {
         //// toggle columns from the dropdown menu ////
         $('select.items-select').on('change click keyup clear', function(){
 
-            console.log($(this).val());
+            console.log($(this).select2('data'));
 
-            $(this).val().forEach(function(id){
-                var column = items_table.column(id);
-                console.log(id);
+            // console.log($(this).val());
 
-                column.visible(!column.visible());
-            });
+            // $(this).val().forEach(function(id){
+            //     var column = items_table.column(id);
+            //     console.log(id);
+
+            //     column.visible(!column.visible());
+            // });
         });
 
     });
