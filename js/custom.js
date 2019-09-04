@@ -226,6 +226,8 @@ $(function () {
 
             $(this).val().forEach(function(id){
                 var column = items_table.column(id);
+                alert(id);
+                console.log(id);
 
                 column.visible(!column.visible());
             });
