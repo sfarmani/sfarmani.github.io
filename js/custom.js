@@ -181,7 +181,6 @@ $(function () {
         item_column_names.forEach(function (column_name, index) {
             results.push({"id": index, "text": column_name, "selected": true});
         });
-        console.log(results);
 
         // console.log(item_column_names);
         // item_column_names.forEach(function (column_name) {
