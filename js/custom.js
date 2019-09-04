@@ -1,8 +1,6 @@
 // Load different parts of the pages
 $(function () {
-    localStorage.clear();
-    console.log(JSON.parse(localStorage.getItem("items_columns")) == null);
-    console.log(localStorage.getItem("items_columns") === null);
+    // localStorage.clear();
     if (localStorage.getItem("items_columns") === null){
         localStorage.setItem("items_columns", JSON.stringify([0, 2, 3, 6, 7, 8, 10]));
         console.log(localStorage);
