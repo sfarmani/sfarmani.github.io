@@ -221,8 +221,8 @@ $(function () {
             var column = items_table.column(e.params.data.id);
             column.visible(!column.visible());
             var selectedColumns = JSON.parse(localStorage.getItem("items_columns"));
-            console.log("is " + e.params.data.id + " in localStorage: " + selectedColumns.includes(e.params.data.id.toString()));
-            if (selectedColumns.includes(e.params.data.id.toString())){
+            console.log("is " + e.params.data.id + " in localStorage: " + selectedColumns.includes(parseInt(e.params.data.id)));
+            if (selectedColumns.includes(parseInt(e.params.data.id))){
                 console.log('removing');
                 console.log("before: " + selectedColumns);
                 selectedColumns.splice($.inArray(e.params.data.id, selectedColumns), 1);
