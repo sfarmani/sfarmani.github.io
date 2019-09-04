@@ -178,13 +178,16 @@ $(function () {
             ]
         });
 
-        //// Get column names and populate dropdown. Also create select2 ////
+        //// Get column names. ////
         var item_column_names = items_table.columns().header().toArray().map(x => x.innerText);
+
         //// replace headers with input boxes ////
         $('#items thead th').each(function (i) {
             var title = $(this).text();
             $(this).html('<input type="text"class="form-control form-control-sm" placeholder="Search ' + title + '" />');
         });
+
+        //// Create an array of objects to insert into select2 ////
         var results = [];
         item_column_names.forEach(function (column_name, index) {
             var selected = JSON.parse(localStorage.getItem("items_columns")).includes(parseInt(index));
@@ -193,6 +196,7 @@ $(function () {
             column.visible(selected);
         });
 
+        //// create select2 ////
         $('select.items-select').select2(
             {
                 theme: "classic",
@@ -201,8 +205,6 @@ $(function () {
                 placeholder: "Select columns to toggle",
                 closeOnSelect: false
             });
-
-        
 
         //// enabling searching for individual columns ////
         items_table.columns().every(function () {
