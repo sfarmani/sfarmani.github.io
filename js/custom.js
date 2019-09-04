@@ -3,7 +3,6 @@ $(function () {
     // localStorage.clear();
     if ([null, "null"].includes(localStorage.getItem("items_columns"))){
         localStorage.setItem("items_columns", JSON.stringify([0, 2, 3, 6, 7, 8, 10]));
-        console.log(localStorage);
     }
     var trolls = ['[HEALED]', '[Air]'];
     var possibleStats =
@@ -181,6 +180,11 @@ $(function () {
 
         //// Get column names and populate dropdown. Also create select2 ////
         var item_column_names = items_table.columns().header().toArray().map(x => x.innerText);
+        //// replace headers with input boxes ////
+        $('#items thead th').each(function (i) {
+            var title = $(this).text();
+            $(this).html('<input type="text"class="form-control form-control-sm" placeholder="Search ' + title + '" />');
+        });
         var results = [];
         item_column_names.forEach(function (column_name, index) {
             var selected = JSON.parse(localStorage.getItem("items_columns")).includes(parseInt(index));
@@ -198,11 +202,7 @@ $(function () {
                 closeOnSelect: false
             });
 
-        //// replace headers with input boxes ////
-        $('#items thead th').each(function (i) {
-            var title = $(this).text();
-            $(this).html('<input type="text"class="form-control form-control-sm" placeholder="Search ' + title + '" />');
-        });
+        
 
         //// enabling searching for individual columns ////
         items_table.columns().every(function () {
@@ -222,24 +222,13 @@ $(function () {
             var column = items_table.column(e.params.data.id);
             column.visible(!column.visible());
             var selectedColumns = JSON.parse(localStorage.getItem("items_columns"));
-            console.log("is " + e.params.data.id + " in localStorage: " + selectedColumns.includes(column_id));
             if (selectedColumns.includes(column_id)){
-                console.log('removing');
-                console.log("before: " + selectedColumns);
                 selectedColumns.splice($.inArray(column_id, selectedColumns), 1);
-                console.log("after: " + selectedColumns);
-                console.log("before localStorage: " + JSON.parse(localStorage.getItem("items_columns")));
                 localStorage.setItem("items_columns", JSON.stringify(selectedColumns));
-                console.log("after localStorage: " + JSON.parse(localStorage.getItem("items_columns")));
             }
             else {
-                console.log('adding');
-                console.log("before: " + selectedColumns);
                 selectedColumns.push(column_id);
-                console.log("after: " + selectedColumns);
-                console.log("before localStorage: " + JSON.parse(localStorage.getItem("items_columns")));
                 localStorage.setItem("items_columns", JSON.stringify(selectedColumns));
-                console.log("after localStorage: " + JSON.parse(localStorage.getItem("items_columns")));
             }
         });
     });
