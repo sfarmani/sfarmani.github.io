@@ -211,7 +211,7 @@ $(function () {
             actionsBox: true
         });
 
-        $('.items-select').on('change', function(e){
+        $('.items-select').on('change', function(){
 
             var values = $(this).val();
             values.forEach(function(id){
