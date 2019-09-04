@@ -54,4 +54,5 @@ input.select2-search__field{
 
 .select2-container--classic .select2-results__option[aria-selected=true]{
     background-color: #ddd !important;
+    color: #858796 !important;
 }
