@@ -1,6 +1,6 @@
 
 // Load different parts of the pages
-jQuery(function () {
+$(function () {
     var trolls = ['[HEALED]', '[Air]'];
     var possibleStats =
         [
@@ -15,12 +15,12 @@ jQuery(function () {
         "<'row'<'col-sm-12'tr>>" +
         "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>";
     // var bullet = "∴";
-    jQuery('#load_headers').load('headers.html');
-    jQuery('#load_sidebar').load('sidebar.html');
-    jQuery('#load_banner').load('banner.html');
-    jQuery('#load_footer').load('footer.html');
-    jQuery.getJSON("json/commands.json", function (json) {
-        jQuery('#commands').DataTable({
+    $('#load_headers').load('headers.html');
+    $('#load_sidebar').load('sidebar.html');
+    $('#load_banner').load('banner.html');
+    $('#load_footer').load('footer.html');
+    $.getJSON("json/commands.json", function (json) {
+        $('#commands').DataTable({
             data: json,
             dom: dom,
             columns: [
@@ -32,11 +32,10 @@ jQuery(function () {
             ]
         });
     });
-
-    jQuery.getJSON("json/items.json", function (json) {
+    $.getJSON("json/items.json", function (json) {
         json = json.filter(x => !trolls.includes(x.type));
 
-        var items_table = jQuery('#items').DataTable({
+        var items_table = $('#items').DataTable({
             data: json,
             dom: dom,
             orderCellsTop: false,
@@ -176,19 +175,19 @@ jQuery(function () {
             ]
         });
 
-        jQuery('#items thead tr').clone(true).appendTo('#items thead');
-        jQuery('#items thead tr:eq(1) th').each(function (i) {
-            jQuery(this).removeAttr('class');
-            jQuery(this).removeAttr('aria-controls');
-            jQuery(this).removeAttr('aria-label');
-            jQuery(this).removeAttr('aria-sort');
-            var title = jQuery(this).text();
-            jQuery(this).html('<input type="text"class="form-control form-control-sm" placeholder="Search ' + title + '" />');
+        $('#items thead tr').clone(true).appendTo('#items thead');
+        $('#items thead tr:eq(1) th').each(function (i) {
+            $(this).removeAttr('class');
+            $(this).removeAttr('aria-controls');
+            $(this).removeAttr('aria-label');
+            $(this).removeAttr('aria-sort');
+            var title = $(this).text();
+            $(this).html('<input type="text"class="form-control form-control-sm" placeholder="Search ' + title + '" />');
 
-            jQuery(this).on('click', function (e) {
+            $(this).on('click', function (e) {
                 e.stopPropagation();
             });
-            jQuery('input', this).on({
+            $('input', this).on({
                 'keyup change': function () {
                     if (items_table.column(i).search() !== this.value) {
                         items_table
@@ -206,9 +205,9 @@ jQuery(function () {
         var item_column_names = items_table.columns().header().toArray().map(x => x.innerText)
         item_column_names.forEach(function(column_name){
             var column_id = items_table.columns().header().toArray().map(x => x.innerText).indexOf(column_name);
-            jQuery('.items-select').append("<option value='" + column_id + "'>" + column_name + "</option>");
+            $('.items-select').append("<option value='" + column_id + "'>" + column_name + "</option>");
         });
-        jQuery('.items-select').selectpicker();
+        $('.items-select').selectpicker();
     });
 });
 
