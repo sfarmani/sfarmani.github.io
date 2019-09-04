@@ -212,9 +212,8 @@ $(function () {
         });
 
         $('.items-select').on('change', function(e){
-            console.log($(this).val());
 
-            var values = $(this).val().split(',');
+            var values = $(this).val();
             values.forEach(function(id){
                 var column = items_table.column(id);
 
