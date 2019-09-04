@@ -192,7 +192,7 @@ $(function () {
             {
                 theme: "classic",
                 data: results,
-                width: "30%",
+                width: "50%",
                 placeholder: "Select columns to toggle"
             });
 
