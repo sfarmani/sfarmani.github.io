@@ -24,6 +24,7 @@ $(function () {
     $('#load_footer').load('footer.html');
     $.getJSON("json/commands.json", function (json) {
         $('#commands').DataTable({
+            responsive: true,
             data: json,
             dom: dom,
             columns: [
@@ -39,6 +40,7 @@ $(function () {
         json = json.filter(x => !trolls.includes(x.type));
 
         var items_table = $('#items').DataTable({
+            responsive: true,
             data: json,
             dom: dom,
             orderCellsTop: false,
