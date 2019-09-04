@@ -40,7 +40,7 @@ $(function () {
         json = json.filter(x => !trolls.includes(x.type));
 
         var items_table = $('#items').DataTable({
-            responsive: false,
+            responsive: true,
             data: json,
             dom: dom,
             orderCellsTop: false,
