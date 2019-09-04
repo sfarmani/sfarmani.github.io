@@ -208,7 +208,7 @@ $(function () {
         items_table.columns().every(function () {
             var that = this;
 
-            $('input', this.header()).on('keyup change clear', function (e) {
+            $('input', this.header()).on('keyup change clear click', function (e) {
                 e.stopPropagation();
                 if (that.search() !== this.value) {
                     that.search(this.value).draw();
