@@ -175,14 +175,15 @@ $(function () {
             ]
         });
 
-        //// Get column names and populate dropdown. Also create selectpicker ////
+        //// Get column names and populate dropdown. Also create select2 ////
         var item_column_names = items_table.columns().header().toArray().map(x => x.innerText);
+        console.log(item_column_names);
         item_column_names.forEach(function (column_name) {
             var column_id = items_table.columns().header().toArray().map(x => x.innerText).indexOf(column_name);
             $('select.items-select').append("<option value='" + column_id + "' selected>" + column_name + "</option>");
             items_table.column(column_id).visible(true);
         });
-        $('select.items-select').select2();
+        $('select.items-select').select2({theme: "classic"});
 
         //// replace headers with input boxes ////
         $('#items thead th').each(function (i) {
@@ -192,7 +193,6 @@ $(function () {
 
         //// enabling searching for individual columns ////
         items_table.columns().every(function () {
-            console.log(this.index);
             var that = this;
 
             $('input', this.header()).on('keyup change clear', function () {
