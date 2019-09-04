@@ -47,3 +47,7 @@
     border-left: 5px solid red;
     border-radius: 7px;
 }
+
+input.select2-search__field{
+    width: 100% !important;
+}
