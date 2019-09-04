@@ -218,15 +218,14 @@ $(function () {
             var column_id = items_table.columns().header().toArray().map(x => x.innerText).indexOf(column_name);
             $('.items-select').append("<option value='" + column_id + "' selected>" + column_name + "</option>");
         });
-        $('.items-select').selectpicker({
-            actionsBox: true
-        });
+        $('.items-select').selectpicker();
 
         $('select.items-select').on('change click keyup clear', function(){
 
+            console.log($(this).val());
+
             $(this).val().forEach(function(id){
                 var column = items_table.column(id);
-                alert(id);
                 console.log(id);
 
                 column.visible(!column.visible());
