@@ -51,3 +51,7 @@
 input.select2-search__field{
     width: 100% !important;
 }
+
+.select2-container--classic .select2-results__option[aria-selected=true]{
+    background-color: #ddd;
+}
