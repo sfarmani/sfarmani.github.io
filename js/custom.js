@@ -214,6 +214,7 @@ $(function () {
         $('.items-select').on('change', function(){
 
             var values = $(this).val();
+            console.log(jQuery.type(values));
             values.forEach(function(id){
                 var column = items_table.column(id);
 
