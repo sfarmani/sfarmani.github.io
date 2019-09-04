@@ -223,11 +223,11 @@ $(function () {
             console.log(selectedColumns.includes(e.params.data.id));
             if (selectedColumns.includes(e.params.data.id)){
                 selectedColumns = selectedColumns - [e.params.data.id];
-                localStorage.setItem(JSON.stringify(selectedColumns));
+                localStorage.setItem("items_columns", JSON.stringify(selectedColumns));
             }
             else{
                 selectedColumns.push(e.params.data.id);
-                localStorage.setItem(JSON.stringify(selectedColumns));
+                localStorage.setItem("items_columns", JSON.stringify(selectedColumns));
             }
         });
     });
