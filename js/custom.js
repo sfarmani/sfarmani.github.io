@@ -211,7 +211,7 @@ $(function () {
             actionsBox: true
         });
 
-        $('.items-select').on('click', function(){
+        $('.items-select').on('click keyup change', function(){
             alert($(this).val());
         });
     });
