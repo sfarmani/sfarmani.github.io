@@ -183,10 +183,10 @@ $(function () {
         var item_column_names = items_table.columns().header().toArray().map(x => x.innerText);
         var results = [];
         item_column_names.forEach(function (column_name, index) {
-            var selected = JSON.parse(localStorage.getItem("items_columns"));
+            var selected = JSON.parse(localStorage.getItem("items_columns")).includes(parseInt(index));
             var column = items_table.column(index);
-            results.push({"id": index, "text": column_name, "selected": selected.includes(index)});
-            column.visible(selected.includes(index));
+            results.push({ "id": index, "text": column_name, "selected": selected});
+            column.visible(selected);
         });
 
         $('select.items-select').select2(
