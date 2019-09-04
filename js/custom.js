@@ -218,6 +218,9 @@ $(function () {
             var column = items_table.column(e.params.data.id);
             column.visible(!column.visible());
             var selectedColumns = JSON.parse(localStorage.getItem("items_columns"));
+            console.log(selectedColumns);
+            console.log(e.params.data.id);
+            console.log(selectedColumns.includes(e.params.data.id));
             if (selectedColumns.includes(e.params.data.id)){
                 selectedColumns = selectedColumns - [e.params.data.id];
                 localStorage.setItem(JSON.stringify(selectedColumns));
