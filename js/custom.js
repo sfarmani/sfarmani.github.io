@@ -1,6 +1,6 @@
 // Load different parts of the pages
 $(function () {
-    $.fn.selectpicker.Constructor.BootstrapVersion = '4';
+    // $.fn.selectpicker.Constructor.BootstrapVersion = '4';
     var trolls = ['[HEALED]', '[Air]'];
     var possibleStats =
         [
