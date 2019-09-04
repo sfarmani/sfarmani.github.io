@@ -182,7 +182,9 @@ $(function () {
         var results = [];
         item_column_names.forEach(function (column_name, index) {
             var selected = JSON.parse(localStorage.getItem("items_columns"));
+            var column = items_table.column(index);
             results.push({"id": index, "text": column_name, "selected": selected.includes(index)});
+            column.visible(selected.includes(index));
         });
 
         $('select.items-select').select2(
