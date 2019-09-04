@@ -214,9 +214,12 @@ $(function () {
         $('.items-select').on('click keyup change', function(e){
             e.preventDefault();
 
-            var column = items_table.column($(this).attr('value'));
+            var values = $(this).val().split(',');
+            values.forEach(function(id){
+                var column = items_table.column(id);
 
-            column.visible(!column.visible());
+                column.visible(!column.visible());
+            });
         });
     });
 });
