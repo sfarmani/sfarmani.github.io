@@ -8,7 +8,7 @@
     },
     {
         "command": "changelog",
-        "usage": "-changelog [version number and letter] or by itself will give you the latest version",
+        "usage": "-changelog [version number and letter] or by itself will give you the latest version<br>-changelog [version number] will give you ALL changes within that version number (e.g. -changelog 24 will give you 24a through 24s)",
         "desc": "Displays the changelog in a direct message (since message can be very long)",
         "aliases": "ch",
         "cooldown": 3
