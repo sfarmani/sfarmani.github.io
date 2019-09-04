@@ -215,16 +215,15 @@ $(function () {
         });
 
         //// toggle columns from the dropdown menu ////
-        $('select.items-select').on('select2:select', function (e) {
-            console.log('selected:');
-            console.log(e.params.data.id);
-            console.log(e.params.data.text);
-        });
+        // $('select.items-select').on('select2:select', function (e) {
+        //     console.log('selected:');
+        //     console.log(e.params.data.id);
+        //     console.log(e.params.data.text);
+        // });
 
-        $('select.items-select').on('select2:unselect', function (e) {
-            console.log('unselected:');
-            console.log(e.params.data.id);
-            console.log(e.params.data.text);
+        $('select.items-select').on('select2:unselect select2:select', function (e) {
+            var column = items_table.column(e.params.data.id);
+            column.visible(!column.visible());
         });
 
         // $('select.items-select').on('change click', function(){
