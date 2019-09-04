@@ -211,16 +211,13 @@ $(function () {
             actionsBox: true
         });
 
-        $('.items-select').on('change', function(){
+        $('select.items-select').on('change', function(){
 
-            var values = $(this).val();
-            console.log($(this).val());
-            console.log(jQuery.type($(this).val()));
-            // values.forEach(function(id){
-            //     var column = items_table.column(id);
+            $(this).val().forEach(function(id){
+                var column = items_table.column(id);
 
-            //     column.visible(!column.visible());
-            // });
+                column.visible(!column.visible());
+            });
         });
     });
 });
