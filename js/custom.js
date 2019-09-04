@@ -1,6 +1,8 @@
 // Load different parts of the pages
 $(function () {
-    // $.fn.selectpicker.Constructor.BootstrapVersion = '4';
+    if (localStorage.getItem("items_columns") === null){
+        localStorage.setItem("items_columns", JSON.stringify([0, 2, 3, 6, 7, 8, 10]));
+    }
     var trolls = ['[HEALED]', '[Air]'];
     var possibleStats =
         [
@@ -179,15 +181,10 @@ $(function () {
         var item_column_names = items_table.columns().header().toArray().map(x => x.innerText);
         var results = [];
         item_column_names.forEach(function (column_name, index) {
-            results.push({"id": index, "text": column_name, "selected": true});
+            var selected = JSON.parse(localStorage.getItem("items_columns"));
+            results.push({"id": index, "text": column_name, "selected": selected.includes(index)});
         });
 
-        // console.log(item_column_names);
-        // item_column_names.forEach(function (column_name) {
-        //     var column_id = items_table.columns().header().toArray().map(x => x.innerText).indexOf(column_name);
-        //     $('select.items-select').append("<option value='" + column_id + "' selected>" + column_name + "</option>");
-        //     items_table.column(column_id).visible(true);
-        // });
         $('select.items-select').select2(
             {
                 theme: "classic",
@@ -215,31 +212,19 @@ $(function () {
         });
 
         //// toggle columns from the dropdown menu ////
-        // $('select.items-select').on('select2:select', function (e) {
-        //     console.log('selected:');
-        //     console.log(e.params.data.id);
-        //     console.log(e.params.data.text);
-        // });
-
-        $('select.items-select').on('select2:unselect select2:select', function (e) {
+        $('select.items-select').on('select2:select select2:unselect', function (e) {
             var column = items_table.column(e.params.data.id);
             column.visible(!column.visible());
+            var selectedColumns = JSON.parse(localStorage.getItem("items_columns"));
+            if (selectedColumns.includes(e.params.data.id)){
+                selectedColumns = selectedColumns - [e.params.data.id];
+                localStorage.setItem(JSON.stringify(selectedColumns));
+            }
+            else{
+                selectedColumns.push(e.params.data.id);
+                localStorage.setItem(JSON.stringify(selectedColumns));
+            }
         });
-
-        // $('select.items-select').on('change click', function(){
-
-        //     console.log($(this).select2('data'));
-
-            // console.log($(this).val());
-
-            // $(this).val().forEach(function(id){
-            //     var column = items_table.column(id);
-            //     console.log(id);
-
-            //     column.visible(!column.visible());
-            // });
-        // });
-
     });
 });
 
