@@ -51,6 +51,7 @@ $(function () {
             data: json,
             dom: dom,
             orderCellsTop: false,
+            scrollX: 20,
             // fixedHeader: true,
             // colReorder: true,
             columns: [
