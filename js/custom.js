@@ -2,7 +2,7 @@
 $(function () {
     // localStorage.clear();
     if ([null, "null"].includes(localStorage.getItem("items_columns"))){
-        localStorage.setItem("items_columns", JSON.stringify([0, 2, 3, 6, 7, 8, 10]));
+        localStorage.setItem("items_columns", JSON.stringify([1, 3, 4, 5, 6, 7, 11]));
     }
     var trolls = ['[HEALED]', '[Air]'];
     var possibleStats =
@@ -46,13 +46,21 @@ $(function () {
             orderCellsTop: false,
             fixedHeader: true,
             columns: [
-                { data: "name", title: "Name", 
+                { data: "level", title: "Level",
+                    render: function(data){
+                        return `<span style="color: #ffff00">Lv. ${data}</span>`;
+                    }
+                },
+                { data: "name", title: "Name",
                     render: function(data, type, row){
                         return `<span style="color: #${toHex(row.color)}">${data}</span>`;
                     }
                 },
-                // { data: "color", title: "Color", defaultContent: "<i>none</i>", visible: false },
-                { data: "koreanname", title: "Korean Name", defaultContent: "<i>none</i>" },
+                { data: "koreanname", title: "Korean Name",
+                    render: function(data, type, row){
+                        return `<span style="color: #${toHex(row.color)}">${data}</span>`;
+                    }
+                },
                 { data: "droprate", title: "Drop Rate",
                     render: function (data) {
                         if (!data) return "<i>none</i>";
@@ -68,7 +76,11 @@ $(function () {
                         return str.join('<br>');
                     } 
                 },
-                { data: "type", title: "Item Type" },
+                { data: "type", title: "Item Type", 
+                    render: function(data){
+                        return `<span style="color: #fff">${data}</span>`;
+                    }
+                },
                 { data: "dropped_by", title: "Dropped By",
                     render: function (data) {
                         if (!data) return "<i>none</i>";
@@ -95,36 +107,36 @@ $(function () {
                                     if (isFloat(val)) val = Math.round(val * 10000) / 100;
                                 }
                             }
-                            if (stat == 'damage') str.push(`${plusminus}${val} Damage`);
-                            if (stat == 'armor') str.push(`${plusminus}${val} Armor`);
-                            if (stat == 'mainstat') str.push(`${plusminus}${val} Main Stat`);
-                            if (stat == 'allstat') str.push(`${plusminus}${val} All Stats`);
-                            if (stat == 'strength') str.push(`${plusminus}${val} STR`);
-                            if (stat == 'agility') str.push(`${plusminus}${val} AGI`);
-                            if (stat == 'intelligence') str.push(`${plusminus}${val} INT`);
-                            if (stat == 'hp') str.push(`${plusminus}${val} HP`);
-                            if (stat == 'mp') str.push(`${plusminus}${val} MP`);
-                            if (stat == 'attackspeedpercent') str.push(`${plusminus}${val}% Attack Speed`);
-                            if (stat == 'movespeed') str.push(`${plusminus}${val} Movement Speed`);
-                            if (stat == 'movespeedpercent') str.push(`${plusminus}${val}% Movement Speed`);
-                            if (stat == 'dodgechancepercent') str.push(`${plusminus}${val}% Dodge Chance`);
-                            if (stat == 'skilldamagepercent') str.push(`${plusminus}${val}% Skill Damage`);
-                            if (stat == 'critchancepercent') str.push(`${plusminus}${val}% Crit Chance`);
-                            if (stat == 'critmultiplier') str.push(`${plusminus}${val}x Crit Multiplier`);
-                            if (stat == 'periodicdamagepercent') str.push(`${plusminus}${val}% Periodic Damage`);
-                            if (stat == 'mdpercent') str.push(`${plusminus}${val}% Magic Defense`);
-                            if (stat == 'drpercent') str.push(`${plusminus}${val}% Damage Reduction`);
-                            if (stat == 'dtpercent') str.push(`${plusminus}${val}% Damage Taken`);
-                            if (stat == 'healingpercent') str.push(`${plusminus}${val}% Healing`);
-                            if (stat == 'healreceivedpercent') str.push(`${plusminus}${val}% Healing Received`);
-                            if (stat == 'hpregen') str.push(`${plusminus}${val} HP regen`);
-                            if (stat == 'mpregen') str.push(`${plusminus}${val} MP regen`);
-                            if (stat == 'affinityiwpercent') str.push(`${plusminus}${val}% Ice/Water Affinity`);
-                            if (stat == 'affinityflamepercent') str.push(`${plusminus}${val}% Flame Affinity`);
-                            if (stat == 'affinityearthpercent') str.push(`${plusminus}${val}% Earth Affinity`);
-                            if (stat == 'affinitywlpercent') str.push(`${plusminus}${val}% Wind/Lightning Affinity`);
-                            if (stat == 'expreceivedpercent') str.push(`${plusminus}${val}% EXP Received`);
-                            if (stat == 'revivaltimepercent') str.push(`${plusminus}${val}% Revival Time`);
+                            if (stat == 'damage') str.push(`<span style="color: #ff8c00">${plusminus}${val} Damage</span>`);
+                            if (stat == 'armor') str.push(`<span style="color: #ff8c00">${plusminus}${val} Armor</span>`);
+                            if (stat == 'mainstat') str.push(`<span style="color: #ff8c00">${plusminus}${val} Main Stat</span>`);
+                            if (stat == 'allstat') str.push(`<span style="color: #ff8c00">${plusminus}${val} All Stats</span>`);
+                            if (stat == 'strength') str.push(`<span style="color: #ff8c00">${plusminus}${val} STR</span>`);
+                            if (stat == 'agility') str.push(`<span style="color: #ff8c00">${plusminus}${val} AGI</span>`);
+                            if (stat == 'intelligence') str.push(`<span style="color: #ff8c00">${plusminus}${val} INT</span>`);
+                            if (stat == 'hp') str.push(`<span style="color: #ff8c00">${plusminus}${val} HP</span>`);
+                            if (stat == 'mp') str.push(`<span style="color: #ff8c00">${plusminus}${val} MP</span>`);
+                            if (stat == 'attackspeedpercent') str.push(`<span style="color: #ff8c00">${plusminus}${val}% Attack Speed</span>`);
+                            if (stat == 'movespeed') str.push(`<span style="color: #ff8c00">${plusminus}${val} Movement Speed</span>`);
+                            if (stat == 'movespeedpercent') str.push(`<span style="color: #ff8c00">${plusminus}${val}% Movement Speed</span>`);
+                            if (stat == 'dodgechancepercent') str.push(`<span style="color: #40e0d0">${plusminus}${val}% Dodge Chance</span>`);
+                            if (stat == 'skilldamagepercent') str.push(`<span style="color: #40e0d0">${plusminus}${val}% Skill Damage</span>`);
+                            if (stat == 'critchancepercent') str.push(`<span style="color: #40e0d0">${plusminus}${val}% Crit Chance</span>`);
+                            if (stat == 'critmultiplier') str.push(`<span style="color: #40e0d0">${plusminus}${val}x Crit Multiplier</span>`);
+                            if (stat == 'periodicdamagepercent') str.push(`<span style="color: #ff1493">${plusminus}${val}% Periodic Damage</span>`);
+                            if (stat == 'mdpercent') str.push(`<span style="color: #40e0d0">${plusminus}${val}% Magic Defense</span>`);
+                            if (stat == 'drpercent') str.push(`<span style="color: #40e0d0">${plusminus}${val}% Damage Reduction</span>`);
+                            if (stat == 'dtpercent') str.push(`<span style="color: #40e0d0">${plusminus}${val}% Damage Taken</span>`);
+                            if (stat == 'healingpercent') str.push(`<span style="color: #ff8c00">${plusminus}${val}% Healing</span>`);
+                            if (stat == 'healreceivedpercent') str.push(`<span style="color: #ff1493">${plusminus}${val}% Healing Received</span>`);
+                            if (stat == 'hpregen') str.push(`<span style="color: #40e0d0">${plusminus}${val} HP regen</span>`);
+                            if (stat == 'mpregen') str.push(`<span style="color: #40e0d0">${plusminus}${val} MP regen</span>`);
+                            if (stat == 'affinityiwpercent') str.push(`<span style="color: #bae0fc">${plusminus}${val}% Ice/Water Affinity</span>`);
+                            if (stat == 'affinityflamepercent') str.push(`<span style="color: #f8ae9c">${plusminus}${val}% Flame Affinity</span>`);
+                            if (stat == 'affinityearthpercent') str.push(`<span style="color: #dfbf9f">${plusminus}${val}% Earth Affinity</span>`);
+                            if (stat == 'affinitywlpercent') str.push(`<span style="color: #b5fbba">${plusminus}${val}% Wind/Lightning Affinity</span>`);
+                            if (stat == 'expreceivedpercent') str.push(`<span style="color: #40e0d0">${plusminus}${val}% EXP Received</span>`);
+                            if (stat == 'revivaltimepercent') str.push(`<span style="color: #40e0d0">${plusminus}${val}% Revival Time</span>`);
                         });
                         return str.join('<br>');
                     }
@@ -134,7 +146,7 @@ $(function () {
                         if (!data) return "<i>none</i>";
                         let str = [];
                         data.forEach(function (ps) {
-                            str.push(ps);
+                            str.push(`<span style="color: #40e0d0">${ps}</span>`);
                         });
                         return str.join("<br>");
                     }
@@ -144,7 +156,7 @@ $(function () {
                         if (!data) return "<i>none</i>";
                         let str = [];
                         data.forEach(function (as) {
-                            str.push(as);
+                            str.push(`<span style="color: #40e0d0">${as}</span>`);
                         });
                         return str.join("<br>");
                     }
