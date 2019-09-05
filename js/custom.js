@@ -202,6 +202,12 @@ $(function () {
                         if (!data) return "<i>none</i>";
                         return data.join("<br>");
                     }
+                },
+                { data: "notes", title: "Notes", 
+                    render: function (data) {
+                        if (!data) return "<i>none</i>";
+                        return data.join("<br>");
+                    }
                 }
             ]
         });
