@@ -53,7 +53,6 @@ $(function () {
             dom: dom,
             orderCellsTop: false,
             processing: true,
-            deferRender: true,
             // fixedHeader: true,
             // colReorder: true,
             columns: [
@@ -222,6 +221,8 @@ $(function () {
                 }
             ]
         });
+
+        jQuery('.load_message').toggle();
 
         //// Get column names. ////
         var item_column_names = items_table.columns().header().toArray().map(x => x.innerText);
