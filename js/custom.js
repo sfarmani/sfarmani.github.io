@@ -27,6 +27,7 @@ $(function () {
         $('#commands').DataTable({
             responsive: true,
             language: { search: "Quick Search:" },
+            colReorder: true,
             data: json,
             dom: dom,
             columns: [
@@ -51,6 +52,7 @@ $(function () {
             dom: dom,
             orderCellsTop: false,
             fixedHeader: true,
+            colReorder: true,
             columns: [
                 { data: "level", title: "Level",
                     render: function(data){
