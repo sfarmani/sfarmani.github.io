@@ -46,7 +46,12 @@ $(function () {
             orderCellsTop: false,
             fixedHeader: true,
             columns: [
-                { data: "name", title: "Name" },
+                { data: "name", title: "Name", 
+                    render: function(data, type, row){
+                        return `<span style="color: #${toHex(row.color)}">${data}</span>`;
+                    }
+                },
+                // { data: "color", title: "Color", defaultContent: "<i>none</i>", visible: false },
                 { data: "koreanname", title: "Korean Name", defaultContent: "<i>none</i>" },
                 { data: "droprate", title: "Drop Rate",
                     render: function (data) {
@@ -250,4 +255,10 @@ function diff(arr1, arr2) {
         }
     }
     return ret;
+}
+
+function toHex(code) {
+    let color = code.toString(16).padStart(6, 0);
+    if (code == 16777215) color = 'BF4000'
+    return color;
 }
