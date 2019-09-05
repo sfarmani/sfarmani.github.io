@@ -200,7 +200,7 @@ $(function () {
                                 str.push(`${Object.keys(rec)} ${count}`);
                             }
                         });
-                        return str.join(" + ");
+                        return str.join(" <span style='color: #fff'>+</span> ");
                     }
                 },
                 { data: "drops", title: "Drops", 
