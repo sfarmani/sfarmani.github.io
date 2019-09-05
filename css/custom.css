@@ -72,3 +72,7 @@ input.select2-search__field{
 .brows-static:hover{
     opacity: 0;
 }
+
+.rocklee{
+    display: -webkit-inline-box;
+}
