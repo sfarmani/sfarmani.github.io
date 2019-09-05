@@ -62,6 +62,7 @@ $(function () {
                 },
                 { data: "name", title: "Name",
                     render: function(data, type, row){
+                        if (data == "Bag") console.log(json);
                         return `<span style="color: #${toHex(row.color)}">${data}</span>`;
                     }
                 },
