@@ -198,7 +198,7 @@ $(function () {
                                 str.push(`<b><u><span style="color: #${toHex(color0)}">${Object.keys(rec)[0]}</span><span style="color: #fff">/</span><span style="color: #${toHex(color1)}">${Object.keys(rec)[1]}</span></u></b>`);
                             }
                             else {
-                                let count = rec[Object.keys(rec)] > 1 ? ` <span style="color: #fff>x</span><span style="color: #ff8c00">${rec[Object.keys(rec)]}</span>` : '';
+                                let count = rec[Object.keys(rec)] > 1 ? ` <span style="color: #fff">x</span><span style="color: #ff8c00">${rec[Object.keys(rec)]}</span>` : '';
                                 let color = json.filter(x => x.name == Object.keys(rec))[0].color
                                 str.push(`<span style="color: #${toHex(color)}">${Object.keys(rec)}</span>${count}`);
                             }
