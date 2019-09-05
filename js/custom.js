@@ -46,7 +46,7 @@ $(function () {
         var items_table = $('#items').DataTable({
             responsive: true,
             columnDefs: [
-                { targets: '_all', defaultContent: "<i>none</i>", width: "10%" }
+                { targets: '_all', defaultContent: "<i style='color: #5a7da0'>none</i>", width: "10%" }
             ],
             language: { search: "Quick Search:" },
             data: json,
@@ -72,15 +72,15 @@ $(function () {
                 },
                 { data: "droprate", title: "Drop Rate",
                     render: function (data) {
-                        if (!data) return "<i>none</i>";
+                        if (!data) return "<i style='color: #5a7da0'>none</i>";
                         let str = [];
                         if (Array.isArray(data)) {
                             data.forEach(function(droprate){
-                                str.push((Math.round(droprate * 10000) / 100) + "%");
+                                str.push(`<span style="color: #4e9396">${(Math.round(droprate * 10000) / 100)}%</span>`);
                             });
                         }
                         else {
-                            str.push((Math.round(data * 10000) / 100) + "%");
+                            str.push(`<span style="color: #4e9396">${(Math.round(data * 10000) / 100)}%</span>`);
                         }
                         return str.join('<br>');
                     } 
@@ -92,20 +92,20 @@ $(function () {
                 },
                 { data: "dropped_by", title: "Dropped By",
                     render: function (data) {
-                        if (!data) return "<i>none</i>";
+                        if (!data) return "<i style='color: #5a7da0'>none</i>";
                         return data.join("<br>");
                     }
                 },
                 { data: "required_by", title: "Used In",
                     render: function (data) {
-                        if (!data) return "<i>none</i>";
+                        if (!data) return "<i style='color: #5a7da0'>none</i>";
                         return data.join(" / ");
                     }
                 },
                 { data: "stats", title: "Stats",
                     render: function (data) {
-                        if (!data) return "<i>none</i>";
-                        if (diff(possibleStats, Object.keys(data)).length <= 0) return "<i>none</i>";
+                        if (!data) return "<i style='color: #5a7da0'>none</i>";
+                        if (diff(possibleStats, Object.keys(data)).length <= 0) return "<i style='color: #5a7da0'>none</i>";
                         let str = [];
                         Object.keys(data).forEach(function (stat) {
                             let val = data[stat];
@@ -152,7 +152,7 @@ $(function () {
                 },
                 { data: "stats.passive", title: "Passive",
                     render: function (data) {
-                        if (!data) return "<i>none</i>";
+                        if (!data) return "<i style='color: #5a7da0'>none</i>";
                         let str = [];
                         data.forEach(function (ps) {
                             str.push(`<span style="color: #40e0d0">${ps}</span>`);
@@ -162,7 +162,7 @@ $(function () {
                 },
                 { data: "stats.active", title: "Active",
                     render: function (data) {
-                        if (!data) return "<i>none</i>";
+                        if (!data) return "<i style='color: #5a7da0'>none</i>";
                         let str = [];
                         data.forEach(function (as) {
                             str.push(`<span style="color: #40e0d0">${as}</span>`);
@@ -172,7 +172,7 @@ $(function () {
                 },
                 { data: "stats.spec", title: "Character Specialties",
                     render: function (data) {
-                        if (!data) return "<i>none</i>";
+                        if (!data) return "<i style='color: #5a7da0'>none</i>";
                         let str = [];
                         data.forEach(function (ss, index) {
                             if (index == 0) { return; }
@@ -189,7 +189,7 @@ $(function () {
                 },
                 { data: "recipe", title: "Recipe",
                     render: function (data) {
-                        if (!data) return "<i>none</i>";
+                        if (!data) return "<i style='color: #5a7da0'>none</i>";
                         let str = [];
                         data.forEach(function (rec) {
                             if (Object.keys(rec).length > 1) {
@@ -205,13 +205,13 @@ $(function () {
                 },
                 { data: "drops", title: "Drops", 
                     render: function (data) {
-                        if (!data) return "<i>none</i>";
+                        if (!data) return "<i style='color: #5a7da0'>none</i>";
                         return data.join("<br>");
                     }
                 },
                 { data: "notes", title: "Notes", 
                     render: function (data) {
-                        if (!data) return "<i>none</i>";
+                        if (!data) return "<i style='color: #5a7da0'>none</i>";
                         return data.join("<br>");
                     }
                 }
