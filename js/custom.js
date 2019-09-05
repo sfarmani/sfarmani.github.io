@@ -62,7 +62,6 @@ $(function () {
                 },
                 { data: "name", title: "Name",
                     render: function(data, type, row){
-                        if (data == "Bag") console.log(json);
                         return `<span style="color: #${toHex(row.color)}">${data}</span>`;
                     }
                 },
@@ -194,11 +193,14 @@ $(function () {
                         let str = [];
                         data.forEach(function (rec) {
                             if (Object.keys(rec).length > 1) {
-                                str.push(`<b><u>${Object.keys(rec)[0]}/${Object.keys(rec)[1]}</u></b>`);
+                                let color0 = json.filter(x => x.name == Object.keys(rec)[0])[0].color
+                                let color1 = json.filter(x => x.name == Object.keys(rec)[1])[0].color
+                                str.push(`<b><u><span style="color: #${toHex(color0)}">${Object.keys(rec)[0]}</span><span style="color: #fff">/</span><span style="color: #${toHex(color1)}">${Object.keys(rec)[1]}</span></u></b>`);
                             }
                             else {
-                                let count = rec[Object.keys(rec)] > 1 ? `x${rec[Object.keys(rec)]}` : '';
-                                str.push(`${Object.keys(rec)} ${count}`);
+                                let count = rec[Object.keys(rec)] > 1 ? ` <span style="color: #fff>x</span><span style="color: #ff8c00">${rec[Object.keys(rec)]}</span>` : '';
+                                let color = json.filter(x => x.name == Object.keys(rec))[0].color
+                                str.push(`<span style="color: #${toHex(color)}">${Object.keys(rec)}</span>${count}`);
                             }
                         });
                         return str.join(" <span style='color: #fff'>+</span> ");
