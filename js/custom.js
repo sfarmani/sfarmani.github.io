@@ -196,6 +196,12 @@ $(function () {
                         });
                         return str.join(" + ");
                     }
+                },
+                { data: "drops", title: "Drops", 
+                    render: function (data) {
+                        if (!data) return "<i>none</i>";
+                        return data.join("<br>");
+                    }
                 }
             ]
         });
