@@ -76,3 +76,7 @@ input.select2-search__field{
 .rocklee{
     display: -webkit-inline-box;
 }
+
+.banner{
+    border-radius: 3px;
+}
