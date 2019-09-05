@@ -27,7 +27,8 @@ $(function () {
     $.getJSON("json/commands.json", function (json) {
         $('#commands').DataTable({
             responsive: true,
-            language: { search: "Quick Search:" },
+            language: { search: "Quick Search:", processing: "Loading Commands..." },
+            processing: true,
             // colReorder: true,
             data: json,
             dom: dom,
@@ -48,10 +49,11 @@ $(function () {
             columnDefs: [
                 { targets: '_all', defaultContent: "<i style='color: #5a7da0'>none</i>", width: "10%" }
             ],
-            language: { search: "Quick Search:" },
+            language: { search: "Quick Search:", processing: "Loading Items..." },
             data: json,
             dom: dom,
             orderCellsTop: false,
+            processing: true,
             // fixedHeader: true,
             // colReorder: true,
             columns: [
