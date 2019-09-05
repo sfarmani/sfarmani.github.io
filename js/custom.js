@@ -22,6 +22,7 @@ $(function () {
     $('#load_sidebar').load('sidebar.html');
     $('#load_banner').load('banner.html');
     $('#load_footer').load('footer.html');
+    $('#load_scripts').load('load_scripts.html');
     $.getJSON("json/commands.json", function (json) {
         $('#commands').DataTable({
             responsive: true,
