@@ -41,6 +41,7 @@ $(function () {
 
         var items_table = $('#items').DataTable({
             responsive: true,
+            language: {search: "Quick Search:"},
             data: json,
             dom: dom,
             orderCellsTop: false,
