@@ -26,6 +26,7 @@ $(function () {
     $.getJSON("json/commands.json", function (json) {
         $('#commands').DataTable({
             responsive: true,
+            language: { search: "Quick Search:" },
             data: json,
             dom: dom,
             columns: [
@@ -42,7 +43,7 @@ $(function () {
 
         var items_table = $('#items').DataTable({
             responsive: true,
-            language: {search: "Quick Search:"},
+            language: { search: "Quick Search:" },
             data: json,
             dom: dom,
             orderCellsTop: false,
