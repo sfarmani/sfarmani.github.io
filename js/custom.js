@@ -43,6 +43,9 @@ $(function () {
 
         var items_table = $('#items').DataTable({
             responsive: true,
+            columnDefs: [
+                { targets: '_all', defaultContent: "<i>none</i>", width: "25%" }
+            ],
             language: { search: "Quick Search:" },
             data: json,
             dom: dom,
