@@ -51,7 +51,7 @@ $(function () {
             data: json,
             dom: dom,
             orderCellsTop: false,
-            fixedHeader: true,
+            // fixedHeader: true,
             // colReorder: true,
             columns: [
                 { data: "level", title: "Level",
