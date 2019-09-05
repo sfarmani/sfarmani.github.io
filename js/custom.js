@@ -300,6 +300,6 @@ function diff(arr1, arr2) {
 
 function toHex(code) {
     let color = code.toString(16).padStart(6, 0);
-    if (code == 16777215) color = 'BF4000'
+    if (code == 16777215) color = 'fff'
     return color;
 }
