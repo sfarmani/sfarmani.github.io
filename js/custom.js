@@ -234,6 +234,7 @@ $(function () {
             results.push({ "id": index, "text": column_name, "selected": selected});
             column.visible(selected);
         });
+        items_table.columns.adjust().draw(false);
 
         //// create select2 ////
         $('select.items-select').select2(
@@ -271,6 +272,7 @@ $(function () {
                 selectedColumns.push(column_id);
                 localStorage.setItem("items_columns", JSON.stringify(selectedColumns));
             }
+            items_table.columns.adjust().draw(false);
         });
     });
 });
