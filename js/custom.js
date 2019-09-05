@@ -96,7 +96,7 @@ $(function () {
                         return data.join(" / ");
                     }
                 },
-                { data: "stats", title: "Stats", width: "10%",
+                { data: "stats", title: "Stats",
                     render: function (data) {
                         if (!data) return "<i>none</i>";
                         if (diff(possibleStats, Object.keys(data)).length <= 0) return "<i>none</i>";
@@ -144,7 +144,7 @@ $(function () {
                         return str.join('<br>');
                     }
                 },
-                { data: "stats.passive", title: "Passive", width: "20%",
+                { data: "stats.passive", title: "Passive",
                     render: function (data) {
                         if (!data) return "<i>none</i>";
                         let str = [];
@@ -154,7 +154,7 @@ $(function () {
                         return str.join("<br>");
                     }
                 },
-                { data: "stats.active", title: "Active", width: "20%",
+                { data: "stats.active", title: "Active",
                     render: function (data) {
                         if (!data) return "<i>none</i>";
                         let str = [];
@@ -164,7 +164,7 @@ $(function () {
                         return str.join("<br>");
                     }
                 },
-                { data: "stats.spec", title: "Character Specialties", width: "20%",
+                { data: "stats.spec", title: "Character Specialties",
                     render: function (data) {
                         if (!data) return "<i>none</i>";
                         let str = [];
@@ -181,7 +181,7 @@ $(function () {
                         return str.join("<br>");
                     }
                 },
-                { data: "recipe", title: "Recipe", width: "20%",
+                { data: "recipe", title: "Recipe",
                     render: function (data) {
                         if (!data) return "<i>none</i>";
                         let str = [];
