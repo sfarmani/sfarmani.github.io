@@ -1,7 +1,6 @@
 // Load different parts of the pages
 $(function () {
     // localStorage.clear();
-    $.fn.DataTable.ext.pager.numbers_length = 6;
     if ([null, "null"].includes(localStorage.getItem("items_columns"))){
         localStorage.setItem("items_columns", JSON.stringify([1, 3, 4, 5, 6, 7, 11]));
     }
@@ -54,6 +53,7 @@ $(function () {
             dom: dom,
             orderCellsTop: false,
             processing: true,
+            deferRender: true,
             // fixedHeader: true,
             // colReorder: true,
             columns: [
