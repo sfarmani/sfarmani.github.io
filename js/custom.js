@@ -14,7 +14,7 @@ $(function () {
         ];
     var dom =
         "<'row'<'col-sm-4 col-md-2'i>>" +
-        "<'row'<'mr-3 ml-4'f><l><'col-sm-4 custom-md-8'p>>" +
+        "<'row'<'col-auto mr-3 ml-3'f><'col-md-1 mr-md-auto'l><'col-auto'p>>" +
         "<'row'<'col-sm-12'tr>>" +
         "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>";
     // var bullet = "∴";
