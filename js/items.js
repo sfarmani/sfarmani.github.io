@@ -42,6 +42,7 @@ $(function () {
             columns: [
                 { data: "level", title: "Level",
                     render: function(data){
+                        if (!data) return "<i style='color: #5a7da0'>none</i>";
                         return `<span style="color: #ffff00">Lv. ${data}</span>`;
                     }
                 },
