@@ -1,7 +1,7 @@
 // Load different parts of the pages
 $(function () {
-    let heroes_url = "https://raw.githubusercontent.com/sfarmani/twrpg-info/master/heros.json?token=ADTE3XDNMLR5GY4CZYYVQP25OHPSE"
-    let skills_url = "https://raw.githubusercontent.com/sfarmani/twrpg-info/master/skills.json?token=ADTE3XGMZXMB2YPLXYGSEQ25OHPSK"
+    let heroes_url = ""
+    let skills_url = ""
 
     var dom =
         "<'row'<'col-sm-4 col-md-2'i>>" +
