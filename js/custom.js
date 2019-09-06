@@ -1,5 +1,11 @@
 // Load different parts of the pages
 $(function () {
+
+    $.getJSON("https://raw.githubusercontent.com/sfarmani/twrpg-info/master/items.json?token=ADTE3XESJS2VZUYEM5JA5FC5OHOYG", function (json){
+        console.log("json from github");
+        console.log(json);
+    });
+
     // localStorage.clear();
     if ([null, "null"].includes(localStorage.getItem("items_columns"))){
         localStorage.setItem("items_columns", JSON.stringify([1, 3, 4, 5, 6, 7, 11]));
