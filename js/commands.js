@@ -10,34 +10,22 @@ $(function () {
     $('#load_sidebar').load('sidebar.html');
     $('#load_banner').load('banner.html');
     $('#load_footer').load('footer.html');
-
-    var commands_json = (function () {
-        var json = null;
-        $.ajax({
-            'async': false,
-            'global': false,
-            'url': 'json/commands.json',
-            'dataType': "json",
-            'success': function (data) {
-                json = data;
-            }
+    
+    $.getJSON("json/commands.json", function (json) {
+        $('#commands').DataTable({
+            responsive: true,
+            language: { search: "Quick Search:", processing: "Loading Commands..." },
+            processing: true,
+            // colReorder: true,
+            data: json,
+            dom: dom,
+            columns: [
+                { data: "command", title: "Command" },
+                { data: "usage", title: "Usage" },
+                { data: "desc", title: "Description" },
+                { data: "aliases", title: "Aliases" },
+                { data: "cooldown", title: "Cooldown" }
+            ]
         });
-        return json;
-    });
-
-    $('#commands').DataTable({
-        responsive: true,
-        language: { search: "Quick Search:", processing: "Loading Commands..." },
-        processing: true,
-        // colReorder: true,
-        data: commands_json,
-        dom: dom,
-        columns: [
-            { data: "command", title: "Command" },
-            { data: "usage", title: "Usage" },
-            { data: "desc", title: "Description" },
-            { data: "aliases", title: "Aliases" },
-            { data: "cooldown", title: "Cooldown" }
-        ]
     });
 });

@@ -12,33 +12,4 @@ $(function () {
     $('#load_sidebar').load('sidebar.html');
     $('#load_banner').load('banner.html');
     $('#load_footer').load('footer.html');
-
-    var heroes_json = (function () {
-        var json = null;
-        $.ajax({
-            'async': false,
-            'global': false,
-            'url': heroes_url,
-            'dataType': "json",
-            'success': function (data) {
-                json = data;
-            }
-        });
-        return json;
-    });
-    var skills_json = (function () {
-        var json = null;
-        $.ajax({
-            'async': false,
-            'global': false,
-            'url': skills_url,
-            'dataType': "json",
-            'success': function (data) {
-                json = data;
-            }
-        });
-        return json;
-    });
-
-    
 });
