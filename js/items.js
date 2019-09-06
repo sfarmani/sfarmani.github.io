@@ -1,6 +1,6 @@
 // Load different parts of the pages
 $(function () {
-    let items_url = "https://raw.githubusercontent.com/sfarmani/twrpg-info/master/items.json?token=ADTE3XESJS2VZUYEM5JA5FC5OHOYG"
+    let items_url = "json/items.json"
 
     // localStorage.clear();
     if ([null, "null"].includes(localStorage.getItem("items_columns"))){
@@ -23,7 +23,7 @@ $(function () {
     $('#load_sidebar').load('sidebar.html');
     $('#load_banner').load('banner.html');
     $('#load_footer').load('footer.html');
-    
+
     $.getJSON(items_url, function (json) {
         json = json.filter(x => !trolls.includes(x.type));
 
