@@ -1,7 +1,7 @@
 // Load different parts of the pages
 $(function () {
-    let heroes_url = ""
-    let skills_url = ""
+    let heroes_url = "";
+    let skills_url = "";
 
     var dom =
         "<'row'<'col-sm-4 col-md-2'i>>" +

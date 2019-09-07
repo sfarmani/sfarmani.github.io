@@ -1,6 +1,6 @@
 // Load different parts of the pages
 $(function () {
-    let items_url = "json/items.json"
+    let items_url = "json/items.json";
 
     // localStorage.clear();
     if ([null, "null"].includes(localStorage.getItem("items_columns"))){
