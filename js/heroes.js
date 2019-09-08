@@ -15,6 +15,8 @@ $(function () {
 
     $.getJSON(heroes_url, function (json) {
 
+        console.log(json);
+
         var heroes = [];
         var str = json.filter(x => x.mainstat == "STR");
         var agi = json.filter(x => x.mainstat == "AGI");
@@ -23,7 +25,8 @@ $(function () {
         $.merge(heroes, str);
         $.merge(heroes, agi);
         $.merge(heroes, int);
-        
+
+        console.log(str);
         console.log(heroes);
 
         data = [];
