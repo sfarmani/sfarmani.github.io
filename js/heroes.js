@@ -1,7 +1,8 @@
+var test = [];
 // Load different parts of the pages
 $(function () {
-    let heroes_url = "";
-    let skills_url = "";
+    let heroes_url = "json/heros.json";
+    let skills_url = "json/skills.json";
 
     var dom =
         "<'row'<'col-sm-4 col-md-2'i>>" +
@@ -12,4 +13,12 @@ $(function () {
     $('#load_sidebar').load('sidebar.html');
     $('#load_banner').load('banner.html');
     $('#load_footer').load('footer.html');
+
+
+    $.getJSON(heroes_url, heroVar);
+    console.log(test);
 });
+
+function heroVar(json){
+    test = json;
+}
