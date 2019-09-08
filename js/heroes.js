@@ -15,6 +15,7 @@ $(function () {
 
     $.getJSON(heroes_url, function (json) {
         heroes = _.groupBy(json, function(data){return data.mainstat});
+        console.log(heroes);
         // var heroes = [];
         // var str = json.filter(x => x.mainstat == "STR");
         // var agi = json.filter(x => x.mainstat == "AGI");
