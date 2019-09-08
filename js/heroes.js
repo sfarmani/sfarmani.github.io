@@ -1,4 +1,3 @@
-var test = [];
 // Load different parts of the pages
 $(function () {
     let heroes_url = "json/heros.json";
@@ -15,11 +14,16 @@ $(function () {
     $('#load_footer').load('footer.html');
 
 
-    $.getJSON(heroes_url, heroVar);
-    console.log("outside function: " + test);
-});
+    var heroes_json;
+    var skills_json;
 
-function heroVar(json){
-    test = json;
-    console.log("inside function: " + test);
-}
+    $.when($.getJSON(heroes_url)).done(function(json){
+        heroes_json = json;
+    });
+    $.when($.getJSON(skills_url)).done(function (json) {
+        skills_json = json;
+    });
+
+    
+    
+});
