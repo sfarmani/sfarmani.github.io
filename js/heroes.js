@@ -14,20 +14,17 @@ $(function () {
     $('#load_footer').load('footer.html');
 
     $.getJSON(heroes_url, function (json) {
+        heroes = _.groupBy(json, function(data){return data.mainstat});
+        // var heroes = [];
+        // var str = json.filter(x => x.mainstat == "STR");
+        // var agi = json.filter(x => x.mainstat == "AGI");
+        // var int = json.filter(x => x.mainstat == "INT");
 
-        console.log(json);
+        // $.merge(heroes, str);
+        // $.merge(heroes, agi);
+        // $.merge(heroes, int);
 
-        var heroes = [];
-        var str = json.filter(x => x.mainstat == "STR");
-        var agi = json.filter(x => x.mainstat == "AGI");
-        var int = json.filter(x => x.mainstat == "INT");
-
-        $.merge(heroes, str);
-        $.merge(heroes, agi);
-        $.merge(heroes, int);
-
-        console.log(str);
-        console.log(heroes);
+        // console.log(heroes);
 
         data = [];
         data.push({})
