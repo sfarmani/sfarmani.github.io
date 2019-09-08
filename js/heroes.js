@@ -16,9 +16,10 @@ $(function () {
 
 
     $.getJSON(heroes_url, heroVar);
-    console.log(test);
+    console.log("outside function: " + test);
 });
 
 function heroVar(json){
     test = json;
+    console.log("inside function: " + test);
 }
