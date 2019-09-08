@@ -15,26 +15,19 @@ $(function () {
 
     $.getJSON(heroes_url, function (json) {
         heroes = _.groupBy(json, function(data){return data.mainstat});
-        console.log(heroes);
-        // var heroes = [];
-        // var str = json.filter(x => x.mainstat == "STR");
-        // var agi = json.filter(x => x.mainstat == "AGI");
-        // var int = json.filter(x => x.mainstat == "INT");
-
-        // $.merge(heroes, str);
-        // $.merge(heroes, agi);
-        // $.merge(heroes, int);
-
-        // console.log(heroes);
 
         data = [];
-        data.push({})
-        str.forEach(function(hero, index){
-            data.push({"id": index, "text": hero.name});
+        heroes.forEach(function(mainstat, index){
+            children = [];
+            mainstat.forEach(function(hero, index){
+                children.push({"id": index, "text": hero.heroClass});
+            });
+            data.push({"text": Object.keys(mainstat)[index]});
         });
+        console.log(data);
 
         //// create select2 ////
-        $('select.items-select').select2(
+        $('select.hero-select').select2(
             {
                 theme: "classic",
                 data: data,
