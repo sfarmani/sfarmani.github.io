@@ -266,6 +266,10 @@ $(function () {
             }
             items_table.columns.adjust().draw(false);
         });
+
+        jQuery('.refreshColumns').on('click', function () {
+            items_table.columns.adjust().draw(false);
+        });
     });
 });
 

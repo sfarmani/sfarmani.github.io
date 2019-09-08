@@ -13,16 +13,12 @@ $(function () {
     $('#load_banner').load('banner.html');
     $('#load_footer').load('footer.html');
 
-
-    var heroes_json;
-    var skills_json;
-
-    $.when($.getJSON(heroes_url)).done(function(json){
-        heroes_json = json;
-    });
-    $.when($.getJSON(skills_url)).done(function (json) {
-        skills_json = json;
+    $.getJSON(heroes_url, function (json) {
+        
     });
 
+    $.getJSON(skills_url, function (json) {
+
+    });
     
 });
