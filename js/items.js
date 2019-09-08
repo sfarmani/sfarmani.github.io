@@ -219,11 +219,11 @@ $(function () {
         });
 
         //// Create an array of objects to insert into select2 ////
-        var results = [];
+        var data = [];
         item_column_names.forEach(function (column_name, index) {
             var selected = JSON.parse(localStorage.getItem("items_columns")).includes(parseInt(index));
             var column = items_table.column(index);
-            results.push({ "id": index, "text": column_name, "selected": selected});
+            data.push({ "id": index, "text": column_name, "selected": selected});
             column.visible(selected);
         });
         items_table.columns.adjust().draw(false);
@@ -232,11 +232,12 @@ $(function () {
         $('select.items-select').select2(
             {
                 theme: "classic",
-                data: results,
+                data: data,
                 width: "50%",
                 placeholder: "Select columns to toggle",
                 closeOnSelect: false
-            });
+            }
+        );
 
         //// enabling searching for individual columns ////
         items_table.columns().every(function () {
