@@ -18,7 +18,7 @@ $(function () {
         var heroes = _.groupBy(json, "mainstat");
         
         data = [];
-        Object.keys(heroes).forEach(function(mainstat){
+        ["STR", "AGI", "INT"].forEach(function(mainstat){
             children = [];
             heroes[mainstat].forEach(function (hero, index) {
                 children.push({ "id": index, "text": hero.heroClass });
@@ -33,7 +33,10 @@ $(function () {
                 theme: "default",
                 data: data,
                 width: "50%",
-                placeholder: "Select a Hero",
+                placeholder: {
+                    id: "-1",
+                    text: "Select a Hero"
+                },
                 allowClear: true
             }
         );

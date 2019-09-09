@@ -234,10 +234,7 @@ $(function () {
                 theme: "default",
                 data: data,
                 width: "50%",
-                placeholder: {
-                    id: "-1",
-                    text: "Select a Hero"
-                },
+                placeholder: "Select columns to toggle",
                 closeOnSelect: false
             }
         );
