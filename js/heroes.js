@@ -14,7 +14,7 @@ $(function () {
     $('#load_footer').load('footer.html');
 
     $.getJSON(heroes_url, function (json) {
-        json = sortByKeyDesc(json, "heroClass");
+        json = sortByKeyAsc(json, "heroClass");
         var heroes = _.groupBy(json, "mainstat");
         
         data = [];
@@ -49,5 +49,12 @@ function sortByKeyDesc(array, key) {
     return array.sort(function (a, b) {
         var x = a[key]; var y = b[key];
         return ((x > y) ? -1 : ((x < y) ? 1 : 0));
+    });
+}
+
+function sortByKeyAsc(array, key) {
+    return array.sort(function (a, b) {
+        var x = a[key]; var y = b[key];
+        return ((x < y) ? -1 : ((x > y) ? 1 : 0));
     });
 }

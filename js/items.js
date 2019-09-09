@@ -231,10 +231,13 @@ $(function () {
         //// create select2 ////
         $('select.items-select').select2(
             {
-                theme: "classic",
+                theme: "default",
                 data: data,
                 width: "50%",
-                placeholder: "Select columns to toggle",
+                placeholder: {
+                    id: "-1",
+                    text: "Select a Hero"
+                },
                 closeOnSelect: false
             }
         );
