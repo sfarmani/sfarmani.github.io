@@ -50,17 +50,17 @@ $(function () {
                 { data: "level", title: "Level",
                     render: function(data){
                         if (!data) return "<i style='color: #5a7da0'>none</i>";
-                        return `<span style="color: #ffff00">Lv. ${data}</span>`;
+                        return `<font color="#ffff00">Lv. ${data}</font>`;
                     }
                 },
                 { data: "name", title: "Name",
                     render: function(data, type, row){
-                        return `<span style="color: #${toHex(row.color)}">${data}</span>`;
+                        return `<font color="#${toHex(row.color)}">${data}</font>`;
                     }
                 },
                 { data: "koreanname", title: "Korean Name",
                     render: function(data, type, row){
-                        return `<span style="color: #${toHex(row.color)}">${data}</span>`;
+                        return `<font color="#${toHex(row.color)}">${data}</font>`;
                     }
                 },
                 { data: "droprate", title: "Drop Rate",
@@ -69,18 +69,18 @@ $(function () {
                         let str = [];
                         if (Array.isArray(data)) {
                             data.forEach(function(droprate){
-                                str.push(`<span style="color: #4e9396">${(Math.round(droprate * 10000) / 100)}%</span>`);
+                                str.push(`<font color="#4e9396">${(Math.round(droprate * 10000) / 100)}%</font>`);
                             });
                         }
                         else {
-                            str.push(`<span style="color: #4e9396">${(Math.round(data * 10000) / 100)}%</span>`);
+                            str.push(`<font color="#4e9396">${(Math.round(data * 10000) / 100)}%</font>`);
                         }
                         return str.join('<br>');
                     } 
                 },
                 { data: "type", title: "Item Type", 
                     render: function(data){
-                        return `<span style="color: #fff">${data}</span>`;
+                        return `<font color="#fff">${data}</font>`;
                     }
                 },
                 { data: "dropped_by", title: "Dropped By",
@@ -109,36 +109,36 @@ $(function () {
                                     if (isFloat(val)) val = Math.round(val * 10000) / 100;
                                 }
                             }
-                            if (stat == 'damage') str.push(`<span style="color: #ff8c00">${plusminus}${val} Damage</span>`);
-                            if (stat == 'armor') str.push(`<span style="color: #ff8c00">${plusminus}${val} Armor</span>`);
-                            if (stat == 'mainstat') str.push(`<span style="color: #ff8c00">${plusminus}${val} Main Stat</span>`);
-                            if (stat == 'allstat') str.push(`<span style="color: #ff8c00">${plusminus}${val} All Stats</span>`);
-                            if (stat == 'strength') str.push(`<span style="color: #ff8c00">${plusminus}${val} STR</span>`);
-                            if (stat == 'agility') str.push(`<span style="color: #ff8c00">${plusminus}${val} AGI</span>`);
-                            if (stat == 'intelligence') str.push(`<span style="color: #ff8c00">${plusminus}${val} INT</span>`);
-                            if (stat == 'hp') str.push(`<span style="color: #ff8c00">${plusminus}${val} HP</span>`);
-                            if (stat == 'mp') str.push(`<span style="color: #ff8c00">${plusminus}${val} MP</span>`);
-                            if (stat == 'attackspeedpercent') str.push(`<span style="color: #ff8c00">${plusminus}${val}% Attack Speed</span>`);
-                            if (stat == 'movespeed') str.push(`<span style="color: #ff8c00">${plusminus}${val} Movement Speed</span>`);
-                            if (stat == 'movespeedpercent') str.push(`<span style="color: #ff8c00">${plusminus}${val}% Movement Speed</span>`);
-                            if (stat == 'dodgechancepercent') str.push(`<span style="color: #40e0d0">${plusminus}${val}% Dodge Chance</span>`);
-                            if (stat == 'skilldamagepercent') str.push(`<span style="color: #40e0d0">${plusminus}${val}% Skill Damage</span>`);
-                            if (stat == 'critchancepercent') str.push(`<span style="color: #40e0d0">${plusminus}${val}% Crit Chance</span>`);
-                            if (stat == 'critmultiplier') str.push(`<span style="color: #40e0d0">${plusminus}${val}x Crit Multiplier</span>`);
-                            if (stat == 'periodicdamagepercent') str.push(`<span style="color: #ff1493">${plusminus}${val}% Periodic Damage</span>`);
-                            if (stat == 'mdpercent') str.push(`<span style="color: #40e0d0">${plusminus}${val}% Magic Defense</span>`);
-                            if (stat == 'drpercent') str.push(`<span style="color: #40e0d0">${plusminus}${val}% Damage Reduction</span>`);
-                            if (stat == 'dtpercent') str.push(`<span style="color: #40e0d0">${plusminus}${val}% Damage Taken</span>`);
-                            if (stat == 'healingpercent') str.push(`<span style="color: #ff8c00">${plusminus}${val}% Healing</span>`);
-                            if (stat == 'healreceivedpercent') str.push(`<span style="color: #ff1493">${plusminus}${val}% Healing Received</span>`);
-                            if (stat == 'hpregen') str.push(`<span style="color: #40e0d0">${plusminus}${val} HP regen</span>`);
-                            if (stat == 'mpregen') str.push(`<span style="color: #40e0d0">${plusminus}${val} MP regen</span>`);
-                            if (stat == 'affinityiwpercent') str.push(`<span style="color: #bae0fc">${plusminus}${val}% Ice/Water Affinity</span>`);
-                            if (stat == 'affinityflamepercent') str.push(`<span style="color: #f8ae9c">${plusminus}${val}% Flame Affinity</span>`);
-                            if (stat == 'affinityearthpercent') str.push(`<span style="color: #dfbf9f">${plusminus}${val}% Earth Affinity</span>`);
-                            if (stat == 'affinitywlpercent') str.push(`<span style="color: #b5fbba">${plusminus}${val}% Wind/Lightning Affinity</span>`);
-                            if (stat == 'expreceivedpercent') str.push(`<span style="color: #40e0d0">${plusminus}${val}% EXP Received</span>`);
-                            if (stat == 'revivaltimepercent') str.push(`<span style="color: #40e0d0">${plusminus}${val}% Revival Time</span>`);
+                            if (stat == 'damage') str.push(`<font color="#ff8c00">${plusminus}${val} Damage</font>`);
+                            if (stat == 'armor') str.push(`<font color="#ff8c00">${plusminus}${val} Armor</font>`);
+                            if (stat == 'mainstat') str.push(`<font color="#ff8c00">${plusminus}${val} Main Stat</font>`);
+                            if (stat == 'allstat') str.push(`<font color="#ff8c00">${plusminus}${val} All Stats</font>`);
+                            if (stat == 'strength') str.push(`<font color="#ff8c00">${plusminus}${val} STR</font>`);
+                            if (stat == 'agility') str.push(`<font color="#ff8c00">${plusminus}${val} AGI</font>`);
+                            if (stat == 'intelligence') str.push(`<font color="#ff8c00">${plusminus}${val} INT</font>`);
+                            if (stat == 'hp') str.push(`<font color="#ff8c00">${plusminus}${val} HP</font>`);
+                            if (stat == 'mp') str.push(`<font color="#ff8c00">${plusminus}${val} MP</font>`);
+                            if (stat == 'attackspeedpercent') str.push(`<font color="#ff8c00">${plusminus}${val}% Attack Speed</font>`);
+                            if (stat == 'movespeed') str.push(`<font color="#ff8c00">${plusminus}${val} Movement Speed</font>`);
+                            if (stat == 'movespeedpercent') str.push(`<font color="#ff8c00">${plusminus}${val}% Movement Speed</font>`);
+                            if (stat == 'dodgechancepercent') str.push(`<font color="#40e0d0">${plusminus}${val}% Dodge Chance</font>`);
+                            if (stat == 'skilldamagepercent') str.push(`<font color="#40e0d0">${plusminus}${val}% Skill Damage</font>`);
+                            if (stat == 'critchancepercent') str.push(`<font color="#40e0d0">${plusminus}${val}% Crit Chance</font>`);
+                            if (stat == 'critmultiplier') str.push(`<font color="#40e0d0">${plusminus}${val}x Crit Multiplier</font>`);
+                            if (stat == 'periodicdamagepercent') str.push(`<font color="#ff1493">${plusminus}${val}% Periodic Damage</font>`);
+                            if (stat == 'mdpercent') str.push(`<font color="#40e0d0">${plusminus}${val}% Magic Defense</font>`);
+                            if (stat == 'drpercent') str.push(`<font color="#40e0d0">${plusminus}${val}% Damage Reduction</font>`);
+                            if (stat == 'dtpercent') str.push(`<font color="#40e0d0">${plusminus}${val}% Damage Taken</font>`);
+                            if (stat == 'healingpercent') str.push(`<font color="#ff8c00">${plusminus}${val}% Healing</font>`);
+                            if (stat == 'healreceivedpercent') str.push(`<font color="#ff1493">${plusminus}${val}% Healing Received</font>`);
+                            if (stat == 'hpregen') str.push(`<font color="#40e0d0">${plusminus}${val} HP regen</font>`);
+                            if (stat == 'mpregen') str.push(`<font color="#40e0d0">${plusminus}${val} MP regen</font>`);
+                            if (stat == 'affinityiwpercent') str.push(`<font color="#bae0fc">${plusminus}${val}% Ice/Water Affinity</font>`);
+                            if (stat == 'affinityflamepercent') str.push(`<font color="#f8ae9c">${plusminus}${val}% Flame Affinity</font>`);
+                            if (stat == 'affinityearthpercent') str.push(`<font color="#dfbf9f">${plusminus}${val}% Earth Affinity</font>`);
+                            if (stat == 'affinitywlpercent') str.push(`<font color="#b5fbba">${plusminus}${val}% Wind/Lightning Affinity</font>`);
+                            if (stat == 'expreceivedpercent') str.push(`<font color="#40e0d0">${plusminus}${val}% EXP Received</font>`);
+                            if (stat == 'revivaltimepercent') str.push(`<font color="#40e0d0">${plusminus}${val}% Revival Time</font>`);
                         });
                         return str.join('<br>');
                     }
@@ -148,7 +148,7 @@ $(function () {
                         if (!data) return "<i style='color: #5a7da0'>none</i>";
                         let str = [];
                         data.forEach(function (ps) {
-                            str.push(`<span style="color: #40e0d0">${ps}</span>`);
+                            str.push(`<font color="#40e0d0">${ps}</font>`);
                         });
                         return str.join("<br>");
                     }
@@ -158,7 +158,7 @@ $(function () {
                         if (!data) return "<i style='color: #5a7da0'>none</i>";
                         let str = [];
                         data.forEach(function (as) {
-                            str.push(`<span style="color: #40e0d0">${as}</span>`);
+                            str.push(`<font color="#40e0d0">${as}</font>`);
                         });
                         return str.join("<br>");
                     }
@@ -188,15 +188,15 @@ $(function () {
                             if (Object.keys(rec).length > 1) {
                                 let color0 = json.filter(x => x.name == Object.keys(rec)[0])[0].color
                                 let color1 = json.filter(x => x.name == Object.keys(rec)[1])[0].color
-                                str.push(`<b><u><span style="color: #${toHex(color0)}">${Object.keys(rec)[0]}</span><span style="color: #fff">/</span><span style="color: #${toHex(color1)}">${Object.keys(rec)[1]}</span></u></b>`);
+                                str.push(`<b><u><font color="#${toHex(color0)}">${Object.keys(rec)[0]}</font><font color="#fff">/</font><font color="#${toHex(color1)}">${Object.keys(rec)[1]}</font></u></b>`);
                             }
                             else {
-                                let count = rec[Object.keys(rec)] > 1 ? ` <span style="color: #fff">x</span><span style="color: #ff8c00">${rec[Object.keys(rec)]}</span>` : '';
+                                let count = rec[Object.keys(rec)] > 1 ? ` <font color="#fff">x</font><font color="#ff8c00">${rec[Object.keys(rec)]}</font>` : '';
                                 let color = json.filter(x => x.name == Object.keys(rec))[0].color
-                                str.push(`<span style="color: #${toHex(color)}">${Object.keys(rec)}</span>${count}`);
+                                str.push(`<font color="#${toHex(color)}">${Object.keys(rec)}</font>${count}`);
                             }
                         });
-                        return str.join(" <span style='color: #fff'>+</span> ");
+                        return str.join(' <font color="#fff">+</font> ');
                     }
                 },
                 { data: "drops", title: "Drops", 
