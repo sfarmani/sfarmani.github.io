@@ -17,10 +17,10 @@ $(function () {
     $('#load_banner').load('banner.html');
     $('#load_footer').load('footer.html');
 
-    $.getJSON(heroes_url, function (json) {
+    $.getJSON(heroes_url, function (heroInfo_json) {
         //// Sort and group by the data ////
-        json = sortByKeyAsc(json, "heroClass");
-        var heroes = _.groupBy(json, "mainstat");
+        heroInfo_json = sortByKeyAsc(heroInfo_json, "heroClass");
+        var heroes = _.groupBy(heroInfo_json, "mainstat");
         
         //// build up data to use in select2 ////
         data = [];
@@ -47,10 +47,12 @@ $(function () {
 
         //// On select ////
         var heroInfo_table;
+        var heroSkills_table;
         $('select.hero-select').on('select2:select', function (e) {
             var heroClass = e.params.data.text
-            var selectedHero = json.filter(x => x.heroClass == heroClass);
+            var selectedHero = heroInfo_json.filter(x => x.heroClass == heroClass);
 
+            //// Heroes Info ////
             if (!$.fn.DataTable.isDataTable('#hero-info')){
                 heroInfo_table = $('#hero-info').DataTable({
                     responsive: true,
@@ -85,7 +87,7 @@ $(function () {
                                 if (!data) return "<i style='color: #5a7da0'>none</i>";
                                 return data.join("<br>");
                             }
-                        },
+                        }
                     ]
                 });
             }
@@ -94,17 +96,51 @@ $(function () {
                 heroInfo_table.rows.add(selectedHero);
                 heroInfo_table.columns.adjust().draw();
             }
+            //// Heroes Info END ////
+
+            //// Heroes Skills ////
+            if (!$.fn.DataTable.isDataTable('#hero-skills')) {
+                $.getJSON(skills_url, function (heroSkills_json) {
+                    var selectedSkills = heroSkills_json.filter(x => x.heroClass == heroClass);
+
+                    if (!$.fn.DataTable.isDataTable('#hero-skills')) {
+                        heroSkills_table = $('#hero-skills').DataTable({
+                            responsive: true,
+                            columnDefs: [
+                                { targets: '_all', defaultContent: "<i style='color: #5a7da0'>none</i>", width: "10%" }
+                            ],
+                            language: { search: "Quick Search:", processing: "Loading Skills..." },
+                            data: selectedSkills,
+                            dom: skillsDom,
+                            orderCellsTop: false,
+                            processing: true,
+                            columns: [
+                                { data: "hotkey", title: "Hotkey" },
+                                { data: "name", title: "Name" },
+                                { data: "passive", title: "Passive",
+                                    render: function(data){
+                                        if (!data) return "<i style='color: #5a7da0'>none</i>";
+                                        return data.join("<br>");
+                                    }
+                                },
+                                { data: "active", title: "Active",
+                                    render: function(data){
+                                        if (!data) return "<i style='color: #5a7da0'>none</i>";
+                                        return data.join("<br>");
+                                    }
+                                },
+                            ]
+                        });
+                    }
+                    else {
+                        heroSkills_table.clear().draw();
+                        heroSkills_table.rows.add(selectedSkills);
+                        heroSkills_table.columns.adjust().draw();
+                    }
+                });
+            }
+            //// Heroes Skills END ////
         });
-
-        //// On unselect ////
-        $('select.hero-select').on('select2:unselect', function (e) {
-            e.params.data.text
-        });
-
-    });
-
-    $.getJSON(skills_url, function (json) {
-
     });
     
 });
