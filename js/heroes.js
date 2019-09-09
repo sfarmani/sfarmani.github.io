@@ -26,8 +26,10 @@ $(function () {
         data = [];
         ["STR", "AGI", "INT"].forEach(function(mainstat){
             children = [];
-            heroes[mainstat].forEach(function (hero, index) {
+            var index = 0;
+            heroes[mainstat].forEach(function (hero) {
                 children.push({ "id": index, "text": hero.heroClass });
+                index = index + 1;
             });
             data.push({ "text": mainstat, "children": children });
         });
