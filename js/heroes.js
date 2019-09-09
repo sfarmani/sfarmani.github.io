@@ -28,7 +28,6 @@ $(function () {
         ["STR", "AGI", "INT"].forEach(function(mainstat){
             children = [];
             heroes[mainstat].forEach(function (hero) {
-                console.log(index);
                 children.push({ "id": index, "text": hero.heroClass });
                 index = index + 1;
             });
@@ -41,8 +40,8 @@ $(function () {
                 theme: "default",
                 data: data,
                 width: "35%",
-                placeholder: "Select a Hero",
-                allowClear: true
+                // allowClear: true,
+                placeholder: "Select a Hero"
             }
         );
 
