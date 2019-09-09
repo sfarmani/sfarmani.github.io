@@ -221,6 +221,7 @@ $(function () {
         //// replace headers with input boxes ////
         $('#items thead th').each(function (i) {
             var title = $(this).text();
+            if (title == 'Icons') return;
             $(this).html('<input type="text"class="form-control form-control-sm" placeholder="Search ' + title + '" />');
         });
 
