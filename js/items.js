@@ -4,7 +4,7 @@ $(function () {
 
     // localStorage.clear();
     if ([null, "null"].includes(localStorage.getItem("items_columns"))){
-        localStorage.setItem("items_columns", JSON.stringify([1, 3, 4, 5, 6, 7, 11]));
+        localStorage.setItem("items_columns", JSON.stringify([0, 2, 4, 5, 6, 7, 8, 12]));
     }
     var trolls = ['[HEALED]', '[Air]'];
     var possibleStats =
@@ -40,7 +40,7 @@ $(function () {
             // fixedHeader: true,
             // colReorder: true,
             columns: [
-                { title: "", width: "3%",
+                { title: "Icons", width: "3%", orderable: false,
                     render: function (data, type, row) {
                         var img_url = encodeURI(`https://raw.githubusercontent.com/sfarmani/twicons/master/${row.name}`);
                         return `<img width="100%" src="${img_url}.jpg">`;

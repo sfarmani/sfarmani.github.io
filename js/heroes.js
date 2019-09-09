@@ -66,7 +66,7 @@ $(function () {
                     orderCellsTop: false,
                     processing: true,
                     columns: [
-                        { data: "icon", title: "", width: "3%",
+                        { data: "icon", title: "Icons", width: "3%",
                             render: function (data) {
                                 if (!data) return "<i style='color: #5a7da0'>none</i>";
                                 var img_url = encodeURI(`https://raw.githubusercontent.com/sfarmani/twicons/master/${data}`);
@@ -130,7 +130,7 @@ $(function () {
                     orderCellsTop: false,
                     processing: true,
                     columns: [
-                        { data: "icon", title: "", width: "3%",
+                        { data: "icon", title: "Icons", width: "3%",
                             render: function (data) {
                                 if (!data) return "<i style='color: #5a7da0'>none</i>";
                                 var img_url = encodeURI(`https://raw.githubusercontent.com/sfarmani/twicons/master/${data}`);
