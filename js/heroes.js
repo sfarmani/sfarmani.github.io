@@ -107,7 +107,7 @@ $(function () {
         //// On select ////
         var heroSkills_table;
         $('select.hero-select').on('select2:select', function (e) {
-            var heroClass = e.params.data.text;
+            var heroClass = e.params.data.text; 
             var selectedSkills = heroSkills_json.filter(x => x.heroClass == heroClass);
 
             if (!$.fn.DataTable.isDataTable('#hero-skills')) {
