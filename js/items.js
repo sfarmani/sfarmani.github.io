@@ -40,6 +40,12 @@ $(function () {
             // fixedHeader: true,
             // colReorder: true,
             columns: [
+                { title: "", width: "3%",
+                    render: function (data, type, row) {
+                        var img_url = encodeURI(`https://raw.githubusercontent.com/sfarmani/twicons/master/${row.name}`);
+                        return `<img width="100%" src="${img_url}.jpg">`;
+                    }
+                },
                 { data: "level", title: "Level",
                     render: function(data){
                         if (!data) return "<i style='color: #5a7da0'>none</i>";
