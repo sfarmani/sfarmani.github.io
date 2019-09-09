@@ -66,11 +66,11 @@ $(function () {
                     orderCellsTop: false,
                     processing: true,
                     columns: [
-                        { data: "icon", title: "", width: "5%",
+                        { data: "icon", title: "", width: "3%",
                             render: function (data) {
                                 if (!data) return "<i style='color: #5a7da0'>none</i>";
                                 var img_url = encodeURI(`https://raw.githubusercontent.com/sfarmani/twicons/master/${data}`);
-                                return `<img width="35%" src="${img_url}.jpg">`;
+                                return `<img width="100%" src="${img_url}.jpg">`;
                             }
                         },
                         { data: "name", title: "Name" },
@@ -130,11 +130,11 @@ $(function () {
                     orderCellsTop: false,
                     processing: true,
                     columns: [
-                        { data: "icon", title: "", width: "5%",
+                        { data: "icon", title: "", width: "3%",
                             render: function (data) {
                                 if (!data) return "<i style='color: #5a7da0'>none</i>";
                                 var img_url = encodeURI(`https://raw.githubusercontent.com/sfarmani/twicons/master/${data}`);
-                                return `<img width="35%" src="${img_url}.jpg">`;
+                                return `<img width="100%" src="${img_url}.jpg">`;
                             }
                         },
                         { data: "hotkey", title: "Hotkey" },
