@@ -87,7 +87,9 @@ $(function () {
                 });
             }
             else {
-                heroInfo_table.ajax.reload(null, false);
+                heroInfo_table.clear().draw();
+                heroInfo_table.rows.add(selectedHero);
+                heroInfo_table.columns.adjust().draw();
             }
         });
 
