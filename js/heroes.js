@@ -14,17 +14,27 @@ $(function () {
     $('#load_footer').load('footer.html');
 
     $.getJSON(heroes_url, function (json) {
-        heroes = _.groupBy(json, function(data){return data.mainstat});
-
+        var heroes = _.groupBy(json, "mainstat");
+        
         data = [];
-        heroes.forEach(function(mainstat, index){
+        Object.keys(heroes).forEach(function(mainstat){
             children = [];
-            mainstat.forEach(function(hero, index){
-                children.push({"id": index, "text": hero.heroClass});
+            heroes[mainstat].forEach(function (hero, index) {
+                children.push({ "id": index, "text": hero.heroClass });
             });
-            data.push({"text": Object.keys(mainstat)[index]});
+            data.push({ "text": mainstat, "children": children });
         });
         console.log(data);
+
+
+        // heroes.forEach(function(mainstat, index){
+        //     children = [];
+        //     mainstat.forEach(function(hero, index){
+        //         children.push({"id": index, "text": hero.heroClass});
+        //     });
+        //     data.push({"text": Object.keys(mainstat)[index]});
+        // });
+        // console.log(data);
 
         //// create select2 ////
         $('select.hero-select').select2(
