@@ -48,13 +48,8 @@ $(function () {
             var heroClass = e.params.data.text
             var selectedHero = json.filter(x => x.heroClass == heroClass);
 
-            var heroInfo_table = $('#hero-info').DataTable();
-
-            if (heroInfo_table instanceof $.fn.dataTable.Api){
-                heroInfo_table.ajax.reload(null, false);
-            }
-            else {
-                heroInfo_table.DataTable({
+            if (!$.fn.DataTable.isDataTable('#hero-info')){
+                var heroInfo_table = $('#hero-info').DataTable({
                     responsive: true,
                     columnDefs: [
                         { targets: '_all', defaultContent: "<i style='color: #5a7da0'>none</i>", width: "10%" }
@@ -91,40 +86,9 @@ $(function () {
                     ]
                 });
             }
-
-            // var heroInfo_table = $('#hero-info').DataTable({
-            //     responsive: true,
-            //     columnDefs: [
-            //         { targets: '_all', defaultContent: "<i style='color: #5a7da0'>none</i>", width: "10%" }
-            //     ],
-            //     language: { search: "Quick Search:", processing: "Loading Hero..." },
-            //     data: selectedHero,
-            //     dom: heroesDom,
-            //     ordering: false,
-            //     orderCellsTop: false,
-            //     processing: true,
-            //     columns: [
-            //         { data: "name", title: "Name" },
-            //         { data: "role", title: "Role", 
-            //             render: function(data){
-            //                 if (!data) return "<i style='color: #5a7da0'>none</i>";
-            //                 return data.join("<br>");
-            //             }
-            //         },
-            //         { data: "wearable", title: "Wearable Item Types", 
-            //             render: function (data) {
-            //                 if (!data) return "<i style='color: #5a7da0'>none</i>";
-            //                 return data.join(" / ");
-            //             }
-            //         },
-            //         { data: "spec", title: "Specialties", 
-            //             render: function (data) {
-            //                 if (!data) return "<i style='color: #5a7da0'>none</i>";
-            //                 return data.join("<br>");
-            //             }
-            //         },
-            //     ]
-            // });
+            else {
+                heroInfo_table.ajax.reload(null, false);
+            }
         });
 
         //// On unselect ////
