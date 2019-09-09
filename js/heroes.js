@@ -26,24 +26,14 @@ $(function () {
         });
         console.log(data);
 
-
-        // heroes.forEach(function(mainstat, index){
-        //     children = [];
-        //     mainstat.forEach(function(hero, index){
-        //         children.push({"id": index, "text": hero.heroClass});
-        //     });
-        //     data.push({"text": Object.keys(mainstat)[index]});
-        // });
-        // console.log(data);
-
         //// create select2 ////
         $('select.hero-select').select2(
             {
-                theme: "classic",
+                theme: "default",
                 data: data,
                 width: "50%",
-                placeholder: "Select columns to toggle",
-                closeOnSelect: false
+                placeholder: "Select a Hero",
+                allowClear: true
             }
         );
     });
