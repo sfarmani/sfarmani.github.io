@@ -66,11 +66,11 @@ $(function () {
                     orderCellsTop: false,
                     processing: true,
                     columns: [
-                        { data: "icon", title: "", 
+                        { data: "icon", title: "", width: "5%",
                             render: function (data) {
                                 if (!data) return "<i style='color: #5a7da0'>none</i>";
                                 var img_url = encodeURI(`https://raw.githubusercontent.com/sfarmani/twicons/master/${data}`);
-                                return `<img src="${img_url}.jpg">`;
+                                return `<img width="35%" src="${img_url}.jpg">`;
                             }
                         },
                         { data: "name", title: "Name" },
@@ -130,6 +130,13 @@ $(function () {
                     orderCellsTop: false,
                     processing: true,
                     columns: [
+                        { data: "icon", title: "", width: "5%",
+                            render: function (data) {
+                                if (!data) return "<i style='color: #5a7da0'>none</i>";
+                                var img_url = encodeURI(`https://raw.githubusercontent.com/sfarmani/twicons/master/${data}`);
+                                return `<img width="35%" src="${img_url}.jpg">`;
+                            }
+                        },
                         { data: "hotkey", title: "Hotkey" },
                         { data: "name", title: "Name" },
                         {
