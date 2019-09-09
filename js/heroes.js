@@ -113,6 +113,7 @@ $(function () {
             if (!$.fn.DataTable.isDataTable('#hero-skills')) {
                 heroSkills_table = $('#hero-skills').DataTable({
                     responsive: true,
+                    order: [],
                     columnDefs: [
                         { targets: '_all', defaultContent: "<i style='color: #5a7da0'>none</i>", width: "10%" }
                     ],
