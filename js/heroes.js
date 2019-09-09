@@ -24,10 +24,11 @@ $(function () {
         
         //// build up data to use in select2 ////
         data = [];
+        var index = 0;
         ["STR", "AGI", "INT"].forEach(function(mainstat){
             children = [];
-            var index = 0;
             heroes[mainstat].forEach(function (hero) {
+                console.log(index);
                 children.push({ "id": index, "text": hero.heroClass });
                 index = index + 1;
             });
