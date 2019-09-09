@@ -27,15 +27,18 @@ $(function () {
         });
 
         //// create select2 ////
-        $('select.hero-select').select2(
+        var heroSelect = $('select.hero-select').select2(
             {
                 theme: "default",
                 data: data,
-                width: "50%",
+                width: "35%",
                 placeholder: "Select a Hero",
                 allowClear: true
             }
         );
+
+        heroSelect.data('select2').$selection.css('height', "10%");
+
     });
 
     $.getJSON(skills_url, function (json) {
