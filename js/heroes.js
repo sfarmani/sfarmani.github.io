@@ -25,7 +25,6 @@ $(function () {
             });
             data.push({ "text": mainstat, "children": children });
         });
-        console.log(data);
 
         //// create select2 ////
         $('select.hero-select').select2(
@@ -33,10 +32,7 @@ $(function () {
                 theme: "default",
                 data: data,
                 width: "50%",
-                placeholder: {
-                    id: "-1",
-                    text: "Select a Hero"
-                },
+                placeholder: "Select a Hero",
                 allowClear: true
             }
         );
