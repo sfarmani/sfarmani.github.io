@@ -49,7 +49,7 @@ $(function () {
         //// On select ////
         var heroInfo_table;
         $('select.hero-select').on('select2:select', function (e) {
-            var heroClass = e.params.data.text
+            var heroClass = e.params.data.text;
             var selectedHero = heroInfo_json.filter(x => x.heroClass == heroClass);
 
             
@@ -103,12 +103,12 @@ $(function () {
 
     //// Heroes Skills ////
     $.getJSON(skills_url, function (heroSkills_json) {
-        var selectedSkills = heroSkills_json.filter(x => x.heroClass == heroClass);
 
         //// On select ////
         var heroSkills_table;
         $('select.hero-select').on('select2:select', function (e) {
-            var heroClass = e.params.data.text
+            var heroClass = e.params.data.text;
+            var selectedSkills = heroSkills_json.filter(x => x.heroClass == heroClass);
 
             if (!$.fn.DataTable.isDataTable('#hero-skills')) {
                 heroSkills_table = $('#hero-skills').DataTable({
