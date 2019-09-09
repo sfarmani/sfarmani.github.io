@@ -66,6 +66,13 @@ $(function () {
                     orderCellsTop: false,
                     processing: true,
                     columns: [
+                        { data: "icon", title: "", 
+                            render: function (data) {
+                                if (!data) return "<i style='color: #5a7da0'>none</i>";
+                                var img_url = encodeURI(`https://raw.githubusercontent.com/sfarmani/twicons/master/${data}`);
+                                return "<img src='img_url'>";
+                            }
+                        },
                         { data: "name", title: "Name" },
                         {
                             data: "role", title: "Role",
