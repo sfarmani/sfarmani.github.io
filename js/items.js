@@ -35,6 +35,7 @@ $(function () {
             language: { search: "Quick Search:", processing: "Loading Items..." },
             data: json,
             dom: dom,
+            order: [],
             orderCellsTop: false,
             processing: true,
             // fixedHeader: true,

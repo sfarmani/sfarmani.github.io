@@ -63,6 +63,7 @@ $(function () {
                     data: selectedHero,
                     dom: heroesDom,
                     ordering: false,
+                    order: [],
                     orderCellsTop: false,
                     processing: true,
                     columns: [
