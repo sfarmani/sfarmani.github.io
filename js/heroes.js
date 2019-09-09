@@ -44,12 +44,13 @@ $(function () {
         );
 
         //// On select ////
+        var heroInfo_table;
         $('select.hero-select').on('select2:select', function (e) {
             var heroClass = e.params.data.text
             var selectedHero = json.filter(x => x.heroClass == heroClass);
 
             if (!$.fn.DataTable.isDataTable('#hero-info')){
-                var heroInfo_table = $('#hero-info').DataTable({
+                heroInfo_table = $('#hero-info').DataTable({
                     responsive: true,
                     columnDefs: [
                         { targets: '_all', defaultContent: "<i style='color: #5a7da0'>none</i>", width: "10%" }
