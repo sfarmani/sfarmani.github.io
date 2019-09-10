@@ -1,9 +1,9 @@
 // Load different parts of the pages
 $(function () {
-        $('#load_headers').load('headers.html');
-        $('#load_sidebar').load('sidebar.html');
-        $('#load_banner').load('banner.html');
-        $('#load_footer').load('footer.html');
+    $('#load_headers').load('headers.html');
+    $('#load_sidebar').load('sidebar.html');
+    $('#load_banner').load('banner.html');
+    $('#load_footer').load('footer.html');
 
     let items_url = "json/items.json";
 
@@ -27,11 +27,9 @@ $(function () {
     
     var items;
 
-    waitForEl(".alert", function () {
-        $.ajaxSetup({ async: false });
-        $.getJSON(items_url, function (items_json) { items = items_json });
-        $.ajaxSetup({ async: true });
-    });
+    $.ajaxSetup({ async: false });
+    $.getJSON(items_url, function (items_json) { items = items_json });
+    $.ajaxSetup({ async: true });
     
 
     items = $.grep(items, function (x) { return !trolls.includes(x.type) });
@@ -312,15 +310,4 @@ function toHex(code) {
     let color = code.toString(16).padStart(6, 0);
     if (code == 16777215) color = 'fff'
     return color;
-}
-
-function waitForEl(selector, callback) {
-    var poller1 = setInterval(function () {
-        $jObject = jQuery(selector);
-        if ($jObject.length < 1) {
-            return;
-        }
-        clearInterval(poller1);
-        callback($jObject)
-    }, 30000);
 }
