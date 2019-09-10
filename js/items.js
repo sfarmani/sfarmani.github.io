@@ -25,9 +25,11 @@ $(function () {
     $('#load_footer').load('footer.html');
 
     var items;
-    $.ajaxSetup({ async: false });
-    $.getJSON(items_url, function (items_json) { items = items_json });
-    $.ajaxSetup({ async: true });
+    $("footer.sticky-footer").ready(function () {
+        $.ajaxSetup({ async: false });
+        $.getJSON(items_url, function (items_json) { items = items_json });
+        $.ajaxSetup({ async: true });
+    });
 
     items = $.grep(items, function (x) { return !trolls.includes(x.type) });
 
