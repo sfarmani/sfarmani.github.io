@@ -5,10 +5,6 @@ $(function () {
     $('#load_banner').load('banner.html');
     $('#load_footer').load('footer.html');
 
-    $('#load_footer').ready(function(){
-        console.log('its ready!');
-    });
-
     let items_url = "json/items.json";
 
     // localStorage.clear();
@@ -31,7 +27,7 @@ $(function () {
     
     var items;
 
-    $('#load_footer').ready(function () {
+    $('#load_footer').on('change', 'footer', function () {
         console.log('its ready!');
         $.ajaxSetup({ async: false });
         $.getJSON(items_url, function (items_json) { items = items_json });
