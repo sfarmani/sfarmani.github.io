@@ -24,10 +24,14 @@ $(function () {
     $('#load_banner').load('banner.html');
     $('#load_footer').load('footer.html');
 
-    $.getJSON(items_url, function (json) {
-        json = $.grep(json, function(x){ return !trolls.includes(x.type) });
+    var items;
+    $.ajaxSetup({ async: false });
+    $.getJSON(items_url, function (items_json) { items = items_json });
+    $.ajaxSetup({ async: true });
 
-        var items_table = $('#items').DataTable({
+    items = $.grep(items, function (x) { return !trolls.includes(x.type) });
+
+    var items_table = $('#items').DataTable({
             responsive: true,
             columnDefs: [
                 { targets: '_all', defaultContent: "<i style='color: #5a7da0'>none</i>", width: "10%" }
@@ -216,6 +220,14 @@ $(function () {
                 }
             ]
         });
+
+
+
+
+    $.getJSON(items_url, function (json) {
+        json = $.grep(json, function(x){ return !trolls.includes(x.type) });
+
+        
 
         jQuery('.load_message').toggle();
 
