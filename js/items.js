@@ -314,12 +314,13 @@ function toHex(code) {
     return color;
 }
 
-var waitForEl = function (selector, callback) {
-    if (jQuery(selector).length) {
-        callback();
-    } else {
-        setTimeout(function () {
-            waitForEl(selector, callback);
-        }, 1000);
-    }
-};
+function waitForEl(selector, callback) {
+    var poller1 = setInterval(function () {
+        $jObject = jQuery(selector);
+        if ($jObject.length < 1) {
+            return;
+        }
+        clearInterval(poller1);
+        callback($jObject)
+    }, 500);
+}
