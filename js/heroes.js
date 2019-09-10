@@ -223,6 +223,7 @@ $(function () {
         }
         else {
             heroSkills_table.clear().draw();
+            console.log(selectedSkills);
             heroSkills_table.rows.add(selectedSkills);
             heroSkills_table.columns.adjust().draw();
         }
