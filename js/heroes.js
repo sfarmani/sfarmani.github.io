@@ -109,24 +109,22 @@ $(function () {
                                 $.ajaxSetup({ async: false });
 
                                 let str = [];
-                                let heroClass = row.name;
+                                let heroClass = row.heroClass;
                                 data.forEach(function (charspec) {
-                                    if (charspec === "No Specs!") return "<i style='color: #5a7da0'>No Specs!</i>";
+                                    if (charspec === "No Specs!"){
+                                        str.push("<i style='color: #5a7da0'>No Specs!</i>");
+                                        return false;
+                                    }
                                     let item_name = charspec.split(' - ')[0];
                                     var item = $.grep(items, function (x) { return x.name === item_name })[0];
                                     var item_spec = item.stats.spec;
                                     str.push(`<font color="#${toHex(item.color)}">${charspec}</font>`);
                                     item_spec.forEach(function (spec, index) {
-                                        console.log(spec);
-                                        console.log(index);
                                         if (index == 0) return;
                                         var char_name = spec.split(' - ')[0];
                                         var spec_info = spec.split(' - ')[1];
-                                        console.log(char_name);
-                                        console.log(spec_info);
                                         if (char_name != heroClass) return;
                                         str.push(`  ${bullet2} <font color="#9B9B9B">${spec_info}</font>`);
-                                        console.log(str);
                                     });
                                 });
                                 return str.join("<br>");
