@@ -27,7 +27,7 @@ $(function () {
     
     var items;
 
-    waitForEl("footer.sticky-footer", function () {
+    waitForEl(".alert", function () {
         $.ajaxSetup({ async: false });
         $.getJSON(items_url, function (items_json) { items = items_json });
         $.ajaxSetup({ async: true });
