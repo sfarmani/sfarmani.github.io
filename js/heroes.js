@@ -230,3 +230,9 @@ function sortByKeyAsc(array, key) {
         return ((x < y) ? -1 : ((x > y) ? 1 : 0));
     });
 }
+
+function toHex(code) {
+    let color = code.toString(16).padStart(6, 0);
+    if (code == 16777215) color = 'fff'
+    return color;
+}
