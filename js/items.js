@@ -27,7 +27,7 @@ $(function () {
     
     var items;
 
-    $('#load_footer').on('change', 'footer', function () {
+    $('#load_footer').on('load', 'footer', function () {
         console.log('its ready!');
         $.ajaxSetup({ async: false });
         $.getJSON(items_url, function (items_json) { items = items_json });
