@@ -104,10 +104,10 @@ $(function () {
                         { data: "spec", title: "Specialties",
                             render: function (data, type, row) {
                                 let heroClass = row.name;
+                                let str = [];
                                 data.forEach(function (charspec) {
                                     if (charspec === "No Specs!") return
                                     let item_name = charspec.split(' - ')[0];
-                                    let str = [];
                                     $.getJSON(items_url, function (items_json) {
                                         var item = $.grep(items_json, function (x) { return x.name === item_name })[0];
                                         var item_spec = item.stats.spec;
