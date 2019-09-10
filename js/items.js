@@ -318,6 +318,6 @@ var waitForEl = function (selector, callback) {
     } else {
         setTimeout(function () {
             waitForEl(selector, callback);
-        }, 500);
+        }, 1000);
     }
 };
