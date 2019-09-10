@@ -117,6 +117,8 @@ $(function () {
                                     var item_spec = item.stats.spec;
                                     str.push(`<font color="#${toHex(item.color)}">${charspec}</font>`);
                                     item_spec.forEach(function (spec, index) {
+                                        console.log(spec);
+                                        console.log(index);
                                         if (index == 0) return;
                                         var char_name = spec.split(' - ')[0];
                                         var spec_info = spec.split(' - ')[1];
