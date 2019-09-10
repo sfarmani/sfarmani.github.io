@@ -1,9 +1,11 @@
 // Load different parts of the pages
 $(function () {
-    $('#load_headers').load('headers.html');
-    $('#load_sidebar').load('sidebar.html');
-    $('#load_banner').load('banner.html');
-    $('#load_footer').load('footer.html');
+    waitForEl("footer.sticky-footer", function () {
+        $('#load_headers').load('headers.html');
+        $('#load_sidebar').load('sidebar.html');
+        $('#load_banner').load('banner.html');
+        $('#load_footer').load('footer.html');
+    });
 
     let items_url = "json/items.json";
 
@@ -26,11 +28,11 @@ $(function () {
         "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>";
     
     var items;
-    waitForEl("footer.sticky-footer", function(){
-        $.ajaxSetup({ async: false });
-        $.getJSON(items_url, function (items_json) { items = items_json });
-        $.ajaxSetup({ async: true });
-    });
+    
+    $.ajaxSetup({ async: false });
+    $.getJSON(items_url, function (items_json) { items = items_json });
+    $.ajaxSetup({ async: true });
+    
 
     items = $.grep(items, function (x) { return !trolls.includes(x.type) });
 
