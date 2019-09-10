@@ -2,6 +2,8 @@
 $(function () {
     let heroes_url = "json/heros.json";
     let skills_url = "json/skills.json";
+    let items_url = "json/items.json";
+    let bullet2 = "※";
 
     var skillsDom =
         "<'row'<'col-sm-4 col-md-2'i>>" +
@@ -50,7 +52,7 @@ $(function () {
         var heroInfo_table;
         $('select.hero-select').on('select2:select', function (e) {
             var heroClass = e.params.data.text;
-            var selectedHero = heroInfo_json.filter(x => x.heroClass == heroClass);
+            var selectedHero = heroInfo_json.filter(x => x.heroClass === heroClass);
 
             
             if (!$.fn.DataTable.isDataTable('#hero-info')){
@@ -74,26 +76,52 @@ $(function () {
                                 return `<img width="100%" src="${img_url}.jpg">`;
                             }
                         },
-                        { data: "name", title: "Name" },
-                        {
-                            data: "role", title: "Role",
-                            render: function (data) {
-                                if (!data) return "<i style='color: #5a7da0'>none</i>";
-                                return data.join("<br>");
+                        { data: "name", title: "Name", 
+                            render: function(data, type, row){
+                                return `<font color="#${row.color}">${data}</font>`;
                             }
                         },
-                        {
-                            data: "wearable", title: "Wearable Item Types",
+                        { data: "role", title: "Role",
                             render: function (data) {
                                 if (!data) return "<i style='color: #5a7da0'>none</i>";
-                                return data.join(" / ");
+                                let str = [];
+                                data.forEach(function(roleinfo){
+                                    str.push(`<font color="#0d9ea3">${roleinfo}</font>`);
+                                });
+                                return str.join("<br>");
                             }
                         },
-                        {
-                            data: "spec", title: "Specialties",
+                        { data: "wearable", title: "Wearable Item Types",
                             render: function (data) {
                                 if (!data) return "<i style='color: #5a7da0'>none</i>";
-                                return data.join("<br>");
+                                let str = [];
+                                data.forEach(function (itemtype) {
+                                    str.push(`<font color="#d9683f">${itemtype}</font>`);
+                                });
+                                return str.join(" / ");
+                            }
+                        },
+                        { data: "spec", title: "Specialties",
+                            render: function (data, type, row) {
+                                let heroClass = row.name;
+                                data.forEach(function (charspec) {
+                                    if (charspec === "No Specs!") return
+                                    let item_name = charspec.split(' - ')[0];
+                                    let str = [];
+                                    $.getJSON(items_url, function (items_json) {
+                                        var item = $.grep(items_json, function (x) { return x.name === item_name })[0];
+                                        var item_spec = item.stats.spec;
+                                        str.push(`<font color="#${item.color}">${charspec}</font>`);
+                                        item_spec.forEach(function(spec, index){
+                                            if (index == 0) return;
+                                            var char_name = spec.split(' - ')[0];
+                                            var spec_info = spec.split(' - ')[1];
+                                            if (char_name != heroClass) return;
+                                            str.push(`  ${bullet2} <font color="#9B9B9B">${spec_info}</font>`);
+                                        });
+                                    });
+                                });
+                                return str.join("<br>");
                             }
                         }
                     ]
@@ -116,7 +144,7 @@ $(function () {
         var heroSkills_table;
         $('select.hero-select').on('select2:select', function (e) {
             var heroClass = e.params.data.text; 
-            var selectedSkills = heroSkills_json.filter(x => x.heroClass == heroClass);
+            var selectedSkills = heroSkills_json.filter(x => x.heroClass === heroClass);
 
             if (!$.fn.DataTable.isDataTable('#hero-skills')) {
                 heroSkills_table = $('#hero-skills').DataTable({
@@ -131,7 +159,7 @@ $(function () {
                     orderCellsTop: false,
                     processing: true,
                     columns: [
-                        { data: "icon", title: "Icons", width: "3%",
+                        { data: "icon", title: "Icons", width: "3%", orderable: false,
                             render: function (data) {
                                 if (!data) return "<i style='color: #5a7da0'>none</i>";
                                 var img_url = encodeURI(`https://raw.githubusercontent.com/sfarmani/twicons/master/${data}`);
@@ -140,15 +168,13 @@ $(function () {
                         },
                         { data: "hotkey", title: "Hotkey" },
                         { data: "name", title: "Name" },
-                        {
-                            data: "passive", title: "Passive",
+                        { data: "passive", title: "Passive",
                             render: function (data) {
                                 if (!data) return "<i style='color: #5a7da0'>none</i>";
                                 return data.join("<br>");
                             }
                         },
-                        {
-                            data: "active", title: "Active",
+                        { data: "active", title: "Active",
                             render: function (data) {
                                 if (!data) return "<i style='color: #5a7da0'>none</i>";
                                 return data.join("<br>");
