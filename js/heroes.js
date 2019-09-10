@@ -103,27 +103,49 @@ $(function () {
                         },
                         { data: "spec", title: "Specialties",
                             render: function (data, type, row) {
-                                let str = [];
+                                var items;
                                 $.ajaxSetup({ async: false });
-                                $.getJSON(items_url, function (items_json) {
-                                    let heroClass = row.name;
-                                    data.forEach(function (charspec) {
-                                        if (charspec === "No Specs!") return "<i style='color: #5a7da0'>No Specs!</i>";
-                                        let item_name = charspec.split(' - ')[0];
-                                        var item = $.grep(items_json, function (x) { return x.name === item_name })[0];
-                                        var item_spec = item.stats.spec;
-                                        str.push(`<font color="#${item.color}">${charspec}</font>`);
-                                        item_spec.forEach(function (spec, index) {
-                                            if (index == 0) return;
-                                            var char_name = spec.split(' - ')[0];
-                                            var spec_info = spec.split(' - ')[1];
-                                            if (char_name != heroClass) return;
-                                            str.push(`  ${bullet2} <font color="#9B9B9B">${spec_info}</font>`);
-                                        });
+                                $.getJSON(items_url, function (items_json) { items = items_json });
+                                $.ajaxSetup({ async: false });
+
+                                let str = [];
+                                let heroClass = row.name;
+                                data.forEach(function (charspec) {
+                                    if (charspec === "No Specs!") return "<i style='color: #5a7da0'>No Specs!</i>";
+                                    let item_name = charspec.split(' - ')[0];
+                                    var item = $.grep(items_json, function (x) { return x.name === item_name })[0];
+                                    var item_spec = item.stats.spec;
+                                    str.push(`<font color="#${toHex(item.color)}">${charspec}</font>`);
+                                    item_spec.forEach(function (spec, index) {
+                                        if (index == 0) return;
+                                        var char_name = spec.split(' - ')[0];
+                                        var spec_info = spec.split(' - ')[1];
+                                        if (char_name != heroClass) return;
+                                        str.push(`  ${bullet2} <font color="#9B9B9B">${spec_info}</font>`);
                                     });
                                 });
-                                $.ajaxSetup({ async: false });
                                 return str.join("<br>");
+
+                                // $.ajaxSetup({ async: false });
+                                // $.getJSON(items_url, function (items_json) {
+                                //     let heroClass = row.name;
+                                //     data.forEach(function (charspec) {
+                                //         if (charspec === "No Specs!") return "<i style='color: #5a7da0'>No Specs!</i>";
+                                //         let item_name = charspec.split(' - ')[0];
+                                //         var item = $.grep(items_json, function (x) { return x.name === item_name })[0];
+                                //         var item_spec = item.stats.spec;
+                                //         str.push(`<font color="#${item.color}">${charspec}</font>`);
+                                //         item_spec.forEach(function (spec, index) {
+                                //             if (index == 0) return;
+                                //             var char_name = spec.split(' - ')[0];
+                                //             var spec_info = spec.split(' - ')[1];
+                                //             if (char_name != heroClass) return;
+                                //             str.push(`  ${bullet2} <font color="#9B9B9B">${spec_info}</font>`);
+                                //         });
+                                //     });
+                                // });
+                                // $.ajaxSetup({ async: false });
+                                // return str.join("<br>");
                             }
                         }
                     ]
