@@ -159,7 +159,7 @@ $(function () {
                 orderCellsTop: false,
                 processing: true,
                 columns: [
-                    { data: "icon", title: "Icons", width: "4.5%", orderable: false,
+                    { data: "icon", title: "Icons", width: "4%", orderable: false,
                         render: function (data) {
                             if (!data) return "<i style='color: #5a7da0'>none</i>";
                             var img_url = encodeURI(`https://raw.githubusercontent.com/sfarmani/twicons/master/${data}`);
