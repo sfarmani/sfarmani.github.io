@@ -193,7 +193,7 @@ $(function () {
                             }
                             else {
                                 let count = rec[Object.keys(rec)] > 1 ? ` <font color="#fff">x</font><font color="#ff8c00">${rec[Object.keys(rec)]}</font>` : '';
-                                let color = $.grep(json, function (ele) { return ele.name === Object.keys(rec) })[0].color;
+                                let color = $.grep(json, function (ele) { return ele.name === Object.keys(rec)[0] })[0].color;
                                 str.push(`<font color="#${toHex(color)}">${Object.keys(rec)}</font>${count}`);
                             }
                         });
