@@ -172,18 +172,46 @@ $(function () {
                                 return `<img width="100%" src="${img_url}.jpg">`;
                             }
                         },
-                        { data: "hotkey", title: "Hotkey" },
-                        { data: "name", title: "Name" },
+                        { data: "hotkey", title: "Hotkey", 
+                            render: function(data){
+                                return `<font color="#ffff00">${data}</font>`;
+                            }
+                        },
+                        { data: "name", title: "Name", 
+                            render: function(data, type, row){
+                                return `<font color="#${row.color}">${data}</font>`;
+                            }
+                        },
                         { data: "passive", title: "Passive",
                             render: function (data) {
                                 if (!data) return "<i style='color: #5a7da0'>none</i>";
-                                return data.join("<br>");
+                                let str = [];
+                                str.push(data.shift());
+                                data.forEach(function(pass, index){
+                                    if (index <= (data.length / 2)){
+                                        str.push(`<font color="#80ff00">${pass}</font>`);
+                                    }
+                                    else {
+                                        str.push(`<font color="#cd96ff">${pass}</font>`);
+                                    }
+                                });
+                                return str.join("<br>");
                             }
                         },
                         { data: "active", title: "Active",
                             render: function (data) {
                                 if (!data) return "<i style='color: #5a7da0'>none</i>";
-                                return data.join("<br>");
+                                let str = [];
+                                str.push(data.shift());
+                                data.forEach(function (pass, index) {
+                                    if (index <= (data.length / 2)) {
+                                        str.push(`<font color="#80ff00">${pass}</font>`);
+                                    }
+                                    else {
+                                        str.push(`<font color="#cd96ff">${pass}</font>`);
+                                    }
+                                });
+                                return str.join("<br>");
                             }
                         },
                     ]
