@@ -322,5 +322,5 @@ function waitForEl(selector, callback) {
         }
         clearInterval(poller1);
         callback($jObject)
-    }, 500);
+    }, 30000);
 }
