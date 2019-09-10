@@ -4,7 +4,10 @@ $(function () {
     $('#load_sidebar').load('sidebar.html');
     $('#load_banner').load('banner.html');
     $('#load_footer').load('footer.html');
-    console.log('test1');
+
+    $('#load_footer').ready(function(){
+        console.log('its ready!');
+    });
 
     let items_url = "json/items.json";
 
@@ -28,11 +31,12 @@ $(function () {
     
     var items;
 
-    $.ajaxSetup({ async: false });
-    console.log('test2');
-    $.getJSON(items_url, function (items_json) { items = items_json });
-    $.ajaxSetup({ async: true });
-    
+    $('#load_footer').ready(function () {
+        console.log('its ready!');
+        $.ajaxSetup({ async: false });
+        $.getJSON(items_url, function (items_json) { items = items_json });
+        $.ajaxSetup({ async: true });
+    });
 
     items = $.grep(items, function (x) { return !trolls.includes(x.type) });
 
