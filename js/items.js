@@ -5,6 +5,8 @@ $(function () {
     $('#load_banner').load('banner.html');
     $('#load_footer').load('footer.html');
 
+    setTimeout(console.log("DOMs Loaded!"), 1000);
+
     let items_url = "json/items.json";
 
     // localStorage.clear();
