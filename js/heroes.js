@@ -124,31 +124,10 @@ $(function () {
                                         var char_name = spec.split(' - ')[0];
                                         var spec_info = spec.split(' - ')[1];
                                         if (char_name != heroClass) return;
-                                        str.push(`  ${bullet2} <font color="#9B9B9B">${spec_info}</font>`);
+                                        str.push(`${bullet2} <font color="#9B9B9B">${spec_info}</font>`);
                                     });
                                 });
                                 return str.join("<br>");
-
-                                // $.ajaxSetup({ async: false });
-                                // $.getJSON(items_url, function (items_json) {
-                                //     let heroClass = row.name;
-                                //     data.forEach(function (charspec) {
-                                //         if (charspec === "No Specs!") return "<i style='color: #5a7da0'>No Specs!</i>";
-                                //         let item_name = charspec.split(' - ')[0];
-                                //         var item = $.grep(items_json, function (x) { return x.name === item_name })[0];
-                                //         var item_spec = item.stats.spec;
-                                //         str.push(`<font color="#${item.color}">${charspec}</font>`);
-                                //         item_spec.forEach(function (spec, index) {
-                                //             if (index == 0) return;
-                                //             var char_name = spec.split(' - ')[0];
-                                //             var spec_info = spec.split(' - ')[1];
-                                //             if (char_name != heroClass) return;
-                                //             str.push(`  ${bullet2} <font color="#9B9B9B">${spec_info}</font>`);
-                                //         });
-                                //     });
-                                // });
-                                // $.ajaxSetup({ async: false });
-                                // return str.join("<br>");
                             }
                         }
                     ]
