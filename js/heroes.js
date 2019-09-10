@@ -27,7 +27,7 @@ $(function () {
     $.getJSON(heroes_url, function (heroInfo_json) { heroInfo = heroInfo_json });
     $.getJSON(skills_url, function (heroSkills_json) { heroSkills = heroSkills_json });
     $.getJSON(items_url, function (items_json) { items = items_json });
-    $.ajaxSetup({ async: false });
+    $.ajaxSetup({ async: true });
 
     //// Sort and group by the data ////
     heroInfo = sortByKeyAsc(heroInfo, "heroClass");
