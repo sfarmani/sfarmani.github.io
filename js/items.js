@@ -26,7 +26,7 @@ $(function () {
         "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>";
     
     var items;
-    $("footer.sticky-footer").ready(function () {
+    waitForEl("footer.sticky-footer", function(){
         $.ajaxSetup({ async: false });
         $.getJSON(items_url, function (items_json) { items = items_json });
         $.ajaxSetup({ async: true });
@@ -311,3 +311,13 @@ function toHex(code) {
     if (code == 16777215) color = 'fff'
     return color;
 }
+
+var waitForEl = function (selector, callback) {
+    if (jQuery(selector).length) {
+        callback();
+    } else {
+        setTimeout(function () {
+            waitForEl(selector, callback);
+        }, 500);
+    }
+};
