@@ -186,14 +186,14 @@ $(function () {
                         let str = [];
                         data.forEach(function (rec) {
                             if (Object.keys(rec).length > 1) {
-                                let color0 = $.grep(json, function(ele){ ele.name === Object.keys(rec)[0]})[0].color;
-                                let color1 = $.grep(json, function(ele){ ele.name === Object.keys(rec)[1]})[0].color;
+                                let color0 = $.grep(json, function(ele){ return ele.name === Object.keys(rec)[0] })[0].color;
+                                let color1 = $.grep(json, function(ele){ return ele.name === Object.keys(rec)[1] })[0].color;
                                 // let color1 = json.filter(x => x.name === Object.keys(rec)[1])[0].color
                                 str.push(`<u><font color="#${toHex(color0)}">${Object.keys(rec)[0]}</font>/<font color="#${toHex(color1)}">${Object.keys(rec)[1]}</font></u>`);
                             }
                             else {
                                 let count = rec[Object.keys(rec)] > 1 ? ` <font color="#fff">x</font><font color="#ff8c00">${rec[Object.keys(rec)]}</font>` : '';
-                                let color = json.filter(x => x.name == Object.keys(rec))[0].color
+                                let color = $.grep(json, function (ele) { return ele.name === Object.keys(rec) })[0].color;
                                 str.push(`<font color="#${toHex(color)}">${Object.keys(rec)}</font>${count}`);
                             }
                         });
