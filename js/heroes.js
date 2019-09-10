@@ -122,8 +122,11 @@ $(function () {
                                         if (index == 0) return;
                                         var char_name = spec.split(' - ')[0];
                                         var spec_info = spec.split(' - ')[1];
+                                        console.log(char_name);
+                                        console.log(spec_info);
                                         if (char_name != heroClass) return;
                                         str.push(`  ${bullet2} <font color="#9B9B9B">${spec_info}</font>`);
+                                        console.log(str);
                                     });
                                 });
                                 return str.join("<br>");
