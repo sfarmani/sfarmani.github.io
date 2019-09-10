@@ -191,8 +191,9 @@ $(function () {
                         render: function (data) {
                             if (!data) return "<i style='color: #5a7da0'>none</i>";
                             let str = [];
-                            str.push(data.shift());
+                            str.push(data.slice(0, 1));
                             data.forEach(function (pass, index) {
+                                if (index === 0) return;
                                 if (index <= (data.length / 2)) {
                                     str.push(`<font color="#80ff00">${pass}</font>`);
                                 }
@@ -208,8 +209,9 @@ $(function () {
                         render: function (data) {
                             if (!data) return "<i style='color: #5a7da0'>none</i>";
                             let str = [];
-                            str.push(data.shift());
+                            str.push(data.slice(0, 1));
                             data.forEach(function (pass, index) {
+                                if (index === 0) return;
                                 if (index <= (data.length / 2)) {
                                     str.push(`<font color="#80ff00">${pass}</font>`);
                                 }
