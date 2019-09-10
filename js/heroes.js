@@ -128,7 +128,7 @@ $(function () {
                                 let item_name = charspec.split(' - ')[0];
                                 var item = $.grep(items, function (x) { return x.name === item_name })[0];
                                 var item_spec = item.stats.spec;
-                                str.push(`<font color="#${toHex(item.color)}">${charspec}</font>`);
+                                str.push(`<font color="#${item.color}">${charspec}</font>`);
                                 item_spec.forEach(function (spec, index) {
                                     if (index == 0) return;
                                     var char_name = spec.split(' - ')[0];
@@ -464,10 +464,4 @@ function sortByKeyAsc(array, key) {
         var x = a[key]; var y = b[key];
         return ((x < y) ? -1 : ((x > y) ? 1 : 0));
     });
-}
-
-function toHex(code) {
-    let color = code.toString(16).padStart(6, 0);
-    if (code == 16777215) color = 'fff'
-    return color;
 }
