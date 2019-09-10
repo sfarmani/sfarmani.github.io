@@ -14,10 +14,10 @@ $(function () {
     var heroesDom =
         "<'row'<'col-sm-12'tr>>";
 
-    $('#load_headers').load('headers.html');
-    $('#load_sidebar').load('sidebar.html');
-    $('#load_banner').load('banner.html');
-    $('#load_footer').load('footer.html');
+    // $('#load_headers').load('headers.html');
+    // $('#load_sidebar').load('sidebar.html');
+    // $('#load_banner').load('banner.html');
+    // $('#load_footer').load('footer.html');
     
     //// Heroes Info ////
     var heroInfo;
