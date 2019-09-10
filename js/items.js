@@ -1,10 +1,10 @@
 // Load different parts of the pages
 $(function () {
-    $.ajaxSetup({ async: false });
     $('#load_headers').load('headers.html');
     $('#load_sidebar').load('sidebar.html');
     $('#load_banner').load('banner.html');
     $('#load_footer').load('footer.html');
+    console.log('test1');
 
     let items_url = "json/items.json";
 
@@ -28,7 +28,8 @@ $(function () {
     
     var items;
 
-    // $.ajaxSetup({ async: false });
+    $.ajaxSetup({ async: false });
+    console.log('test2');
     $.getJSON(items_url, function (items_json) { items = items_json });
     $.ajaxSetup({ async: true });
     
