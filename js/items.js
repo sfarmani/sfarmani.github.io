@@ -1,11 +1,10 @@
 // Load different parts of the pages
 $(function () {
+    $.ajaxSetup({ async: false });
     $('#load_headers').load('headers.html');
     $('#load_sidebar').load('sidebar.html');
     $('#load_banner').load('banner.html');
     $('#load_footer').load('footer.html');
-
-    setTimeout(console.log("DOMs Loaded!"), 30000);
 
     let items_url = "json/items.json";
 
@@ -29,7 +28,7 @@ $(function () {
     
     var items;
 
-    $.ajaxSetup({ async: false });
+    // $.ajaxSetup({ async: false });
     $.getJSON(items_url, function (items_json) { items = items_json });
     $.ajaxSetup({ async: true });
     
@@ -67,12 +66,12 @@ $(function () {
             },
             { data: "name", title: "Name",
                 render: function(data, type, row){
-                    return `<font color="#${toHex(row.color)}">${data}</font>`;
+                    return `<font color="#${row.color}">${data}</font>`;
                 }
             },
             { data: "koreanname", title: "Korean Name",
                 render: function(data, type, row){
-                    return `<font color="#${toHex(row.color)}">${data}</font>`;
+                    return `<font color="#${row.color}">${data}</font>`;
                 }
             },
             { data: "droprate", title: "Drop Rate",
@@ -200,12 +199,12 @@ $(function () {
                         if (Object.keys(rec).length > 1) {
                             let color0 = $.grep(items, function(x){ return x.name === Object.keys(rec)[0] })[0].color;
                             let color1 = $.grep(items, function(x){ return x.name === Object.keys(rec)[1] })[0].color;
-                            str.push(`<u><font color="#${toHex(color0)}">${Object.keys(rec)[0]}</font>/<font color="#${toHex(color1)}">${Object.keys(rec)[1]}</font></u>`);
+                            str.push(`<u><font color="#${color0}">${Object.keys(rec)[0]}</font>/<font color="#${color1}">${Object.keys(rec)[1]}</font></u>`);
                         }
                         else {
                             let count = rec[Object.keys(rec)] > 1 ? ` <font color="#fff">x</font><font color="#ff8c00">${rec[Object.keys(rec)]}</font>` : '';
                             let color = $.grep(items, function (x) { return x.name === Object.keys(rec)[0] })[0].color;
-                            str.push(`<font color="#${toHex(color)}">${Object.keys(rec)}</font>${count}`);
+                            str.push(`<font color="#${color}">${Object.keys(rec)}</font>${count}`);
                         }
                     });
                     return str.join(' + ');
@@ -306,10 +305,4 @@ function diff(arr1, arr2) {
         }
     }
     return ret;
-}
-
-function toHex(code) {
-    let color = code.toString(16).padStart(6, 0);
-    if (code == 16777215) color = 'fff'
-    return color;
 }
