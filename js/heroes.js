@@ -103,9 +103,10 @@ $(function () {
                         },
                         { data: "spec", title: "Specialties",
                             render: function (data, type, row) {
+                                let str = [];
+                                $.ajaxSetup({ async: false });
                                 $.getJSON(items_url, function (items_json) {
                                     let heroClass = row.name;
-                                    let str = [];
                                     data.forEach(function (charspec) {
                                         if (charspec === "No Specs!") return "<i style='color: #5a7da0'>No Specs!</i>";
                                         let item_name = charspec.split(' - ')[0];
@@ -120,8 +121,9 @@ $(function () {
                                             str.push(`  ${bullet2} <font color="#9B9B9B">${spec_info}</font>`);
                                         });
                                     });
-                                    return str.join("<br>");
                                 });
+                                $.ajaxSetup({ async: false });
+                                return str.join("<br>");
                             }
                         }
                     ]
