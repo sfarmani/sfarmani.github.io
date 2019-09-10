@@ -1,5 +1,10 @@
 // Load different parts of the pages
 $(function () {
+    $('#load_headers').load('headers.html');
+    $('#load_sidebar').load('sidebar.html');
+    $('#load_banner').load('banner.html');
+    $('#load_footer').load('footer.html');
+
     let items_url = "json/items.json";
 
     // localStorage.clear();
@@ -19,11 +24,7 @@ $(function () {
         "<'row'<'col-auto mr-3 ml-3'f><'col-md-1 mr-md-auto'l><'col-auto'p>>" +
         "<'row'<'col-sm-12'tr>>" +
         "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>";
-    $('#load_headers').load('headers.html');
-    $('#load_sidebar').load('sidebar.html');
-    $('#load_banner').load('banner.html');
-    $('#load_footer').load('footer.html');
-
+    
     var items;
     $("footer.sticky-footer").ready(function () {
         $.ajaxSetup({ async: false });
