@@ -63,6 +63,8 @@ $(function () {
         var heroClass = e.params.data.text;
         var selectedHero = heroInfo.filter(x => x.heroClass === heroClass);
         var selectedSkills = heroSkills.filter(x => x.heroClass === heroClass);
+        console.log("initial");
+        console.log(selectedSkills);
 
         //// for hero-info table ////
         if (!$.fn.DataTable.isDataTable('#hero-info')) {
@@ -223,6 +225,7 @@ $(function () {
         }
         else {
             heroSkills_table.clear().draw();
+            console.log("after");
             console.log(selectedSkills);
             heroSkills_table.rows.add(selectedSkills);
             heroSkills_table.columns.adjust().draw();
