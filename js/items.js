@@ -43,7 +43,10 @@ $(function () {
             columns: [
                 { title: "Icons", width: "3%", orderable: false,
                     render: function (data, type, row) {
-                        var img_url = encodeURI(`https://raw.githubusercontent.com/sfarmani/twicons/master/${row.name}`);
+                        var url_name = row.name;
+                        if (row.type === "[Token]") url_name = "Token";
+                        if (row.type === "[Ore Deposit]") url_name = "Magical Ore Deposit";
+                        var img_url = encodeURI(`https://raw.githubusercontent.com/sfarmani/twicons/master/${url_name}`);
                         return `<img width="100%" src="${img_url}.jpg">`;
                     }
                 },
@@ -188,7 +191,6 @@ $(function () {
                             if (Object.keys(rec).length > 1) {
                                 let color0 = $.grep(json, function(ele){ return ele.name === Object.keys(rec)[0] })[0].color;
                                 let color1 = $.grep(json, function(ele){ return ele.name === Object.keys(rec)[1] })[0].color;
-                                // let color1 = json.filter(x => x.name === Object.keys(rec)[1])[0].color
                                 str.push(`<u><font color="#${toHex(color0)}">${Object.keys(rec)[0]}</font>/<font color="#${toHex(color1)}">${Object.keys(rec)[1]}</font></u>`);
                             }
                             else {
