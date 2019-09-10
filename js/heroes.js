@@ -113,7 +113,7 @@ $(function () {
                                 data.forEach(function (charspec) {
                                     if (charspec === "No Specs!") return "<i style='color: #5a7da0'>No Specs!</i>";
                                     let item_name = charspec.split(' - ')[0];
-                                    var item = $.grep(items_json, function (x) { return x.name === item_name })[0];
+                                    var item = $.grep(items, function (x) { return x.name === item_name })[0];
                                     var item_spec = item.stats.spec;
                                     str.push(`<font color="#${toHex(item.color)}">${charspec}</font>`);
                                     item_spec.forEach(function (spec, index) {
