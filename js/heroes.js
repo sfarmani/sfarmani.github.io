@@ -138,6 +138,10 @@ $(function () {
                 heroInfo_table.rows.add(selectedHero);
                 heroInfo_table.columns.adjust().draw();
             }
+            //// Refresh column widths on click ////
+            jQuery('.refreshColumns').on('click', function () {
+                heroInfo_table.columns.adjust().draw(false);
+            });
         });
          
     });
@@ -222,6 +226,10 @@ $(function () {
                 heroSkills_table.rows.add(selectedSkills);
                 heroSkills_table.columns.adjust().draw();
             }
+        });
+        //// Refresh column widths on click ////
+        jQuery('.refreshColumns').on('click', function () {
+            heroSkills_table.columns.adjust().draw(false);
         });
     });
     //// Heroes Skills END ////

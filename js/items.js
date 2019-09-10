@@ -279,6 +279,7 @@ $(function () {
             items_table.columns.adjust().draw(false);
         });
 
+        //// Refresh column widths on click ////
         jQuery('.refreshColumns').on('click', function () {
             items_table.columns.adjust().draw(false);
         });
