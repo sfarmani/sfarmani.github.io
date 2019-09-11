@@ -23,18 +23,9 @@ $(function () {
     
     var items;
 
-    // $.ajaxSetup({ async: false });
-    // $.getJSON(items_url, function (items_json) { items = items_json });
-    $.ajax({
-        url: "https://api.github.com/repos/sfarmani/twrpg-info/contents/items.json",
-        headers: {
-            Accept: "application/vnd.github.v3.raw"
-        },
-        success: function (items_json) {
-            items = JSON.parse(items_json);
-        }
-    });
-    // $.ajaxSetup({ async: true });
+    $.ajaxSetup({ async: false });
+    $.getJSON(items_url, function (items_json) { items = items_json });
+    $.ajaxSetup({ async: true });
 
     items = $.grep(items, function (x) { return !trolls.includes(x.type) });
 
