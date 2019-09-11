@@ -64,7 +64,7 @@ $(function () {
             heroInfo_table = $('#hero-info').DataTable({
                 responsive: true,
                 columnDefs: [
-                    { targets: '_all', defaultContent: "<i style='color: #5a7da0'>none</i>", width: "10%" }
+                    { targets: '_all', defaultContent: "<i style='color: #5a7da0'>none</i>" }
                 ],
                 language: { search: "Quick Search:", processing: "Loading Hero..." },
                 data: selectedHero,
@@ -74,7 +74,7 @@ $(function () {
                 orderCellsTop: false,
                 processing: true,
                 columns: [
-                    { data: "icon", title: "Icons", width: "3%",
+                    { data: "icon", title: "Icons", width: "8%",
                         render: function (data) {
                             if (!data) return "<i style='color: #5a7da0'>none</i>";
                             var img_url = encodeURI(`https://raw.githubusercontent.com/sfarmani/twicons/master/${data}`);
