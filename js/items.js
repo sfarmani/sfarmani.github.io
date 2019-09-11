@@ -1,7 +1,6 @@
 // Load different parts of the pages
 $(function () {
-    // let items_url = "json/items.json";
-    // let items_url = "https://api.github.com/repos/sfarmani/twrpg-info/contents/items.json";
+    let items_url = "https://raw.githubusercontent.com/sfarmani/twrpg-info/master/items.json";
 
     // localStorage.clear();
     if ([null, "null"].includes(localStorage.getItem("items_columns"))){
@@ -22,11 +21,9 @@ $(function () {
         "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>";
     
     var items;
-    // $.getJSON("https://api.github.com/repos/sfarmani/twrpg-info/contents/heros.json", function (json) { console.log(json); });
 
     $.ajaxSetup({ async: false });
-    // $.getJSON(items_url, function (items_json) { items = items_json });
-    $.getJSON("https://raw.githubusercontent.com/sfarmani/twrpg-info/master/items.json", function (json) { items = json });
+    $.getJSON(items_url, function (json) { items = json });
     $.ajaxSetup({ async: true });
 
     items = $.grep(items, function (x) { return !trolls.includes(x.type) });

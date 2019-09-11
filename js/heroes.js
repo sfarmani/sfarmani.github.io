@@ -1,8 +1,8 @@
 // Load different parts of the pages
 $(function () {
-    let heroes_url = "json/heros.json";
-    let skills_url = "json/skills.json";
-    let items_url = "json/items.json";
+    let heroes_url = "https://raw.githubusercontent.com/sfarmani/twrpg-info/master/heros.json";
+    let skills_url = "https://raw.githubusercontent.com/sfarmani/twrpg-info/master/skills.json";
+    let items_url = "https://raw.githubusercontent.com/sfarmani/twrpg-info/master/items.json";
     let bullet2 = "※";
 
     var skillsDom =
@@ -19,9 +19,9 @@ $(function () {
     var heroSkills;
     var items;
     $.ajaxSetup({ async: false });
-    $.getJSON(heroes_url, function (heroInfo_json) { heroInfo = heroInfo_json });
-    $.getJSON(skills_url, function (heroSkills_json) { heroSkills = heroSkills_json });
-    $.getJSON(items_url, function (items_json) { items = items_json });
+    $.getJSON(heroes_url, function (json) { heroInfo = json });
+    $.getJSON(skills_url, function (json) { heroSkills = json });
+    $.getJSON(items_url, function (json) { items = json });
     $.ajaxSetup({ async: true });
 
     //// Sort and group by the data ////
