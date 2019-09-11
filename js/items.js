@@ -31,7 +31,7 @@ $(function () {
             Accept: "application/vnd.github.v3.raw"
         },
         success: function (items_json) {
-            items = items_json;
+            items = JSON.parse(items_json);
         }
     });
     $.ajaxSetup({ async: true });
