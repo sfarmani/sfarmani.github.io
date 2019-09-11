@@ -146,7 +146,7 @@ $(function () {
                 responsive: true,
                 order: [],
                 columnDefs: [
-                    { targets: '_all', defaultContent: "<i style='color: #5a7da0'>none</i>", width: "10%" }
+                    { targets: '_all', defaultContent: "<i style='color: #5a7da0'>none</i>" }
                 ],
                 language: { search: "Quick Search:", processing: "Loading Skills..." },
                 data: selectedSkills,
