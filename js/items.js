@@ -39,10 +39,89 @@ $(function () {
         order: [],
         orderCellsTop: false,
         processing: true,
-        // fixedHeader: true,
-        // colReorder: true,
+        initComplete: function() {
+
+            var this_table = this.api();
+            var item_column_names = this_table.columns().header().toArray().map(x => x.innerText);
+            //// replace headers with input boxes ////
+            $('#items thead th').each(function (i) {
+                var title = $(this).text();
+                if (title == 'Icons' || title == 'Name') return;
+                $(this).html('<input type="text"class="form-control form-control-sm" placeholder="Search ' + title + '" />');
+            });
+
+            //// Create an array of objects to insert into select2 ////
+            var data = [];
+            item_column_names.forEach(function (column_name, index) {
+                if (column_name == "Icons") return;
+                var selected = JSON.parse(localStorage.getItem("items_columns")).includes(parseInt(index));
+                var column = this_table.column(index);
+                data.push({ "id": index, "text": column_name, "selected": selected });
+                column.visible(['Name', 'Korean Name', 'Item Type'].includes(column_name) ? true : selected);
+            });
+            // this_table.columns.adjust().draw(false);
+
+            //// create select2 ////
+            $('select.items-select').select2(
+                {
+                    theme: "default",
+                    data: data,
+                    width: "50%",
+                    placeholder: "Select columns to toggle",
+                    closeOnSelect: false
+                }
+            );
+
+            //// enabling searching for individual columns ////
+            this_table.columns().every(function () {
+                var that = this;
+
+                $('input', this.header()).on('keyup change clear click', function (e) {
+                    e.stopPropagation();
+                    if (that.search() !== this.value) {
+                        that.search(this.value).draw();
+                    }
+                });
+            });
+
+            //// Name, Korean Name, Item Type ////
+            var column_ids = [2, 3, 5];
+
+            //// Replace 3 above headers to dropdowns and enable searching for them ////
+            column_ids.forEach(function(id){
+                var column = this_table.column(id);
+                var column_name = item_column_names[id];
+                var column_name_altered = column_name.replace(/\s+/gi, '_').toLowerCase();
+                var select = $(`<select class="${column_name_altered}-select"><option value=""></option></select>`)
+                    .appendTo($(column.header()).empty())
+                    .on('change', function () {
+                        var val = $.fn.dataTable.util.escapeRegex($(this).val());
+                        column.search(val ? '^' + val + '$' : '', true, false).draw();
+                    });
+                column.data().unique().sort().each(function (d, j) {
+                    select.append('<option value="' + d + '">' + d + '</option>');
+                });
+
+                //// create select2 ////
+                $(`select.${column_name_altered}-select`).select2(
+                    {
+                        theme: "default",
+                        allowClear: true,
+                        width: "100%",
+                        placeholder: `Search ${column_name}`
+                    }
+                );
+                var selected = JSON.parse(localStorage.getItem("items_columns")).includes(parseInt(id));
+                column.visible(selected);
+
+            });
+            this_table.columns.adjust().draw(false);
+            
+            //// Disable sorting when clicked on dropdown ////
+            $('#items th').on('focus click change', 'span.select2', function (e) { e.stopPropagation(); });
+        },
         columns: [
-            { title: "Icons", width: "3%", orderable: false,
+            { title: "Icons", width: "5%", orderable: false,
                 render: function (data, type, row) {
                     var url_name = row.name;
                     if (row.type === "[Token]") url_name = "Token";
@@ -220,54 +299,12 @@ $(function () {
 
     jQuery('.load_message').toggle();
 
-    //// Get column names. ////
-    var item_column_names = items_table.columns().header().toArray().map(x => x.innerText);
-
-    //// replace headers with input boxes ////
-    $('#items thead th').each(function (i) {
-        var title = $(this).text();
-        if (title == 'Icons') return;
-        $(this).html('<input type="text"class="form-control form-control-sm" placeholder="Search ' + title + '" />');
-    });
-
-    //// Create an array of objects to insert into select2 ////
-    var data = [];
-    item_column_names.forEach(function (column_name, index) {
-        var selected = JSON.parse(localStorage.getItem("items_columns")).includes(parseInt(index));
-        var column = items_table.column(index);
-        data.push({ "id": index, "text": column_name, "selected": selected });
-        column.visible(selected);
-    });
-    items_table.columns.adjust().draw(false);
-
-    //// create select2 ////
-    $('select.items-select').select2(
-        {
-            theme: "default",
-            data: data,
-            width: "50%",
-            placeholder: "Select columns to toggle",
-            closeOnSelect: false
-        }
-    );
-
-    //// enabling searching for individual columns ////
-    items_table.columns().every(function () {
-        var that = this;
-
-        $('input', this.header()).on('keyup change clear click', function (e) {
-            e.stopPropagation();
-            if (that.search() !== this.value) {
-                that.search(this.value).draw();
-            }
-        });
-    });
-
     //// toggle columns from the dropdown menu ////
     $('select.items-select').on('select2:select select2:unselect', function (e) {
         var column_id = parseInt(e.params.data.id);
         var column = items_table.column(e.params.data.id);
         column.visible(!column.visible());
+        $('#items th').on('focus click change', 'span.select2', function (e) { e.stopPropagation(); });
         var selectedColumns = JSON.parse(localStorage.getItem("items_columns"));
         if (selectedColumns.includes(column_id)) {
             selectedColumns.splice($.inArray(column_id, selectedColumns), 1);

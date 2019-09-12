@@ -46,7 +46,6 @@ $(function () {
             theme: "default",
             data: data,
             width: "35%",
-            // allowClear: true,
             placeholder: "Select a Hero"
         }
     );
