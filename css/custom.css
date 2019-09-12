@@ -57,6 +57,10 @@ input.select2-search__field{
     color: #858796 !important;
 }
 
+.select2-container--default .select2-results>.select2-results__options{
+    max-height: 340px !important;
+}
+
 @media (min-width: 768px){
     .custom-md-8{
         flex: 0 0 70.1%;

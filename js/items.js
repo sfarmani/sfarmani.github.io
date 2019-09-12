@@ -59,7 +59,6 @@ $(function () {
                 data.push({ "id": index, "text": column_name, "selected": selected });
                 column.visible(['Name', 'Korean Name', 'Item Type'].includes(column_name) ? true : selected);
             });
-            // this_table.columns.adjust().draw(false);
 
             //// create select2 ////
             $('select.items-select').select2(
