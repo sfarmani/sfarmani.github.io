@@ -16,10 +16,26 @@ $(function () {
             data: json,
             dom: dom,
             columns: [
-                { data: "command", title: "Command" },
-                { data: "usage", title: "Usage" },
-                { data: "desc", title: "Description" },
-                { data: "aliases", title: "Aliases" },
+                { data: "command", title: "Command", 
+                    render: function(data){
+                        return `<font color="#eade2c">${data}</font>`;
+                    }
+                },
+                { data: "usage", title: "Usage", 
+                    render: function(data){
+                        return `<font color="#e48282">${data}</font>`;
+                    }
+                },
+                { data: "desc", title: "Description", 
+                    render: function(data){
+                        return `<font color="#fff">${data}</font>`;
+                    }
+                },
+                { data: "aliases", title: "Aliases", 
+                    render: function(data){
+                        return `<font color="#22bacc">${data}</font>`;
+                    }
+                },
                 { data: "cooldown", title: "Cooldown" }
             ]
         });
