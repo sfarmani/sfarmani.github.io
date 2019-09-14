@@ -84,3 +84,64 @@ input.select2-search__field{
 .banner{
     border-radius: 3px;
 }
+
+body {
+  overflow-x: hidden;
+}
+
+/* Sidebar */
+
+#sidebar {
+  -webkit-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+  padding: 15px;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+}
+
+#content {
+  -webkit-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+}
+
+.sidebar-opened #content {
+  margin-left: 250px;
+}
+
+@media (min-width: 100px) {
+    .sidebar .nav-item .nav-link {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+    width: 14rem;
+  }
+}
+
+@media (max-width: 992px) {
+  #sidebar {
+    margin-left: -251px;
+  }
+}
+
+@media (min-width: 992px) {
+  #content {
+    margin-left: 250px;
+  }
+}
+
+
+/* Hamburger Menu */
+
+.nav-trigger {
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+.pt-2_2{
+  padding-top: 2.2rem !important;
+}

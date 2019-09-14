@@ -22,7 +22,7 @@
         rel="stylesheet">
     
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet" type="text/css">
+    <link href="css/sb-admin-2.css" rel="stylesheet" type="text/css">
     <link href="css/custom.css" rel="stylesheet" type="text/css">
     
     <!-- DataTables CDN -->
@@ -34,12 +34,13 @@
 <body id="page-top">
 
     <!-- Page Wrapper -->
-    <div id="wrapper">
+    <div id="wrapper" class="main-container">
 
-        <div id="load_sidebar" class="not_quite_black">
-            <!-- Sidebar -->
-            <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
-            
+        <div id="load_sidebar" class="not_quite_black d-flex vh-100">
+
+            <!-- new sidebar -->
+            <aside id="sidebar" class="sidebar sidebar-dark side-panel d-flex flex-column h-100 bg-golden">
+
                 <!-- Sidebar - Brand -->
                 <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                     <div class="sidebar-brand-icon">
@@ -51,90 +52,79 @@
                     Built and maintained by<br>Rock Lee#7769
                 </div>
                 <br>
-            
+                
                 <!-- Divider -->
                 <hr class="sidebar-divider my-0">
-            
+                
                 <!-- Heading -->
                 <div class="sidebar-heading">
                     Quick Links
                 </div>
-            
-                <!-- Nav Item - Invite -->
-                <li class="nav-item">
-                    <a class="nav-link"
-                        href="https://discordapp.com/oauth2/authorize?client_id=452880836975525899&permissions=18432&scope=bot"
-                        target="_blank">
-                        <i class="fas fa-plus"></i>
-                        <span>Invite</span>
-                    </a>
-                </li>
-            
-                <!-- Nav Item - Discord link -->
-                <li class="nav-item">
-                    <a class="nav-link" href="https://discord.gg/cEwPJzZ" target="_blank">
-                        <i class="fab fa-discord"></i>
-                        <span>TWRPG Official Discord</span>
-                    </a>
-                </li>
-            
-                <!-- Nav Item - Discord link -->
-                <li class="nav-item">
-                    <a class="nav-link" href="https://discord.gg/hduwajN" target="_blank">
-                        <i class="fab fa-discord"></i>
-                        <span>Support</span>
-                    </a>
-                </li>
+                
+                <ul class="navbar-nav bd-navbar-nav">
+                    <!-- Nav Item - Invite -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://discordapp.com/oauth2/authorize?client_id=452880836975525899&permissions=18432&scope=bot" target="_blank">
+                            <i class="fas fa-plus"></i>
+                            <span>Invite</span>
+                        </a>
+                    </li>
+                    
+                    <!-- Nav Item - Discord link -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://discord.gg/cEwPJzZ" target="_blank">
+                            <i class="fab fa-discord"></i>
+                            <span>TWRPG Official Discord</span>
+                        </a>
+                    </li>
+                    
+                    <!-- Nav Item - Discord link -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://discord.gg/hduwajN" target="_blank">
+                            <i class="fab fa-discord"></i>
+                            <span>Support</span>
+                        </a>
+                    </li>
+                    
+                    <!-- Nav Item - Commands -->
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-list"></i>
+                            <span>Commands List</span>
+                        </a>
+                    </li>
+                    
+                    <!-- Nav Item - Items -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="items.html">
+                            <i class="fas fa-list"></i>
+                            <span>Items List</span>
+                        </a>
+                    </li>
+                    
+                    <!-- Nav Item - Heroes and Skills -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="heroes.html">
+                            <i class="fas fa-list"></i>
+                            <span>Heroes and Skills List</span>
+                        </a>
+                    </li>
+                    
+                    <!-- Nav Item - link to Item Builder (Texnical) -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://texnical.github.io/tw-builder/">
+                            <i class="fas fa-link"></i>
+                            <span>Texnical's Item Builder</span>
+                        </a>
+                    </li>
+                </ul>
 
-                <!-- Nav Item - Commands -->
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">
-                        <i class="fas fa-list"></i>
-                        <span>Commands List</span>
-                    </a>
-                </li>
-            
-                <!-- Nav Item - Items -->
-                <li class="nav-item">
-                    <a class="nav-link" href="items.html">
-                        <i class="fas fa-list"></i>
-                        <span>Items List</span>
-                    </a>
-                </li>
-            
-                <!-- Nav Item - Heroes and Skills -->
-                <li class="nav-item">
-                    <a class="nav-link" href="heroes.html">
-                        <i class="fas fa-list"></i>
-                        <span>Heroes and Skills List</span>
-                    </a>
-                </li>
-
-                <!-- Nav Item - link to Item Builder (Texnical) -->
-                <li class="nav-item">
-                    <a class="nav-link" href="https://texnical.github.io/tw-builder/">
-                        <i class="fas fa-link"></i>
-                        <span>Texnical's Item Builder</span>
-                    </a>
-                </li>
-
-                <!-- Divider -->
-                <hr class="sidebar-divider d-none d-md-block">
-            
-                <!-- Sidebar Toggler (Sidebar) -->
-                <div class="text-center d-none d-md-inline">
-                    <button class="rounded-circle border-0" id="sidebarToggle"></button>
-                </div>
-            
-            </ul>
-            <!-- End of Sidebar -->
-            
-            <!-- Custom scripts for all pages-->
-            <script src="js/sb-admin-2.min.js"></script>
+            </aside>
+            <!-- new sidebar END -->
         </div>
 
         <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column dark_not_black">
+        <div id="content-wrapper" class="dark_not_black">
 
             <!-- Main Content -->
             <div id="content">
@@ -156,6 +146,10 @@
                     </header>
                 </div>
                 <br>
+                <a id="navTrigger" class="d-lg-none nav-trigger m-3" role="button" title="Click to toggle sidebar">
+                    <span class="hamburger"><i class="fas fa-bars"></i></span>
+                </a>
+                <br>
                 <div class='text-center container'>
                     <h2 class="fullpackfont">
                         Commands List
@@ -169,7 +163,7 @@
             </div>
             <!-- End of Main Content -->
 
-            <div id="load_footer">
+            <div id="load_footer" class="pt-2_2">
                 <!-- Footer -->
                 <footer class="sticky-footer not_quite_black">
                     <div class="container my-auto text-center">

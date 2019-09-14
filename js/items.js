@@ -298,6 +298,18 @@ $(function () {
 
     jQuery('.load_message').toggle();
 
+    var sidebar = $("#sidebar");
+    var hamburger = $('#navTrigger');
+
+    hamburger.click(function (e) {
+        e.preventDefault();
+        $(this).toggleClass('is-active');
+        // This will add `sidebar-opened`
+        $('#wrapper').toggleClass("sidebar-opened");
+        // Remove magin left
+        sidebar.toggleClass('ml-0');
+    });
+
     //// toggle columns from the dropdown menu ////
     $('select.items-select').on('select2:select select2:unselect', function (e) {
         var column_id = parseInt(e.params.data.id);
