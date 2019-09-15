@@ -130,7 +130,8 @@ $(function () {
                 }
             },
             { data: "level", title: "Level",
-                render: function(data){
+                render: function(data, type){
+                    if (type == "sort" || type == "type") return !data ? 0 : data;
                     if (!data) return "<i style='color: #5a7da0'>none</i>";
                     return `<font color="#ffff00">Lv. ${data}</font>`;
                 }
@@ -146,7 +147,8 @@ $(function () {
                 }
             },
             { data: "droprate", title: "Drop Rate",
-                render: function (data) {
+                render: function (data, type) {
+                    if (type == "sort" || type == "type") return !data ? 0 : data;
                     if (!data) return "<i style='color: #5a7da0'>none</i>";
                     let str = [];
                     if (Array.isArray(data)) {
