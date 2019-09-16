@@ -77,7 +77,7 @@ $(function () {
                         render: function (data) {
                             if (!data) return "<i style='color: #5a7da0'>none</i>";
                             var img_url = encodeURI(`https://raw.githubusercontent.com/sfarmani/twicons/master/${data}`);
-                            return `<img width="100%" src="${img_url}.jpg">`;
+                            return `<img width="100%" src="${img_url}.jpg" alt="${data}">`;
                         }
                     },
                     { data: "name", title: "Name",
