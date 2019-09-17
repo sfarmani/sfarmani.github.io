@@ -10589,6 +10589,7 @@ a:focus {
   -webkit-box-flex: 1;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
+  margin-bottom: 155px;
 }
 
 .container,
@@ -12048,6 +12049,9 @@ footer.sticky-footer {
   padding: 2rem 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
 
 footer.sticky-footer .copyright {
