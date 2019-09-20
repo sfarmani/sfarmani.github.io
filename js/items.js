@@ -120,7 +120,7 @@ $(function () {
             $('#items th').on('focus click change', 'span.select2', function (e) { e.stopPropagation(); });
         },
         columns: [
-            { title: "Icons", width: "5%", orderable: false,
+            { title: "Icons", width: "64px", orderable: false,
                 render: function (data, type, row) {
                     var url_name = row.name;
                     if (row.type === "[Token]") url_name = "Token";
