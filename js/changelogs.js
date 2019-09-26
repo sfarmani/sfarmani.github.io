@@ -76,7 +76,7 @@ $(function () {
                     orderCellsTop: false,
                     processing: true,
                     columns: [
-                        { data: "bugs", title: "Bugs", render: function (data) { return print_array(data, '#00ff66') } },
+                        { data: "bugs", title: "Bug Fixes", render: function (data) { return print_array(data, '#00ff66') } },
                         { data: "misc", title: "Misc", render: function (data) { return print_array(data, '#00dcff') } }
                     ]
                 });
@@ -248,7 +248,7 @@ $(function () {
             hereoes_table.columns.adjust().draw(false);
         });
     });
-    
+
     var sidebar = $("#sidebar");
     var hamburger = $('#navTrigger');
 
