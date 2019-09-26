@@ -1,0 +1,129 @@
+[
+    {
+        "name": "26p",
+        "notes": [
+            "Compatible Version: v0.24c ~"
+        ],
+        "bugs": [
+            "Powder box - Fixed having 2 of each powder on hero selection load (for real this time)"
+        ]
+    },
+    {
+        "name": "26m",
+        "notes": [
+            "Compatible Version: v0.24c ~"
+        ],
+        "bugs": [
+            "Powder box - fixed having 2 of each powder on hero selection/load"
+        ]
+    },
+    {
+        "name": "26k",
+        "notes": [
+            "Compatible Version: v0.24c ~"
+        ],
+        "bugs": [
+            "Fixed a bug that prevented the Ice Shard quest to be turned in",
+            "Ifrit - Fixed Seeds of Flame getting removed by greater debuff cleanse"
+        ],
+        "items": [
+            {
+                "name": "Benedict, the Crimson Armor of Blood",
+                "changes": [
+                    "When max HP is accumulated: HP recovery per second → HP Regen"
+                ]
+            },
+            {
+                "name": "Eye of the Abyss / Void Eye / Eye of the Flame Lord",
+                "changes": [
+                    "Changed to also apply skill damage aura to summons"
+                ]
+            }
+        ],
+        "monsters": [
+            {
+                "name": "Monster notes",
+                "changes": [
+                    "Difficulty scaling restricted to the bosses named below:",
+                    [
+                        "Skeleton King Desperia",
+                        "Zombie Lord",
+                        "Ancient Ent",
+                        "Archangel Samael",
+                        "Shadow Dragon Irbert",
+                        "Death Fiend",
+                        "Valtora",
+                        "Ifrit"
+                    ]
+                ]
+            },
+            {
+                "name": "Tentacle Lord",
+                "changes": [
+                    "Horn of Deep Sea / Infested Tentacle droprate: 3% → 5%"
+                ]
+            },
+            {
+                "name": "Giant Golem",
+                "changes": [
+                    "Corrupted Crystal Fragment / Corrupt Creations droprate: 3% → 5%"
+                ]
+            },
+            {
+                "name": "Mad Clown",
+                "changes": [
+                    "Material droprate: 2% → 3%"
+                ]
+            },
+            {
+                "name": "Shadow Dragon",
+                "changes": [
+                    "Removed Mage Lord summoning requirements"
+                ]
+            },
+            {
+                "name": "Ifrit",
+                "changes": [
+                    "Disabled mounts in arena"
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Phantom Blade",
+                "changes": [
+                    "Release (T)",
+                    [
+                        "No longer costs souls",
+                        "Adds full HP regen effect of Soul (D) for duration"
+                    ],
+                    "Obliterate (F)",
+                    [
+                        "Soul cost: 7 → 4"
+                    ]
+                ]
+            },
+            {
+                "name": "Arcane Mage",
+                "changes": [
+                    "Barrage (T)",
+                    [
+                        "Healing Turtles in Turtle Lord fight are now considered as bosses by this spell"
+                    ]
+                ]
+            }
+        ],
+        "misc": [
+            "Increased speed of corpses dissapearing",
+            "Changed powder box to fill up when hero is selected/loaded",
+            "Bags",
+            [
+                "Base inventory size: 23 → 24",
+                "Token's (except some) inventory size: 24 → 30",
+                "Base movement speed: 350 → 250",
+                "Token's (except some) movement speed: 450 → 500"
+            ],
+            "Bags are now able to drop items with Patrol (p) (cannot pickup same way)"
+        ]
+    }
+]

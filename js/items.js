@@ -1,6 +1,6 @@
 // Load different parts of the pages
 $(function () {
-    let items_url = "https://raw.githubusercontent.com/sfarmani/twrpg-info/master/items.json";
+    var items_url = "https://raw.githubusercontent.com/sfarmani/twrpg-info/master/items.json";
 
     // localStorage.clear();
     if ([null, "null"].includes(localStorage.getItem("items_columns"))){

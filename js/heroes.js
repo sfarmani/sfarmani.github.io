@@ -1,9 +1,9 @@
 // Load different parts of the pages
 $(function () {
-    let heroes_url = "https://raw.githubusercontent.com/sfarmani/twrpg-info/master/heros.json";
-    let skills_url = "https://raw.githubusercontent.com/sfarmani/twrpg-info/master/skills.json";
-    let items_url = "https://raw.githubusercontent.com/sfarmani/twrpg-info/master/items.json";
-    let bullet2 = "※";
+    var heroes_url = "https://raw.githubusercontent.com/sfarmani/twrpg-info/master/heros.json";
+    var skills_url = "https://raw.githubusercontent.com/sfarmani/twrpg-info/master/skills.json";
+    var items_url = "https://raw.githubusercontent.com/sfarmani/twrpg-info/master/items.json";
+    var bullet2 = "※";
 
     var skillsDom =
         "<'row'<'col-sm-4 col-md-2'i>>" +
@@ -11,8 +11,7 @@ $(function () {
         "<'row'<'col-sm-12'tr>>" +
         "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>";
 
-    var heroesDom =
-        "<'row'<'col-sm-12'tr>>";
+    var heroesDom = "<'row'<'col-sm-12'tr>>";
     
     //// Heroes Info ////
     var heroInfo;
