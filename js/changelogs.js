@@ -182,7 +182,7 @@ $(function () {
             }
             else {
                 monsters_table.clear().draw();
-                monsters_table.rows.add(selected_version[0].items);
+                monsters_table.rows.add(selected_version[0].monsters);
                 monsters_table.columns.adjust().draw();
             }
         }
@@ -231,7 +231,7 @@ $(function () {
             }
             else {
                 hereoes_table.clear().draw();
-                hereoes_table.rows.add(selected_version[0].items);
+                hereoes_table.rows.add(selected_version[0].heroes);
                 hereoes_table.columns.adjust().draw();
             }
         }

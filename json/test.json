@@ -125,5 +125,275 @@
             ],
             "Bags are now able to drop items with Patrol (p) (cannot pickup same way)"
         ]
+    },
+    {
+        "name": "26h",
+        "notes": [
+            "Compatible Version: v0.24c ~"
+        ],
+        "bugs": [
+            "Movespeed - Fixed related bugs",
+            "Dashes - Fixed bugs related to spells like Paladin Holy Divide (Q) / Thunderers Lightning Rush (W)",
+            "Lancer - Fixed Oriental Spear Mastery (D) buff not applying when re-casted",
+            "Martial Artist - Fixed being unable to drop Grandine, the Plates of Wraith after using Nameless Arts (F) with Sacred Heart from Heaven's Fist active",
+            "Shooter - Fixed Distortion (R) causing various damage resistance-related bugs"
+        ],
+        "items": [
+            {
+                "name": "Frostbane",
+                "changes": [
+                    "Consecutive Freezing Shot (W) damage: 10000 + 80 X AGI → 400% attack damage + 80 X AGI"
+                ]
+            },
+            {
+                "name": "Everfrostbane",
+                "changes": [
+                    "Consecutive Freezing Shot (W) damage: 10000 + 112 ~ 128 X AGI → 400% attack damage + 112 ~ 128 X AGI"
+                ]
+            },
+            {
+                "name": "Pheles, the Bow of Wind",
+                "changes": [
+                    "Attack speed: 25% → 10%"
+                ]
+            },
+            {
+                "name": "Pheles, the Bow of Skies",
+                "changes": [
+                    "Attack speed: 30% → 20%",
+                    "Magic Defense: -5% → -7.5%"
+                ]
+            },
+            {
+                "name": "Winter Robe",
+                "changes": [
+                    "Removed 2% extra skill damage increase from Water Mage Spec"
+                ]
+            },
+            {
+                "name": "Wanderer's Cape",
+                "changes": [
+                    "Martial Artist spec: Reduces Nameless Arts (F) cast time by 0.5 seconds → Reduces cast time by 1 second",
+                    "1 second duration increase removed"
+                ]
+            },
+            {
+                "name": "Wings of Phoenix",
+                "changes": [
+                    "Removed 1 second duration increase for Martial Artist spec"
+                ]
+            }
+        ],
+        "monsters": [
+            {
+                "name": "Wings of Death",
+                "changes": [
+                    "Howl movement speed decrease: 50% → 25%"
+                ]
+            },
+            {
+                "name": "Zombie Lord",
+                "changes": [
+                    "HP: 13,541,930 → 12,541,930"
+                ]
+            },
+            {
+                "name": "Shadow Dragon Irbert",
+                "changes": [
+                    "Removed 30% speed reduction on attack",
+                    "Breath speed reduction: 75% → 50%"
+                ]
+            },
+            {
+                "name": "Valtora",
+                "changes": [
+                    "HP threshold to be able to cast Judgment of Skies: 85% → 50%"
+                ]
+            },
+            {
+                "name": "Death Fiend",
+                "changes": [
+                    "Empower attacks now deal damage to secondary targets based on their armor"
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Dark Knight",
+                "changes": [
+                    "Requiem (T)",
+                    [
+                        "Cooldown: 45 seconds → 30 seconds"
+                    ],
+                    "Unholy Tempest (F)",
+                    [
+                        "Duration: 3 seconds → 2.5 seconds (total damage output is same)"
+                    ]
+                ]
+            },
+            {
+                "name": "Crusader",
+                "changes": [
+                    "Original Sin (F)",
+                    [
+                        "Final slash damage: 475 X STR → 550 X STR",
+                        "Reduced cast delay by 0.5 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Paladin",
+                "changes": [
+                    "Holy Aura (D) - Aura of Awakening (R)",
+                    [
+                        "Movespeed increase: 50 → 75"
+                    ],
+                    "Divine Spirit (W)",
+                    [
+                        "Removed 75 movespeed increase if at least on spirit exists"
+                    ]
+                ]
+            },
+            {
+                "name": "Berserker",
+                "changes": [
+                    "Blade Rush (R)",
+                    [
+                        "No longer decreases duration of Berserk (T) while active"
+                    ]
+                ]
+            },
+            {
+                "name": "Shooter",
+                "changes": [
+                    "Distortion (R)",
+                    [
+                        "Knockback distance: 400 → 450",
+                        "Debuff no longer is removed when knockback is activated"
+                    ]
+                ]
+            },
+            {
+                "name": "Martial Artist",
+                "changes": [
+                    "Nameless Arts (F)",
+                    [
+                        "Cast time: 2.5 seconds → 2 seconds",
+                        "Duration: 6 seconds → 8 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Bow Master",
+                "changes": [
+                    "Arrow Rain (T)",
+                    [
+                        "Increased damage by 50%",
+                        "No longer increases damage if casted after Flame Shot (Q)"
+                    ]
+                ]
+            },
+            {
+                "name": "Water Mage",
+                "changes": [
+                    "Ice Age (F)",
+                    [
+                        "Duration: 6 seconds → 5 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Alchemist",
+                "changes": [
+                    "Conjure Fire (Q) - Magma Explosion (W)",
+                    [
+                        "Bonus damage if casted on targets affected by Conjure Air (E) - Rock Storm (R): 1.75 ~ 2.75 → 2 ~ 2.5"
+                    ]
+                ]
+            }
+        ],
+        "misc": [
+            "Fixed Orb of the Deep Sea description being outdated",
+            "Decreased visual Noise of Lightning Mage's Lightning bolt (Q) with casual costume enabled"
+        ]
+    },
+    {
+        "name": "26f",
+        "notes": [
+            "Compatible Version: v0.24c ~"
+        ],
+        "bugs": [
+            "Movement - Fixed units sometimes getting stuck on border between areas",
+            "Berserker - Fixed Blade Rush (R) not consuming HP on use",
+            "Paladin - Fixed Holy Divide (Q) sometimes not moving towards target point on use"
+        ],
+        "monsters": [
+            {
+                "name": "Wings of Death",
+                "changes": [
+                    "Howl movespeed reduction: 200% → 50%"
+                ]
+            },
+            {
+                "name": "Ancient Ent",
+                "changes": [
+                    "HP: 30,000,000 to 25,000,000"
+                ]
+            },
+            {
+                "name": "Archangel Samael",
+                "changes": [
+                    "HP: 30,120,000 to 28,370,000"
+                ]
+            },
+            {
+                "name": "Shadow Dragon Irbert",
+                "changes": [
+                    "HP: 35,821,000 to 33,821,000",
+                    "Breath movespeed reduction: 90% → 75%"
+                ]
+            },
+            {
+                "name": "Death Fiend",
+                "changes": [
+                    "Death Devourer HP: 11,381,910 → 10,381,910",
+                    "Death Devourer HP: 22,314,500 → 20,314,500",
+                    "Death Devourer HP: 21,391,000 → 18,310,000"
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Shooter",
+                "changes": [
+                    "Distortion (R)",
+                    [
+                        "Damage: main stat X 60 → main stat X 50",
+                        "Debuff no longer shared between other shooters",
+                        "Damage resistance reduction: 12% → 10%"
+                    ],
+                    "Stardust Rain (T)",
+                    [
+                        "Damage per projectile: 120% attack damage + 8 X main stat → 100% attack damage + 7.5 X main stat"
+                    ]
+                ]
+            },
+            {
+                "name": "Soul Weaver",
+                "changes": [
+                    "Unholy Blast (Q)",
+                    [
+                        "Damage resistance reduction: (5 + INT / 2500)% → 5%"
+                    ],
+                    "Soul Materia (W)",
+                    [
+                        "Skill damage increase: 12% → (5 + INT / 1000)%"
+                    ]
+                ]
+            }
+        ],
+        "misc": [
+            "Reduced map size (preventing map download bugs)"
+        ]
     }
 ]
