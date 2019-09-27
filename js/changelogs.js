@@ -57,7 +57,7 @@ $(function () {
         if ($('.notes_wrapper').hasClass('d-none')){
             $('.notes_wrapper').removeClass('d-none');
         }
-        $('.notes').text(notes);
+        $('.notes').html(notes);
 
         ////////////////////////////////////////////// for bugs and misc table //////////////////////////////////////////////
         if ($.type(selected_version[0].bugs) != "undefined" || $.type(selected_version[0].misc) != "undefined"){
