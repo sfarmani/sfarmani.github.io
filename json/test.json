@@ -1,5 +1,144 @@
 [
     {
+        "name": "26s",
+        "notes": [
+            "Compatible Version: v0.24c ~"
+        ],
+        "items": [
+            {
+                "name": "Winter's Heart",
+                "changes": [
+                    "Knight spec - Grants Frozen Break to Excalibur (F) → Breaks shields when hit by Excalibur (F)"
+                ]
+            },
+            {
+                "name": "Guardian Ring / True Guardian Ring / Ispion, the Runed Ring",
+                "changes": [
+                    "Knight spec - Removed Seal of Mana (T) duration increase"
+                ]
+            }
+        ],
+        "monsters": [
+            {
+                "name": "Jack-o-Lantern",
+                "changes": [
+                    "Jack Impact damage: 50,000 → 20,000"
+                ]
+            },
+            {
+                "name": "Death Fiend",
+                "changes": [
+                    "Now resets when all heroes in fight die",
+                    "Death Weaver",
+                    [
+                        "Wave stuns for 3 seconds → slows target down for 3 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Valtora",
+                "changes": [
+                    "Tornadoes now slow down fora  bit after bouncing / slightly increased their radius"
+                ]
+            },
+            {
+                "name": "Ifrit",
+                "changes": [
+                    "Obsidian Giant shield break efficency:",
+                    [
+                        "Knight - Blitz (W) 10% → 20%",
+                        "Witch - Arrow of Destruction (T → Q) 40% → 30%"
+                    ]
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Berserker",
+                "changes": [
+                    "Attack range: 50 → 75",
+                    "Blood Bath (D)",
+                    [
+                        "Bleed duration: 4 seconds → 5 seconds"
+                    ],
+                    "Blood Fury (E)",
+                    [
+                        "No longer interrupts actions",
+                        "Provides silence immunity when toggled ON"
+                    ]
+                ]
+            },
+            {
+                "name": "Knight",
+                "changes": [
+                    "Release Mana (D)",
+                    [
+                        "MP recovery per second 8% → 10%",
+                        "MP to HP conversion 75% → 50%"
+                    ],
+                    "Blitz (W)",
+                    [
+                        "Redirects damage from allies onto Knight for 6 seconds → Provides (max MP X damage reduction) shield to allies for 3 seconds"
+                    ],
+                    "Seal of Mana (T)",
+                    [
+                        "Provides (30 + damage reduction / 2)% shield to allies → shares damage reduction and HP recovery with allies",
+                        "Radius: 400 → 500"
+                    ],
+                    "Excalibur (F)",
+                    [
+                        "Damage: STR X 400 → STR X 475",
+                        "Cooldown: 100 seconds → 60 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Paladin",
+                "changes": [
+                    "Holy Aura (D) - Aura of Retribution (Q)",
+                    [
+                        "Attack damage: 12% → 10%"
+                    ]
+                ]
+            },
+            {
+                "name": "Phantom Blade",
+                "changes": [
+                    "Obliterate (F)",
+                    [
+                        "Damage: (ATTACK DAMAGE X 15000%) → (ATTACK DAMAGE X 17500%)",
+                        "Cast time reduced"
+                    ]
+                ]
+            },
+            {
+                "name": "Hermit",
+                "changes": [
+                    "Restoration (W)",
+                    [
+                        "HP restoration is applied to lowest ally → closest ally"
+                    ],
+                    "Purify (F)",
+                    [
+                        "Shield break cycle 0.5 second → 0.75 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Water Mage",
+                "changes": [
+                    "Frozen Emotion (W)",
+                    [
+                        "Skill damage increase still applies when shield is depleted"
+                    ]
+                ]
+            }
+        ],
+        "misc": [
+            "-title command removed"
+        ]
+    },
+    {
         "name": "26p",
         "notes": [
             "Compatible Version: v0.24c ~"
