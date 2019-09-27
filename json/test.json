@@ -1270,7 +1270,7 @@
         "name": "25a",
         "notes": [
             "Compatible Version: v0.24c ~",
-            "Summer event starts in this version, for participation rules please read this post: https://twrpg.com/viewtopic.php?f=44&t=5233"
+            "Summer event starts in this version, for participation rules please read this post: <a href='https://twrpg.com/viewtopic.php?f=44&t=5233'>Forum Event Link</a>"
         ],
         "bugs": [
             "Fiend Token: Fixed cosmetic spell not being usable"
