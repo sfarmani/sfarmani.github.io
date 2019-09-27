@@ -116,7 +116,7 @@ $(function () {
                                 var str = [];
                                 var names = data.split(' / ');
                                 names.forEach(function(name){
-                                    var color = name === "Item notes" ? 'fff' : items.filter(x => x.name === name)[0].color;
+                                    var color = items.filter(x => x.name === name).length === 0 ? 'fff' : items.filter(x => x.name === name)[0].color;
                                     str.push(`<span style="color: #${color}">${name}</span>`);
                                 });
                                 return str.join(' / ');
@@ -165,7 +165,7 @@ $(function () {
                                 var str = [];
                                 var names = data.split(' / ');
                                 names.forEach(function(name){
-                                    // var color = name === "Monster notes" ? 'fff' : bosses.filter(x => x.name === name)[0].color;
+                                    // var color = bosses.filter(x => x.name === name).length === 0 ? 'fff' : bosses.filter(x => x.name === name)[0].color;
                                     var color = 'fff';
                                     str.push(`<span style="color: #${color}">${name}</span>`);
                                 });
@@ -215,7 +215,7 @@ $(function () {
                                 var str = [];
                                 var names = data.split(' / ');
                                 names.forEach(function(name){
-                                    var color = name === "Hero notes" ? 'fff' : heroes.filter(x => x.heroClass === name)[0].color;
+                                    var color = heroes.filter(x => x.heroClass === name).length === 0 ? 'fff' : heroes.filter(x => x.heroClass === name)[0].color;
                                     str.push(`<span style="color: #${color}">${name}</span>`);
                                 });
                                 return str.join(' / ');
@@ -262,19 +262,15 @@ $(function () {
     });
 });
 
-function print_array(array, color){
+function print_array(array, color=''){
     if (!array) return "<i style='color: #5a7da0'>none</i>";
-    var result = [`<ul style='color: ${color}'>`];
-    array.forEach(function (str) {
+    var style = color ? ` style="color: ${color}"` : '';
+    var result = [`<ul${style}>`];
+    array.forEach(function(str){
         if ($.type(str) === "array") {
-            result.push("<ul>");
-            str.forEach(function (substr) {
-                result.push(`<li>${substr}</li>`);
-            });
-            result.push("</ul>");
-            
+            result.push(print_array(str));
         }
-        else {
+        else{
             result.push(`<li>${str}</li>`);
         }
     });

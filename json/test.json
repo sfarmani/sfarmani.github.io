@@ -395,5 +395,1046 @@
         "misc": [
             "Reduced map size (preventing map download bugs)"
         ]
+    },
+    {
+        "name": "26e",
+        "notes": [
+            "Compatible Version: v0.24c ~"
+        ],
+        "bugs": [
+            "Jack - Powder bug fix",
+            "Lancer - Speed bug fix",
+            "Fixed Shooter's Water Bullet (Q) with Hydrobuster not working"
+        ],
+        "items": [
+            {
+                "name": "Frozen Robe",
+                "changes": [
+                    "Shield: (MP X 0.75) + (INT X 6) → (INT X 6)"
+                ]
+            },
+            {
+                "name": "Winter Robe",
+                "changes": [
+                    "Shield: (MP X 0.75) + (INT X 5) → (INT X 8)"
+                ]
+            },
+            {
+                "name": "Ring of Time",
+                "changes": [
+                    "Recipe: Spirit of Abyss → Spirit of Abyss / Orb of Oblivion"
+                ]
+            }
+        ],
+        "monsters": [
+            {
+                "name": "Skeleton King Desperia",
+                "changes": [
+                    "HP: 31,001,200 → 27,120,000"
+                ]
+            },
+            {
+                "name": "Death Fiend",
+                "changes": [
+                    "Mark of Death duration: 15 seconds → 30 seconds",
+                    "Death Devourer",
+                    [
+                        "HP: 12,381,910 → 11,381,910",
+                        "Bonus magic defense: 75% → 50%",
+                        "Soul absorb HP recovery: 15% → 10%"
+                    ]
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Shooter",
+                "changes": [
+                    "Distortion (R)",
+                    [
+                        "Knockback distance: 600 → 400",
+                        "Charge cycle: 10 seconds → 12 seconds"
+                    ]
+                ]
+            }
+        ]
+    },
+    {
+        "name": "26d",
+        "notes": [
+            "Compatible Version: v0.24c ~"
+        ],
+        "bugs": [
+            "Map - Fixed bugs related to downloading map in-game",
+            "Lancer - Changed Pierce (Q) to not get stuck inside enemies",
+            "Wings of Death - Fixed being able to move over terrain",
+            "Death Fiend - Fixed not healing summons sometimes",
+            "Bag of Mother Nature - Fixed merchange spec not increasing duration of Life Shield Scroll (E)"
+        ],
+        "items": [
+            {
+                "name": "Item notes",
+                "changes": [
+                    "Removed movespeed increase from all items",
+                    "Added dissassembling system",
+                    [
+                        "Dean Jaina can dissassemble some items with W option (limited to dropabble items)",
+                        "This creates Fragment of Effort",
+                        [
+                            "1 Proof of Endeavor is created when disassembling Rectus / Spirit Beast / Flame Nightmare / Turtle Lord items",
+                            "6 Proof of Endeavor can be used to forge material from said bosses"
+                        ]
+                    ]
+                ]
+            },
+            {
+                "name": "Hellspike Armor",
+                "changes": [
+                    "Changed charge percentage text to last longer"
+                ]
+            },
+            {
+                "name": "Silky Bag / Very Silky Bag / Fruit-filled Bag / Candy-filled Bag / Candy-Filled Bag +1",
+                "changes": [
+                    "Added 50 movespeed bonus (bypasses 500 limit)"
+                ]
+            },
+            {
+                "name": "Bag of Heaven / Bag of Life / Bag of Mother Nature",
+                "changes": [
+                    "Added 75 movespeed bonus (bypasses 500 limit)"
+                ]
+            },
+            {
+                "name": "Winter Robe",
+                "changes": [
+                    "Skill damage and magic defense: 10% → 8%"
+                ]
+            },
+            {
+                "name": "Snow Wings",
+                "changes": [
+                    "Increased size of visual"
+                ]
+            }
+        ],
+        "monsters": [
+            {
+                "name": "Monster notes",
+                "changes": [
+                    "Changed powder costs for following bosses",
+                    [
+                        "Hydra: 3 White → 2 White",
+                        "Count: 2 White and 2 Red → 2 White and 1 Red",
+                        "Jack: 3 Red → 2 Red",
+                        "Wings of Death: 4 Green → 3 Green",
+                        "Mage Lord: 4 Red → 3 Red",
+                        "Frostspider Lord: 4 Blue and 2 Holy → 4 Blue and 1 Holy",
+                        "Turtle Lord: 6 Blue and 6 Green → 4 Blue and 4 Green"
+                    ],
+                    "Tweaked memory stone mana costs",
+                    [
+                        "All bosses that cost 3 mana → now costs 2 mana"
+                    ],
+                    "Added difficulty scaling based on amount of players",
+                    [
+                        "7 players: 10% damage resistance and 5% droprate increase",
+                        "8 players: 20% damage resistance and 10% droprate increase",
+                        "9 players: 30% damage resistance and 15% droprate increase",
+                        "10 players: 40% damage resistance and 20% droprate increase",
+                        "Removed difficulty scaling from Skeleton King Desperia, Archangel Samael, and Shadow Dragon Irbert"
+                    ]
+                ]
+            },
+            {
+                "name": "Scarab / Wallachia Spectre",
+                "changes": [
+                    "Added pop-up text to drops"
+                ]
+            },
+            {
+                "name": "Death Knight / Ragnaar / Tentacle Lord / Giant Golem / Mana Ancient",
+                "changes": [
+                    "Respawn time: 7 minutes 30 seconds → 5 minutes"
+                ]
+            },
+            {
+                "name": "Guardian Angel",
+                "changes": [
+                    "Conviction of Light",
+                    [
+                        "Damage: 40,000 → 20,000"
+                    ],
+                    "Judgment of Light",
+                    [
+                        "Damage: 100,000 → 50,000"
+                    ]
+                ]
+            },
+            {
+                "name": "Corrupt Angel",
+                "changes": [
+                    "Judgment of Darkness",
+                    [
+                        "Damage: 100,000 → 50,000"
+                    ]
+                ]
+            },
+            {
+                "name": "Mage Lord",
+                "changes": [
+                    "Dark Star",
+                    [
+                        "Damage: 50,000 → 20,000",
+                        "Stun duration: 0.25 seconds → 1.5 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Mad Clown",
+                "changes": [
+                    "Changed to be a Raid Boss (no longer respawns, can be revived from memory stone for 2 mana)"
+                ]
+            },
+            {
+                "name": "Flame Nightmare",
+                "changes": [
+                    "Anger damage reduced"
+                ]
+            },
+            {
+                "name": "Spirit Beast",
+                "changes": [
+                    "HP regen during blue phase: 25,000 → 0",
+                    "Lightning Strike delay: 1.5 seconds → 1 second"
+                ]
+            },
+            {
+                "name": "Corruptor Rectus",
+                "changes": [
+                    "Droprate of items: 3% → 2%"
+                ]
+            },
+            {
+                "name": "Death Fiend",
+                "changes": [
+                    "Damage Resistance gain on 2nd phase: 33% → 0%"
+                ]
+            },
+            {
+                "name": "Valtora",
+                "changes": [
+                    "Damage resistance: 50% → 25%",
+                    "Tornadoes now move more randomly, and get stuck less"
+                ]
+            },
+            {
+                "name": "Ifrit",
+                "changes": [
+                    "Damage resistance: 50% → 25%",
+                    "Damage during wheel: 148,139 → 68,139"
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Hero notes",
+                "changes": [
+                    "Changed base movespeed of all heroes to 500",
+                    "Cooldown of summons recall spell: 10 seconds → 1 second",
+                    "Removed movespeed increase from spells that can't increase it past 500",
+                    [
+                        "Example: Priest Holy Aurora (E) 30% movespeed increase removed",
+                        "Example: Martial Artist Footwalk (D) / Reapers Scythe Mastery (D) 125 / 100 move speed kept",
+                        "Example: Sword Enchanter's Speed Enchant (W) 400 movespeed kept"
+                    ]
+                ]
+            },
+            {
+                "name": "Berserker",
+                "changes": [
+                    "Bloodbath (D)",
+                    [
+                        "Healing: 5% max HP → 6% max HP",
+                        "Change to activate: 10% → 15%",
+                        "Duration: 5 seconds → 4 seconds",
+                        "Changed units affected by proc to appear red to Berserker"
+                    ],
+                    "Blood Fury (E)",
+                    [
+                        "Draining 30% max HP per second → draining 30% current HP per second",
+                        "Max efficiency threshold: 1% HP → 20% HP"
+                    ],
+                    "Blade Rush (R)",
+                    [
+                        "First strike and per second damage: 400% attack damage + 40 X STR → 500% attack damage + 50 X STR",
+                        "Now able to move and cast other spells for duration",
+                        "Bonus damage to bleeding targets: (75 + skill damage)% → 100% and a chance to reset bleed duration",
+                        "Duration: always 2 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Dark Knight",
+                "changes": [
+                    "Slightly reduced skill cast delay",
+                    "Deathblade (D)",
+                    [
+                        "Empower attacks no longer miss"
+                    ]
+                ]
+            },
+            {
+                "name": "Knight",
+                "changes": [
+                    "Excalibur (F)",
+                    [
+                        "Cooldown: 150 seconds → 100 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Paladin",
+                "changes": [
+                    "Holy Aura (D) - Aura of Awakening (R)",
+                    [
+                        "Added 50 movespeed increase"
+                    ]
+                ]
+            },
+            {
+                "name": "Martial Artist",
+                "changes": [
+                    "Nameless Arts (F)",
+                    [
+                        "Added 50 attack range increase"
+                    ]
+                ]
+            },
+            {
+                "name": "Swordsman",
+                "changes": [
+                    "Crescent Slash (W)",
+                    [
+                        "Base damage removed",
+                        "Additional damage: 17.5 X AGI → 25 X AGI",
+                        "Cooldown: 12 seconds → 8 seconds"
+                    ],
+                    "Sword Storm (E)",
+                    [
+                        "Base damage removed",
+                        "Additonal damage: 9 X AGI → 10 X AGI",
+                        "Cooldown: 20 seconds → 15 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Phantom Blade",
+                "changes": [
+                    "Changed attack range to 500 (to avoid right click bugs)",
+                    "Slash (A)",
+                    [
+                        "Changed to hit boss units first if multiple enemies are hit"
+                    ]
+                ]
+            },
+            {
+                "name": "Shooter",
+                "changes": [
+                    "Slightly reduced skill cast delay",
+                    "Breatkshot (E)",
+                    [
+                        "Cooldown: 12 seconds → 10 seconds"
+                    ],
+                    "Distortion (R)",
+                    [
+                        "Spell reworked"
+                    ]
+                ]
+            },
+            {
+                "name": "Wind Mage",
+                "changes": [
+                    "Feather of Aeolus (D)",
+                    [
+                        "Changed to not move camera to target point"
+                    ],
+                    "Gentle Winds (W)",
+                    [
+                        "Projectile speed: 250 → 400"
+                    ],
+                    "Horn of Notus (T)",
+                    [
+                        "Slightly reduced visual noise"
+                    ]
+                ]
+            },
+            {
+                "name": "Arcane Mage",
+                "changes": [
+                    "Gravity Field (E)",
+                    [
+                        "Cooldown: 17.5 seconds → 10 seconds"
+                    ],
+                    "Barrage (T)",
+                    [
+                        "Changed to target nearby boss units first if multiple enemies are nearby",
+                        "Damage per projectile: 30 X INT → 40 X INT",
+                        "Cooldown: 20 seconds → 15 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Soul Weaver",
+                "changes": [
+                    "Unholy Blast (Q)",
+                    [
+                        "Changed to by pass terrain"
+                    ]
+                ]
+            },
+            {
+                "name": "Witch",
+                "changes": [
+                    "Hell Gate (T)",
+                    [
+                        "Decreased summoning time"
+                    ]
+                ]
+            }
+        ],
+        "misc": [
+            "Slightly adjusted early game leveling",
+            "Slightly increased base stats",
+            [
+                "Everyone who has a character, please retrieve them using Mage Tower option for it"
+            ],
+            "Added tombstone of your player color to appear on death",
+            "Changed bags to absorb ores too with Absorb Magic Stone spell",
+            "Changed bags to drop Yeti Tooth as well with Drop Magic Stone spell"
+        ]
+    },
+    {
+        "name": "26c",
+        "notes": [
+            "Compatible Version: v0.24c ~",
+            "No major changes"
+        ]
+    },
+    {
+        "name": "26b",
+        "notes": [
+            "Compatible Version: v0.24c ~"
+        ],
+        "bugs": [
+            "Fixed a bug where the game kept crashing while fighting Death Fiend",
+            "Warlock - Fixed a bug that made the screen keep shaking even after end channeling of Soul Grimoire (R)"
+        ]
+    },
+    {
+        "name": "26a",
+        "notes": [
+            "Compatible Version: v0.24c ~"
+        ],
+        "bugs": [
+            "Blue Lotus Aura - Fixed not replacing some ring visuals"
+        ],
+        "items": [
+            {
+                "name": "Atricia, the Sword of Dreams",
+                "changes": [
+                    "Fragment of Chaos in recipe changed to be interchangeable with Spearhead of Death",
+                    "Fragment of Chaos might get removed from recipe later on"
+                ]
+            },
+            {
+                "name": "Pheles, the Bow of Wind",
+                "changes": [
+                    "Bow Master Spec: Removed"
+                ]
+            },
+            {
+                "name": "Pheles, the Bow of Skies",
+                "changes": [
+                    "Attack Damage: 25000 → 23000"
+                ]
+            },
+            {
+                "name": "Everfrostbane",
+                "changes": [
+                    "Attack Damage: 24000 → 28000"
+                ]
+            },
+            {
+                "name": "Twin Snow",
+                "changes": [
+                    "Elementalist Spec Added: Seal of Water (W) HP increased by 20%"
+                ]
+            },
+            {
+                "name": "Triple Snow",
+                "changes": [
+                    "Elementalist Spec Added: Seal of Water (W) HP increased by 40%"
+                ]
+            },
+            {
+                "name": "Bloodsoul Plates",
+                "changes": [
+                    "Fragment of Oblivion no longer interchangeable with Orb of Oblivion",
+                    "Burning Bone Fragments now interchangeable with Dragonic Orb",
+                    "Burning Bone Fragments might get removed from recipe later on"
+                ]
+            },
+            {
+                "name": "Druid's Mantle",
+                "changes": [
+                    "Fairies are only generated while in combat → will always be generated"
+                ]
+            },
+            {
+                "name": "Cold Ring of Death",
+                "changes": [
+                    "Swordsman Spec: Increases Quick Draw (D) damage by 15% removed"
+                ]
+            },
+            {
+                "name": "Soul Eater",
+                "changes": [
+                    "Removed stun effect from active"
+                ]
+            },
+            {
+                "name": "Walrus",
+                "changes": [
+                    "Double right-click to ram allies → use Move (M) to ram allies"
+                ]
+            },
+            {
+                "name": "Storm",
+                "changes": [
+                    "New item and recipe added"
+                ]
+            }
+        ],
+        "monsters": [
+            {
+                "name": "Anceint Ent",
+                "changes": [
+                    "Elder Ent",
+                    [
+                        "HP: 20,000,000 → 15,000,000",
+                        "Jump channel time: 2 seconds → 1.5 seconds"
+                    ],
+                    "Giant Ent",
+                    [
+                        "HP: 10,000,000 → 5,000,000",
+                        "Purified Water of Nature / Fragment of the Wind droprate: 0.02% → 0.04%"
+                    ]
+                ]
+            },
+            {
+                "name": "Shadow Dragon Irbert",
+                "changes": [
+                    "HP: 31,821,000 → 35,821,000"
+                ]
+            },
+            {
+                "name": "Death Fiend",
+                "changes": [
+                    "Revival timers for all monsters in Abandoned Cemetery stops while Death Fiend is alive",
+                    "Death Weaver",
+                    [
+                        "Added red visual effect to monster's arms when casting claws",
+                        "Added green visual effect to monster's arms when casting waves"
+                    ],
+                    "Death Devourer",
+                    [
+                        "Soul swallow cast time: 1.5 seconds → 2 seconds",
+                        "Charge Duration: 15 seconds → 12 seconds"
+                    ],
+                    "Death Huntress",
+                    [
+                        "Arrow charge cycle: 15 seconds → 10 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Valtora",
+                "changes": [
+                    "Red lines now disappear when Valtora dies"
+                ]
+            },
+            {
+                "name": "Ifrit",
+                "changes": [
+                    "Obsidian Giants",
+                    [
+                        "Stun duration after charge: 5 seconds → 1.5 seconds",
+                        "Shield break after charge: 20% → 30%"
+                    ],
+                    "Flame Soul",
+                    [
+                        "No longer releases waves on death once Ifrit is killed or reset"
+                    ]
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Berserker",
+                "changes": [
+                    "Blood Fury (E)",
+                    [
+                        "Max HP drain per second: 15% → 30%"
+                    ]
+                ]
+            },
+            {
+                "name": "Swordsman",
+                "changes": [
+                    "Quick Draw (D)",
+                    [
+                        "Passive effect removed"
+                    ],
+                    "Genocide Storm (F)",
+                    [
+                        "Final slash damage buffed from 300 X AGI → 400 X AGI"
+                    ]
+                ]
+            },
+            {
+                "name": "Phantom Blade",
+                "changes": [
+                    "Soul (D)",
+                    [
+                        "Increases HP regen by 2% per 4 souls → increases HP regen by 0.5% per soul"
+                    ]
+                ]
+            },
+            {
+                "name": "Bow Master",
+                "changes": [
+                    "Arrow Rain (T)",
+                    [
+                        "Base damage per arrow: 150% attack damage → 100% attack damage (Heartseeker: 1200% attack damage → 800% attack damage)"
+                    ]
+                ]
+            },
+            {
+                "name": "Lightning Mage",
+                "changes": [
+                    "Lightning Bolt (Q)",
+                    [
+                        "Now bypasses terrian"
+                    ],
+                    "Lightning Strike (R)",
+                    [
+                        "Cooldown: 18 seconds → 15 seconds"
+                    ],
+                    "Hypercharge (T)",
+                    [
+                        "Cooldown: 45 seconds → 40 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Arcane Mage",
+                "changes": [
+                    "Moonlight Link (D)",
+                    [
+                        "Cooldown: 15 seconds → 12 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Warlock",
+                "changes": [
+                    "Dimension Collapse (W)",
+                    [
+                        "Base attack cycle: 4.5 seconds → 4 seconds"
+                    ],
+                    "Vengeance (E)",
+                    [
+                        "Pure damage dealt: 1000% → 2000% absorbed"
+                    ],
+                    "Soul Grimoire (R)",
+                    [
+                        "Max MP cost per second: 20% → 25%",
+                        "Attack speed increase of Dimension Collapse (W) orbs: 400% → 500%",
+                        "Duration: 5 seconds → 4 seconds",
+                        "No longer ends channeling if you run out of MP during Demonic Fury (T)"
+                    ],
+                    "Demonic Fury (T)",
+                    [
+                        "No longer exits transformed form if Soul Grimoire (R) is channeling",
+                        "Removed additional 10% skill damage increase after 15 seconds of duration",
+                        "Added new spell when active - Soul Offering (T): Reduces empower cycle 1 second to 0.25 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Blood Weaver",
+                "changes": [
+                    "Blood Boil (R)",
+                    [
+                        "Cooldown: 17.5 seconds → 15 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Elementalist",
+                "changes": [
+                    "Seal of Water (W)",
+                    [
+                        "Refreshing Well now also affects itself"
+                    ],
+                    "Seal of Chaos (F)",
+                    [
+                        "Abyss Walk (Q) / Eye of Chaos (E)",
+                        [
+                            "Increased damage by 50%"
+                        ]
+                    ]
+                ]
+            }
+        ],
+        "misc": [
+            "Fixed description errors for Bahanar, the Sword of Illusion / Bahanar, the True Sword of Illusion"
+        ]
+    },
+    {
+        "name": "25h",
+        "notes": [
+            "Compatible Version: v0.24c ~"
+        ],
+        "misc": [
+            "Added -title command temporarily",
+            [
+                "This command allows players to test how their title looks in game",
+                "It can be done by writing -title <hex code> <title>",
+                "Example: -title ff0047 Jerk"
+            ],
+            "Titles will still be added manually, this command is only for testing your title choices."
+        ]
+    },
+    {
+        "name": "25g",
+        "notes": [
+            "Compatible Version: v0.24c ~",
+            "EVENT IS OVER IN THIS VERSION BUT YOU MAY CONTINUE PLAYING KOREAN OR ENGLISH 0.25f ",
+            "VERSION TO OBTAIN EVENT REWARDS UNTIL AUGUST 12TH 23:59:59 UTC"
+        ],
+        "misc": [
+            "Event",
+            [
+                "Summer event ends"
+            ],
+            "Disabled Mark of Rebirth costume for Thunderer"
+        ]
+    },
+    {
+        "name": "25f",
+        "notes": [
+            "Compatible Version: v0.24c ~",
+            "EVENT IS OVER IN THIS VERSION BUT YOU MAY CONTINUE PLAYING KOREAN OR ENGLISH 0.25f ",
+            "VERSION TO OBTAIN EVENT REWARDS UNTIL AUGUST 12TH 23:59:59 UTC"
+        ],
+        "items": [
+            {
+                "name": "Crimson Star",
+                "changes": [
+                    "Changed active projectiles to ignore terrain"
+                ]
+            }
+        ],
+        "misc": [
+            "Event",
+            [
+                "Lucky beach ball",
+                [
+                    "Changed seals to be invincible",
+                    "Changed seals to be stun-immune",
+                    "Added player color to seals",
+                    "Seal teleport (Q) cooldown: 7.5 seconds → 10 seconds"
+                ]
+            ]
+        ]
+    },
+    {
+        "name": "25e",
+        "notes": [
+            "Compatible Version: v0.24c ~"
+        ],
+        "misc": [
+            "Event",
+            [
+                "Reworked lucky beach ball",
+                [
+                    "Changed to ignore terrain and objects again",
+                    "When ball spawns, each player gets a seal that can move through terrian and teleport with (Q); Slippers removed",
+                    "Beach balls no longer collide with heroes. Can only collide with seals"
+                ]
+            ]
+        ]
+    },
+    {
+        "name": "25d",
+        "notes": [
+            "Compatible Version: v0.24c ~"
+        ],
+        "bugs": [
+            "Gunner - Fixed not being able to craft summer costume",
+            "Blue Lotus Aura - Fixed not replacing some ring effects"
+        ],
+        "monsters": [
+            {
+                "name": "Ancient Ent",
+                "changes": [
+                    "Changed to be revivable after Ancient Ent and all Elder Ents are dead"
+                ]
+            }
+        ],
+        "misc": [
+            "Event",
+            [
+                "Added ticket/ball drop chance to more bosses",
+                [
+                    "Item bosses",
+                    "Death Knight, Ragnaar, Giant Golem, Tentacle Lord, Mana Ancient, Mad Clown"
+                ],
+                "Added ball drop chance to Guardian Angels, Corrupt Angel (was ticket only before)",
+                "Lucky beach ball changed to bounce off of terrian and objects; Max amount of bounces: 20 → 15",
+                "Reduced damage of enemies in Seasea Caves"
+            ]
+        ]
+    },
+    {
+        "name": "25c",
+        "notes": [
+            "Compatible Version: v0.24c ~"
+        ],
+        "bugs": [
+            "Blue Lotus Aura - Fixed not showing properly",
+            "Rudolph - Fixed not showing properly"
+        ],
+        "items": [
+            {
+                "name": "Item notes",
+                "changes": []
+            }
+        ],
+        "monsters": [
+            {
+                "name": " Ancient Ent",
+                "changes": [
+                    "No longer revivable if Elder Ent still alive"
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Hero notes",
+                "changes": []
+            }
+        ],
+        "misc": [
+            "Event",
+            [
+                "Seasea ticket droprate increased by 50%",
+                "Event item droprate from seasea red/green pouches decreased by 33%",
+                "limited ticket/beach ball drops to these bosses:",
+                [
+                    "Death Fiend, Valtora, Ifrit, Skeleton King, Zombie Lord, Ancient Ent, Samael, Shadow Dragon, Frostspider Lord, Demon Lord Beriel, Corruptor Rectus, Flame Nightmare, Turtle Lord, Hydra, Count, Jack, Wings of Death, Mage Lord, Spirit Beast, Bone Dragon, Guardian Angels (no ball), Corrupt Angel (No ball)"
+                ],
+                "Droprate reduction per 10 obtained shining seashells reduced"
+            ]
+        ]
+    },
+    {
+        "name": "25b",
+        "notes": [
+            "Compatible Version: v0.24c ~"
+        ],
+        "bugs": [
+            "Shining Seashells - Fixed being unsavable (Obtained seashells will be auto-recovered. If you already used them on some crafts, please discard the auto-recovered seashells)"
+        ],
+        "misc": [
+            "Event",
+            [
+                "Shining Seashells - Droprate decrease after obtaining 10 reduced",
+                "Lucky beachballs - Changed to only bounce off of dark borders and max bounce amount: 30 → 20"
+            ]
+        ]
+    },
+    {
+        "name": "25a",
+        "notes": [
+            "Compatible Version: v0.24c ~",
+            "Summer event starts in this version, for participation rules please read this post: https://twrpg.com/viewtopic.php?f=44&t=5233"
+        ],
+        "bugs": [
+            "Fiend Token: Fixed cosmetic spell not being usable"
+        ],
+        "items": [
+            {
+                "name": "Aglaia, the Spear of Heavenly Flows",
+                "changes": [
+                    "Skill damage: 9% → 10%",
+                    "Crit chance: 9% → 0%"
+                ]
+            },
+            {
+                "name": "Cape of Corrupt Flame",
+                "changes": [
+                    "Magic Defense: 12% → 9%"
+                ]
+            },
+            {
+                "name": "Cloak of the Fallen Shadows",
+                "changes": [
+                    "Magic Defense: 15% → 12%"
+                ]
+            }
+        ],
+        "monsters": [
+            {
+                "name": "Spirit Beast / Ancient Ent",
+                "changes": [
+                    "Removed player limit"
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Swordsman",
+                "changes": [
+                    "Sword Storm (E)",
+                    [
+                        "Changed to count as periodic damage"
+                    ]
+                ]
+            },
+            {
+                "name": "Soul Weaver",
+                "changes": [
+                    "Harvest (A)",
+                    [
+                        "Changed to not proc single-target effects"
+                    ]
+                ]
+            }
+        ],
+        "misc": [
+            "Event",
+            [
+                "Summer event will last from july 29th to august 12th 23:59:59 UTC"
+            ]
+        ]
+    },
+    {
+        "name": "24s",
+        "notes": [
+            "Compatible Version: v0.24c ~"
+        ],
+        "bugs": [
+            "Lancer - Fixed aura effects working improperly",
+            "Power recorder - Fixed not working properly",
+            "Attack damage - Fixed description error",
+            [
+                "Hell Riser damage: 26000 → 28000"
+            ]
+        ],
+        "items": [
+            {
+                "name": "Creation of the Sky and Earth",
+                "changes": [
+                    "STR: 825 → 975",
+                    "Passive effect removed"
+                ]
+            },
+            {
+                "name": "Protector's Will",
+                "changes": [
+                    "Damage Taken -18% → -15%"
+                ]
+            },
+            {
+                "name": "Halo of Judgment",
+                "changes": [
+                    "On attack damage: main stat X 0.75 → main stat X 1"
+                ]
+            },
+            {
+                "name": "Ring of Revival",
+                "changes": [
+                    "All stats: 1020 → 1170",
+                    "Active - Removed stat increase"
+                ]
+            },
+            {
+                "name": "Latea, the Ring of Overlord",
+                "changes": [
+                    "All stats: 1250 → 1300"
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Crusader",
+                "changes": [
+                    "1st Sword Dance: Strike (R) - 2nd Sword Dance: Sword (R)",
+                    [
+                        "Damage and stun duration from Strike of Honor (E): 100% → 150%"
+                    ],
+                    "Max Amplication: Execution Sword (T)",
+                    [
+                        "Healing per second: 20% → 30%"
+                    ]
+                ]
+            },
+            {
+                "name": "Bow Master",
+                "changes": [
+                    "Guardian Scout (E)",
+                    [
+                        "Attack damage and main stat gain: 10% → 8%"
+                    ]
+                ]
+            },
+            {
+                "name": "Lightning Mage",
+                "changes": [
+                    "Discharge (E)",
+                    [
+                        "Distance traveled to reach max damage: 2000 → 1000"
+                    ]
+                ]
+            },
+            {
+                "name": "Warlock",
+                "changes": [
+                    "Dimension Collapse (W)",
+                    [
+                        "No longer castable if current MP is below the minimal required MP",
+                        "Duration is now paused if Warlock is paused",
+                        "Cooldown: 6 seconds → 0 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Blood Weaver",
+                "changes": [
+                    "Crimson Pillar (T)",
+                    [
+                        "Cooldown: 45 seconds → 30 seconds"
+                    ]
+                ]
+            }
+        ],
+        "misc": [
+            "Changed heroes to get auto-selected when picked or loaded",
+            "Powder bag slots changed from 5 → 6",
+            "Summer event starts in next version"
+        ]
     }
 ]
