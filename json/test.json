@@ -1436,5 +1436,56 @@
             "Powder bag slots changed from 5 → 6",
             "Summer event starts in next version"
         ]
+    },
+    {
+        "name": "24r",
+        "notes": [
+            "Compatible Version: v0.24c ~"
+        ],
+        "bugs": [
+            "Druid mantle - Fixed shooters being unable to wear it"
+        ],
+        "monsters": [
+            {
+                "name": "Archangel Samael",
+                "changes": [
+                    "Hp: 27,120,000 →  30,120,000",
+                    "Armor: 910 → 1240",
+                    "Protection of light",
+                    [
+                        "Damage Resistance: 50% → 25%"
+                    ],
+                    "Souls of Light",
+                    [
+                        "Speed and radius increased"
+                    ]
+                ]
+            },
+            {
+                "name": "Valtora",
+                "changes": [
+                    "Tornado damage per second: 15% max HP → 10% max HP"
+                ]
+            }
+        ],
+        "misc": [
+            "Added new bag to bag space for each player",
+            [
+                "Has 12 slots",
+                "Cannot move or teleport",
+                "Can save same items as normal bag"
+            ],
+            "Added new sections to closet for aura/mount items",
+            "Save code length increased"
+        ]
+    },
+    {
+        "name": "24o",
+        "notes": [
+            "Compatible Version: v0.13c ~"
+        ],
+        "bugs": [
+            "Arcane mage - Fixed invincibility not ending after Starlight (F) cast"
+        ]
     }
 ]
