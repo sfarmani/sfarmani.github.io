@@ -1217,24 +1217,12 @@
             "Blue Lotus Aura - Fixed not showing properly",
             "Rudolph - Fixed not showing properly"
         ],
-        "items": [
-            {
-                "name": "Item notes",
-                "changes": []
-            }
-        ],
         "monsters": [
             {
                 "name": " Ancient Ent",
                 "changes": [
                     "No longer revivable if Elder Ent still alive"
                 ]
-            }
-        ],
-        "heroes": [
-            {
-                "name": "Hero notes",
-                "changes": []
             }
         ],
         "misc": [
