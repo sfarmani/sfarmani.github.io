@@ -16,7 +16,7 @@
             {
                 "name": "Zombie lord",
                 "changes": [
-                    "Hp nerfed from 12,541,930 → 11,541,930"
+                    "HP: 12,541,930 → 11,541,930"
                 ]
             }
         ],
@@ -24,7 +24,7 @@
             {
                 "name": "Hero notes",
                 "changes": [
-                    "Buffed cooldowns from 150 seconds to 120 seconds for following characters",
+                    "Cooldowns changed from 150 seconds to 120 seconds for following characters",
                     [
                         "Berserker",
                         "Dark Knight",
