@@ -127,7 +127,7 @@ $(function () {
                         },
                         { data: "changes", title: "Item Change(s)",
                             render: function (data) {
-                                return print_array(data, '#00ff7e');
+                                return print_array(data, '#ea3588');
                             }
                         }
                     ]
