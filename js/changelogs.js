@@ -62,6 +62,7 @@ $(function () {
         ////////////////////////////////////////////// for bugs and misc table //////////////////////////////////////////////
         if ($.type(selected_version[0].bugs) != "undefined" || $.type(selected_version[0].misc) != "undefined"){
             $('.bugs_wrapper').removeClass('d-none');
+            $('.bugs_table_wrapper').removeClass('d-none');
             if (!$.fn.DataTable.isDataTable('#bugs_and_misc')) {
                 bug_misc_table = $('#bugs_and_misc').DataTable({
                     responsive: true,
@@ -89,6 +90,7 @@ $(function () {
         }
         else if ($.fn.DataTable.isDataTable('#bugs_and_misc')) {
             $('.bugs_wrapper').addClass('d-none');
+            $('.bugs_table_wrapper').addClass('d-none');
             bug_misc_table.destroy();
             $('table#bugs_and_misc').children().remove();
         }
@@ -97,6 +99,7 @@ $(function () {
         ////////////////////////////////////////////// for items table //////////////////////////////////////////////
         if ($.type(selected_version[0].items) != "undefined") {
             $('.items_wrapper').removeClass('d-none');
+            $('.items_table_wrapper').removeClass('d-none');
             if (!$.fn.DataTable.isDataTable('#items')) {
                 items_table = $('#items').DataTable({
                     responsive: true,
@@ -138,6 +141,7 @@ $(function () {
         }
         else if ($.fn.DataTable.isDataTable('#items')) {
             $('.items_wrapper').addClass('d-none');
+            $('.items_table_wrapper').addClass('d-none');
             items_table.destroy();
             $('table#items').children().remove();
         }
@@ -146,6 +150,7 @@ $(function () {
         ////////////////////////////////////////////// for monsters table //////////////////////////////////////////////
         if ($.type(selected_version[0].monsters) != "undefined") {
             $('.monsters_wrapper').removeClass('d-none');
+            $('.monsters_table_wrapper').removeClass('d-none');
             if (!$.fn.DataTable.isDataTable('#monsters')) {
                 monsters_table = $('#monsters').DataTable({
                     responsive: true,
@@ -188,6 +193,7 @@ $(function () {
         }
         else if ($.fn.DataTable.isDataTable('#monsters')) {
             $('.monsters_wrapper').addClass('d-none');
+            $('.monsters_table_wrapper').addClass('d-none');
             monsters_table.destroy();
             $('table#monsters').children().remove();
         }
@@ -196,6 +202,7 @@ $(function () {
         ////////////////////////////////////////////// for heroes table //////////////////////////////////////////////
         if ($.type(selected_version[0].heroes) != "undefined") {
             $('.heroes_wrapper').removeClass('d-none');
+            $('.heroes_table_wrapper').removeClass('d-none');
             if (!$.fn.DataTable.isDataTable('#heroes')) {
                 hereoes_table = $('#heroes').DataTable({
                     responsive: true,
@@ -237,6 +244,7 @@ $(function () {
         }
         else if ($.fn.DataTable.isDataTable('#heroes')) {
             $('.heroes_wrapper').addClass('d-none');
+            $('.heroes_table_wrapper').addClass('d-none');
             hereoes_table.destroy();
             $('table#heroes').children().remove();
         }
