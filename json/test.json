@@ -2611,5 +2611,22 @@
             "Moved NPC for compensation so it no longer blocks Alfon portal",
             "HP restored upon leveling: 33% → 25%"
         ]
+    },
+    {
+        "name": "24d",
+        "notes": [
+            "Compatible Version: v0.13c ~"
+        ],
+        "bugs": [
+            "Fixed healing turtles of turtle lord not moving"
+        ],
+        "items": [
+            {
+                "name": "Witch",
+                "changes": [
+                    "Knockback change rolled back (no longer reduced by 33%)"
+                ]
+            }
+        ]
     }
 ]
