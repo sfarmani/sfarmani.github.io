@@ -689,7 +689,7 @@
                 ]
             },
             {
-                "name": "Silky Bag / Very Silky Bag / Fruit-filled Bag / Candy-filled Bag / Candy-Filled Bag +1",
+                "name": "Silky Bag / Very Silky Bag / Fruit-filled Bag / Candy-filled Bag / Candy-filled Bag +1",
                 "changes": [
                     "Added 50 movespeed bonus (bypasses 500 limit)"
                 ]
@@ -1330,9 +1330,7 @@
     {
         "name": "25f",
         "notes": [
-            "Compatible Version: v0.24c ~",
-            "EVENT IS OVER IN THIS VERSION BUT YOU MAY CONTINUE PLAYING KOREAN OR ENGLISH 0.25f ",
-            "VERSION TO OBTAIN EVENT REWARDS UNTIL AUGUST 12TH 23:59:59 UTC"
+            "Compatible Version: v0.24c ~"
         ],
         "items": [
             {
@@ -1626,7 +1624,7 @@
             "Compatible Version: v0.24c ~"
         ],
         "bugs": [
-            "Druid mantle - Fixed shooters being unable to wear it"
+            "Druid's mantle - Fixed shooters being unable to wear it"
         ],
         "monsters": [
             {
@@ -1685,7 +1683,7 @@
         ],
         "items": [
             {
-                "name": "Druid Mantle",
+                "name": "Druid's Mantle",
                 "changes": [
                     "New item added"
                 ]
@@ -1716,7 +1714,7 @@
                 ]
             },
             {
-                "name": "Earthen Plates / Creation of Sky and Earth",
+                "name": "Earthen Plates / Creation of the Sky and Earth",
                 "changes": [
                     "Removed Lancer spec"
                 ]
@@ -2287,6 +2285,148 @@
             ],
             "Removed Dragon's Nest portal",
             "Volcanic Lands portal moved to be near bridge of Dragon's Nest"
+        ]
+    },
+    {
+        "name": "24f2",
+        "notes": [
+            "Compatible Version: v0.13c ~",
+            "Only two urgent bug fixes are applied in this version (no donor rewards/balance changes/etc.)",
+            "More changes will be done this weekend"
+        ],
+        "bugs": [
+            "Dragon's nest - Fixed players that teleport into it not being able to pick up item drops",
+            "Ifrit - Fixed hp getting reset after wheel cast"
+        ]
+    },
+    {
+        "name": "24f",
+        "notes": [
+            "Compatible Version: v0.13c ~"
+        ],
+        "bugs": [
+            "Merchant - Fixed her having mana when special costume is enabled",
+            "Swordsman - Fixed model getting stuck sometimes",
+            "Witch - Fixed Mark of Power (T - W) being unusable on magic immune units",
+            "Ring of Fervor - Fixed buff increasing main stat by 250 instead of 300",
+            "Ifrit - fixed some spells not working properly after reviving"
+        ],
+        "items": [
+            {
+                "name": "Dragonic Rod",
+                "changes": [
+                    "Renamed to Dragonic Orb and changed icon"
+                ]
+            }
+        ],
+        "monsters": [
+            {
+                "name": "Giant Golem",
+                "changes": [
+                    "Corrupt Crystal Fragment / Corrupt Creation droprate: 2% → 3%"
+                ]
+            },
+            {
+                "name": "Tentacle Lord",
+                "changes": [
+                    "Horn of Deep Sea droprate: 2% → 3%"
+                ]
+            },
+            {
+                "name": "Mana Ancient",
+                "changes": [
+                    "All equipment droprates: 2.5% → 3%"
+                ]
+            },
+            {
+                "name": "Mad Clown",
+                "changes": [
+                    "No longer drops Corrupt Crystal Fragment",
+                    "Soul Stone / Mad Symbol droprate: 1% → 2%"
+                ]
+            },
+            {
+                "name": "Bone Dragon",
+                "changes": [
+                    "Swipe - Roar",
+                    [
+                        "Damage: 25000 + max HP X 2 → (150 / amount of units in area)% of max HP ; Deals a minimum of max HP X 50%"
+                    ]
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Swordsman",
+                "changes": [
+                    "Sword Storm (E) - Flash Step (Q)",
+                    [
+                        "Removed bonus damage based on distance traveled"
+                    ]
+                ]
+            },
+            {
+                "name": "Hermit",
+                "changes": [
+                    "Restoration (W)",
+                    [
+                        "Changed from target spell to target or point spell",
+                        "Applies to closest unit if used on ground"
+                    ],
+                    "Purge (T)",
+                    [
+                        "No longer destroys Orb of Harmony (R)"
+                    ]
+                ]
+            },
+            {
+                "name": "Arcane Mage",
+                "changes": [
+                    "Improved facial textures",
+                    "Magic Star (Q)",
+                    [
+                        "Doubled projectile speed"
+                    ],
+                    "Flash Storm (W)",
+                    [
+                        "Spell reworked and damage buffed"
+                    ],
+                    "Illusion (R)",
+                    [
+                        "Removed casting time, increased dash speed and damage increased"
+                    ],
+                    "Barage (T)",
+                    [
+                        "Spell reworked and damage reduced"
+                    ]
+                ]
+            },
+            {
+                "name": "Alchemist",
+                "changes": [
+                    "Conjure Water (W) - Healing Raing (R)",
+                    [
+                        "Healing ticks: 1 per second → 1 per 0.5 seconds (same total healing)"
+                    ],
+                    "Conjure Earth (R) - Conjure Cannon (Q)",
+                    [
+                        "Visual effects adjusted to reduce lag"
+                    ]
+                ]
+            },
+            {
+                "name": "Priest",
+                "changes": [
+                    "Heaven's Gate (T)",
+                    [
+                        "Raguel duration: 97 seconds → 100 seconds"
+                    ]
+                ]
+            }
+        ],
+        "misc": [
+            "Added portal to Dragon's Nest",
+            "Fixed some event rewards"
         ]
     }
 ]
