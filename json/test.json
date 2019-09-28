@@ -2428,5 +2428,188 @@
             "Added portal to Dragon's Nest",
             "Fixed some event rewards"
         ]
+    },
+    {
+        "name": "",
+        "notes": [
+            "Compatible Version: v0.13c ~"
+        ],
+        "bugs": [
+            "Fixed hermit W being able to target bags/powder bags/probes",
+            "Fixed hermit W not being castable on magic immune targets",
+            "Fixed alchemist golem not dealing additional damage on each attack",
+            "Fixed power recorder not showing hp regeneration properly",
+            "Fixed death fiend coils being angled improperly"
+        ],
+        "items": [
+            {
+                "name": "Staff of Abyss",
+                "changes": [
+                    "For recipe, Dragonic Rod can now be used as an optional replacement for Dark Crystal"
+                ]
+            },
+            {
+                "name": "Hatred",
+                "changes": [
+                    "Active",
+                    [
+                        "Damage: INT X 200 → INT X 250",
+                        "Max bonus damage: 150% → 100%",
+                        "Now applies to target and enemies around it.",
+                        "Visual effects changed"
+                    ]
+                ]
+            },
+            {
+                "name": "Winter's Heart",
+                "changes": [
+                    "Active",
+                    [
+                        "Guard break text now visible to user"
+                    ]
+                ]
+            },
+            {
+                "name": "Frozen Robe / Winter Robe",
+                "changes": [
+                    "Active",
+                    [
+                        "Shield: (Max MP X 1.2) + (INT X 5) → (Max MP X 0.75) + (INT X 6)"
+                    ],
+                    "Water Mage spec",
+                    [
+                        "Frozen Emotion - Damage Reduction rate bonus: 15% → 12%"
+                    ]
+                ]
+            },
+            {
+                "name": "Ring of Fervor",
+                "changes": [
+                    "Passive - Added 300 Main Stat"
+                ]
+            },
+            {
+                "name": "Soul Eater",
+                "changes": [
+                    "Active - When using from 0 MP: 0% efficiency → 50%"
+                ]
+            }
+        ],
+        "monsters": [
+            {
+                "name": "Monster notes",
+                "changes": [
+                    "Hunting Experience",
+                    "Increased the number of early leveling mobs",
+                    "Increased the attack damage of mid-level mobs",
+                    "Kalidi Forest entry level 30 → 25",
+                    "Capital Pruis entry level 80 → 60"
+                ]
+            },
+            {
+                "name": "Memory Stone",
+                "changes": [
+                    "Guardian Angels and Gatekeeper separated (1 mana each)",
+                    "Ifrit is now revivalable"
+                ]
+            },
+            {
+                "name": "Skeletal King Desperia",
+                "changes": [
+                    "All skeleton summons will now die when Skeletal King dies"
+                ]
+            },
+            {
+                "name": "Death Fiend",
+                "changes": [
+                    "Death Fiend is not longer affected by Bonds of Death.",
+                    "(Won't gain 4% damage output per 10% HP lost and won't increase damage reduction when distance between himself and his summons are more than 1000 range by 90%)",
+                    "Death Devourer",
+                    [
+                        "Howl cooldown: 8 seconds → 12 seconds, damage per soul 7500 → Max HP X 15%",
+                        "Charge: continues towards target until inital target is reached or max duration ends.",
+                        "Souls now disappear during charge and mark to keep refreshing on charged target (so that it doesn't disappear immediately after)"
+                    ],
+                    "Death Huntress",
+                    [
+                        "Arrow cooldown: 10 seconds → 8 seconds"
+                    ]
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Assassin",
+                "changes": [
+                    "Remove mana cost"
+                ]
+            },
+            {
+                "name": "Hermit",
+                "changes": [
+                    "Orb of Harmony (R)",
+                    [
+                        "No more repetative sound effects"
+                    ],
+                    "Purge (T)",
+                    [
+                        "Recognition radius of Orb of Harmony: 1800 → 2250"
+                    ]
+                ]
+            },
+            {
+                "name": "Thunderer",
+                "changes": [
+                    "Heart Break (R)",
+                    [
+                        "Text added back in"
+                    ]
+                ]
+            },
+            {
+                "name": "Priest",
+                "changes": [
+                    "Heal (D)",
+                    [
+                        "Recovery rate: 10% → 8%",
+                        "Damage reduction received: 25% → 20%",
+                        "Duration: 8 seconds → 12 seconds",
+                        "Cooldown: 8 seconds → 6 seconds",
+                        "Only one target can have buff at a time"
+                    ],
+                    "Holy Wave (Q)",
+                    [
+                        "No longer heals to 100% HP of an ally under the effect of Heal (D)"
+                    ],
+                    "Heaven's Gate (T)",
+                    [
+                        "Raguel now has mutlishot from level 1",
+                        "Target limit removed from multishot"
+                    ]
+                ]
+            },
+            {
+                "name": "Soul Weaver",
+                "changes": [
+                    "Soul Cradle (T)",
+                    [
+                        "Duration: 8 seconds → 6 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Alchemist",
+                "changes": [
+                    "Conjure Air (E) - Burning Hand (Q)",
+                    [
+                        "Can now only give buff to hero"
+                    ]
+                ]
+            }
+        ],
+        "misc": [
+            "Moved NPC for compensation so it no longer blocks Alfon portal",
+            "HP restored upon leveling: 33% → 25%"
+        ]
     }
 ]
