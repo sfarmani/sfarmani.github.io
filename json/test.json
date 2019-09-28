@@ -1,5 +1,61 @@
 [
     {
+        "name": "26u",
+        "notes": [
+            "Compatible Version: v0.24c ~"
+        ],
+        "bugs": [
+            "Knight - Fixed Winter's heart increasing duration of Excalibur (F) buff by 1 second",
+            "Knight - Fixed Excalibur (F) breaking shields of allies",
+            "Knight - Fixed Excalibur (F) cooldown being 100 seconds instead of 60 seconds",
+            "Berserker - Fixed not being immune to silence when Blood fury (E) is toggled ON",
+            "Bone dragon - Fixed ways to dodge explosion of Crazy hellspike without hiding behind other Hellspikes",
+            "Death fiend - Fixed Death hounds not dissapearing on fight reset"
+        ],
+        "monsters": [
+            {
+                "name": "Zombie lord",
+                "changes": [
+                    "Hp nerfed from 12,541,930 → 11,541,930"
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Hero notes",
+                "changes": [
+                    "Buffed cooldowns from 150 seconds to 120 seconds for following characters",
+                    [
+                        "Berserker",
+                        "Dark Knight",
+                        "Paladin",
+                        "Crusader",
+                        "Lancer",
+                        "Phantom Blade",
+                        "Swordsman",
+                        "Blood Weaver",
+                        "Alchemist",
+                        "Soul Weaver",
+                        "Warlock",
+                        "Witch"
+                    ]
+                ]
+            },
+            {
+                "name": "Swordsman",
+                "changes": [
+                    "Genocide storm (F)",
+                    [
+                        "Final slash damage: AGI X 400 → AGI X 475"
+                    ]
+                ]
+            }
+        ],
+        "misc": [
+            "Made knockback end if affected unit dies"
+        ]
+    },
+    {
         "name": "26s",
         "notes": [
             "Compatible Version: v0.24c ~"
@@ -2108,6 +2164,129 @@
                     ]
                 ]
             }
+        ]
+    },
+    {
+        "name": "24h",
+        "notes": [
+            "Compatible Version: v0.13c ~"
+        ],
+        "bugs": [
+            "Fixed a bug where some tokens were not enabled"
+        ],
+        "heroes": [
+            {
+                "name": "Hermit",
+                "changes": [
+                    "Inner Release [T] → [T]",
+                    [
+                        "Changed the color of the icon"
+                    ]
+                ]
+            },
+            {
+                "name": "Reaper",
+                "changes": [
+                    "Death Mark [T]",
+                    [
+                        "Changed the color of the icon"
+                    ]
+                ]
+            },
+            {
+                "name": "Soul Weaver",
+                "changes": [
+                    "Infinite Void [F]",
+                    [
+                        "Fixed mobs to not spin too much while dragging them"
+                    ]
+                ]
+            }
+        ]
+    },
+    {
+        "name": "24g",
+        "notes": [
+            "Compatible Version: v0.13c ~"
+        ],
+        "bugs": [
+            "Swordsman - Fixed model getting stuck when revived after dying in Genocide storm (F)"
+        ],
+        "items": [
+            {
+                "name": "Guardian Ring / True Guardian Ring",
+                "changes": [
+                    "Knight special effect - radius increase of Seal of mana (T) 25% → 15%"
+                ]
+            },
+            {
+                "name": "Ispion, the runed ring",
+                "changes": [
+                    "Knight special effect - radius increase of Seal of mana (T) 50% → 30%"
+                ]
+            },
+            {
+                "name": "Horn of God",
+                "changes": [
+                    "Healing delay: 1 second → instant"
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Thunderer",
+                "changes": [
+                    "Lightning Rush (W)",
+                    [
+                        "Cooldown: 10 seconds → 8 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Sniper",
+                "changes": [
+                    "Explosive Shot (R)",
+                    [
+                        "Removed cast delay"
+                    ]
+                ]
+            },
+            {
+                "name": "Arcane Mage",
+                "changes": [
+                    "Flash Storm (W)",
+                    [
+                        "Damage: max MP X 1000% → max MP X 1500%"
+                    ],
+                    "Illusion (R)",
+                    [
+                        "Explosion damage: INT X 50 → INT X 40"
+                    ],
+                    "Barrage (T)",
+                    [
+                        "Damage per orb: INT X 25 → INT X 30",
+                        "Orb explosion radius: 250 → 275",
+                        "Orb release time: 0.5 ~ 1 seconds → 0.25 ~ 0.5 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Witch",
+                "changes": [
+                    "Death Field (F)",
+                    [
+                        "Now counts as periodic damage"
+                    ]
+                ]
+            }
+        ],
+        "misc": [
+            "Fixed some text errors",
+            [
+                "Lancer - Empowered Pierce (Q) damage text changed from 45% to 50%"
+            ],
+            "Removed Dragon's Nest portal",
+            "Volcanic Lands portal moved to be near bridge of Dragon's Nest"
         ]
     }
 ]
