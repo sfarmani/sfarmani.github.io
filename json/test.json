@@ -2628,5 +2628,1186 @@
                 ]
             }
         ]
+    },
+    {
+        "name": "24c",
+        "notes": [
+            "Compatible Version: v0.13c ~"
+        ],
+        "bugs": [
+            "Fixed hermit D not counting as a single-target spell",
+            "Changed death fiend to only be revivable after all bosses in fight die",
+            "Fixed blood wraith spells glitching out if more than 2 summons are present",
+            "Fixed wings of death sometimes getting summoned after teleporting bag to hero"
+        ],
+        "items": [
+            {
+                "name": "Fairy Robe",
+                "changes": [
+                    "Priest Spec - Heal (D) - Strengthen effect removed"
+                ]
+            },
+            {
+                "name": "Diana, the Robe of Holy Maiden",
+                "changes": [
+                    "Priest Spec - Heal (D) / Holy Wave (Q) - Strengthen effect removed"
+                ]
+            },
+            {
+                "name": "Bell of Light",
+                "changes": [
+                    "Priest Spec - Holy Aurora (E) - Increase radius 50% → 20%"
+                ]
+            },
+            {
+                "name": "Death Visage / Grim Visage",
+                "changes": [
+                    "No longer changes color of screen when using active"
+                ]
+            }
+        ],
+        "monsters": [
+            {
+                "name": "Death Fiend",
+                "changes": [
+                    "New effect: Mark of Death",
+                    [
+                        "Boss and summon attacks will mark a target for 15 seconds",
+                        "Boss and summon can only maintain one mark"
+                    ],
+                    "New effect: Bonds of Death",
+                    [
+                        "Boss and summons increase damage taken every 10% of HP lost by 4%",
+                        "Boss and summons have a 90% reduction in damage taken when they reach 1000 range from each other"
+                    ],
+                    "Death Coil",
+                    [
+                        "Targets random heroes that do not have markers on them",
+                        "No longer binds the target",
+                        "Projectile now moves along with the target"
+                    ],
+                    "Summons",
+                    [
+                        "Shield duration when summoned 30 seconds → 10 seconds",
+                        "Summons now appear on top/bottom of area instead of under boss"
+                    ],
+                    "Death Devourer",
+                    [
+                        "Soul Absorbtion",
+                        [
+                            "Reduced recovery amount by 100% → 25% + (5% increase per second)",
+                            "Damage per second 4000 → Max HP X 5% + 0.5% increase per second",
+                            "Once outside of aura range, extra healing taken reduction and damage stacks will be reset",
+                            "Removed 0.6% hp regen per second to nearby allies part of aura"
+                        ],
+                        "Howl",
+                        [
+                            "Casting time 2 seconds → 1.5 seconds; Changed to be interruptable by all stun effects, including freeze",
+                            "Movement speed of souls reduced; They will disappear and deal 7500 magic damage if they are absorbed by a hero or restore 15% HP if they are absorbed by devourer",
+                            "New effect: Periodically souls appear at random locations in area and fly towards devourer"
+                        ],
+                        "Charge",
+                        [
+                            "Can target both marked and unmarked heroes",
+                            "Marks a target",
+                            "Destroy terrain when it touches it and continue charge towards target",
+                            "Reduced inital speed and made it increase over duration",
+                            "Changed cooldown to be shorter if non-marked hero was targetted"
+                        ]
+                    ],
+                    "Death Huntress",
+                    [
+                        "Arrow",
+                        [
+                            "Can target both marked and unmarked heroes",
+                            "Damage: 100,000 → 15,000 + Max HP X 40% of the target / Insta-kills bleeding targets",
+                            "Added bleeding debuff that increases damage target receives by 30% and reduces speed by 30% for 30 seconds (cannot be cleansed)",
+                            "Fly at constant speed after cast → slow cast time, showing trajectory during casting and flying at high speed after casting"
+                        ],
+                        "Vortex",
+                        [
+                            "Duration: 45 seconds → 30 seconds",
+                            "Radius increase per stacked vortex reduced and removed duratin reset if vortexes overlap",
+                            "Pulling speed reduced and stunned units no longer get pulled",
+                            "Explosion radius: 150% → 100%"
+                        ],
+                        "Death Hound",
+                        [
+                            "HP: 5,130,190 → 4,130,190",
+                            "Number of hounds generated per vortex 3 → 2"
+                        ]
+                    ],
+                    "Death Weaver",
+                    [
+                        "Swipe",
+                        [
+                            "Stun Duration: 0.15 seconds → 0.2 seconds"
+                        ],
+                        "Wave",
+                        [
+                            "Damage: 90,000 per wave → 40,000; Insta-kills marked targets",
+                            "Stun for 3 seconds when hit",
+                            "Wave travel distance: 600 → Infinite; Reduced movement speed of waves",
+                            "Directions are now random"
+                        ],
+                        "Blink",
+                        [
+                            "Can target both marked and unmarked heroes",
+                            "Marks a target",
+                            "Increased stun duration/delay until next spell cast by 0.5 seconds"
+                        ]
+                    ]
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Dark Knight",
+                "changes": [
+                    "Abyssal Slam (W)",
+                    [
+                        "Slightly reduce aerial time"
+                    ]
+                ]
+            },
+            {
+                "name": "Paladin",
+                "changes": [
+                    "Aura of Protection (D - W)",
+                    [
+                        "Increased magic defense 18% → 15%"
+                    ]
+                ]
+            },
+            {
+                "name": "Phantom Blade",
+                "changes": [
+                    "Soul (D)",
+                    [
+                        "HP X 4% recovery per second when maintaining 8 souls → HP X 2% recovery per second when maintaining 4 souls"
+                    ]
+                ]
+            },
+            {
+                "name": "Assassin",
+                "changes": [
+                    "Smoke Bomb (R)",
+                    [
+                        "Special effect disappears immediately at the end of the duration"
+                    ]
+                ]
+            },
+            {
+                "name": "Hermit",
+                "changes": [
+                    "Restoration (W)",
+                    [
+                        "Rolled back to single-target"
+                    ],
+                    "Orb of Harmony (R)",
+                    [
+                        "Mana cost 60 → 50"
+                    ],
+                    "Purify (F)",
+                    [
+                        "Shield break cycle once every 0.25 seconds → once every 1 second"
+                    ]
+                ]
+            },
+            {
+                "name": "Lightning Mage",
+                "changes": [
+                    "Static Sweep (W) - Lightning Punch (W)",
+                    [
+                        "Range 100 → 150 (same as attack range)"
+                    ]
+                ]
+            },
+            {
+                "name": "Priest",
+                "changes": [
+                    "Heal (D)",
+                    [
+                        "Recovers 12% of lost HP per second → 5% Max HP per 0.5 seconds"
+                    ],
+                    "Holy Wave (Q)",
+                    [
+                        "Cleanses debuffs and restore 100% HP to targets under the effect of Heal (D)"
+                    ],
+                    "Holy Aurora (E)",
+                    [
+                        "Passive",
+                        [
+                            "Increases Priest's movement speed by 60"
+                        ],
+                        "Active",
+                        [
+                            "Effect radius 400 → 500",
+                            "Additional recovery: INT X 0.45 → INT X 0.5"
+                        ]
+                    ],
+                    "Heaven's Gate (T) - God's Blessing (F)",
+                    [
+                        "Reduces damage recieved by 80% for duration → Reduces damage by 50% for 3 seconds after resurrection"
+                    ]
+                ]
+            },
+            {
+                "name": "Witch",
+                "changes": [
+                    "Reduced knockback distance by 33%"
+                ]
+            }
+        ],
+        "misc": [
+            "Fixed text errors",
+            "Prioritize screen color changes (Zombie infection seems to be preferred over items)",
+            "Change characters to make them more clickable",
+            [
+                "Dark Knight",
+                "Knight",
+                "Paladin",
+                "Shooter",
+                "Sword Enchanter",
+                "Assassin",
+                "Warlock"
+            ],
+            "New commands",
+            [
+                "-fog: Disables (special) fog",
+                "-flash: Disables screen flashing"
+            ]
+        ]
+    },
+    {
+        "name": "24b",
+        "notes": [
+            "Compatible Version: v0.13c ~"
+        ],
+        "bugs": [
+            "Fixed wing visuals not showing on soul weaver",
+            "Fixed vision range of witch and hermit",
+            "Fixed witch W sometimes causing her to get stuck attacking",
+            "Fixed witch being able to have multiple T summons alive at same time",
+            "Fixed witch summon being able to attack items",
+            "Fixed eye of flame lord active not working",
+            "Fixed crown of serenity proc not including int scaling if proced by self-healing"
+        ],
+        "items": [
+            {
+                "name": "Red Cross",
+                "changes": [
+                    "Shooter spec - 100% increase in Nanomachine Injection duration deleted"
+                ]
+            },
+            {
+                "name": "Crimson Cross / Crimson Star / Cosmic Star",
+                "changes": [
+                    "Shooter spec - Nanaomachine Injection duration increase 200% → 50%"
+                ]
+            },
+            {
+                "name": "Benedict, the Crimson Armor of Blood",
+                "changes": [
+                    "Passive - HP Recovery per second at Max accumulation 1.25% → 1.5%"
+                ]
+            },
+            {
+                "name": "Vest of Cyclone / Vest of Storm",
+                "changes": [
+                    "Passive",
+                    [
+                        "AGI Increase 0 → 150/300",
+                        "Bonus Damage: AD X 100% → AD X 50%",
+                        "Additional attacks no longer consume Gunner's ammo"
+                    ]
+                ]
+            }
+        ],
+        "monsters": [
+            {
+                "name": "Shadow Dragon",
+                "changes": [
+                    "HP: 29,821,000 → 31,821,000"
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Berserker",
+                "changes": [
+                    "Aura effect size 20% reduction (Such as aura effects of Ring of Time)"
+                ]
+            },
+            {
+                "name": "Lancer",
+                "changes": [
+                    "Nerve Strike (E)",
+                    [
+                        "Guard break text now visiable to caster"
+                    ],
+                    "Meteor Spear (T)",
+                    [
+                        "Range 750 → 900",
+                        "Cooldown: 40 seconds → 30 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Sword Enchanter",
+                "changes": [
+                    "Guard Enchant (R)",
+                    [
+                        "Damage reduced by 60% for 4 seconds → 50% damage taken for 3 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Shooter",
+                "changes": [
+                    "Nanomachine Injection (W)",
+                    [
+                        "Remove casting delay",
+                        "Duration 1 second → 2 seconds",
+                        "Added 100 movement speed for duration"
+                    ],
+                    "Break Shot (E)",
+                    [
+                        "Number of projectiles from Stardust Rain when hit 3 → 6"
+                    ],
+                    "Distortion (R)",
+                    [
+                        "Number of projectiles from Stardust Rain when hit 3 → 0"
+                    ]
+                ]
+            },
+            {
+                "name": "Gunner",
+                "changes": [
+                    "HE Bomb",
+                    [
+                        "Removed casting delay"
+                    ],
+                    "Bullet Time (T)",
+                    [
+                        "Duration 12 seconds → 10 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Phantom Blade",
+                "changes": [
+                    "Release (T)",
+                    [
+                        "Duration: 10 seconds → 8 seconds"
+                    ],
+                    "Obliterate (F)",
+                    [
+                        "Deals up to 60% bonus damage based on target's missing HP → 40%"
+                    ]
+                ]
+            },
+            {
+                "name": "Reaper",
+                "changes": [
+                    "Extreme Focus (T)",
+                    [
+                        "Damage reduction: 40% → 30%",
+                        "Duration: 2 seconds → 3 seconds"
+                    ],
+                    "Death Mark (F)",
+                    [
+                        "Increased amount of damage received 30 ~ 60% → 30 ~ 50%",
+                        "Can now re-use to finish skill earlier/manually"
+                    ]
+                ]
+            },
+            {
+                "name": "Hermit",
+                "changes": [
+                    "Perfect Harmony (D)",
+                    [
+                        "Friendly hero's recovery is now priority"
+                    ],
+                    "Flowing Fist (Q)",
+                    [
+                        "Added splash effect",
+                        "Stunning time at close range 1 second → 0.5 seconds"
+                    ],
+                    "Restoration (W)",
+                    [
+                        "Changed AoE target spell (applies heal to first ally with lowest HP in the targeted area)"
+                    ],
+                    "Wind Walk (E)",
+                    [
+                        "Removed sound effects"
+                    ],
+                    "Purify (F)",
+                    [
+                        "Added guard break text"
+                    ]
+                ]
+            },
+            {
+                "name": "Fire Mage",
+                "changes": [
+                    "Fireball (Q)",
+                    [
+                        "Bonus damage: INT X 22.5 → INT X 30"
+                    ],
+                    "Flame Spirit (W)",
+                    [
+                        "Duration: 4 seconds → 5 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Lightning Mage",
+                "changes": [
+                    "Short Circuit (D)",
+                    [
+                        "Increase HIT text size"
+                    ],
+                    "Lightning Strike (R)",
+                    [
+                        "Damage: INT X 125 → INT X 150",
+                        "Added 1 second stun"
+                    ],
+                    "Lightning Blade (F)",
+                    [
+                        "Damage: INT X 300 → INT X 325",
+                        "Invincible during casting"
+                    ]
+                ]
+            },
+            {
+                "name": "Arcane Mage",
+                "changes": [
+                    "Illusion (R)",
+                    [
+                        "Removed unit collision for 3 seconds after cast"
+                    ]
+                ]
+            },
+            {
+                "name": "Witch",
+                "changes": [
+                    "Star Shower (W)",
+                    [
+                        "Heal: INT X 3 → INT X 1.5"
+                    ],
+                    "Mysterious Cauldron (E)",
+                    [
+                        "Heal: INT X 5 → INT X 3"
+                    ],
+                    "Hellgate (T) - Arrow of Destruction (Q)",
+                    [
+                        "Added guard break text"
+                    ],
+                    "Hellgate (T) - Stamping Force (W)",
+                    [
+                        "Disabled for probes and bags/powder bags"
+                    ]
+                ]
+            },
+            {
+                "name": "Witch",
+                "changes": [
+                    "Conjure Fire (Q) - Boulder Strike (R)",
+                    [
+                        "Bonus damage to stunned units (150 + 3 X Skill Damage)% → (50 + 3 X SKill damage)%",
+                        "Rolls back bonus damage to stun resistant units"
+                    ],
+                    "Conjure Air (E) - Burning Hand (Q)",
+                    [
+                        "When attacking, 25% chance to cast Ignite → On spell cast, 15% chance to cast Ignition",
+                        "Added text to indicate stacks"
+                    ],
+                    "Conjure Earth (R) - Conjure Cannon (Q)",
+                    [
+                        "Cannons now can only be re-casted by original alchemist that casted it"
+                    ]
+                ]
+            }
+        ],
+        "misc": [
+            "Added model donor compensation",
+            "Changed base model and weird costume of sniper to be clicked on easier"
+        ]
+    },
+    {
+        "name": "24a",
+        "notes": [
+            "Compatible Version: v0.13c ~"
+        ],
+        "bugs": [
+            "Fixed materials for removed quests still dropping from wallachia mobs",
+            "Fixed duration of elementalist FW being 1 second instead of 1.5",
+            "Fixed entrance to frostspider lord cave being locked during his revival",
+            "Fixed volcanic heart not providing listed movespeed bonus"
+        ],
+        "items": [
+            {
+                "name": "Avenger",
+                "changes": [
+                    "Damage: 22,500 → 21,000"
+                ]
+            },
+            {
+                "name": "Griseus, the Sword of Protection",
+                "changes": [
+                    "Shows guard break text to the caster"
+                ]
+            },
+            {
+                "name": "Rusty Pickaxe / Sturdy Pickaxe",
+                "changes": [
+                    "Can no longer be sold to stores"
+                ]
+            }
+        ],
+        "monsters": [
+            {
+                "name": "Death Fiend",
+                "changes": [
+                    "Can no longer enter/exit the cemetery while being summoned"
+                ]
+            },
+            {
+                "name": "Ancient Ent",
+                "changes": [
+                    "Critical hit: 3x → 1.5x",
+                    "Elder Ent",
+                    [
+                        "Damage: 94,690 → 154,690"
+                    ],
+                    "Giant Ent",
+                    [
+                        "Damage: 64,690 → 34,690"
+                    ]
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Berserker",
+                "changes": [
+                    "Wing effect size reduced by 20%"
+                ]
+            },
+            {
+                "name": "Knight",
+                "changes": [
+                    "Seal of Mana (T)",
+                    [
+                        "No longer overlaps with other Knights'"
+                    ]
+                ]
+            },
+            {
+                "name": "Paladin",
+                "changes": [
+                    "Holy Divide (Q)",
+                    [
+                        "No longer overlaps with other Paladins'"
+                    ]
+                ]
+            },
+            {
+                "name": "Hermit",
+                "changes": [
+                    "New character added - AGI Mainstat",
+                    "Item restrictions: can use all (int/str/agi items) except bow/gun items"
+                ]
+            },
+            {
+                "name": "Sword Enchanter",
+                "changes": [
+                    "Weapon Enchant (Q)",
+                    [
+                        "Cooldown: 5 seconds → 7.5 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Assassin",
+                "changes": [
+                    "Shadow Rush (T)",
+                    [
+                        "Shadow duration: 6 seconds → 8 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Witch",
+                "changes": [
+                    "New character added - INT Mainstat"
+                ]
+            },
+            {
+                "name": "Soul Weaver",
+                "changes": [
+                    "Astral Walk (R)",
+                    [
+                        "Buff allies will no longer become bald"
+                    ]
+                ]
+            },
+            {
+                "name": "Elementalist",
+                "changes": [
+                    "Seal of Lightning (E) - Shock",
+                    [
+                        "Every 4th attack damage: INT X 12 → INT X 20"
+                    ]
+                ]
+            },
+            {
+                "name": "Alchemist",
+                "changes": [
+                    "Conjure Fire (Q)",
+                    [
+                        "Cooldown: 15 seconds → 8 seconds"
+                    ],
+                    "Conjure Fire (Q) - Blaze (Q)",
+                    [
+                        "Remove stun time"
+                    ],
+                    "Conjure Fire (Q) - Magma Explosion (W)",
+                    [
+                        "Damage: INT X 35 → INT X 50",
+                        "Removes 75% additional damage to burned units"
+                    ],
+                    "Conjure Fire (Q) - Bolder Strike (R)",
+                    [
+                        "Range: 900 → 600",
+                        "(50 + 3 X Skill Damage increase)% → (150 + 3 X Skill Damage increase)%",
+                        "Stun resistant units no longer recieve additional damage"
+                    ],
+                    "Conjure Water (W) - Icicle Transmutation (E)",
+                    [
+                        "Change to single target spell",
+                        "Deals INT X 75 damage and stuns for 1.5 seconds"
+                    ],
+                    "Conjure Earth (R) - Conjure Cannon (Q)",
+                    [
+                        "Recognition Radius 750 → 800",
+                        "Changed cannon reactivation to be based on distance from enemy rather than from Alchemist"
+                    ]
+                ]
+            },
+            {
+                "name": "Fire Mage",
+                "changes": [
+                    "Flame Nova (E)",
+                    [
+                        "Damage amplification per wave: 60% → 50%"
+                    ],
+                    "Meteor Fragment (T)",
+                    [
+                       "Number of meteorites: 10 → 12"
+                    ]
+                ]
+            }
+        ],
+        "misc": [
+            "Added notification for when Fatigue Reaper appears",
+            "Removed Triple Snow sound effects (Forreal this time)",
+            "-save command now creates a randomly named .txt file when filename is not specified"
+        ]
+    },
+    {
+        "name": "23g",
+        "notes": [
+            "Compatible Version: v0.13c ~"
+        ],
+        "bugs": [
+            "Fixed bosses/mana injection icons disappearing from the Memory Stone",
+            "Fixed tornado movement speed of revived Valtora having increased speed",
+            "Fixed refresh spell of Pure Crystal Wings being weird",
+            "Archangel Samael - Fixed being able to use teleporation items after reviving boss",
+            "Fixed music bug"
+        ],
+        "items": [
+            {
+                "name": "The Ender",
+                "changes": [
+                    "item type: Weapon All Classes → All Classes except Bow characters (shooter, gunner, sniper, bow master)"
+                ]
+            },
+            {
+                "name": "Cold Ring of Death",
+                "changes": [
+                    "Reflect damage cannot exceed 1 Million damage"
+                ]
+            },
+            {
+                "name": "Eternal Rose / Nebula Rose",
+                "changes": [
+                    "Aura range 800 → 1,200"
+                ]
+            }
+        ],
+        "monsters": [
+            {
+                "name": "Monster notes",
+                "changes": [
+                    "HP / ATK / DEF / Droprate of item-summoned bosses (Frozen Crystal, Mask of Blood, etc)",
+                    "Increased EXP gained in Duchy of Wallachia / Volcanic Lands quests",
+                    [
+                        "Fused Wallachia gathering quests to single one, changed it to provide EXP and relocated to Prius"
+                    ]
+                ]
+            },
+            {
+                "name": "Walrus",
+                "changes": [
+                    "Charge damage 3,700 → 1,250",
+                    "Duration of slide 10 seconds → 5 seconds, When running into a wall damage: Instant death → up to Max damage of 2,500 + Max HP X 25%"
+                ]
+            },
+            {
+                "name": "King Crab",
+                "changes": [
+                    "Eating Spell",
+                    [
+                        "Stun duration 10 seconds → 5 seconds, King Crab restores 2,500 HP per damage you take it",
+                        "Retores 2,500 HP each time you are damaged"
+                    ]
+                ]
+            },
+            {
+                "name": "King Kong",
+                "changes": [
+                    "Throwing Damage 3,000 → 2,000"
+                ]
+            },
+            {
+                "name": "Mammoth",
+                "changes": [
+                    "Charge Damage 7,500 → 5,000"
+                ]
+            },
+            {
+                "name": "Death Fiend - Death Huntress",
+                "changes": [
+                    "Death Hound summon dies when Death Huntress dies"
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Swordsman",
+                "changes": [
+                    "Sword Storm (E)",
+                    [
+                        "Chain availability 3.5 seconds → 4 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Bow Master",
+                "changes": [
+                    "Flame Shot (Q)",
+                    [
+                        "Explosion radius 275/400 → 325/325",
+                        "Stun time 0.75 seconds → 1 second",
+                        "Bonus damage from stunned enemies 200% → 150%"
+                    ],
+                    "Guardian Scout (E)",
+                    [
+                        "Recovery rate 12% → 10%"
+                    ],
+                    "Purestorm Shot (R)",
+                    [
+                        "Projectile speed doubled",
+                        "Radius 325 → 375"
+                    ]
+                ]
+            },
+            {
+                "name": "Elementalist",
+                "changes": [
+                    "Seal of Flame (Q) - Explosion (Q)",
+                    [
+                        "Radius 425 → 500"
+                    ]
+                ]
+            }
+        ],
+        "misc": [
+            "Re-scaled boss levels to be more indicative of difficulty levels",
+            "Skill learning level / Skill level upgrade",
+            [
+                "R Learning level 40 → 60",
+                "T Learning level 80 → 120"
+            ],
+            "Re-scaled levels required to upgrade spells"
+        ]
+    },
+    {
+        "name": "23f",
+        "notes": [
+            "Compatible Version: v0.13c ~"
+        ],
+        "bugs": [
+            "Ancient Ent - No longer able to leave area while reviving",
+            "Death Fiend - Fixed Treasure of Death not spawing on a revived Death Fiend",
+            "Shortcut hotkey to buy Memory Stone (S) fixed"
+        ],
+        "items": [
+            {
+                "name": "Medea, the Robe of the Witch",
+                "changes": [
+                    "Active - Fire projectiles to random enemeies → Fire to closest boss, if not closest enemy"
+                ]
+            },
+            {
+                "name": "Ring of Composure",
+                "changes": [
+                    "Active cooldown 25 seconds → 30 seconds"
+                ]
+            },
+            {
+                "name": "Horn of Lightning God",
+                "changes": [
+                    "Damage received + 10% → + 8%"
+                ]
+            },
+            {
+                "name": "Shroud of Perseverance",
+                "changes": [
+                    "Damage received - 8% → - 12%"
+                ]
+            },
+            {
+                "name": "Pure Crystal Wings",
+                "changes": [
+                    "When skills are being refreshed, it will no longer stop a skill from being cast"
+                ]
+            },
+            {
+                "name": "Sturdy Magic Pickaxe",
+                "changes": [
+                    "Chance to mine Medium/Greater Magic Stones 1/6 → 1/4"
+                ]
+            }
+        ],
+        "monsters": [
+            {
+                "name": "Jack-o-Lantern",
+                "changes": [
+                    "Changed spawn position to be near fountain"
+                ]
+            },
+            {
+                "name": "Zombie Lord",
+                "changes": [
+                    "Parasitic Staff / Hood of the Fallen droprate 1.5% → 1.25%",
+                    "Shroud of Perseverance droprate 0.5% → 0.75%"
+                ]
+            },
+            {
+                "name": "Archangel Samael",
+                "changes": [
+                    "Guardian of the Skies droprate 0.5% → 0.6%"
+                ]
+            },
+            {
+                "name": "Valtora",
+                "changes": [
+                    "Electric shock no longer stuns nearby allies",
+                    "Lightning Hammer",
+                    [
+                        "Damage 20,000 → 10,000 + Max HP of target X 25%"
+                    ]
+                ]
+            },
+            {
+                "name": "Ifrit",
+                "changes": [
+                    "Flameproof",
+                    [
+                        "Damage 7,500/s → 2,000 + Max HP X 10%"
+                    ],
+                    "Spirit of Flame",
+                    [
+                        "Reduced probability of overlapping",
+                        "No longer launches projectiles in the first 0.75 seconds"
+                    ],
+                    "Flame Festival",
+                    [
+                        "Duration 45/45 seconds → 30/45 seconds"
+                    ]
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Bow Master",
+                "changes": [
+                    "Elven Arrow (D)",
+                    [
+                        "Movement Speed increased by 100"
+                    ],
+                    "Flame Shot (Q)",
+                    [
+                        "Basic damage 1,250 → AD X 200%",
+                        "Bonus damage to stunned enemies (50 + 4 X Skill Damage)% → 200%"
+                    ],
+                    "Freezing Shot (W)",
+                    [
+                        "Basic damage 2,000 → AD X 300%"
+                    ],
+                    "Guardian Scout (E)",
+                    [
+                        "AD / Stat increase 8% → 10%",
+                        "Removed Movement speed gain"
+                    ],
+                    "Purestorm Shot (R)",
+                    [
+                        "Basic damage 1,200 → 0",
+                        "Critical Effect: Next attack from scout is converted to pure damage → Increases damage of Scout by 300% for 1 second",
+                        "Cooldown 20 seconds → 15 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Sniper",
+                "changes": [
+                    "Emergency Rations (D)",
+                    [
+                        "HP Recovery per second Max HP X 10% → Max HP X 15%",
+                        "Recover period 0.5 seconds → 0.25 seconds",
+                        "Max Duration 3 seconds → 2 seconds"
+                    ],
+                    "Storm Aegis (E)",
+                    [
+                        "Cooldown 30 seconds → 25 seconds"
+                    ],
+                    "Demolition (F)",
+                    [
+                        "When using melee range, jump backwards in the air (+invulnerable) and make a long-ranged attack",
+                        "Passive of Snipe (T) will always be applied to damage of Demolition (F)",
+                        "Deals up to 20% bonus damage, based on target's missing health → Deals up to 40% bonus damage, based on target's missing health"
+                    ]
+                ]
+            },
+            {
+                "name": "Lightning Mage",
+                "changes": [
+                    "Static Sweep (W)",
+                    [
+                        "Bonus damage INT X 20 → (AGI + INT) X 20"
+                    ],
+                    "Static Sweep (W) - Lightning Punch (W)",
+                    [
+                        "Bonus damage 0 → AGI X 40"
+                    ]
+                ]
+            },
+            {
+                "name": "Priest",
+                "changes": [
+                    "Holy Wave (Q)",
+                    [
+                        "Damage 2,000 + INT X 7.5 → INT X 20"
+                    ],
+                    "Divine Light (R)",
+                    [
+                        "Damage 7,500 + INT X 35 → INT X 75"
+                    ],
+                    "Heaven's Gate (T)",
+                    [
+                        "25% Magic Defense added to Raguel"
+                    ]
+                ]
+            },
+            {
+                "name": "Warlock",
+                "changes": [
+                    "Soul Grimoire (R)",
+                    [
+                        "HP / Skill Damage increase by 20% → 25%"
+                    ]
+                ]
+            }
+        ],
+        "misc": [
+            "Changed Death Fiend area to stay open while summoning",
+            "Fixed short freeze that occurs on first fight of Valtora / Ifrit",
+            "Modified the description of Seal Breaking Gem",
+            "Memory Stone",
+            [
+                "4 Holy Powder → 0",
+                "Start with 0 mana instead of 12, use 1 Holy Powder to add 3 mana (Max 4 times possible)",
+                "Summoned boss can no longer be seen or clicked on for the first 30 seconds (so that items under area can be picked up)",
+                "Added Valtora to the list of revivable bosses"
+            ]
+        ]
+    },
+    {
+        "name": "23e",
+        "notes": [
+            "Compatible Version: v0.13c ~"
+        ],
+        "bugs": [
+            "Fixed boss bugs with resurrected memory stone",
+            "Elementalist - Seal of Flame (Q) - Corrected the duration",
+            "Shadow Dragon - Fixed bugs related to Illusions of Irbert aggro"
+        ],
+        "monsters": [
+            {
+                "name": "Flame Nightmare",
+                "changes": [
+                    "Jump skill",
+                    [
+                        "Cooldown 60 seconds → 75 seconds"
+                    ],
+                    "Hatred debuff application range 2500 → 2000"
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Sniper",
+                "changes": [
+                    "Emergency Rations (D)",
+                    [
+                        "Recovery period 1 second → 0.5 seconds (total recovery amount is the same)"
+                    ]
+                ]
+            },
+            {
+                "name": "Elementalist",
+                "changes": [
+                    "Seal of Earth (R)",
+                    [
+                        "Duration 30 seconds (+3 with Earthen Pillar, +5 with Earthen Soul) → 40 seconds (+5 with Earthen Pillar, +10 with Earthen Soul)"
+                    ]
+                ]
+            }
+        ],
+        "misc": [
+            "Modify Beast Token skill",
+            "Bosses revived from altar of memories now indicate last 10 seconds of revival"
+        ]
+    },
+    {
+        "name": "23d",
+        "notes": [
+            "Compatible Version: v0.13c ~"
+        ],
+        "bugs": [
+            "Flame Nightmare - Fixed a bug where flame spawns don't move towards him when he's respawned by memory stone",
+            "Turtle Lord - Fixed a bug where healing turtles don't spawn when he's respawned by memory stone"
+        ],
+        "items": [
+            {
+                "name": "Staff of Contagion",
+                "changes": [
+                    "Damage 0 → 18500"
+                ]
+            },
+            {
+                "name": "Ring of Ferver",
+                "changes": [
+                    "Mainstat 1110 → All stat 960",
+                    "HP Recover rate 300 → 400",
+                    "Passive - Increases target's Skill Damage by 12% / Critical Hit rate by 6% for 12 seconds → Increases target's damage by 7.5% for 12 seconds",
+                    "Every 6th attack restores 1500 HP → Active - Restores 40% HP of allies affected by passive (30 second cooldown)"
+                ]
+            },
+            {
+                "name": "Ring of Compsure",
+                "changes": [
+                    "MP Recovery rate 300 → 200"
+                ]
+            }
+        ],
+        "monsters": [
+            {
+                "name": "Flame Nightmare",
+                "changes": [
+                    "Jump Skill",
+                    [
+                        "Cooldown 45 seconds → 60 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Skeleton King Desperia",
+                "changes": [
+                    "Memory stone - Entrance to closes after he is revived"
+                ]
+            },
+            {
+                "name": "Samael",
+                "changes": [
+                    "Memory stone - Entrance to area is kept open until he is revived"
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Soul Weaver",
+                "changes": [
+                    "Harvet (A)",
+                    [
+                        "Changed to enable casting during silence",
+                        "Changed to be affected by attack speed"
+                    ],
+                    "Unholy Blast (Q)",
+                    [
+                        "Increased damage received 8% → (5+ INT / 2500)%",
+                        "Duration 4 seconds → 5 seconds"
+                    ],
+                    "Soul Materia (W)",
+                    [
+                        "Recovery rate per second Max HP X 4% → INT X 0.2"
+                    ],
+                    "Infinite Void (F)",
+                    [
+                        "Activation delay 1 second → 0.5 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Alchemist",
+                "changes": [
+                    "Stone Golem",
+                    [
+                        "Movement speed 225 → 400"
+                    ]
+                ]
+            },
+            {
+                "name": "Elementalist",
+                "changes": [
+                    "Seal of Flame (Q)",
+                    [
+                        "Duration 10 seconds → 15 seconds",
+                        "Cooldown 15 seconds → 20 seconds"
+                    ],
+                    "Seal of Earth (R)",
+                    [
+                        "Earthen Protection now applies to self"
+                    ],
+                    "Elemental Link (T)",
+                    [
+                        "Cooldown 5 seconds → 3 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Priest",
+                "changes": [
+                    "Heaven's Gate (T)",
+                    [
+                        "Raguel now has base CC immunity"
+                    ]
+                ]
+            }
+        ]
     }
 ]
