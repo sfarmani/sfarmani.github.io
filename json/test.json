@@ -3389,9 +3389,12 @@
                 ]
             },
             {
-                "name": "Death Fiend - Death Huntress",
+                "name": "Death Fiend",
                 "changes": [
-                    "Death Hound summon dies when Death Huntress dies"
+                    "Death Huntress",
+                    [
+                        "Death Hound summon dies when Death Huntress dies"
+                    ]
                 ]
             }
         ],
@@ -3710,7 +3713,7 @@
                 ]
             },
             {
-                "name": "Ring of Ferver",
+                "name": "Ring of Fervor",
                 "changes": [
                     "Mainstat 1110 → All stat 960",
                     "HP Recover rate 300 → 400",
@@ -3719,7 +3722,7 @@
                 ]
             },
             {
-                "name": "Ring of Compsure",
+                "name": "Ring of Composure",
                 "changes": [
                     "MP Recovery rate 300 → 200"
                 ]
