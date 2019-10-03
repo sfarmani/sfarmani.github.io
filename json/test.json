@@ -3812,5 +3812,1042 @@
                 ]
             }
         ]
+    },
+    {
+        "name": "23c",
+        "notes": [
+            "Compatible Version: v0.13c ~"
+        ],
+        "bugs": [
+            "Elementalist - Seal of Flame (Q) - Explosion (Q) - Fixed damage error",
+            "Ring of Composure - cooldown corrected from 20 seconds to 25 seconds"
+        ],
+        "items": [
+            {
+                "name": "Crimson Reaper",
+                "changes": [
+                    "Increased critical multiplier 0.30x → 0.25x"
+                ]
+            },
+            {
+                "name": "Atricia, the Sword of Dreams",
+                "changes": [
+                    "Passive damage Mainstat X 6 → Mainstat X 7.5",
+                    "Max recovery HP X 3% → Mainstat X 0.15"
+                ]
+            },
+            {
+                "name": "Vest of Cyclone",
+                "changes": [
+                    "Passive",
+                    [
+                        "Amount of bonus attacks 2 times → 1",
+                        "Agility bonus removed",
+                        "Movement speed bonus increased",
+                        "Duration 6 seconds → 1.5 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Vest of Storm",
+                "changes": [
+                    "Agility 1180 → 1280",
+                    "Passive",
+                    [
+                        "Amount of bonus attacks 2 times → 1",
+                        "Agility bonus removed",
+                        "Movement speed bonus increased",
+                        "Duration 6 seconds → 1.5 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Death Visage",
+                "changes": [
+                    "Added 4.5% Critial Chance",
+                    "Active - Crit multiplier increase 0 → 0.10"
+                ]
+            },
+            {
+                "name": "Grim Visage",
+                "changes": [
+                    "Added 6% Critical Chance*"
+                ]
+            },
+            {
+                "name": "Eye of Wallachia",
+                "changes": [
+                    "Passive - Increase Crit multiplier 0.3x → 0.2x"
+                ]
+            }
+        ],
+        "monsters": [
+            {
+                "name": "Tentacle Lord",
+                "changes": [
+                    "Respawn time: 12.5 minutes → 7.5 minutes"
+                ]
+            },
+            {
+                "name": "Mad Clown",
+                "changes": [
+                    "Respawn Time: 15 minutes → 7.5 minutes"
+                ]
+            },
+            {
+                "name": "Mana Ancient",
+                "changes": [
+                    "Respawn Time: 15 minutes → 7.5 minutes"
+                ]
+            },
+            {
+                "name": "Shadow Dragon Irbert",
+                "changes": [
+                    "Entry limit removed",
+                    "9 players: Damage + 15%, Damage reduction rate + 20%, Drop rate + 10%",
+                    "10 players: Damage + 25%, Damage reduction rate + 35%, Drop rate + 20%"
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Dark Knight",
+                "changes": [
+                    "Soul Break (Q)",
+                    [
+                        "Max channeling time 1.25 seconds → 1 second",
+                        "Damage: AD X 300% + STR X 30 → AD X 400% + STR X 30",
+                        "Damage 140% ^ (channeling time / 0.25) → 100% + 100% X (channeling time / 0.25)",
+                        [
+                            "Damage now scales additively instead of mutliplicatively"
+                        ]
+                    ]
+                ]
+            },
+            {
+                "name": "Swordman",
+                "changes": [
+                    "Illusal Dance (T)",
+                    [
+                        "Basic damage: AD X 2000% → AD X 3000%",
+                        "Cooldown 50 seconds → 40 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Assassin",
+                "changes": [
+                    "Dark Shroud (D)",
+                    [
+                        "Damage reduction rate 40% → 30%"
+                    ],
+                    "Shadow Rush (T)",
+                    [
+                        "Damage formula change",
+                        [
+                            "Before: (Skill Level X 5000 + AGI X 45) + (1 + 0.25 X Number of shadows)",
+                            "After: (AGI X 50) + (1 + Number of shadows)"
+                        ],
+                        "Cooldown 40 seconds → 25 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Soul Weaver",
+                "changes": [
+                    "Harvest (A)",
+                    [
+                        "Reduced recover amount 40% → 15%",
+                        "Movement speed decrease 80% → 60%",
+                        "Mob/boss soul absorption per second 5 → 4"
+                    ],
+                    "Unholy Blast (Q)",
+                    [
+                        "Damage: INT X 25 → INT X 20"
+                    ],
+                    "Astral Walk (R)",
+                    [
+                        "Damage: INT X 80 → INT X 60",
+                        "Applies buff to self when used"
+                    ],
+                    "Soul Cradle (T)",
+                    [
+                        "HP recovery amount 25% → 50%"
+                    ]
+                ]
+            }
+        ],
+        "misc": [
+            "Memory Stone",
+            [
+                "Can be made with Alchemy using 4 Holy Powder (only one per game)",
+                "Upon use, your memory will be recalled",
+                "The Memory Stone begins with 12 mana and can resurrect bosses by consuming a certain amount of mana when the boss has been killed once",
+                [
+                    "1 Mana: Hydra, Jack-o-lantern, Wings of Death, Count Wallachia, Mage Lord, Corrupt Angel, Lord of Everfrost, Spider Queen",
+                    "2 Mana: Avalon (3 Guardian Angels + Gatekeeper), Frostspider Lord",
+                    "3 Mana: Demon Lord, Rectus, Flame Nightmare, Turtle Lord, Spirit Beast",
+                    "4 Mana: Skeleton King, Zombie Lord (Won't require Holy Water), Samael, Ancient Ent, Bone Dragon",
+                    "6 Mana: Shadow Dragon, Death Fiend"
+                ],
+                "Each boss can be revived up to 3 times",
+                "Resurrection takes a minute and cinematics / waves are skipped"
+            ],
+            "Wind Mage - fixed problematic model size",
+            "Warlock - Apocalypse (F) - Fixed voice to re-appear when using",
+            "Fixed soul weaver A targetting system"
+        ]
+    },
+    {
+        "name": "23b",
+        "notes": [
+            "Compatible Version: v0.13c ~"
+        ],
+        "bugs": [
+            "Fixed a bug where Soul Weaver - Astral Walk (R) allowed players to dash into unintended areas",
+            "Fixed Elementalist - Seal of Flame (Q) - Explosion (Q) getting 1% bonus damage per 1% hp lost instead of 2% per 1%",
+            "Fixed Ifrit dropping Shackles of Heaven instead of Volcanic Heart",
+            "Fixed silences of Demon Lord Beriel and Evil Lava Spawn going through silence immunity",
+            "Various other bugs fixed"
+        ],
+        "items": [
+            {
+                "name": "Item notes",
+                "changes": [
+                    "New Items recipes added",
+                    [
+                        "Atricia, the Sword of Dreams",
+                        [
+                            "Oceanus, the Sword of Light + Laktrisha, the Illusional Sword of Poison + Essence of Flame + Essence of Storm + Essence of Darkness + Steel of God + Fragment of Chaos"
+                        ],
+                        "Crimson Hatred",
+                        [
+                            "Bloody Hatred + Staff of Souls + Dragonic Rod + Essence of Flame + Spearhead of Death + Essence of Darkness + God's Page",
+                        ],
+                        "Staff of Plague",
+                        [
+                            "Staff of Contagion + Parasitic Staff + Shackles of Heaven + Essence of Flame + God's Page + Spearhead of Death + Antimatter"
+                        ],
+                        "Cosmic Star",
+                        [
+                            "Crimson Star + Eye of Watcher + Essence of Flame + Essence of Light + Antimatter + Shining Fragment of Ruins"
+                        ],
+                        "Vest of Cyclone",
+                        [
+                            "Vest of Guardian + Spirit of Forest + Spirit of Nightmare + Ancient Fragment of Ruins"
+                        ],
+                        "Vest of Storm",
+                        [
+                            "Vest of Cyclone + Ring of the Storm + Antimatter + Essence of Light"
+                        ],
+                        "Ring of Revival",
+                        [
+                            "Trueblood Ring + Volcanic Heart + Shroud of Perseverance + Purified Water + Potion of Corruption"
+                        ],
+                        "Nebula Rose",
+                        [
+                            "Eternal Rose + Ring of the Storm + Aegis of Storm + Essence of Light + Fragment of Chaos"
+                        ],
+                        "Protection of the Fairies",
+                        [
+                            "Embrace of Nature + Soul of the Dead + Essence of Flame + Essence of Storm + Proof of Purification + Fragment of Chaos"
+                        ]
+                    ]
+                ]
+            },
+            {
+                "name": "Benziena, the Earthen Pillar",
+                "changes": [
+                    "Reworked"
+                ]
+            },
+            {
+                "name": "Benziena, the Earthen Soul",
+                "changes": [
+                    "Reworked",
+                    "recipe: Ring of the Storm → Spirit of Forest, Powder requirement removed"
+                ]
+            },
+            {
+                "name": "Bag of Mother Nature",
+                "changes": [
+                    "recipe: Dragonic Rod → Spirit of Forest"
+                ]
+            },
+            {
+                "name": "Crimson Star",
+                "changes": [
+                    "Active - Damage: AGI X 60 → INT X 60"
+                ]
+            },
+            {
+                "name": "Benedict, the Crimson Armor of Blood",
+                "changes": [
+                    "Passive - Recovers 50% of accumulated HP when expired → Provides 1.25% HP regen during passive"
+                ]
+            },
+            {
+                "name": "Protector's Will",
+                "changes": [
+                    "Damage resistance 20% → 18%"
+                ]
+            },
+            {
+                "name": "Wing Frame",
+                "changes": [
+                    "Fixed wing frames of Frozen Heart / Embrace of Nature / Grim Heart not showing properly"
+                ]
+            }
+        ],
+        "monsters": [
+            {
+                "name": "Scarab",
+                "changes": [
+                    "Removed ability to silence"
+                ]
+            },
+            {
+                "name": "Spirit Beast",
+                "changes": [
+                    "New drop item - Spirit of Forest"
+                ]
+            },
+            {
+                "name": "Demon Lord Beriel",
+                "changes": [
+                    "Spell usage delay 0.75 seconds → 0.35 seconds"
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Knight",
+                "changes": [
+                    "Seal of Mana (T)",
+                    [
+                        "No longer shared amoung other Knight players"
+                    ]
+                ]
+            },
+            {
+                "name": "Merchant",
+                "changes": [
+                    "Throwing Healing Potion (W)",
+                    [
+                        "Duration 120 seconds → 300 seconds"
+                    ],
+                    "Scroll of God's Blessing (F)",
+                    [
+                        "No longer usable on probes of Shooter"
+                    ]
+                ]
+            },
+            {
+                "name": "Thunderer",
+                "changes": [
+                    "Skill usage delay 0.26 seconds → 0 seconds"
+                ]
+            },
+            {
+                "name": "Soul Weaver",
+                "changes": [
+                    "Unholy Blast (Q)",
+                    [
+                        "Damage: INT X 30 → INT X 25"
+                    ],
+                    "Soul Materia (W)",
+                    [
+                        "Duration 15 seconds → 30 seconds"
+                    ],
+                    "Astral Walk (R)",
+                    [
+                        "Damage: INT X 100 → INT X 80",
+                        "Buff duration 30 seconds → 45 seconds"
+                    ],
+                    "Soul Cradle (T)",
+                    [
+                        "Soul consumption 80 → 60"
+                    ]
+                ]
+            },
+            {
+                "name": "Warlock",
+                "changes": [
+                    "Dark Whisper (D)",
+                    [
+                        "Recovery no longer affected by Skill Damage"
+                    ],
+                    "Demonic Fury (T)",
+                    [
+                        "Hunger (D)",
+                        [
+                            "Increased MAX HP X 7.5% recovery per 4 attacks"
+                        ],
+                        "Leap of Execution (W)",
+                        [
+                            "Damage: INT X 48 → INT X 100"
+                        ],
+                        "Skill usage delay at time of transformation 0.25 seconds → 0 seconds"
+                    ],
+                    "Apocalypse (F)",
+                    [
+                        "Activation delay 1 second → 0.5 seconds"
+                    ]
+                ]
+            }
+        ],
+        "misc": [
+            "Floating damage text now only appears on boss units",
+            "Amount of stat points required to gain 100 fatigue 40 → 60",
+            "Max ressurection time 47 seconds → 40 seconds"
+        ]
+    },
+    {
+        "name": "23a",
+        "notes": [
+            "Compatible Version: v0.13c ~",
+            "!! [KOREAN VERSION ONLY] !!"
+        ],
+        "bugs": [
+            "Fixed a bug that caused AoE spells to not hit surrounding enemy units when casted onto a boss",
+            "Fixed a bug that allowed temporary costumes to be used even when event ended",
+            "Elementalist - Fixed a bug that was triggered when summoning the Earth Spirit"
+        ],
+        "items": [
+            {
+                "name": "Anger",
+                "changes": [
+                    "Active - STR increase per stack 75 → 100"
+                ]
+            },
+            {
+                "name": "Death Scythe",
+                "changes": [
+                    "Active - Skill Damage increased by 7.5% → 5%"
+                ]
+            },
+            {
+                "name": "Laksha, the Ancient Sword of Poison",
+                "changes": [
+                    "Active - Damage per stack AGI X 8.5 → AGI X 12.5"
+                ]
+            },
+            {
+                "name": "Horn of God",
+                "changes": [
+                    "Active - Can no longer change probes while active"
+                ]
+            },
+            {
+                "name": "Wings of Phoenix",
+                "changes": [
+                    "Movespeed 150 → 160"
+                ]
+            },
+            {
+                "name": "Wings of Blood Lord",
+                "changes": [
+                    "Passive - Duration 2.5 seconds → 4 seconds"
+                ]
+            },
+            {
+                "name": "Blood Mask (summon item)",
+                "changes": [
+                    "Droprate increased"
+                ]
+            }
+        ],
+        "monsters": [
+            {
+                "name": "Poisoned Tree",
+                "changes": [
+                    "Wings of Nature drop rate 10% → 20%"
+                ]
+            },
+            {
+                "name": "Walrus",
+                "changes": [
+                    "Slide cooldown 10 seconds → 20 seconds"
+                ]
+            },
+            {
+                "name": "King Crab / Walrus / Mammoth / King Kong",
+                "changes": [
+                    "Max item drops 1 → 2"
+                ]
+            },
+            {
+                "name": "Evil Lava Spirit",
+                "changes": [
+                    "Max item drops 1 → 2",
+                    "Item drop rate increased by 25%"
+                ]
+            },
+            {
+                "name": "Blood Wraith / Wallachia Monstrosity",
+                "changes": [
+                    "Mask of Blood / Blood Orb / Ring of the Dead droprate increase by 33%"
+                ]
+            },
+            {
+                "name": "Ancient Ent",
+                "changes": [
+                    "Elder Ent",
+                    [
+                        "Jump no longer jumps to the same hero at the same time from two different Elder Ents"
+                    ]
+                ]
+            },
+            {
+                "name": "Ifrit",
+                "changes": [
+                    "New boss added"
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Knight",
+                "changes": [
+                    "Blitz (W)",
+                    [
+                        "Shield break now visible to player"
+                    ]
+                ]
+            },
+            {
+                "name": "Gunner",
+                "changes": [
+                    "Tumble (Q)",
+                    [
+                        "Cooldown 6 seconds → 4.5 seconds"
+                    ],
+                    "Outlaw (W)",
+                    [
+                        "Effect Radius 525 → 600"
+                    ]
+                ]
+            },
+            {
+                "name": "Shooter",
+                "changes": [
+                    "Distortion (R)",
+                    [
+                        "Launches 1 Magic Bullet per probe to enemies hit"
+                    ],
+                    "Stardust Rain (T)",
+                    [
+                        "Angle slightly bent"
+                    ]
+                ]
+            },
+            {
+                "name": "Bow Master",
+                "changes": [
+                    "Guardian Scout (E)",
+                    [
+                        "Active Radius 400 → 450",
+                        "Healed amount per second Max HP X 10% → Max HP X 12%"
+                    ]
+                ]
+            },
+            {
+                "name": "Sniper",
+                "changes": [
+                    "Storm Shaft (Q)",
+                    [
+                        "Passive buff duration 8 seconds → 10 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Phantom Blade",
+                "changes": [
+                    "Obliterate (F)",
+                    [
+                        "Soul cost 8 → 7"
+                    ]
+                ]
+            },
+            {
+                "name": "Wind Mage",
+                "changes": [
+                    "Model change"
+                ]
+            },
+            {
+                "name": "Elementalist",
+                "changes": [
+                    "Seal of Wind (D) - Wind Booster",
+                    [
+                        "Radius 500 → 600"
+                    ],
+                    "Seal of Flame (Q) - Explosion",
+                    [
+                        "Damage increase per missing HP 1% → 2%",
+                        "Added 1 second stun"
+                    ],
+                    "Seal of Water (W) - Refreshing Well",
+                    [
+                        "Radius 350 → 400"
+                    ],
+                    "Seal of Lightning (E) - Lightning Beam",
+                    [
+                        "Damage: INT per second X 60 → INT X 80"
+                    ]
+                ]
+            },
+            {
+                "name": "Soul Weaver",
+                "changes": [
+                    "Model Change",
+                    "Skill Re-organization"
+                ]
+            }
+        ],
+        "misc": [
+            "Bag sight radius 100 → 500",
+            "Remove Twin Snow / Triple Snow sound effects"
+        ]
+    },
+    {
+        "name": "22u",
+        "notes": [
+            "Compatible Version: v0.13c ~"
+        ],
+        "bugs": [
+            "Fixed a bug that could cause a fatal error when casting phantom blade Q after using weird costume",
+            "Fixed a bug where Lightning Mage - W could skip terrains"
+        ],
+        "items": [
+            {
+                "name": "Uncle Van's Carrot",
+                "changes": [
+                    "Changed to have no effect when used by level 400 or higher character"
+                ]
+            },
+            {
+                "name": "Magical Horn / Frozen Crystal",
+                "changes": [
+                    "Droprate increased"
+                ]
+            }
+        ],
+        "monsters": [
+            {
+                "name": "Bone Dragon",
+                "changes": [
+                    "Phoenix Summon",
+                    [
+                        "5 times for 3 seconds → 4 seconds",
+                        "Changed to not be casted during rage",
+                        "Phoenix",
+                        [
+                            "HP 2,080,000 → 1,080,000",
+                            "Duration 50 seconds → 60 seconds"
+                        ]
+                    ]
+                ]
+            }
+        ],
+        "misc": [
+            "Event",
+            [
+                "End of event (You may use previous version up until April 8th 11:59:59 PM Forum time)"
+            ],
+            "Assassin - Fixed weird costume being elementalist model instead of merchant"
+        ]
+    },
+    {
+        "name": "22s",
+        "notes": [
+            "Compatible Version: v0.13c ~"
+        ],
+        "bugs": [
+            "Removed ability to pick up melons",
+            "Fixed a bug that didn't allow players to enter Dragon's nest"
+        ]
+    },
+    {
+        "name": "22r",
+        "notes": [
+            "Compatible Version: v0.13c ~"
+        ],
+        "misc": [
+            "Event",
+            [
+                "Changed to receive rewards even when dead near the boss"
+            ],
+            "Areas",
+            [
+                "Removed level restriction on picking fruits from uncle Van's farm",
+                "Removed dragon's nest entry limit / removed flame ornament"
+            ],
+            "Level 410 ~ Level 420 EXP Rate 5% → 10%"
+        ]
+    },
+    {
+        "name": "22q",
+        "notes": [
+            "Compatible Version: v0.13c ~"
+        ],
+        "items": [
+            {
+                "name": "Prophetia, the Source of Mana / Prophetia, the Greater Source of Mana",
+                "changes": [
+                    "Removed cast time for active"
+                ]
+            },
+            {
+                "name": "Nightmare Rod",
+                "changes": [
+                    "Increased droprate from mobs"
+                ]
+            }
+        ],
+        "monsters": [
+            {
+                "name": "Elemental of Chaos",
+                "changes": [
+                    "Chaos Magic Stone droprate 5% → 7.5%"
+                ]
+            },
+            {
+                "name": "Corruptor Rectus",
+                "changes": [
+                    "Removed Seal Breaking Gem requirement to enter area"
+                ]
+            },
+            {
+                "name": "Skeleton King",
+                "changes": [
+                    "Made the sealing stone breakable to start fight faster (2,500,000 HP / 80% Magic Resistance)"
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Crusader",
+                "changes": [
+                    "1st Sword Dance: Strike (R)",
+                    [
+                        "7,500 + 55 X STR damage → Attack Damage X 2,500% damage"
+                    ],
+                    "2nd Sword Dance: Sword (RR)",
+                    [
+                        "9,000 + 60 X STR damage → STR X 100 damage"
+                    ],
+                    "Max Amplification: Execution Sword (T)",
+                    [
+                        "HP Recovery per second 30% → 20%"
+                    ]
+                ]
+            },
+            {
+                "name": "Bow Master",
+                "changes": [
+                    "Guardian Scout (E)",
+                    [
+                        "Nearby friendly attack and stat increase 12% → 8%",
+                        "Movement speed increase 150 → 100",
+                        "Cooldown 10 seconds → 12 seconds"
+                    ],
+                    "Arrow Rain (T)",
+                    [
+                        "Damage per arrow 100% X Attack Damage + AGI X 6 → 150% X Attack Damage + AGI X 10",
+                        "Heartseeker damage per arrow 1000% X Attack Damage + AGI X 60 → 1200% X Attack Damage + AGI X 80"
+                    ]
+                ]
+            },
+            {
+                "name": "Warlock",
+                "changes": [
+                    "Demonic Fury (T)",
+                    [
+                        "Delay time to transform 1.5 seconds → 1 second"
+                    ]
+                ]
+            },
+            {
+                "name": "Wind Mage",
+                "changes": [
+                    "Feather of Aeolus",
+                    [
+                        "Range 1200 → 800"
+                    ]
+                ]
+            },
+            {
+                "name": "Elementalist",
+                "changes": [
+                    "No longer runs away when attacked",
+                    "Seal of Water (W)",
+                    [
+                        "Invincible → HP: Elementalist HP X 120% / Armor: Elementalist Armor X 75%"
+                    ],
+                    "Seal of Lightning (E)",
+                    [
+                        "Invincible → HP: Elementalist HP X 150% / Armor: Elementalist Armor X 100%",
+                        "Shock",
+                        [
+                            "Bonus Damager per attack: INT X 3 → INT X 4"
+                        ],
+                        "Lightning Beam",
+                        [
+                            "Increased damage by 20%"
+                        ]
+                    ],
+                    "Seal of Chaos (F)",
+                    [
+                        "Eye of Chaos (E)",
+                        [
+                            "Increased damage by 50%"
+                        ]
+                    ]
+                ]
+            }
+        ],
+        "misc": [
+            "Event",
+            [
+                "Weird event has started! Runs from March 31st to April 8th"
+            ]
+        ]
+    },
+    {
+        "name": "22p",
+        "notes": [
+            "Compatible Version: v0.13c ~"
+        ],
+        "bugs": [
+            "Elementalist - Seal of Earth (R) - Fixed a bug that increased the enemy's damage reduction rate",
+            "Spirit Beast - Fixed a bug where the second phase HP % was reversed with the damage reduction - now 2nd phase starts at 40% but DR during that phase is 25%"
+        ],
+        "misc": [
+            "Halloween Costume - Sword Enchanter models implemented"
+        ]
+    },
+    {
+        "name": "22o",
+        "notes": [
+            "Compatible Version: v0.13c ~"
+        ],
+        "bugs": [
+            "Fixed Demon Lord waves not spawning during cutscenes",
+            "Benziena, the Earthen Soul - Alchemist Golem special effects fixed"
+        ],
+        "monsters": [
+            {
+                "name": "Polar Bear Giant",
+                "changes": [
+                    "Bear Fur Cloak droprate 2% → 5%"
+                ]
+            },
+            {
+                "name": "Spirit Beast",
+                "changes": [
+                    "Shockwave damage 5000 + 50% of target's Max HP → 5000 + 37.5% of target's Max HP",
+                    "Second phase damage reduction 40% → 25% (Currently not working as intended!! In this version second phase is triggered at 25% HP and DR is still at 40%)"
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Lancer",
+                "changes": [
+                    "Nerve Strike (E)",
+                    [
+                        "Increased amount of damage received 5% → 6%"
+                    ]
+                ]
+            },
+            {
+                "name": "Crusader",
+                "changes": [
+                    "Nerve Strike (E)",
+                    [
+                        "Base attack speed 1.5 → 1.4",
+                        "Strike of Honor (E)",
+                        [
+                            "Enhanced debuff duration 5 seconds → 8 seconds"
+                        ]
+                    ]
+                ]
+            },
+            {
+                "name": "Reaper",
+                "changes": [
+                    "Consecutive Strikes (W)",
+                    [
+                        "Bonus damager per stack 3% → 2.5%"
+                    ]
+                ]
+            },
+            {
+                "name": "Assassin",
+                "changes": [
+                    "Night Fury (F)",
+                    [
+                        "Cooldown 150 seconds → 120 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Bow Master",
+                "changes": [
+                    "Guardian Scout (E)",
+                    [
+                        "Attack damage / Mainstat bonus 10% → 12%",
+                        "Cooldown 12 seconds → 10 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Warlock",
+                "changes": [
+                    "Demonic Fury (T)",
+                    [
+                        "Gives 400 armor and 100% bonus HP → Gives 400 armor and 25% bonus HP and Magic Reduction for duration"
+                    ]
+                ]
+            }
+        ],
+        "misc": [
+            "Cost of stat point reversal 50,000 gold → 10,000 gold, Full reversal 500,000 gold → 100,000 gold"
+        ]
+    },
+    {
+        "name": "22n",
+        "notes": [
+            "Compatible Version: v0.13c ~"
+        ],
+        "bugs": [
+            "Fixed Wings of Death staying in air after avatar ends",
+            "Fixed Crown of serenity proc not applying int multiplier to itself"
+        ],
+        "items": [
+            {
+                "name": "Crown of Serenity",
+                "changes": [
+                    "Passive activation changed to be affected by healing output"
+                ]
+            },
+            {
+                "name": "Acorn Bomb",
+                "changes": [
+                    "No longer stuns bosses",
+                ]
+            }
+        ],
+        "monsters": [
+            {
+                "name": "Magnataurs",
+                "changes": [
+                    "Respawn time 40 seconds → 30 seconds"
+                ]
+            },
+            {
+                "name": "Yeti",
+                "changes": [
+                    "Respawn time 40 seconds → 30 seconds"
+                ]
+            },
+            {
+                "name": "Tentacle Lord",
+                "changes": [
+                    "Horn of Deep Sea droprate 1.25% → 2%",
+                    "Infected Tentacle droprate 2% → 3%"
+                ]
+            },
+            {
+                "name": "Fairy Spirit",
+                "changes": [
+                    "Damage reduced / Respawn time 45 seconds → 90 seconds",
+                    "Bonus damage per attack 1500 → 0"
+                ]
+            },
+            {
+                "name": "Driads",
+                "changes": [
+                    "Damage reduced / Respawn time 45 seconds → 90 seconds",
+                    "Splash attack removed"
+                ]
+            },
+            {
+                "name": "Spirit Beast",
+                "changes": [
+                    "Size / aggro range increased",
+                    "Shockwave",
+                    [
+                        "Damage (2500 + 25% of target's Max HP) → (5000 + 50% of target's Max HP)",
+                        "Trail damage per tick 2500 → (1000 + 10% of target's Max HP)",
+                        "Trail regeneration per tick 0.5% Max HP → 1% Max HP"
+                    ],
+                    "Second Phase",
+                    [
+                        "Damage Reduction 25% → 40%",
+                        "Lightning Damage 2500 → 10,000"
+                    ]
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Wind Mage",
+                "changes": [
+                    "Gentle Winds (W)",
+                    [
+                        "Removed default recovery amount 375",
+                        "Added INT X 20 damage"
+                    ]
+                ]
+            },
+            {
+                "name": "Priest",
+                "changes": [
+                    "Heaven's Gate (T)",
+                    [
+                        "Raguel Multi shot targets 2 → 3"
+                    ]
+                ]
+            },
+            {
+                "name": "Soul Weaver",
+                "changes": [
+                    "Soul Bolt (Q) - Curse Explosion (Q)",
+                    [
+                        "Explosion Radius 450 → 600"
+                    ],
+                    "Dead Spirit (E)",
+                    [
+                        "Movement speed 350 → 750",
+                        "Howling damage increased by 200%"
+                    ],
+                    "Dead Spike",
+                    [
+                        "Cooldown 20 seconds → 10 seconds"
+                    ]
+                ]
+            }
+        ],
+        "misc": [
+            "Experience",
+            [
+                "Level 360 ~ 400 EXP gain from hunting quests: 5 ~ 3.5% → 5%",
+                "Level 400 ~ 420 EXP gain from hunting quests: 3.5% → 1%",
+                "Level 360 ~ 400 EXP gain: 60% → 50%",
+                "Level 400 ~ 410 EXP gain: 54 ~ 6% → 10%",
+                "Level 410 ~ 420 EXP gain: 2.7 ~ 0.3% → 5%",
+                "Levels of EXP",
+                [
+                    "Hunting Quests: 1 ~ 420",
+                    "Gathering Quests: 1 ~ 420 (When quest level exceeded, gives only 30% EXP)",
+                    "Field/Item boss EXP: Local entry level ~ 400",
+                    "Hydra ~ Demon Lord boss EXP: 240 ~ 420"
+                ],
+                "Adjusted boss EXP gain",
+                "Removed 1000 kills quest"
+            ]
+        ]
     }
 ]
