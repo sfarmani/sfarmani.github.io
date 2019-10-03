@@ -271,7 +271,7 @@
                 ]
             },
             {
-                "name": "Shadow Dragon",
+                "name": "Shadow Dragon Irbert",
                 "changes": [
                     "Removed Mage Lord summoning requirements"
                 ]
@@ -2926,7 +2926,7 @@
         ],
         "monsters": [
             {
-                "name": "Shadow Dragon",
+                "name": "Shadow Dragon Irbert",
                 "changes": [
                     "HP: 29,821,000 → 31,821,000"
                 ]
@@ -3745,7 +3745,7 @@
                 ]
             },
             {
-                "name": "Samael",
+                "name": "Archangel Samael",
                 "changes": [
                     "Memory stone - Entrance to area is kept open until he is revived"
                 ]
@@ -3925,7 +3925,7 @@
                 ]
             },
             {
-                "name": "Swordman",
+                "name": "Swordsman",
                 "changes": [
                     "Illusal Dance (T)",
                     [
@@ -4251,7 +4251,7 @@
                 ]
             },
             {
-                "name": "Blood Mask (summon item)",
+                "name": "Mask of Blood (summon item)",
                 "changes": [
                     "Droprate increased"
                 ]
