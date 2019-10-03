@@ -4022,7 +4022,7 @@
                         ],
                         "Crimson Hatred",
                         [
-                            "Bloody Hatred + Staff of Souls + Dragonic Rod + Essence of Flame + Spearhead of Death + Essence of Darkness + God's Page",
+                            "Bloody Hatred + Staff of Souls + Dragonic Rod + Essence of Flame + Spearhead of Death + Essence of Darkness + God's Page"
                         ],
                         "Staff of Plague",
                         [
@@ -4735,7 +4735,7 @@
             {
                 "name": "Acorn Bomb",
                 "changes": [
-                    "No longer stuns bosses",
+                    "No longer stuns bosses"
                 ]
             }
         ],
