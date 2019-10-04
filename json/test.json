@@ -4849,5 +4849,183 @@
                 "Removed 1000 kills quest"
             ]
         ]
+    },
+    {
+        "name": "22m",
+        "notes": [
+            "Compatible Version: v0.13c ~"
+        ],
+        "bugs": [
+            "Fixed valtora not getting CC-immune on 2nd phase"
+        ],
+        "monsters": [
+            {
+                "name": "Monster notes",
+                "changes": [
+                    "Anti-Magic Shell duration 12 seconds → 8 seconds (for all bosses)"
+                ]
+            },
+            {
+                "name": "Giant Golem",
+                "changes": [
+                    "Corrupt Crystal Fragment droprate 1% → 2%"
+                ]
+            },
+            {
+                "name": "Mana Ancient",
+                "changes": [
+                    "Plates of Rengeration / Vest of Protection / Fairy Robe / Lifestone droprate 1.75% → 2.5%"
+                ]
+            },
+            {
+                "name": "Mad Clown",
+                "changes": [
+                    "Corrupt Crystal Fragment droprate 1% → 2.5%"
+                ]
+            },
+            {
+                "name": "Jack-o-lantern",
+                "changes": [
+                    "Candy Bag droprate 6% → 7.5%",
+                    "Magical Ore Deposit droprate 5% → 7.5%"
+                ]
+            },
+            {
+                "name": "Count Wallachia",
+                "changes": [
+                    "Pull stun duration 4 seconds → 1 second",
+                    "Count's Old Cape droprate 3% → 5%",
+                    "Ancient Writings droprate 3% → 5%"
+                ]
+            },
+            {
+                "name": "Wings of Death",
+                "changes": [
+                    "Avatar duration 30 seconds → 15 seconds",
+                    "Ancient Writings droprate 3% → 6%"
+                ]
+            },
+            {
+                "name": "Mage Lord",
+                "changes": [
+                    "Sealed Weapon droprate 5% → 6%",
+                    "Robe of the Mage / Hood of the Mage droprate 3.75% → 6%",
+                    "Ring of Resonance droprate 2.5% → 4%",
+                    "Ancient Writings droprate 3.75% → 7.5%",
+                    "Magical Ore Deposit droprate 5% → 7.5%"
+                ]
+            },
+            {
+                "name": "Guardian Spirit, Avalon's Gatekeeper",
+                "changes": [
+                    "Guardian Ring droprate 2% → 4%"
+                ]
+            },
+            {
+                "name": "Guardian Angels",
+                "changes": [
+                    "Pull stun duration 3 seconds → 1 second",
+                    "Holy Sword / Staff / Cannon droprate 2% → 2.5%",
+                    "Sacred Armor / Helm droprate 1.66% → 2.5%",
+                    "A Page of the Bible / Fragment of Angel's Feather droprate 2.5% → 3%"
+                ]
+            },
+            {
+                "name": "Corrupt Angel",
+                "changes": [
+                    "Pull stun duration 5 seconds → 1 second"
+                ]
+            },
+            {
+                "name": "Frostspider Lord",
+                "changes": [
+                    "Spider Queen",
+                    [
+                        "Okelanq Spear / Bow / Lord of Revolvers droprate 4% → 6%"
+                    ],
+                    "Winter Tear / Frostbane droprate 1.75% → 2.5%",
+                    "Niflheim / Ripple Snow droprate 3.5% → 5%",
+                    "Magical Ore Deposit droprate 5% → 7.5%"
+                ]
+            },
+            {
+                "name": "Demon Lord Beriel",
+                "changes": [
+                    "Magical Portal",
+                    [
+                        "HP 10,000,000 → 50,000,000",
+                        "Reduced hp/attack/defence/magic damage reduction of summons"
+                    ],
+                    "Damage 61,489 → 42,439, Damage per rage stack 2500 → 1500",
+                    "Change bonus per additional player over lvl 340",
+                    [
+                        "Skill damage / Damage reduction increased by 15% → 10% (up to 30%)",
+                        "Attack speed increased by 25% → 10% (up to 30%)",
+                        "Droprate increase 33.33% → 16.66% (up to 50%)"
+                    ],
+                    "Claws of Destruction / Bullet of Destruction droprate 0.6% → 1.75%",
+                    "Horn of Demon Lord / Eye of the Abyss droprate 1.2% → 3%",
+                    "Slayer Boots droprate 0.9% → 2.5%",
+                    "Dark Wings droprate 4% → 6%",
+                    "Dark Matter droprate 4 ~ 5% → Fixed 6%"
+                ]
+            },
+            {
+                "name": "Corruptor Rectus",
+                "changes": [
+                    "Essence of Corruption / Ancient Fragment of Ruins droprate 2% → 3%"
+                ]
+            },
+            {
+                "name": "Flame Nightmare",
+                "changes": [
+                    "Spirit of Nightmare droprate 2% → 3%",
+                    "Essence of Anger droprate 1.5% → 2%",
+                    "Shard of Ange - Essence of Anger droprate 0.9% → 1.2%"
+                ]
+            },
+            {
+                "name": "Turtle Lord",
+                "changes": [
+                    "Pure Steel / Mark of Storm droprate 2.25% → 3%",
+                    "Mana Orb droprate 1.5% → 2%",
+                    "Shard of Mana - Mana Orb droprate 0.9% → 1.2%"
+                ]
+            },
+            {
+                "name": "Spirit Beast",
+                "changes": [
+                    "Boss reworked",
+                    "Maximum number of drops 1 → 4",
+                    "Spiritus, the Sword of Elements droprate 2.5% → 3%",
+                    "Visvire, the Hammer of Storm / Storm Headdress droprate 1.5% → 2%",
+                    "Spirit Orb droprate 1.5% → 2.5%"
+                ]
+            },
+            {
+                "name": "Skeleton King Desperia",
+                "changes": [
+                    "Orb of Oblivion / Fragment of Oblivion / Skeleton Bone / Spirit of Abyss 0.6% → 0.75%",
+                    "Getsuga damage 30,000 → 25,000"
+                ]
+            },
+            {
+                "name": "Bone Dragon",
+                "changes": [
+                    "Tentacle Duration 30 seconds → 45 seconds (to prevent any bugs with it disappearing too early during explosion)"
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Sniper",
+                "changes": [
+                    "Glide (W)",
+                    [
+                        "Cooldown 5 seconds → 4 seconds"
+                    ]
+                ]
+            }
+        ]
     }
 ]
