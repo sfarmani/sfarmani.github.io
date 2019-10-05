@@ -255,6 +255,19 @@ $(function () {
             monsters_table.columns.adjust().draw(false);
             hereoes_table.columns.adjust().draw(false);
         });
+        $.fn.dataTable.tables({ api: true }).search($('.search_all input').val()).draw();
+        if ($.fn.DataTable.isDataTable('#bugs_and_misc') || $.fn.DataTable.isDataTable('#items') || $.fn.DataTable.isDataTable('#monsters') || $.fn.DataTable.isDataTable('#heroes')) {
+            if ($('.search_all').hasClass('d-none')) {
+                $('.search_all').removeClass('d-none');
+            }
+        }
+        else {
+            $('.search_all').addClass('d-none');
+        }
+    });
+
+    $('.search_all input').on('keyup change search', function(e){
+        $.fn.dataTable.tables({ api: true }).search($(this).val()).draw();
     });
 
     var sidebar = $("#sidebar");
