@@ -5162,5 +5162,588 @@
                 ]
             }
         ]
+    },
+    {
+        "name": "22k",
+        "notes": [
+            "Released on: January 28th, 2019",
+            "Compatible Version: v0.13c ~"
+        ],
+        "bugs": [
+            "Fixed item description for Stalker",
+            "King Crab and Mammoth can no longer be summoned multiple times with one summoning item",
+            "Alchemist - Fixed a bug where Golem's power slam skill was not activating"
+        ],
+        "items": [
+            {
+                "name": "Hydro Buster",
+                "changes": [
+                    "Shooter Spec - Water Bullet damage INT X 30 → INT X 50"
+                ]
+            },
+            {
+                "name": "Parasitic Staff",
+                "changes": [
+                    "Active - HP regeneration rate 12% → 10%"
+                ]
+            },
+            {
+                "name": "Crimson Star",
+                "changes": [
+                    "Shooter Spec - Twin Star damage type changed to magic and damage increased by 200%"
+                ]
+            },
+            {
+                "name": "Earthen Plates",
+                "changes": [
+                    "Lancer Spec - Removed debuff effect when using Battle Recovery (R)"
+                ]
+            },
+            {
+                "name": "Creation of the Sky and Earth",
+                "changes": [
+                    "Passive - Mainstat increase per stack 115 → 125",
+                    "Lancer Spec - Removes debuff effect when using Battle Recover (R)"
+                ]
+            },
+            {
+                "name": "Crown of Serenity",
+                "changes": [
+                    "Passive - Maximum regeneration HP X 4% per second → Maximum HP X 2% of target + INT X 0.125"
+                ]
+            },
+            {
+                "name": "Grim Heart",
+                "changes": [
+                    "Active - Removed ability to reduce healing"
+                ]
+            },
+            {
+                "name": "Archangel Wings",
+                "changes": [
+                    "New recipe applied:",
+                    [
+                        "+725 All Stats",
+                        "+250 Mainstat",
+                        "+250 HP and Mana regeneration",
+                        "+15% Skill Damage",
+                        "Passive: \"Archangel's Judgement\" On spell cast, 5% chance to reset the cooldown of all non-ultimate skills after 2 seconds of delay and gain 10% skill damage for 10 seconds (150 second CD)",
+                        "Passive: \"Archangel's Blessing\" If HP drops below 1 (not including instant kills), restores 70% HP and Mana (300 second cooldown)"
+                    ]
+                ]
+            }
+        ],
+        "monsters": [
+            {
+                "name": "Scarab / Wallachia Wraith",
+                "changes": [
+                    "Increased respawn time"
+                ]
+            },
+            {
+                "name": "Mad Clown",
+                "changes": [
+                    "Evasion removed",
+                    "HP regeneration 12321 per second → 1234 per second",
+                    "Attack Damage 23,456 → 12,345",
+                    "Wheel of Despair",
+                    [
+                        "Cooldown 75 seconds → 100 seconds"
+                    ],
+                    "Mad Symbol droprate 0.7% → 1%"
+                ]
+            },
+            {
+                "name": "Mage Lord",
+                "changes": [
+                    "Sealed Weapon - User can choose which weapon to receive"
+                ]
+            },
+            {
+                "name": "Demon Lord Beriel",
+                "changes": [
+                    "Doom",
+                    [
+                        "Now interruptable if paused mid-cast"
+                    ],
+                    "Waves are now similar to Frostspider Lord"
+                ]
+            },
+            {
+                "name": "Frostspider Lord",
+                "changes": [
+                    "Units can no longer get past the cave entrance with certain spells (Wind Mage D)",
+                    "Added portal to prius after wave ends",
+                    "Now both mini-bosses appear during wave (Lich and spider queen)"
+                ]
+            },
+            {
+                "name": "Corruptor Rectus",
+                "changes": [
+                    "Droprates",
+                    [
+                        "Corruptor 4% → 3%",
+                        "Stalker 4% → 3%",
+                        "Avenger 4% → 3%",
+                        "Chaser 4% → 3%",
+                        "Skull Seal 4% → 3%",
+                        "Potion of Corruption 4% → 3%",
+                        "Staff of Contagion 1.75% → 1.5%"
+                    ]
+                ]
+            },
+            {
+                "name": "Flame Nightmare",
+                "changes": [
+                    "Droprates",
+                    [
+                        "Hatred 4% → 3%",
+                        "Flameshard Armor 4% → 3%",
+                        "Ring of Nightmare 4% → 3%",
+                        "Inferno 4% → 3%",
+                        "Crown of Fervor 1.75% → 1.5%"
+                    ]
+                ]
+            },
+            {
+                "name": "Turtle Lord",
+                "changes": [
+                    "Droprates",
+                    [
+                        "Water Cannon 4% → 3%",
+                        "Tunic of Subtlety 4% → 3%",
+                        "Scale Protector 4% → 3%",
+                        "Purified Water 4% → 3%",
+                        "Oath of Courage 1.75% → 1.5%"
+                    ],
+                    "Healing Turtle",
+                    [
+                        "HP 2,380,000 → 1,780,000",
+                        "HP regeneration rate 25,000 → 10,000",
+                        "Movement speed 300 → 250"
+                    ],
+                    "Blue Turtle",
+                    [
+                        "Bonus magic defense 95% → 80%",
+                        "On attack, has a 12.5% chance to freeze for 0.5 seconds → slow"
+                    ]
+                ]
+            },
+            {
+                "name": "Bone Dragon",
+                "changes": [
+                    "Thorns of Hell (Tentacles)",
+                    [
+                        "Radius 100 → 175",
+                        "If spawned near another tentacle, it will be pushed away to prevent stacking",
+                        "Changed visual effect of 4th tentacle",
+                        "Cooldown 5 seconds → 8 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Ancient Ent",
+                "changes": [
+                    "No longer stuns at start"
+                ]
+            },
+            {
+                "name": "Skeleton King Desperia",
+                "changes": [
+                    "Droprates",
+                    [
+                        "Spirit of Abyss 0.5% → 0.6%",
+                        "Fragment of Oblivion 0.5% → 0.6%",
+                        "Orb of Oblivion 0.5% → 0.6%",
+                        "Skeleton Bone 0.5% → 0.6%"
+                    ]
+                ]
+            },
+            {
+                "name": "Shadow Dragon",
+                "changes": [
+                    "Droprates",
+                    [
+                        "Levante, the sword of Love and Hate 1.2% → 0.75%"
+                    ]
+                ]
+            },
+            {
+                "name": "Valtora",
+                "changes": [
+                    "Tornadoes changed to affect CC immune units",
+                    "Electric Shock",
+                    [
+                        "Non-hero units no longer constantly damage nearby friendly units"
+                    ]
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Knight",
+                "changes": [
+                    "Excalibur (F)",
+                    [
+                        "Makes allies ignore all damage and becomes invulnerable → Becomes CC immune and 100% damage reduction"
+                    ]
+                ]
+            },
+            {
+                "name": "Berserker",
+                "changes": [
+                    "Blood Fury (E)",
+                    [
+                        "Active toggle consumes Max HP X 10% HP per second → Max HP X 15% HP per second"
+                    ]
+                ]
+            },
+            {
+                "name": "Lancer",
+                "changes": [
+                    "Battle Recovery (R)",
+                    [
+                        "Removes debuffs on use"
+                    ]
+                ]
+            },
+            {
+                "name": "Shooter",
+                "changes": [
+                    "Twin Star (Q)",
+                    [
+                        "Now deals Pure damage all the time"
+                    ]
+                ]
+            },
+            {
+                "name": "Sword Enchanter",
+                "changes": [
+                    "Ultimate Enchant (F)",
+                    [
+                        "Healing Received reduction 40% → 20%"
+                    ]
+                ]
+            },
+            {
+                "name": "Witch (now Warlock)",
+                "changes": [
+                    "Renamed to Warlock",
+                    "Demonic Fury (T) - Leap of Execution (W)",
+                    [
+                        "50% reduction in post-delay"
+                    ]
+                ]
+            },
+            {
+                "name": "Elementalist",
+                "changes": [
+                    "Attack delay 1.30 → 0.90",
+                    "Sprite size decreased",
+                    "Seal of Flame (Q)",
+                    [
+                        "Remove armor",
+                        "Cooldown 10 seconds → 15 seconds"
+                    ],
+                    "Seal of Water (W)",
+                    [
+                        "Remove HP/Armor",
+                        "Is now invulnerable",
+                        "Water Beam (Q)",
+                        [
+                            "Can no longer heal Fire Elemental"
+                        ]
+                    ],
+                    "Seal of Earth (R)",
+                    [
+                        "Model change",
+                        "Earthen Protection (D)",
+                        [
+                            "reduces damage received by nearby elementals and summons by 60% → Reduces damage from nearby friendly units by 30%"
+                        ]
+                    ],
+                    "Seal of Chaos (F)",
+                    [
+                        "Summoning time 2.5 seconds → 1 second",
+                        "Duration 25 seconds → 20 seconds",
+                        "Power of Chaos (D)",
+                        [
+                            "Increase magic defense by 80% → Ignore all damage / Avoids all attacks",
+                            "Does not avoid empowered attacks like Zombie Lord's Hunger or Death Fiend's Empowered attacks"
+                        ],
+                        "Dark Reach (D)",
+                        [
+                            "Every attack deals INT X 10 bonus damage to nearby enemies → Every attack deals INT X 7.5 bonus damage to nearby enemies",
+                            "Every 4th attack deals INT X 30 bonus damage to nearby enemies → Every 5th attack deals INT X 50 bonus damage to nearby enemies"
+                        ],
+                        "Abyss Walk (Q)",
+                        [
+                            "Range 1000 → 1500"
+                        ],
+                        "Collapse Dimension (W)",
+                        [
+                            "Cooldown 15 seconds → 5 seconds"
+                        ],
+                        "Eye of Chaos (E)",
+                        [
+                            "Damage reduced by 20%"
+                        ]
+                    ]
+                ]
+            }
+        ],
+        "misc": [
+            "Changed magic stone absorption and drop abilities on tokens to affect chaos magic stones",
+            "Shooter - costume aura size reduced"
+        ]
+    },
+    {
+        "name": "22j",
+        "notes": [
+            "Released on: January 26th, 2019",
+            "Compatible Version: v0.13c ~"
+        ],
+        "bugs": [
+            "Fixed a bug where Soul Weaver's Unholy Blast (R) range is not visible",
+            "Alchemist - Fixed some issues with specific spells that altered exp gain and damage reduction"
+        ],
+        "items": [
+            {
+                "name": "Diana, the Robe of Holy Maiden",
+                "changes": [
+                    "Passive - Increases the Magic Resistance of nearby allies by 9% → 8% (Classified as Type-A - doesn't stack with Oath of Courage and Eternal Rose)"
+                ]
+            },
+            {
+                "name": "Ispion, the Runed Ring",
+                "changes": [
+                    "Damage reduction 12% → 9%",
+                    "Passive - Increases the armor of nearby allies by 8% → Reduces damage received by 6%"
+                ]
+            }
+        ],
+        "monsters": [
+            {
+                "name": "Bone Dragon",
+                "changes": [
+                    "Max HP 26,109,000 → 24,109,000",
+                    "Max MP 80 → 60",
+                    "Detection radius/vision increased",
+                    "Swipe wind-up time 1.5 seconds → 1 second",
+                    "Frozen time 2 seconds → 1.5 second",
+                    "Thorns of Hell (Tentacles)",
+                    [
+                        "All Tentacles will disappear when rage mode ends",
+                        "Changed to be usable even after mana is depleted",
+                        "Cooldown 3 seconds → 5 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Zombie Lord",
+                "changes": [
+                    "50% less lifesteal",
+                    "Mini-zombies",
+                    [
+                        "Max HP 750,000 → 500,000",
+                        "sound will only play on first pop-up of high amount of zombies, further pop-ups will be text-only",
+                        "Resurrection time 6 seconds → 3 seconds"
+                    ],
+                    "Death Coil - Increased flying speed"
+                ]
+            },
+            {
+                "name": "Ancient Ent",
+                "changes": [
+                    "Damage reduction when rooted 100% → 66.66%",
+                    "Earth Slam",
+                    [
+                        "Casting time 2 seconds → 1.5 seconds",
+                        "Cooldown 12 seoncds → 10 seconds"
+                    ],
+                    "Orbs of life",
+                    [
+                        "Changed so that an invulnerable unit cannot absorb it",
+                        "Damage 12,500 → 10,000",
+                        "Maximum speed 80 → 100",
+                        "100% increase in rate of spawn when boss is below 25% HP"
+                    ],
+                    "Elder Ent",
+                    [
+                        "Magic defense 85% → 80%",
+                        "Earth Slam",
+                        [
+                            "Physical Damage 500,000 → Magic Damage 25,000",
+                            "Cast-time 1.25 seconds → 1.5 seconds",
+                            "Cooldown 8 seconds → 5 seconds"
+                        ],
+                        "Jump",
+                        [
+                            "Jump delay 3 seconds → 2 seconds"
+                        ],
+                        "Reflect",
+                        [
+                            "Damage reflected back to you 1500 + Damage X 6% → 1500 + Damage received X 10%",
+                            "Duration 6 seconds → 4 seconds"
+                        ]
+                    ]
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Witch (now Warlock)",
+                "changes": [
+                    "Model change"
+                ]
+            },
+            {
+                "name": "Blood Weaver",
+                "changes": [
+                    "Blood Boil (R)",
+                    [
+                        "Cooldown 20 seconds → 17.5 seconds"
+                    ],
+                    "Sacrifice (F)",
+                    [
+                        "Changed to be immune to CC when casting"
+                    ]
+                ]
+            },
+            {
+                "name": "Blood Weaver",
+                "changes": [
+                    "Seal of Lightning (E) - Shock (W)",
+                    [
+                        "Decrease Magic defense Type-D → Type-C (No longer stacks with Soul Weaver's Unholy Blast (R))"
+                    ]
+                ]
+            }
+        ]
+    },
+    {
+        "name": "22h",
+        "notes": [
+            "Released on: January 25th",
+            "Compatible Version: v0.13c ~",
+            "You may use v0.22g until 01/26/2019 23:59:59",
+            "Afterwards please use this version"
+        ],
+        "bugs": [
+            "Fixed a bug where wallachia spectre and mad clown would ignore damage if paused"
+        ],
+        "items": [
+            {
+                "name": "Item notes",
+                "changes": []
+            }
+        ],
+        "monsters": [
+            {
+                "name": "Mad Clown",
+                "changes": [
+                    "Wheel of Despair - Changed to be invincible while casted"
+                ]
+            },
+            {
+                "name": "Zombie Lord",
+                "changes": [
+                    "Temporary droprate increase reverted to normal",
+                    "Acolyte - Death Coil",
+                    [
+                        "Radius 275 → 175",
+                        "coils prevented to not start casting if acolyte is stunned when reaching 100 mana"
+                    ]
+                ]
+            },
+            {
+                "name": "Valtora",
+                "changes": [
+                    "Base damage reduction 20% → 25%",
+                    "Lightning Hammer",
+                    [
+                        "Damage 25,000 → 20,000",
+                        "Electric shock duration 15 seconds → 6 seconds",
+                        "Cooldown 15 seconds → 12 seconds"
+                    ],
+                    "Tornado",
+                    [
+                        "Damage per second Max HP X 40% → Max HP X 30%"
+                    ]
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Phantom Blade",
+                "changes": [
+                    "Cresent (Q)",
+                    [
+                        "0.25 second stun to non-boss units removed",
+                        "90% movespeed reduction on all units for 3 seconds"
+                    ],
+                    "Release (T)",
+                    [
+                        "Soul cost removed when active",
+                        "5 second finishing countdown text"
+                    ]
+                ]
+            }
+        ],
+        "misc": [
+            "Adjusted master level of some skills (master level stats remain unchanged)",
+            "Updated some skill descriptions to be more accurate",
+            [
+                "reaper R duration from 1.5 seconds to 1.25"
+            ],
+            "Update to statusboard",
+            [
+                "Change stats / fatigues to appear next to gold",
+                "Fixed a problem where some class names are too dark to show in the statusboard",
+                "Change the properties of the mage classes to appear in the statusboard appropriately"
+            ]
+        ]
+    },
+    {
+        "name": "22g",
+        "notes": [
+            "Released on: January 23rd, 2019",
+            "Compatible Version: v0.13c ~"
+        ],
+        "bugs": [
+            "Fixed a bug where Phantom Blade's Slash (A) still did not get cast in silence",
+            "Zombie Lord - Fixed a bug where it did not drop any items"
+        ],
+        "items": [
+            {
+                "name": "Tiberius, the Spear of Lightning",
+                "changes": [
+                    "Attack Damage 24,000 → 25,000",
+                    "Strength 1,975 → 2,025"
+                ]
+            }
+        ],
+        "monsters": [
+            {
+                "name": "Corruptor Rectus",
+                "changes": [
+                    "Infection - Changed to be treated as periodic damage"
+                ]
+            },
+            {
+                "name": "Zombie Lord",
+                "changes": [
+                    "Droprate temporarily increased by 50%",
+                    "Summoning cycle of mini-zombies slightly reduced",
+                    "Infection",
+                    [
+                        "Changed so it does affect units in disappeared state"
+                    ]
+                ]
+            }
+        ],
+        "misc": [
+            "Changed to allow movement while being knocked back"
+        ]
     }
 ]
