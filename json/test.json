@@ -6984,5 +6984,743 @@
                 "Now active!"
             ]
         ]
+    },
+    {
+        "name": "20m",
+        "notes": [
+            "Released on: December 20th, 2018",
+            "Compatible Version: v0.13c ~"
+        ],
+        "bugs": [
+            "Witch - Fixed bug where Soul Grimoire (R) dealt no damage when using Ring of Deep Darkness",
+            "Wizard (Fire) - Fixed a bug that caused some wing effects to not appear when activating Halloween costumes"
+        ],
+        "items": [
+            {
+                "name": "Parasitic Staff",
+                "changes": [
+                    "Active effect",
+                    [
+                        "Heal per second INT X 0.75 → INT X 0.50",
+                        "Duration 8 seconds → 5 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Grandine, the Armor of the Spectre",
+                "changes": [
+                    "Passive effect",
+                    [
+                        "Cooldown 50 seconds → 60 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Cold Ring of Death",
+                "changes": [
+                    "Active effect",
+                    [
+                        "Duration 4 seconds → 3 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Latea, the Ring of the Overlord",
+                "changes": [
+                    "All stats 1210 → 1250",
+                    "Passive effect",
+                    [
+                        "10% chance of 40% additional damage → 20% chance of 20% additional damage"
+                    ]
+                ]
+            },
+            {
+                "name": "Ring of Time",
+                "changes": [
+                    "All stats 910 → 960",
+                    "Passive effect",
+                    [
+                        "Activates if HP drops below 1 HP → if HP drops below 25%",
+                        "Heal amount HP X 50% → HP X 40%",
+                        "No longer cancels the damage that procced the passive effect",
+                        "Cooldown 360 seconds → 300 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Archangel's Wings",
+                "changes": [
+                    "Passive effect",
+                    [
+                        "Activates if HP drops below 1 HP → if HP drops below 25%",
+                        "No longer cancels the damage that procced the passive effect"
+                    ]
+                ]
+            },
+            {
+                "name": "Grim Heart",
+                "changes": [
+                    "Active effect",
+                    [
+                        "Stun duration 1.25 sec → 1 sec",
+                        "Cooldown 30 seconds → 40 seconds"
+                    ]
+                ]
+            },
+            {
+                "name": "Soul Eater",
+                "changes": [
+                    "Active effect",
+                    [
+                        "Cooldown 30 seconds → 40 seconds"
+                    ]
+                ]
+            }
+        ],
+        "monsters": [
+            {
+                "name": "Skeleton King Desperia",
+                "changes": [
+                    "Damage reduction per player when exceeding 6 players increased from 7.5% → 12.5%",
+                    "No longer has aura that reduces the enemies' armor / HP regen",
+                    "Weapon of Nothingness Damage 20000 → 30000"
+                ]
+            },
+            {
+                "name": "Skeleton King Desperia",
+                "changes": [
+                    "HP 11041930 → 13541930",
+                    "Now activates Hunger immediately after revival"
+                ]
+            },
+            {
+                "name": "Samael",
+                "changes": [
+                    "Magic defense 80% → 85%",
+                    "Protection of light",
+                    [
+                        "No longer activates while Judgment is active",
+                        "Damage reduction 80% → 70%",
+                        "Cooldown 51 sec → 25 sec"
+                    ]
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Elementalist",
+                "changes": [
+                    "Seal of the Wind (D)",
+                    [
+                        "Maximum number of jumps limited to 5 (displayed in MP)"
+                    ]
+                ]
+            },
+            {
+                "name": "Alchemist",
+                "changes": [
+                    "Infusion (D)",
+                    [
+                        "Cooldown 10 seconds → 8 seconds"
+                    ],
+                    "Conjure Water (W) - Water Bomb (Q)",
+                    [
+                        "Additional damage to burning enemies reduced from 133% (INT X 20) → 100% (INT X 15)"
+                    ]
+                ]
+            }
+        ],
+        "misc": [
+            "Applied missing Halloween event titles"
+        ]
+    },
+    {
+        "name": "20k",
+        "notes": [
+            "Released on: December 4th, 2018",
+            "Compatible Version: v0.13c ~"
+        ],
+        "bugs": [
+            "Non-hero units can no longer be selected",
+            "Fixed a bug where alchemist could not cast target spells for 0.8s after infusion cast"
+        ],
+        "items": [
+            {
+                "name": "Ring of Deep Darkness",
+                "changes": [
+                    "Witch Spec (R) Bonus Damage 10% → 0%"
+                ]
+            },
+            {
+                "name": "Grimoire of Darkness",
+                "changes": [
+                    "Witch Spec (R) Bonus Damage 15% → 5%"
+                ]
+            }
+        ],
+        "monsters": [
+            {
+                "name": "Guardian Angels",
+                "changes": [
+                    "Holy Powders required 3 → 2"
+                ]
+            },
+            {
+                "name": "Magical Ore Deposit",
+                "changes": [
+                    "Duration 5m → 2m",
+                    "Size Reduction"
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Crusader",
+                "changes": [
+                    "Flash of Immortality (W)",
+                    [
+                        "No longer triggers (D)"
+                    ],
+                    "Strike of Honor (E)",
+                    [
+                        "Stun Duration 1s → 2s",
+                        "Bonus stun duration removed",
+                        "Reduce targets armor → Increase Damage Taken by 10% for 5s"
+                    ]
+                ]
+            },
+            {
+                "name": "Knight",
+                "changes": [
+                    "Changed Model and slightly increased attack range"
+                ]
+            },
+            {
+                "name": "Lancer",
+                "changes": [
+                    "Pierce (Q)",
+                    [
+                        "Debuff duration 7s → 20s",
+                        "Debuff duration won't increase based on Q travel distance anymore"
+                    ]
+                ]
+            },
+            {
+                "name": "Martial Artist",
+                "changes": [
+                    "Footwalk (D)",
+                    [
+                        "CD 25s → 20s"
+                    ]
+                ]
+            },
+            {
+                "name": "Merchant",
+                "changes": [
+                    "Scroll of God's Blessing (F)",
+                    [
+                        "Increases damage dealt by target by 40% → 35%"
+                    ]
+                ]
+            },
+            {
+                "name": "Sniper",
+                "changes": [
+                    "Snipe (T)",
+                    [
+                        "Cooldown 30s → 40s"
+                    ]
+                ]
+            },
+            {
+                "name": "Witch",
+                "changes": [
+                    "Soul Grimoire (R)",
+                    [
+                        "MP Recovery rate increase 200% → 250 + 100%"
+                    ],
+                    "Apocalypse (F)",
+                    [
+                        "DPS INT X 200 → INT X 250"
+                    ]
+                ]
+            },
+            {
+                "name": "Alchemist",
+                "changes": [
+                    "Can no longer attack while using a conjuring spell",
+                    "Conjure Fire (Q) - Blaze (Q)",
+                    [
+                        "Attack Damage X (0.3 X Skill Level) + INT X (1 + 0.6 X Skill Level) → Attack Damage X (200 X Skill Level)%",
+                        "4 Projectiles that deal bonus if stacked with Burning Hand → (1 + Burning Hand stack) fire"
+                    ],
+                    "Conjure Water (W) - Icicle Transmutation (E)",
+                    [
+                        "Attack Damage X (150 + 50 X Skill Level)% → INT X (15 + 3 X Skill Level)",
+                        "Added 80% Movement Speed reduction to target for 3 seconds"
+                    ],
+                    "Conjure Air (E)",
+                    [
+                        "Remove Attack Speed Increase"
+                    ],
+                    "Conjure Air (E) - Burning Hand (Q)",
+                    [
+                        "Bonus Damage buff INT X 2 → 25%",
+                        "20% Reduction in ignite damage / 100% change of activation / 33% reduction in cooldown"
+                    ],
+                    "Gate of Truth (F)",
+                    [
+                        "HP Consumption max HP X (5 + 1 per second)% → max HP X (5 + 0.50 per second)%"
+                    ]
+                ]
+            }
+        ],
+        "misc": [
+            "System",
+            [
+                "Changed formulas for 'MR Reduction' and 'Bonus Damage Taken' debuffs to count them as sum of operations instead of multiplicative operations.",
+                "Ex: Target with 50% MD buff, 10% MR Reduction, and 20% Magic Defense debuff:",
+                [
+                    "Before: 0.50 X 1.10 X 1.20 = 66% final Magic Damage received",
+                    "After: 0.50 X (1.00 + 0.10 + 0.20) = 65% final Magic Damage received"
+                ]
+            ],
+            "Wizard (Fire) - Added and applied new halloween costume",
+            "Increased range of experience gain from dead monsters",
+            "Removed Triple Snow sound effect",
+            "Modification of model applicant compensation"
+        ]
+    },
+    {
+        "name": "20j",
+        "notes": [
+            "Released on: November 27th, 2018",
+            "!! [ONLY KOREAN VERSION RELEASED] !!",
+            "Compatible Version: v0.13c ~"
+        ],
+        "bugs": [
+            "Fixed a bug where Paladin - Divine Cross (R) was dealing bonus damage if target is below 25% hp instead of 40% hp",
+            "Witch's Bizarre Candy - Fixed a bug that does not apply to some characters"
+        ],
+        "monsters": [
+            {
+                "name": "Valtora",
+                "changes": [
+                    "Changed tornados to stay in one of the 4 parts of the arena"
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Fire Mage",
+                "changes": [
+                    "Flame Nova (E)",
+                    [
+                        "Bonus damage INT X 110 (with Mark INT X 120) → INT X 100"
+                    ]
+                ]
+            },
+            {
+                "name": "Lightning Mage",
+                "changes": [
+                    "Lightning Blade (F)",
+                    [
+                        "Damage on expiration INT X 325 → INT X 300"
+                    ]
+                ]
+            },
+            {
+                "name": "Alchemist",
+                "changes": [
+                    "Gate of Truth (F)",
+                    [
+                        "INT max increase 80% → 60%"
+                    ]
+                ]
+            }
+        ],
+        "misc": [
+            "Costumes",
+            [
+                "Dark Knight - Halloween Costume #2",
+                [
+                    "Now the same as Halloween Costume #1"
+                ],
+                "Sword Enchanter - Halloween Costume #1 and #2",
+                [
+                    "Temporarily disabled, replaced with another model"
+                ],
+                "Fire Mage",
+                [
+                    "Temporarily disabled, replaced with another model"
+                ],
+                "Owners of costumes mentioned above will be able to use \"-change\" command to get snow staff as a compensation item (permanently available)",
+                "If you already have snow staff, the command will not work for you"
+            ],
+            "Model fixes, etc",
+            "Fixed title issues"
+        ]
+    },
+    {
+        "name": "20h",
+        "notes": [
+            "Released on: November 20th, 2018",
+            "Compatible Version: v0.13c ~"
+        ],
+        "bugs": [
+            "Fixed a bug where Mana Ancients skill did not end"
+        ]
+    },
+    {
+        "name": "20g",
+        "notes": [
+            "Released on: November 13th, 2018",
+            "Compatible Version: v0.13c ~"
+        ],
+        "bugs": [
+            "Fixed a bug which caused Halloween music to be randomly played at the start of the game",
+            "Triple Snow's Spec now applies correctly on Elementalists",
+            "Witch's Bizarre Candy is no longer glitched for some characters",
+            "Fixed a bug on Bat Wing series which caused double procs"
+        ],
+        "items": [
+            {
+                "name": "Ring of Intrusion",
+                "changes": [
+                    "Can no longer use Essence of Corruption"
+                ]
+            },
+            {
+                "name": "Wings of Blood Lord",
+                "changes": [
+                    "New item added"
+                ]
+            },
+            {
+                "name": "Ruinbringer",
+                "changes": [
+                    "Attack Damage 23200 → 25200"
+                ]
+            },
+            {
+                "name": "Hellflame",
+                "changes": [
+                    "AGI 1975 → 2050",
+                    "Skill damage 6% → 7%",
+                    "+5% Fire Affinity"
+                ]
+            },
+            {
+                "name": "Hydro Buster",
+                "changes": [
+                    "Shooter Spec: Water Bullet: Cooldown 3s → 2s"
+                ]
+            },
+            {
+                "name": "Staff of Contagion",
+                "changes": [
+                    "INT 2050 → 1950"
+                ]
+            },
+            {
+                "name": "Staff of Domination",
+                "changes": [
+                    "Watcher HP Regen 1500 → 4000"
+                ]
+            },
+            {
+                "name": "Triple Snow",
+                "changes": [
+                    "Water Elemental - Refreshing Well: Radius increased from 150 → 200"
+                ]
+            },
+            {
+                "name": "Purified Water",
+                "changes": [
+                    "Removed Alchemist Spec"
+                ]
+            },
+            {
+                "name": "Potion of Corruption",
+                "changes": [
+                    "Alchemist Spec reworked - Make 2 Elixir at a time"
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Lancer",
+                "changes": [
+                    "Meteor Spear",
+                    [
+                        "No longer requires empowerment to buff allies' stats"
+                    ]
+                ]
+            },
+            {
+                "name": "Gunner",
+                "changes": [
+                    "HE Bomb",
+                    [
+                        "Now retains its targetting mechanism while casting Tumble"
+                    ]
+                ]
+            },
+            {
+                "name": "Bow Master",
+                "changes": [
+                    "Elven Arrow",
+                    [
+                        "Activation chance 20% → 100%",
+                        "Cooldown changed from 4s to 5s"
+                    ],
+                    "Guardian Scout",
+                    [
+                        "Extra attack's damage changed from Damage X 50% + AGI X 5 → Damage X 50% + AGI X 2.5",
+                        "Extra attack's cooldown removed",
+                        "Active duration 5s → 4s"
+                    ]
+                ]
+            },
+            {
+                "name": "Witch",
+                "changes": [
+                    "Changed location of HP bar on model"
+                ]
+            },
+            {
+                "name": "Elementalist",
+                "changes": [
+                    "Seal of Wind (D)",
+                    [
+                        "Cooldown 20s → 15s"
+                    ],
+                    "Seal of Flame (Q)",
+                    [
+                        "Duration 6s → 10s"
+                    ],
+                    "Seal of Water (W)",
+                    [
+                        "Up to HP X 75% of HP Orders → Max HP X 125%",
+                        "Refreshing spring water - HP/MP recovery → HP/MP recovery rate increase"
+                    ],
+                    "Seal of Lightning (E)",
+                    [
+                        "Armor changed from Elementalist's Armor X 50% → Elementalist's Armor X 100%"
+                    ]
+                ]
+            }
+        ],
+        "misc": [
+            "'Itemify' option in the closet will now get rid of the item and create 2 copies in your storage area",
+            "Added some event rewards"
+        ]
+    },
+    {
+        "name": "20e",
+        "notes": [
+            "Released on: October 29th, 2018",
+            "Compatible Version: v0.13c ~"
+        ],
+        "bugs": [
+            "Fixed Halloween Costume of witch crashing the game"
+        ],
+        "items": [
+            {
+                "name": "Ring of Destruction",
+                "changes": [
+                    "All stat 1010 → 980",
+                    "Main stat 320 → 420",
+                    "Skill Damage 6% → 0%",
+                    "Movement Speed 125 → 150",
+                    "15% chance to do 50% more damage on any damage instance → 15% chance to do 40% more damage on any damage instance"
+                ]
+            },
+            {
+                "name": "Ispion, the Runed Ring",
+                "changes": [
+                    "Active CD 50 seconds → 60 seconds"
+                ]
+            }
+        ],
+        "monsters": [
+            {
+                "name": "Monster notes",
+                "changes": []
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Merchant",
+                "changes": [
+                    "Scroll of God's Blessing (F)",
+                    [
+                        "Changed to behave like a single target spell"
+                    ]
+                ]
+            }
+        ],
+        "misc": [
+            "Halloween Event",
+            [
+                "Ended, any items gained in the previous version will be invalid"
+            ],
+            "Removed being able to get onto hills",
+            "Summons will be teleported to owner if owner enters a PvP area",
+            "Fixed some spell description typos"
+        ]
+    },
+    {
+        "name": "20d",
+        "notes": [
+            "Released on: October 27th, 2018",
+            "Compatible Version: v0.13c ~"
+        ],
+        "bugs": [
+            "Fixed issues with Halloween Costumes"
+        ],
+        "items": [
+            {
+                "name": "Item Notes",
+                "changes": [
+                    "Elixir cooldown 240 seconds → 120 seconds"
+                ]
+            },
+            {
+                "name": "Mithril Pickaxe/Abyssal Pickaxe",
+                "changes": [
+                    "now mines 100 ores over 1 second"
+                ]
+            }
+        ],
+        "monsters": [
+            {
+                "name": "Yeti",
+                "changes": [
+                    "spawn period 60 seconds → 45 seconds"
+                ]
+            }
+        ],
+        "misc": [
+            "Save code files are no longer generated while watching a replay"
+        ]
+    },
+    {
+        "name": "20c",
+        "notes": [
+            "Released on: October 26th, 2018",
+            "Compatible Version: v0.13c ~"
+        ],
+        "bugs": [
+            "Fixed Beast Hunter's model"
+        ],
+        "items": [
+            {
+                "name": "Rusty Pickaxe / Sturdy Pickaxe / Rusty Magical Pickaxe / Sturdy Magic Pickaxe",
+                "changes": [
+                    "Changed to a channeling system where they will continue to mine until interrupted."
+                ]
+            }
+        ],
+        "misc": [
+            "Alchemy cost 1000 → 500",
+            "Improved Bow Master's Model",
+            "Fixed resurrection time reduction items not applying properly",
+            "Removed sound of healing proc on Hydro Buster (not removed completely last time)"
+        ]
+    },
+    {
+        "name": "20b",
+        "notes": [
+            "Released on: October 22nd, 2018",
+            "Compatible Version: v0.13c ~"
+        ],
+        "bugs": [
+            "Applied some fixes to reduce the number of random deaths occurring on Blood Weaver/Paladin",
+            "Bow Master's Arrow Rain (T) bug fixed"
+        ],
+        "items": [
+            {
+                "name": "Bow Master",
+                "changes": [
+                    "Model Changed"
+                ]
+            }
+        ],
+        "misc": [
+            "Halloween Event",
+            [
+                "All models implemented"
+            ],
+            "Hydro Buster SFX removed"
+        ]
+    },
+    {
+        "name": "20a",
+        "notes": [
+            "Released on: October 22nd, 2018",
+            "Compatible Version: v0.13c ~"
+        ],
+        "monsters": [
+            {
+                "name": "Corruptor Rectus",
+                "changes": [
+                    "Staff of Contagion's droprate reduced by 12.5%"
+                ]
+            },
+            {
+                "name": "Flame Nightmare",
+                "changes": [
+                    "Crown of Ferver's droprate reduced by 12.5%"
+                ]
+            },
+            {
+                "name": "Turtle Lord",
+                "changes": [
+                    "Oath of Courages's droprate reduced by 12.5%"
+                ]
+            },
+            {
+                "name": "Giant Ent",
+                "changes": [
+                    "Spirit Orb's droprate increased by 100%"
+                ]
+            }
+        ],
+        "heroes": [
+            {
+                "name": "Assassin",
+                "changes": [
+                    "Dark Shroud (D)",
+                    [
+                        "Hiding time decreased from 4 → 2.5."
+                    ],
+                    "Shadow Walk (E)",
+                    [
+                        "Increase attack damage duration → Deal double damage if used on target's back."
+                    ],
+                    "Smoke Bomb (R)",
+                    [
+                        "Decrease hiding time by 700% → 400%"
+                    ]
+                ]
+            },
+            {
+                "name": "Bow Master",
+                "changes": [
+                    "Guardian Scout (E)",
+                    [
+                        "HP regen increased from 8% → 10%",
+                        "Movement Speed buff changed from 40% → 150 flat MS (can bypass 500 MS limit)"
+                    ]
+                ]
+            }
+        ],
+        "misc": [
+            "Halloween Event",
+            [
+                "Active until November 4th, 2018"
+            ]
+        ]
     }
 ]
