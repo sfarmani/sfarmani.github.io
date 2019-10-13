@@ -9,12 +9,6 @@
             "Witch - Fixed Star shower (W) not dealing damage to enemies it pierces",
             "General - Fixed various bugs"
         ],
-        "monsters": [
-            {
-                "name": "Monster notes",
-                "changes": []
-            }
-        ],
         "heroes": [
             {
                 "name": "Priest",
