@@ -1,7 +1,6 @@
 $(function () {
 
-    // var changelog_url = "https://raw.githubusercontent.com/sfarmani/twrpg-info/master/changelog.json";
-    var changelog_url = "json/test.json";
+    var changelog_url = "https://raw.githubusercontent.com/sfarmani/twrpg-info/master/changelog.json";
     var items_url = "https://raw.githubusercontent.com/sfarmani/twrpg-info/master/items.json";
     var heroes_url = "https://raw.githubusercontent.com/sfarmani/twrpg-info/master/heros.json";
     // var bosses_url = "https://raw.githubusercontent.com/sfarmani/twrpg-info/master/bosses.json";
