@@ -52,12 +52,14 @@ $(function () {
     $('select.changelog-select').on('select2:select', function (e) {
         var version = e.params.data.text;
         var selected_version = changelogs.filter(x => x.name == version);
-        var notes = selected_version[0].notes.join("<br>");
-        if ($('.notes_wrapper').hasClass('d-none')){
-            $('.notes_wrapper').removeClass('d-none');
+        
+        if (selected_version[0].notes) {
+            var notes = selected_version[0].notes.join("<br>");
+            if ($('.notes_wrapper').hasClass('d-none')) {
+                $('.notes_wrapper').removeClass('d-none');
+            }
+            $('.notes').html(notes);
         }
-        $('.notes').html(notes);
-
         ////////////////////////////////////////////// for bugs and misc table //////////////////////////////////////////////
         if ($.type(selected_version[0].bugs) != "undefined" || $.type(selected_version[0].misc) != "undefined"){
             $('.bugs_wrapper').removeClass('d-none');
