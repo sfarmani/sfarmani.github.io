@@ -130,7 +130,7 @@ $(function () {
                         {
                             data: "changes", title: "Event Change(s)",
                             render: function (data) {
-                                return print_array(data, '#ea3588');
+                                return print_array(data, '#2A9BA3');
                             }
                         }
                     ]
