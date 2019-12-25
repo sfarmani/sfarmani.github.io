@@ -47,6 +47,7 @@ $(function () {
 
     var bug_misc_table;
     var items_table;
+    var events_table;
     var monsters_table;
     var hereoes_table;
     $('select.changelog-select').on('select2:select', function (e) {
@@ -96,6 +97,58 @@ $(function () {
             $('table#bugs_and_misc').children().remove();
         }
         ////////////////////////////////////////////// for bugs and misc table END //////////////////////////////////////////////
+
+        ////////////////////////////////////////////// for events table //////////////////////////////////////////////
+        if ($.type(selected_version[0].items) != "undefined") {
+            $('.events_wrapper').removeClass('d-none');
+            $('.events_table_wrapper').removeClass('d-none');
+            if (!$.fn.DataTable.isDataTable('#events')) {
+                items_table = $('#events').DataTable({
+                    responsive: true,
+                    columnDefs: [
+                        { targets: '_all', defaultContent: "<i style='color: #5a7da0'>none</i>" }
+                    ],
+                    language: { search: "Quick Search:", processing: "Loading Change Log..." },
+                    data: selected_version[0].events,
+                    dom: dom,
+                    order: [],
+                    orderCellsTop: false,
+                    processing: true,
+                    columns: [
+                        {
+                            data: "name", title: "Event Name(s)",
+                            render: function (data) {
+                                if (!data) return "<i style='color: #5a7da0'>none</i>";
+                                var str = [];
+                                var names = data.split(' / ');
+                                names.forEach(function (name) {
+                                    str.push(`<span>${name}</span>`);
+                                });
+                                return str.join(' / ');
+                            }
+                        },
+                        {
+                            data: "changes", title: "Event Change(s)",
+                            render: function (data) {
+                                return print_array(data, '#ea3588');
+                            }
+                        }
+                    ]
+                });
+            }
+            else {
+                events_table.clear().draw();
+                events_table.rows.add(selected_version[0].events);
+                events_table.columns.adjust().draw();
+            }
+        }
+        else if ($.fn.DataTable.isDataTable('#events')) {
+            $('.events_wrapper').addClass('d-none');
+            $('.events_table_wrapper').addClass('d-none');
+            events_table.destroy();
+            $('table#events').children().remove();
+        }
+        ////////////////////////////////////////////// for events END //////////////////////////////////////////////
 
         ////////////////////////////////////////////// for items table //////////////////////////////////////////////
         if ($.type(selected_version[0].items) != "undefined") {
