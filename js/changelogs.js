@@ -99,11 +99,11 @@ $(function () {
         ////////////////////////////////////////////// for bugs and misc table END //////////////////////////////////////////////
 
         ////////////////////////////////////////////// for events table //////////////////////////////////////////////
-        if ($.type(selected_version[0].items) != "undefined") {
+        if ($.type(selected_version[0].events) != "undefined") {
             $('.events_wrapper').removeClass('d-none');
             $('.events_table_wrapper').removeClass('d-none');
             if (!$.fn.DataTable.isDataTable('#events')) {
-                items_table = $('#events').DataTable({
+                events_table = $('#events').DataTable({
                     responsive: true,
                     columnDefs: [
                         { targets: '_all', defaultContent: "<i style='color: #5a7da0'>none</i>" }
