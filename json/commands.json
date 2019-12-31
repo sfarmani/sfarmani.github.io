@@ -8,7 +8,7 @@
     },
     {
         "command": "buff",
-        "usage": "-buff [boss name]",
+        "usage": "-buff [buff name]",
         "desc": "Show which buffs are of a certain type<br>Buffs of the same type do not stack",
         "aliases": "buffs",
         "cooldown": 3
@@ -22,7 +22,7 @@
     },
     {
         "command": "debuff",
-        "usage": "-debuff [boss name]",
+        "usage": "-debuff [debuff name]",
         "desc": "Show which debuffs are of a certain type<br>Debuffs of the same type do not stack",
         "aliases": "buffs",
         "cooldown": 3
