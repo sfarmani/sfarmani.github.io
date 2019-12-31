@@ -8,10 +8,10 @@
     },
     {
         "command": "buff",
-        "usage": "-buff [buff name]",
+        "usage": "-buff or -buff [buff name]",
         "desc": "Show which buffs are of a certain type<br>Buffs of the same type do not stack",
         "aliases": "buffs",
-        "cooldown": 3
+        "cooldown": 1
     },
     {
         "command": "changelog",
@@ -22,10 +22,10 @@
     },
     {
         "command": "debuff",
-        "usage": "-debuff [debuff name]",
+        "usage": "-debuff or -debuff [debuff name]",
         "desc": "Show which debuffs are of a certain type<br>Debuffs of the same type do not stack",
-        "aliases": "buffs",
-        "cooldown": 3
+        "aliases": "debuffs",
+        "cooldown": 1
     },
     {
         "command": "donate",
@@ -67,7 +67,7 @@
         "usage": "-recipe [item name]",
         "desc": "Shows you details about an item, such as recipe, stats, droprate, etc.",
         "aliases": "item, spawn, 조합법",
-        "cooldown": 3
+        "cooldown": 1
     },
     {
         "command": "roll",
@@ -88,7 +88,7 @@
         "usage": "-skill [hero name] or -skill [skill name] or -skill [hero name] all",
         "desc": "Shows the details of a skill name specified, or lists the skill names of a specified class. Can also be used to view all hero skills at the same time by adding the key word \"all\" at the end. (See the usage)",
         "aliases": "abil, skills, spell, spells, hero, heros, heroes",
-        "cooldown": 3
+        "cooldown": 1
     },
     {
         "command": "spec",
