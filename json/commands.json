@@ -7,10 +7,24 @@
         "cooldown": 3
     },
     {
+        "command": "buff",
+        "usage": "-buff [boss name]",
+        "desc": "Show which buffs are of a certain type<br>Buffs of the same type do not stack",
+        "aliases": "buffs",
+        "cooldown": 3
+    },
+    {
         "command": "changelog",
         "usage": "-changelog [version number and letter] or by itself will give you the latest version<br>-changelog [version number] will give you ALL changes within that version number (e.g. -changelog 24 will give you 24a through 24s)",
         "desc": "Displays the changelog in a direct message (since message can be very long)",
         "aliases": "ch",
+        "cooldown": 3
+    },
+    {
+        "command": "debuff",
+        "usage": "-debuff [boss name]",
+        "desc": "Show which debuffs are of a certain type<br>Debuffs of the same type do not stack",
+        "aliases": "buffs",
         "cooldown": 3
     },
     {
