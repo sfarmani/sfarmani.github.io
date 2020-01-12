@@ -125,6 +125,7 @@ $(function () {
                     var url_name = row.name;
                     if (row.type === "[Token]") url_name = "Token";
                     if (row.type === "[Ore Deposit]") url_name = "Magical Ore Deposit";
+                    if (row.name.match(/Sealed\s/) && !["Sealed Weapon", "Sealed Archangel Wings"].includes(row.name)) url_name = row.name.replace(/Sealed\s/, '');
                     var img_url = encodeURI(`https://raw.githubusercontent.com/sfarmani/twicons/master/${url_name}`);
                     return `<img width="100%" src="${img_url}.jpg" alt="${url_name}">`;
                 }
