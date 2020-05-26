@@ -84,7 +84,7 @@ $(function () {
             });
 
             //// Name, Korean Name, Item Type ////
-            var column_ids = [2, 3, 5];
+            var column_ids = [3, 4, 6];
 
             //// Replace 3 above headers to dropdowns and enable searching for them ////
             column_ids.forEach(function(id){
