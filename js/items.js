@@ -137,6 +137,13 @@ $(function () {
                     return `<font color="#ffff00">Lv. ${data}</font>`;
                 }
             },
+            { data: "worth", title: "Worth",
+                render: function (data, type) {
+                    if (type == "sort" || type == "type") return !data ? 0 : data;
+                    if (!data) return "<i style='color: #5a7da0'>none</i>";
+                    return `<font color="#ffff00">${data} Prius Silver Coin${data > 1 ? 's' : ''}</font>`;
+                }
+            },
             { data: "name", title: "Name",
                 render: function(data, type, row){
                     return `<font color="#${row.color}">${data}</font>`;
