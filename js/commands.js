@@ -36,6 +36,11 @@ $(function () {
                         return `<font color="#22bacc">${data}</font>`;
                     }
                 },
+                { data: "category", title: "Category", 
+                    render: function(data){
+                        return `<font color="#22bacc">${data}</font>`;
+                    }
+                },
                 { data: "cooldown", title: "Cooldown" }
             ]
         });

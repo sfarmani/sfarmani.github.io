@@ -1,16 +1,34 @@
 [
     {
+        "command": "avatar",
+        "usage": "-avatar [@user or user_id]",
+        "desc": "Finds the user's avatar image",
+        "aliases": "ava",
+        "category": "Utility",
+        "cooldown": 5
+    },
+    {
+        "command": "ban",
+        "usage": "-ban [@user or user_id]",
+        "desc": "Bans a member from the server. REQUIRES ADMIN",
+        "aliases": "none",
+        "category": "Utility",
+        "cooldown": 1
+    },
+    {
         "command": "boss",
         "usage": "-boss [boss name]",
         "desc": "Finds the searched boss, and gives you a list of items it drops and their droprate",
         "aliases": "listboss",
-        "cooldown": 3
+        "category": "Info",
+        "cooldown": 1
     },
     {
         "command": "buff",
         "usage": "-buff or -buff [buff name]",
-        "desc": "Show which buffs are of a certain type<br>Buffs of the same type do not stack",
+        "desc": "Show which buffs are of a certain type<br>Buffs of the same type do not stack<br>to start, type -buff to get a list of buffs to choose",
         "aliases": "buffs",
+        "category": "Info",
         "cooldown": 1
     },
     {
@@ -18,13 +36,15 @@
         "usage": "-changelog [version number and letter] or by itself will give you the latest version<br>-changelog [version number] will give you ALL changes within that version number (e.g. -changelog 24 will give you 24a through 24s)",
         "desc": "Displays the changelog in a direct message (since message can be very long)",
         "aliases": "ch",
+        "category": "Info",
         "cooldown": 3
     },
     {
         "command": "debuff",
         "usage": "-debuff or -debuff [debuff name]",
-        "desc": "Show which debuffs are of a certain type<br>Debuffs of the same type do not stack",
+        "desc": "Show which debuffs are of a certain type<br>Debuffs of the same type do not stack<br>to start, type -debuff to get a list of debuffs to choose",
         "aliases": "debuffs",
+        "category": "Info",
         "cooldown": 1
     },
     {
@@ -32,41 +52,79 @@
         "usage": "-donate",
         "desc": "Gives a link to donate to the map developer!",
         "aliases": "none",
-        "cooldown": 5
+        "category": "Utility",
+        "cooldown": 1
     },
     {
         "command": "help",
         "usage": "-help or -help [command name]",
         "desc": "Lists all commands or info about a specific command.",
         "aliases": "commands",
-        "cooldown": 5
+        "category": "Utility",
+        "cooldown": 1
     },
     {
         "command": "invite",
         "usage": "-invite",
         "desc": "Gives you the invite link to TWRPG-BOT",
         "aliases": "none",
+        "category": "Utility",
         "cooldown": 3
+    },
+    {
+        "command": "kick",
+        "usage": "-kick",
+        "desc": "Kicks a member from this server. REQUIRES ADMIN",
+        "aliases": "none",
+        "category": "Utility",
+        "cooldown": 1
     },
     {
         "command": "list",
         "usage": "-list [category] to search by name and type simultaneously OR can search it individually by adding the category to the end of the command: -listtype, -listname",
         "desc": "PMs the user with a list of items nearest to the word typed in. It can search by categories: name and type",
         "aliases": "none",
+        "category": "Info",
         "cooldown": 5
+    },
+    {
+        "command": "mute",
+        "usage": "-mute",
+        "desc": "Mutes a member in this server. REQUIRES ADMIN",
+        "aliases": "m",
+        "category": "Utility",
+        "cooldown": 1
     },
     {
         "command": "post",
         "usage": "-post",
         "desc": "(ONLY USEABLE BY OWNER)",
         "aliases": "none",
+        "category": "Utility",
         "cooldown": 3
     },
     {
         "command": "recipe",
         "usage": "-recipe [item name]",
         "desc": "Shows you details about an item, such as recipe, stats, droprate, etc.",
-        "aliases": "item, spawn, 조합법",
+        "aliases": "item, spawn, 조합법, drop",
+        "category": "Info",
+        "cooldown": 5
+    },
+    {
+        "command": "rmlog",
+        "usage": "-rmlog",
+        "desc": "Delete the preferred channel for bot commands. Commands opened up to be used anywhere. REQUIRES ADMIN",
+        "aliases": "dl, rml, dellog",
+        "category": "Utility",
+        "cooldown": 1
+    },
+    {
+        "command": "rmpref",
+        "usage": "-rmpref [#channelname]",
+        "desc": "Delete the preferred channel for bot commands. Commands opened up to be used anywhere. REQUIRES ADMIN",
+        "aliases": "dc, rmp, delchannel",
+        "category": "Utility",
         "cooldown": 1
     },
     {
@@ -74,20 +132,47 @@
         "usage": "-roll [from] [to] or nothing to roll the default 1-200",
         "desc": "Random number generator!",
         "aliases": "dice",
-        "cooldown": 5
+        "category": "Fun",
+        "cooldown": 3
+    },
+    {
+        "command": "setchannel",
+        "usage": "-setchannel",
+        "desc": "Set the channel for the bot commands. REQUIRES ADMIN",
+        "aliases": "sc",
+        "category": "Utility",
+        "cooldown": 1
+    },
+    {
+        "command": "setlog",
+        "usage": "-setlog",
+        "desc": "Set the channel for the logs channel. REQUIRES ADMIN",
+        "aliases": "sl",
+        "category": "Utility",
+        "cooldown": 1
     },
     {
         "command": "size",
         "usage": "-size",
         "desc": "Shows you the size of how many items, characters, and bosses are recorded on this bot",
         "aliases": "none",
+        "category": "Info",
         "cooldown": 3
     },
     {
         "command": "skill",
-        "usage": "-skill [hero name] or -skill [skill name] or -skill [hero name] all",
-        "desc": "Shows the details of a skill name specified, or lists the skill names of a specified class. Can also be used to view all hero skills at the same time by adding the key word \"all\" at the end. (See the usage)",
+        "usage": "-skill [skill name] or -hero [hero name] or -hero [hero name] all",
+        "desc": "Shows the details of a skill or hero. User -hero to specify a hero, -skill to specify a skill",
         "aliases": "abil, skills, spell, spells, hero, heros, heroes",
+        "category": "Info",
+        "cooldown": 1
+    },
+    {
+        "command": "spawn",
+        "usage": "-skill [@user]",
+        "desc": "Ping your friends if they are AFK ^_^",
+        "aliases": "none",
+        "category": "Info",
         "cooldown": 1
     },
     {
@@ -95,6 +180,23 @@
         "usage": "-spec [class name]",
         "desc": "shows a list of spec items for the specified hero",
         "aliases": "specs",
+        "category": "Info",
         "cooldown": 3
+    },
+    {
+        "command": "toggle",
+        "usage": "-toggle [command name]",
+        "desc": "Toggle commands in the Fun category from being used in all channels<br>If there is a specified commands channel, it will only be used there<br>REQUIRES ADMIN",
+        "aliases": "none",
+        "category": "Utility",
+        "cooldown": 1
+    },
+    {
+        "command": "unmute",
+        "usage": "-unmute [@user or user_id]",
+        "desc": "Unmutes a muted member in this server. REQUIRES ADMIN",
+        "aliases": "um",
+        "category": "Utility",
+        "cooldown": 1
     }
 ]
