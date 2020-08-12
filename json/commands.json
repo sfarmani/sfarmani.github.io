@@ -12,7 +12,7 @@
         "usage": "-ban [@user or user_id]",
         "desc": "Bans a member from the server. REQUIRES ADMIN",
         "aliases": "none",
-        "category": "Utility",
+        "category": "Moderation",
         "cooldown": 1
     },
     {
@@ -40,6 +40,14 @@
         "cooldown": 3
     },
     {
+        "command": "choose",
+        "usage": "-choose [your | list | of | choices | here]",
+        "desc": "If you can't make a choice, ask the bot!",
+        "aliases": "pick",
+        "category": "Fun",
+        "cooldown": 5
+    },
+    {
         "command": "debuff",
         "usage": "-debuff or -debuff [debuff name]",
         "desc": "Show which debuffs are of a certain type<br>Debuffs of the same type do not stack<br>to start, type -debuff to get a list of debuffs to choose",
@@ -52,6 +60,14 @@
         "usage": "-donate",
         "desc": "Gives a link to donate to the map developer!",
         "aliases": "none",
+        "category": "Utility",
+        "cooldown": 1
+    },
+    {
+        "command": "hero",
+        "usage": "-hero",
+        "desc": "List skills of a certain hero",
+        "aliases": "heros, heroes, skills, spells",
         "category": "Utility",
         "cooldown": 1
     },
@@ -76,7 +92,7 @@
         "usage": "-kick",
         "desc": "Kicks a member from this server. REQUIRES ADMIN",
         "aliases": "none",
-        "category": "Utility",
+        "category": "Moderation",
         "cooldown": 1
     },
     {
@@ -92,8 +108,16 @@
         "usage": "-mute",
         "desc": "Mutes a member in this server. REQUIRES ADMIN",
         "aliases": "m",
-        "category": "Utility",
+        "category": "Moderation",
         "cooldown": 1
+    },
+    {
+        "command": "ping",
+        "usage": "-ping",
+        "desc": "PONG",
+        "aliases": "none",
+        "category": "Fun",
+        "cooldown": 2
     },
     {
         "command": "post",
@@ -101,6 +125,14 @@
         "desc": "(ONLY USEABLE BY OWNER)",
         "aliases": "none",
         "category": "Utility",
+        "cooldown": 3
+    },
+    {
+        "command": "prune",
+        "usage": "-prune [number of messages] [optional @user or user_id]",
+        "desc": "Removes messages. Give a number of messages to remove. Optionally give it a username to remove that many number of messages by a certain user",
+        "aliases": "purge",
+        "category": "Moderation",
         "cooldown": 3
     },
     {
@@ -116,7 +148,7 @@
         "usage": "-rmlog",
         "desc": "Delete the preferred channel for bot commands. Commands opened up to be used anywhere. REQUIRES ADMIN",
         "aliases": "dl, rml, dellog",
-        "category": "Utility",
+        "category": "Moderation",
         "cooldown": 1
     },
     {
@@ -124,7 +156,7 @@
         "usage": "-rmpref [#channelname]",
         "desc": "Delete the preferred channel for bot commands. Commands opened up to be used anywhere. REQUIRES ADMIN",
         "aliases": "dc, rmp, delchannel",
-        "category": "Utility",
+        "category": "Moderation",
         "cooldown": 1
     },
     {
@@ -136,11 +168,19 @@
         "cooldown": 3
     },
     {
+        "command": "say",
+        "usage": "-say [message]",
+        "desc": "Repeats what you say!",
+        "aliases": "none",
+        "category": "Fun",
+        "cooldown": 3
+    },
+    {
         "command": "setchannel",
         "usage": "-setchannel",
         "desc": "Set the channel for the bot commands. REQUIRES ADMIN",
         "aliases": "sc",
-        "category": "Utility",
+        "category": "Moderation",
         "cooldown": 1
     },
     {
@@ -148,7 +188,7 @@
         "usage": "-setlog",
         "desc": "Set the channel for the logs channel. REQUIRES ADMIN",
         "aliases": "sl",
-        "category": "Utility",
+        "category": "Moderation",
         "cooldown": 1
     },
     {
@@ -163,7 +203,7 @@
         "command": "skill",
         "usage": "-skill [skill name] or -hero [hero name] or -hero [hero name] all",
         "desc": "Shows the details of a skill or hero. User -hero to specify a hero, -skill to specify a skill",
-        "aliases": "abil, skills, spell, spells, hero, heros, heroes",
+        "aliases": "abil, spell",
         "category": "Info",
         "cooldown": 1
     },
@@ -188,7 +228,7 @@
         "usage": "-toggle [command name]",
         "desc": "Toggle commands in the Fun category from being used in all channels<br>If there is a specified commands channel, it will only be used there<br>REQUIRES ADMIN",
         "aliases": "none",
-        "category": "Utility",
+        "category": "Moderation",
         "cooldown": 1
     },
     {
@@ -196,7 +236,7 @@
         "usage": "-unmute [@user or user_id]",
         "desc": "Unmutes a muted member in this server. REQUIRES ADMIN",
         "aliases": "um",
-        "category": "Utility",
+        "category": "Moderation",
         "cooldown": 1
     }
 ]
