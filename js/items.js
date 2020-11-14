@@ -10,7 +10,7 @@ $(function () {
     var possibleStats =
         [
             'damage', 'armor', 'mainstat', 'allstat', 'strength', 'agility', 'intelligence', 'hp', 'mp', 'attackspeedpercent', 'movespeed', 'movespeedpercent',
-            'dodgechancepercent', 'skilldamagepercent', 'critchancepercent', 'critmultiplier', 'periodicdamagepercent', 'mdpercent', 'drpercent', 'dtpercent',
+            'dodgechancepercent', 'skilldamagepercent', 'critchancepercent', 'critmultiplier', 'periodicdamagepercent', 'mdpercent', 'drpercent', 'dtpercent', 'dt',
             'healingpercent', 'healingreceivedpercent', 'hpregen', 'mpregen', 'affinityiwpercent', 'affinityflamepercent', 'affinityearthpercent', 'affinitywlpercent',
             'expreceivedpercent', 'revivaltimepercent', 'damagedealtpercent'
         ];
@@ -221,6 +221,7 @@ $(function () {
                         if (stat === 'mdpercent') str.push(`<font color="#40e0d0">${plusminus}${val}% Magic Defense</font>`);
                         if (stat === 'drpercent') str.push(`<font color="#40e0d0">${plusminus}${val}% Damage Reduction</font>`);
                         if (stat === 'dtpercent') str.push(`<font color="#40e0d0">${plusminus}${val}% Damage Taken</font>`);
+                        if (stat === 'dt') str.push(`<font color="#40e0d0">${plusminus}${val} Damage Taken</font>`);
                         if (stat === 'damagedealtpercent') str.push(`<font color="#40e0d0">${plusminus}${val}% Damage Dealt</font>`);
                         if (stat === 'healingpercent') str.push(`<font color="#ff8c00">${plusminus}${val}% Healing</font>`);
                         if (stat === 'healreceivedpercent') str.push(`<font color="#ff1493">${plusminus}${val}% Healing Received</font>`);
