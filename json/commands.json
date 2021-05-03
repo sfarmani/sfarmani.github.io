@@ -32,12 +32,28 @@
         "cooldown": 1
     },
     {
+        "command": "build",
+        "usage": "-build [hero name] [build number]",
+        "desc": "Displays the recommended build for a given class.\nNOTE: the builds listed are not absolute and are only recommendations",
+        "aliases": "builds",
+        "category": "Info",
+        "cooldown": 1
+    },
+    {
         "command": "changelog",
         "usage": "-changelog [version number and letter] or by itself will give you the latest version<br>-changelog [version number] will give you ALL changes within that version number (e.g. -changelog 24 will give you 24a through 24s)",
         "desc": "Displays the changelog in a direct message (since message can be very long)",
         "aliases": "ch",
         "category": "Info",
         "cooldown": 3
+    },
+    {
+        "command": "channel",
+        "usage": "-channel [list] or -channel [set channeltype | #channelname] or -channel [del channeltype]",
+        "desc": "Displays the changelog in a direct message (since message can be very long)",
+        "aliases": "none",
+        "category": "Moderation",
+        "cooldown": 1
     },
     {
         "command": "choose",
@@ -64,18 +80,18 @@
         "cooldown": 1
     },
     {
-        "command": "hero",
-        "usage": "-hero",
-        "desc": "List skills of a certain hero",
-        "aliases": "heros, heroes, skills, spells",
-        "category": "Utility",
-        "cooldown": 1
-    },
-    {
         "command": "help",
         "usage": "-help or -help [command name]",
         "desc": "Lists all commands or info about a specific command.",
         "aliases": "commands",
+        "category": "Utility",
+        "cooldown": 1
+    },
+    {
+        "command": "hero",
+        "usage": "-hero",
+        "desc": "List skills of a certain hero",
+        "aliases": "heros, heroes, skills, spells",
         "category": "Utility",
         "cooldown": 1
     },
@@ -102,6 +118,14 @@
         "aliases": "none",
         "category": "Info",
         "cooldown": 5
+    },
+    {
+        "command": "lobby",
+        "usage": "-lobby [lobby arguments]. Type -lobby to show its usage",
+        "desc": "for game lobby hosting template",
+        "aliases": "none",
+        "category": "Utility",
+        "cooldown": 3
     },
     {
         "command": "mute",
@@ -144,22 +168,6 @@
         "cooldown": 5
     },
     {
-        "command": "rmlog",
-        "usage": "-rmlog",
-        "desc": "Delete the preferred channel for bot commands. Commands opened up to be used anywhere. REQUIRES ADMIN",
-        "aliases": "dl, rml, dellog",
-        "category": "Moderation",
-        "cooldown": 1
-    },
-    {
-        "command": "rmpref",
-        "usage": "-rmpref [#channelname]",
-        "desc": "Delete the preferred channel for bot commands. Commands opened up to be used anywhere. REQUIRES ADMIN",
-        "aliases": "dc, rmp, delchannel",
-        "category": "Moderation",
-        "cooldown": 1
-    },
-    {
         "command": "roll",
         "usage": "-roll [from] [to] or nothing to roll the default 1-200",
         "desc": "Random number generator!",
@@ -174,22 +182,6 @@
         "aliases": "none",
         "category": "Fun",
         "cooldown": 3
-    },
-    {
-        "command": "setchannel",
-        "usage": "-setchannel",
-        "desc": "Set the channel for the bot commands. REQUIRES ADMIN",
-        "aliases": "sc",
-        "category": "Moderation",
-        "cooldown": 1
-    },
-    {
-        "command": "setlog",
-        "usage": "-setlog",
-        "desc": "Set the channel for the logs channel. REQUIRES ADMIN",
-        "aliases": "sl",
-        "category": "Moderation",
-        "cooldown": 1
     },
     {
         "command": "size",
@@ -222,6 +214,14 @@
         "aliases": "specs",
         "category": "Info",
         "cooldown": 3
+    },
+    {
+        "command": "tag",
+        "usage": "-tag [tagname] or [subcommand]. Type -tag to get more usage details",
+        "desc": "Filter through items and skills using pre-defined keywords",
+        "aliases": "tags",
+        "category": "Info",
+        "cooldown": 1
     },
     {
         "command": "toggle",
