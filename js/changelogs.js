@@ -25,31 +25,32 @@ $(function () {
     $.ajaxSetup({ async: true });
     var selectdata = [];
 
+    var preselected_version = getUrlParameter('version');
+
     changelogs.forEach(function(changelog){
         selectdata.push(
             {
                 "id": changelog.name,
-                "text": changelog.name
+                "text": changelog.name,
+                "selected": changelog.name == preselected_version
             }
-        )
+        );
     });
 
     //// create select2 ////
-    $('select.changelog-select').select2(
-        {
-            theme: "default",
-            data: selectdata,
-            width: "35%",
-            placeholder: "Select a Version"
-        }
-    );
+    $('select.changelog-select').select2({
+        theme: "default",
+        data: selectdata,
+        width: "35%",
+        placeholder: "Select a Version"
+    });
 
 
     var bug_misc_table;
     var items_table;
     var events_table;
     var monsters_table;
-    var hereoes_table;
+    var heroes_table;
     $('select.changelog-select').on('select2:select', function (e) {
         var version = e.params.data.text;
         var selected_version = changelogs.filter(x => x.name == version);
@@ -62,7 +63,7 @@ $(function () {
             $('.notes').html(notes);
         }
         ////////////////////////////////////////////// for bugs and misc table //////////////////////////////////////////////
-        if ($.type(selected_version[0].bugs) != "undefined" || $.type(selected_version[0].misc) != "undefined"){
+        if (typeof selected_version[0].bugs != "undefined" || typeof selected_version[0].misc != "undefined"){
             $('.bugs_wrapper').removeClass('d-none');
             $('.bugs_table_wrapper').removeClass('d-none');
             if (!$.fn.DataTable.isDataTable('#bugs_and_misc')) {
@@ -99,7 +100,7 @@ $(function () {
         ////////////////////////////////////////////// for bugs and misc table END //////////////////////////////////////////////
 
         ////////////////////////////////////////////// for events table //////////////////////////////////////////////
-        if ($.type(selected_version[0].events) != "undefined") {
+        if (typeof selected_version[0].events != "undefined") {
             $('.events_wrapper').removeClass('d-none');
             $('.events_table_wrapper').removeClass('d-none');
             if (!$.fn.DataTable.isDataTable('#events')) {
@@ -151,7 +152,7 @@ $(function () {
         ////////////////////////////////////////////// for events END //////////////////////////////////////////////
 
         ////////////////////////////////////////////// for items table //////////////////////////////////////////////
-        if ($.type(selected_version[0].items) != "undefined") {
+        if (typeof selected_version[0].items != "undefined") {
             $('.items_wrapper').removeClass('d-none');
             $('.items_table_wrapper').removeClass('d-none');
             if (!$.fn.DataTable.isDataTable('#items')) {
@@ -202,7 +203,7 @@ $(function () {
         ////////////////////////////////////////////// for items table END //////////////////////////////////////////////
 
         ////////////////////////////////////////////// for monsters table //////////////////////////////////////////////
-        if ($.type(selected_version[0].monsters) != "undefined") {
+        if (typeof selected_version[0].monsters != "undefined") {
             $('.monsters_wrapper').removeClass('d-none');
             $('.monsters_table_wrapper').removeClass('d-none');
             if (!$.fn.DataTable.isDataTable('#monsters')) {
@@ -254,11 +255,11 @@ $(function () {
         ////////////////////////////////////////////// for monsters table END //////////////////////////////////////////////
 
         ////////////////////////////////////////////// for heroes table //////////////////////////////////////////////
-        if ($.type(selected_version[0].heroes) != "undefined") {
+        if (typeof selected_version[0].heroes != "undefined") {
             $('.heroes_wrapper').removeClass('d-none');
             $('.heroes_table_wrapper').removeClass('d-none');
             if (!$.fn.DataTable.isDataTable('#heroes')) {
-                hereoes_table = $('#heroes').DataTable({
+                heroes_table = $('#heroes').DataTable({
                     responsive: true,
                     columnDefs: [
                         { targets: '_all', defaultContent: "<i style='color: #5a7da0'>none</i>" }
@@ -291,15 +292,15 @@ $(function () {
                 });
             }
             else {
-                hereoes_table.clear().draw();
-                hereoes_table.rows.add(selected_version[0].heroes);
-                hereoes_table.columns.adjust().draw();
+                heroes_table.clear().draw();
+                heroes_table.rows.add(selected_version[0].heroes);
+                heroes_table.columns.adjust().draw();
             }
         }
         else if ($.fn.DataTable.isDataTable('#heroes')) {
             $('.heroes_wrapper').addClass('d-none');
             $('.heroes_table_wrapper').addClass('d-none');
-            hereoes_table.destroy();
+            heroes_table.destroy();
             $('table#heroes').children().remove();
         }
         ////////////////////////////////////////////// for heroes table END //////////////////////////////////////////////
@@ -307,7 +308,7 @@ $(function () {
             bug_misc_table.columns.adjust().draw(false);
             items_table.columns.adjust().draw(false);
             monsters_table.columns.adjust().draw(false);
-            hereoes_table.columns.adjust().draw(false);
+            heroes_table.columns.adjust().draw(false);
         });
         $.fn.dataTable.tables({ api: true }).search($('.search_all input').val()).draw();
         if ($.fn.DataTable.isDataTable('#bugs_and_misc') || $.fn.DataTable.isDataTable('#items') || $.fn.DataTable.isDataTable('#monsters') || $.fn.DataTable.isDataTable('#heroes')) {
@@ -327,7 +328,19 @@ $(function () {
     var sidebar = $("#sidebar");
     var hamburger = $('#navTrigger');
 
-    hamburger.click(function (e) {
+    if (preselected_version){
+        let data = selectdata.filter(x => x.text == preselected_version)[0];
+        if (data){
+            $('select.changelog-select').val(preselected_version).trigger('change').trigger({
+                type: 'select2:select',
+                params: {
+                    data: data
+                }
+            });
+        }
+    }
+
+    hamburger.on('click', function (e) {
         e.preventDefault();
         $(this).toggleClass('is-active');
         // This will add `sidebar-opened`
@@ -362,3 +375,19 @@ function render_item_changes(array) {
     if (!array) return "<i style='color: #5a7da0'>none</i>";
     return array;
 }
+
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return typeof sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+    return false;
+};
