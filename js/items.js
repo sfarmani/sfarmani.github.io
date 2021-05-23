@@ -19,7 +19,7 @@ $(function () {
     // 14 = Drops
     // 15 = Notes
 
-    localStorage.clear();
+    // localStorage.clear();
     if ([null, "null"].includes(localStorage.getItem("items_columns"))){
         localStorage.setItem("items_columns", JSON.stringify([1, 3, 5, 6, 9, 10, 11]));
     }
