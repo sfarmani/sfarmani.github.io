@@ -2,9 +2,26 @@
 $(function () {
     var items_url = "https://raw.githubusercontent.com/sfarmani/twrpg-info/master/items.json";
 
-    // localStorage.clear();
+    // 0 = Icons
+    // 1 = Level
+    // 2 = Worth
+    // 3 = Name
+    // 4 = Korean Name
+    // 5 = Drop Rate
+    // 6 = Item Type
+    // 7 = Dropped By
+    // 8 = Used In
+    // 9 = Stats
+    // 10 = Passive
+    // 11 = Active
+    // 12 = Character Specialties
+    // 13 = Recipe
+    // 14 = Drops
+    // 15 = Notes
+
+    localStorage.clear();
     if ([null, "null"].includes(localStorage.getItem("items_columns"))){
-        localStorage.setItem("items_columns", JSON.stringify([0, 2, 4, 5, 6, 7, 8, 12]));
+        localStorage.setItem("items_columns", JSON.stringify([1, 3, 5, 6, 9, 10, 11]));
     }
     var trolls = ['[HEALED]', '[Air]'];
     var possibleStats =
