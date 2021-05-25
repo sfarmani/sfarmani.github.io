@@ -26,12 +26,12 @@ $(function () {
 
 
 
-    var bugs_events_misc;
+    var bugs_events_misc_table;
     var items_table;
     var monsters_table;
     var heroes_table;
 
-    bugs_events_misc = $('#bugs_events_misc').DataTable({
+    bugs_events_misc_table = $('#bugs_events_misc').DataTable({
         responsive: true,
         columnDefs: [
             { targets: '_all', defaultContent: "<i style='color: #5a7da0'>none</i>" }
