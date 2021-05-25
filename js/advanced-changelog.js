@@ -110,7 +110,6 @@ $(function () {
     });
 
     $('input.column-filter').on('keyup search change', function(){
-        console.log($(this).attr('id'));
         if ($(this).attr('id') == 'search_bugs')     filterColumn($(this).parents('div').attr('data-column'), $('#bugs_events_misc'), $(this).attr('id'));
         if ($(this).attr('id') == 'search_event')    filterColumn($(this).parents('div').attr('data-column'), $('#bugs_events_misc'), $(this).attr('id'));
         if ($(this).attr('id') == 'search_misc')     filterColumn($(this).parents('div').attr('data-column'), $('#bugs_events_misc'), $(this).attr('id'));
