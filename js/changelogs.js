@@ -46,9 +46,8 @@ $(function () {
     });
 
 
-    var bug_misc_table;
+    var bug_event_misc_table;
     var items_table;
-    var events_table;
     var monsters_table;
     var heroes_table;
     $('select.changelog-select').on('select2:select', function (e) {
@@ -62,12 +61,12 @@ $(function () {
             }
             $('.notes').html(notes);
         }
-        ////////////////////////////////////////////// for bugs and misc table //////////////////////////////////////////////
-        if (typeof selected_version[0].bugs != "undefined" || typeof selected_version[0].misc != "undefined"){
+        ////////////////////////////////////////////// for bugs, events, and misc table //////////////////////////////////////////////
+        if (typeof selected_version[0].bugs != "undefined" || typeof selected_version[0].misc != "undefined" || typeof selected_version[0].events != "undefined"){
             $('.bugs_wrapper').removeClass('d-none');
             $('.bugs_table_wrapper').removeClass('d-none');
-            if (!$.fn.DataTable.isDataTable('#bugs_and_misc')) {
-                bug_misc_table = $('#bugs_and_misc').DataTable({
+            if (!$.fn.DataTable.isDataTable('#bugs_events_misc')) {
+                bug_event_misc_table = $('#bugs_events_misc').DataTable({
                     responsive: true,
                     columnDefs: [
                         { targets: '_all', defaultContent: "<i style='color: #5a7da0'>none</i>" }
@@ -80,76 +79,25 @@ $(function () {
                     orderCellsTop: false,
                     processing: true,
                     columns: [
-                        { data: "bugs", title: "Bug Fixes", render: function (data) { return print_array(data, '#00ff66') } },
+                        { data: "bugs", title: "Bug Fixes", width: "50%", render: function (data) { return print_array(data, '#00ff66') } },
+                        { data: "events", title: "Events", render: function (data) { return print_array(data, '#00dcff') } },
                         { data: "misc", title: "Misc", render: function (data) { return print_array(data, '#00dcff') } }
                     ]
                 });
             }
             else {
-                bug_misc_table.clear().draw();
-                bug_misc_table.rows.add(selected_version);
-                bug_misc_table.columns.adjust().draw();
+                bug_event_misc_table.clear().draw();
+                bug_event_misc_table.rows.add(selected_version);
+                bug_event_misc_table.columns.adjust().draw();
             }
         }
-        else if ($.fn.DataTable.isDataTable('#bugs_and_misc')) {
+        else if ($.fn.DataTable.isDataTable('#bugs_events_misc')) {
             $('.bugs_wrapper').addClass('d-none');
             $('.bugs_table_wrapper').addClass('d-none');
-            bug_misc_table.destroy();
-            $('table#bugs_and_misc').children().remove();
+            bug_event_misc_table.destroy();
+            $('table#bugs_events_misc').children().remove();
         }
         ////////////////////////////////////////////// for bugs and misc table END //////////////////////////////////////////////
-
-        ////////////////////////////////////////////// for events table //////////////////////////////////////////////
-        if (typeof selected_version[0].events != "undefined") {
-            $('.events_wrapper').removeClass('d-none');
-            $('.events_table_wrapper').removeClass('d-none');
-            if (!$.fn.DataTable.isDataTable('#events')) {
-                events_table = $('#events').DataTable({
-                    responsive: true,
-                    columnDefs: [
-                        { targets: '_all', defaultContent: "<i style='color: #5a7da0'>none</i>" }
-                    ],
-                    language: { search: "Quick Search:", processing: "Loading Change Log..." },
-                    data: selected_version[0].events,
-                    dom: dom,
-                    order: [],
-                    orderCellsTop: false,
-                    processing: true,
-                    columns: [
-                        {
-                            data: "name", title: "Event Name(s)",
-                            render: function (data) {
-                                if (!data) return "<i style='color: #5a7da0'>none</i>";
-                                var str = [];
-                                var names = data.split(' / ');
-                                names.forEach(function (name) {
-                                    str.push(`<span>${name}</span>`);
-                                });
-                                return str.join(' / ');
-                            }
-                        },
-                        {
-                            data: "changes", title: "Event Change(s)",
-                            render: function (data) {
-                                return print_array(data, '#2A9BA3');
-                            }
-                        }
-                    ]
-                });
-            }
-            else {
-                events_table.clear().draw();
-                events_table.rows.add(selected_version[0].events);
-                events_table.columns.adjust().draw();
-            }
-        }
-        else if ($.fn.DataTable.isDataTable('#events')) {
-            $('.events_wrapper').addClass('d-none');
-            $('.events_table_wrapper').addClass('d-none');
-            events_table.destroy();
-            $('table#events').children().remove();
-        }
-        ////////////////////////////////////////////// for events END //////////////////////////////////////////////
 
         ////////////////////////////////////////////// for items table //////////////////////////////////////////////
         if (typeof selected_version[0].items != "undefined") {
@@ -168,7 +116,7 @@ $(function () {
                     orderCellsTop: false,
                     processing: true,
                     columns: [
-                        { data: "name", title: "Item Name(s)",
+                        { data: "name", title: "Item Name(s)", width: "50%",
                             render: function (data) {
                                 if (!data) return "<i style='color: #5a7da0'>none</i>";
                                 var str = [];
@@ -219,7 +167,7 @@ $(function () {
                     orderCellsTop: false,
                     processing: true,
                     columns: [
-                        { data: "name", title: "Monster Name(s)",
+                        { data: "name", title: "Monster Name(s)", width: "50%",
                             render: function (data) {
                                 if (!data) return "<i style='color: #5a7da0'>none</i>";
                                 var str = [];
@@ -271,7 +219,7 @@ $(function () {
                     orderCellsTop: false,
                     processing: true,
                     columns: [
-                        { data: "name", title: "Hero Name(s)",
+                        { data: "name", title: "Hero Name(s)", width: "50%",
                             render: function (data) {
                                 if (!data) return "<i style='color: #5a7da0'>none</i>";
                                 var str = [];
@@ -304,14 +252,14 @@ $(function () {
             $('table#heroes').children().remove();
         }
         ////////////////////////////////////////////// for heroes table END //////////////////////////////////////////////
-        jQuery('.refreshColumns').on('click', function () {
-            bug_misc_table.columns.adjust().draw(false);
+        $('.refreshColumns').on('click', function () {
+            bug_event_misc_table.columns.adjust().draw(false);
             items_table.columns.adjust().draw(false);
             monsters_table.columns.adjust().draw(false);
             heroes_table.columns.adjust().draw(false);
         });
         $.fn.dataTable.tables({ api: true }).search($('.search_all input').val()).draw();
-        if ($.fn.DataTable.isDataTable('#bugs_and_misc') || $.fn.DataTable.isDataTable('#items') || $.fn.DataTable.isDataTable('#monsters') || $.fn.DataTable.isDataTable('#heroes')) {
+        if ($.fn.DataTable.isDataTable('#bugs_events_misc') || $.fn.DataTable.isDataTable('#items') || $.fn.DataTable.isDataTable('#monsters') || $.fn.DataTable.isDataTable('#heroes')) {
             if ($('.search_all').hasClass('d-none')) {
                 $('.search_all').removeClass('d-none');
             }
@@ -321,7 +269,7 @@ $(function () {
         }
     });
 
-    $('.search_all input').on('keyup change search', function(e){
+    $('.search_all input').on('keyup change search', function(){
         $.fn.dataTable.tables({ api: true }).search($(this).val()).draw();
     });
 
@@ -355,7 +303,7 @@ function print_array(array, color=''){
     var style = color ? ` style="color: ${color}"` : '';
     var result = [`<ul${style}>`];
     array.forEach(function(str){
-        if ($.type(str) === "array") {
+        if (Array.isArray(str)) {
             result.push(print_array(str));
         }
         else{

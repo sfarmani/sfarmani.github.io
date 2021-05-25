@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
-        content="Browse through the changelogs for TWRPG (The World RPG). Use the dropdown menu to search a specific map version's changelogs">
+        content="Search through all changelogs with advanced searching">
     <meta name="author" content="Rock Lee#7769 (sfarmani)">
     <meta name="google-site-verification" content="avpMWVrMtAk9nPqw-ZvoLtGyo6hYzv_ZFxOFg6u-pLY" />
 
-    <link rel="canonical" href="https://sfarmani.github.io/tw-bot/changelogs.html">
+    <link rel="canonical" href="https://sfarmani.github.io/tw-bot/advanced-changelog.html">
 
     <link id="favicon" rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <title>TWRPG Change Log</title>
+    <title>Advanced TWRPG Change Log search</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -118,7 +118,7 @@
                     </li>
 
                     <!-- Nav Item - Changelogs -->
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="changelogs.html">
                             <i class="fas fa-list"></i>
                             <span>Change Log</span>
@@ -154,16 +154,20 @@
                                         alt="TWRPG-BOT" />
                                 </a>
                             </div>
-                            <form class="col-auto mr-auto" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                            <form class="col-auto mr-auto" action="https://www.paypal.com/cgi-bin/webscr" method="post"
+                                target="_blank">
                                 <input type="hidden" name="cmd" value="_donations" />
                                 <input type="hidden" name="business" value="ZJWSXUBKHF5ZA" />
                                 <input type="hidden" name="currency_code" value="USD" />
                                 <button class="btn" type="submit" name="submit">
                                     <div class="rocklee mr-2">
-                                        <img class="img-fluid brows-static" src="img/brows.png" width="65px" alt="Rock Lee Brows">
-                                        <img class="img-fluid brows-active" src="img/brows-icon.gif" width="65px" alt="Rock Lee Brows">
+                                        <img class="img-fluid brows-static" src="img/brows.png" width="65px"
+                                            alt="Rock Lee Brows">
+                                        <img class="img-fluid brows-active" src="img/brows-icon.gif" width="65px"
+                                            alt="Rock Lee Brows">
                                     </div>
-                                    <span class="fullpackfont rem-2 donate">Donate <i class="fab fa-paypal fa-2_5x"></i></span>
+                                    <span class="fullpackfont rem-2 donate">Donate <i
+                                            class="fab fa-paypal fa-2_5x"></i></span>
                                 </button>
                             </form>
                             <div class="col-auto">
@@ -184,18 +188,11 @@
                     <div class="row">
                         <div class="col align-self-center">
                             <h1 class="fullpackfont">
-                                Change Log
+                                Advanced Change Log Search
                             </h1>
-                            <p>This website is not optimized for mobile. For best user experience please use a PC with Google Chrome.
+                            <p>This website is not optimized for mobile. For best user experience please use a PC with
+                                Google Chrome.
                             </p>
-                            <select class="changelog-select form-control form-control-sm">
-                                <option></option>
-                            </select>
-                            <a href="advanced-changelog.html" type="button" class="btn btn-info btn-sm btn-icon-split refreshColumns">
-                                <span class="icon text-white-50"><i class="fas fa-search"></i></span>
-                                <span class="text">Advanced Search</span>
-                            </a>
-                            <br>
                         </div>
                     </div>
                 </div>
@@ -206,40 +203,90 @@
                         <span class="text">Refresh Column Width</span>
                     </button>
                 </div>
-                <div class="search_all d-none row">
-                    <label>Search All<input type="search" class="form-control form-control-sm" placeholder></label>
+
+                <div class='text-center container'>
+                    <div class="row">
+                        <div class="col align-self-center">
+                            <h1>
+                                Search by
+                            </h1>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-6 search_box">
+                        <div class="row mb-3 mt-3 justify-content-center">
+                            <div class="ml-3" data-column="1">
+                                <input id="search_bugs" type="search" class="form-control column-filter" placeholder="Bug fixes"></input>
+                            </div>
+                            <div class="ml-3" data-column="2">
+                                <input id="search_event" type="search" class="form-control column-filter" placeholder="Event changes"></input>
+                            </div>
+                            <div class="ml-3" data-column="3">
+                                <input id="search_misc" type="search" class="form-control column-filter" placeholder="Misc changes"></input>
+                            </div>
+                        </div>
+                        <div class="row mb-3 mt-3 justify-content-center">
+                            <div class="ml-3" data-column="1">
+                                <input id="search_items" type="search" class="form-control column-filter" placeholder="Items"></input>
+                            </div>
+                            <div class="ml-3" data-column="1">
+                                <input id="search_monsters" type="search" class="form-control column-filter" placeholder="Monsters"></input>
+                            </div>
+                            <div class="ml-3" data-column="1">
+                                <input id="search_heroes" type="search" class="form-control column-filter" placeholder="Heroes"></input>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
                 <br>
                 <div class="m-1 notes_wrapper d-none text-center">
                     <h3 class="fullpackfont">
                         Notes
                     </h3>
-                    <h5 class='notes'></h5>
+                    <h5 class="notes"></h5>
                 </div>
                 <br>
                 <div class="mr-4 ml-4">
-                    <div class="bugs_wrapper d-none text-center">
+
+                    <!-- Bugs, Events, Misc -->
+                    <div class="text-center">
+                        <button class="btn btn-info" type="button" data-toggle="collapse" data-target=".bugs-collapse">Toggle Bugs, Events, Misc table</button>
+                        <button class="btn btn-info" type="button" data-toggle="collapse" data-target=".items-collapse">Toggle Items table</button>
+                        <button class="btn btn-info" type="button" data-toggle="collapse" data-target=".monsters-collapse">Toggle Monsters table</button>
+                        <button class="btn btn-info" type="button" data-toggle="collapse" data-target=".monsters-collapse">Toggle Heroes table</button>
+                        <br><br>
+                    </div>
+                    <div class="bugs_wrapper text-center collapse bugs-collapse">
                         <h3 class="fullpackfont">Bugs, Events, and Misc</h3>
                     </div>
-                    <div class="mb-5 bugs_table_wrapper d-none">
+                    <div class="mb-5 bugs_table_wrapper collapse bugs-collapse">
                         <table id="bugs_events_misc" class="table table-striped table-bordered" width="100%"></table>
                     </div>
-                    <div class="items_wrapper d-none text-center">
+
+                    <!-- Items -->
+                    <div class="items_wrapper text-center collapse items-collapse">
                         <h3 class="fullpackfont">Items</h3>
                     </div>
-                    <div class="mb-5 items_table_wrapper d-none">
+                    <div class="mb-5 items_table_wrapper collapse items-collapse">
                         <table id="items" class="table table-striped table-bordered" width="100%"></table>
                     </div>
-                    <div class="monsters_wrapper d-none text-center">
+
+                    <!-- Monsters -->
+                    <div class="monsters_wrapper text-center collapse monsters-collapse">
                         <h3 class="fullpackfont">Monsters</h3>
                     </div>
-                    <div class="mb-5 monsters_table_wrapper d-none">
+                    <div class="mb-5 monsters_table_wrapper collapse monsters-collapse">
                         <table id="monsters" class="table table-striped table-bordered" width="100%"></table>
                     </div>
-                    <div class="heroes_wrapper d-none text-center">
+
+                    <!-- Heroes -->
+                    <div class="heroes_wrapper text-center collapse monsters-collapse">
                         <h3 class="fullpackfont">Heroes</h3>
                     </div>
-                    <div class="mb-5 heroes_table_wrapper d-none">
+                    <div class="mb-5 heroes_table_wrapper collapse monsters-collapse">
                         <table id="heroes" class="table table-striped table-bordered" width="100%"></table>
                     </div>
                 </div>
@@ -291,7 +338,7 @@
 
     <!-- Custom scripts for all pages-->
     <script type="text/javascript" src="js/sb-admin-2.min.js"></script>
-    <script type="text/javascript" src="js/changelogs.js"></script>
+    <script type="text/javascript" src="js/advanced-changelog.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js"></script>
 
