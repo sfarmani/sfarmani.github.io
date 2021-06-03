@@ -109,17 +109,12 @@ $(function () {
         ]
     });
 
-    $('input.column-filter').on('keyup search change', function(){
-        if ($(this).attr('id') == 'search_bugs')     filterColumn($(this).parents('div').attr('data-column'), $('#bugs_events_misc'), $(this).attr('id'));
-        if ($(this).attr('id') == 'search_event')    filterColumn($(this).parents('div').attr('data-column'), $('#bugs_events_misc'), $(this).attr('id'));
-        if ($(this).attr('id') == 'search_misc')     filterColumn($(this).parents('div').attr('data-column'), $('#bugs_events_misc'), $(this).attr('id'));
-        if ($(this).attr('id') == 'search_items')    filterColumn($(this).parents('div').attr('data-column'), $('#items'), $(this).attr('id'));
-        if ($(this).attr('id') == 'search_monsters') filterColumn($(this).parents('div').attr('data-column'), $('#monsters'), $(this).attr('id'));
-        if ($(this).attr('id') == 'search_heroes')   filterColumn($(this).parents('div').attr('data-column'), $('#heroes'), $(this).attr('id'));
+    $('input.column-filter').on('keyup search', function(){
+        filterColumn($(this).parents('div').attr('data-column'), $($(this).attr('data-table')), $(this).attr('id'), this);
     });
 
     $('.refreshColumns').on('click', function () {
-        bug_event_misc_table.columns.adjust().draw(false);
+        bugs_events_misc_table.columns.adjust().draw(false);
         items_table.columns.adjust().draw(false);
         monsters_table.columns.adjust().draw(false);
         heroes_table.columns.adjust().draw(false);
@@ -138,7 +133,13 @@ $(function () {
     });
 });
 
-function filterColumn(i, table, column) {
+function filterColumn(i, table, column, ele) {
+    // Toggle tables
+    $($(ele).attr('data-item')).collapse('show');
+    if ($(ele).val() == '') {
+        $($(ele).attr('data-item')).collapse('hide');
+    }
+    // Filter the columns
     table.DataTable().column(i).search( $(`#${column}`).val() ).draw();
 }
 
