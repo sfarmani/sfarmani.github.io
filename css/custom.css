@@ -16,6 +16,12 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.column_highlight{
+  font-weight: 700 !important;
+  color: #5a5c69 !important;
+  background-color: #f6c23e !important;
+}
+
 .fullpackfont{
     font-family: 'full pack 2025', Arial, sans-serif;
     font-weight: normal;

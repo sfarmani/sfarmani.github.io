@@ -1,9 +1,9 @@
+
+var oels = [];
+
 $(function () {
 
     var changelog_url = "https://raw.githubusercontent.com/sfarmani/twrpg-info/master/changelog.json";
-    var items_url = "https://raw.githubusercontent.com/sfarmani/twrpg-info/master/items.json";
-    var heroes_url = "https://raw.githubusercontent.com/sfarmani/twrpg-info/master/heros.json";
-    // var bosses_url = "https://raw.githubusercontent.com/sfarmani/twrpg-info/master/bosses.json";
 
     // var bugs_misc_dom = "<'row'<'col-sm-12'tr>>";
 
@@ -14,14 +14,9 @@ $(function () {
         "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>";
 
     var changelogs;
-    var items;
-    var heroes;
     // var bosses;
     $.ajaxSetup({ async: false });
     $.getJSON(changelog_url, function (json) { changelogs = json });
-    $.getJSON(items_url, function (json) { items = json });
-    $.getJSON(heroes_url, function (json) { heroes = json });
-    // $.getJSON(bosses_url, function (json) { bosses = json });
     $.ajaxSetup({ async: true });
 
 
@@ -39,6 +34,7 @@ $(function () {
         language: { processing: "Loading Change Log..." },
         lengthMenu: [3, 5, 10, 20, 50, 100],
         data: changelogs,
+        searchHighlight: true,
         dom: dom,
         ordering: false,
         order: [],
@@ -60,6 +56,7 @@ $(function () {
         language: { processing: "Loading Change Log..." },
         lengthMenu: [3, 5, 10, 20, 50, 100],
         data: changelogs,
+        searchHighlight: true,
         dom: dom,
         ordering: false,
         order: [],
@@ -79,6 +76,7 @@ $(function () {
         language: { processing: "Loading Change Log..." },
         lengthMenu: [3, 5, 10, 20, 50, 100],
         data: changelogs,
+        searchHighlight: true,
         dom: dom,
         ordering: false,
         order: [],
@@ -98,6 +96,7 @@ $(function () {
         language: { processing: "Loading Change Log..." },
         lengthMenu: [3, 5, 10, 20, 50, 100],
         data: changelogs,
+        searchHighlight: true,
         dom: dom,
         ordering: false,
         order: [],
@@ -110,7 +109,7 @@ $(function () {
     });
 
     $('input.column-filter').on('keyup search', function(){
-        filterColumn($(this).parents('div').attr('data-column'), $($(this).attr('data-table')), $(this).attr('id'), this);
+        filterColumn($(this));
     });
 
     $('.refreshColumns').on('click', function () {
@@ -133,11 +132,15 @@ $(function () {
     });
 });
 
-function filterColumn(i, table, column, ele) {
+function filterColumn(ele) {
+    let i = $(ele).parents('div').attr('data-column');
+    let table = $($(ele).attr('data-table'));
+    let column = $(ele).attr('id');
+    let item = $($(ele).attr('data-item'));
     // Toggle tables
-    $($(ele).attr('data-item')).collapse('show');
-    if ($(ele).val() == '') {
-        $($(ele).attr('data-item')).collapse('hide');
+    item.collapse('show');
+    if (ele.val() == '') {
+        item.collapse('hide');
     }
     // Filter the columns
     table.DataTable().column(i).search( $(`#${column}`).val() ).draw();
