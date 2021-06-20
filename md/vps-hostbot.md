@@ -50,9 +50,9 @@ Most VPS would have the Operating System we will use in this tutorial, but its n
 The OS we will use in this tutorial is Ubuntu 18.04
 
 ## Pricing
-A Virtual Private Server is a server that has the bare minimum so it shouldn't cost a lot. Digital Ocean's lowest VPS costs only 5 USD per month.
+A Virtual Private Server is a server that has the bare minimum so it shouldn't cost a lot. Digital Ocean's lowest VPS costs only `5 USD per month`.
 
-As a recommendation, you shouldn't be paying anything over 10 USD per month. 5 USD is also a good minimum because anything lower could lead to not enough resources for the hostbot to run.
+As a recommendation, you shouldn't be paying anything over `10 USD per month`. `5 USD` is also a good minimum because anything lower could lead to not enough resources for the hostbot to run.
 
 ## VPS Specs
 A Warcraft III hostbot requires a small amount of resources to run.
@@ -62,7 +62,7 @@ A Warcraft III hostbot requires a small amount of resources to run.
 3. At least 3 GB of storage
 4. 200 mb/s transfer rate or higher (bandwith)
 
-If you want a better performance bot, then you should focus on maximizing #1 and #4 and just get the minimum of #2 and #3. For some VPS, that my cause you to pay extra, or above 10 USD, so choose wisely.
+If you want a better performance bot, then you should focus on maximizing `#1` and `#4` and just get the minimum of `#2` and `#3`. For some VPS, that my cause you to pay extra, or above `10 USD`, so choose wisely.
 
 ## AWS EC2 and Google Compute Engine
 Amazon and Google offer some VPS services as well, some of which provide up to 1 year's worth of free trial.
@@ -72,7 +72,7 @@ Although that sounds great, I believe there are some downsides to using them.
 ### Pro's
 \+ Since its a free trial for 1 year, its great practice and doesn't cost anything (as long as you are within their conditions)
 
-\+ Have lots of locations to choose from
+\+ Has lots of locations to choose from
 
 ### Con's
 \- Hard to use interface, not very intuitive.
@@ -87,29 +87,32 @@ Although that sounds great, I believe there are some downsides to using them.
 Once you've chosen your VPS, then we can begin setting it up. I will use Digital Ocean as examples.
 
 1. Navigate to your VPS's site (for [Digital Ocean](https://www.digitalocean.com)) and sign up with an account.
-    - It will immediately require you to enter a your Credit Card/PayPal information.
-    - It won't charge you until you make an instance of a server and use it for about a month.
+    > It will immediately require you to enter a your Credit Card/PayPal information.
+    > 
+    > It won't charge you until you make an instance of a server and use it for about a month.
+    > This should be true for all other VPS's
 2. Once you are done setting up a credit card, it will probably ask you to jump in.
     - We don't want to do that, so we will skip it by click on the link that says `Explore our control panel`.
 
-![Skip to control panel](img/Skip quickstart.png "Skip to control panel")
+![Skip to control panel](https://raw.githubusercontent.com/sfarmani/tw-bot/master/img/skip-quickstart.png "Skip to control panel")
 
 3. Click on `Create` and select `Droplets`
 
-
+![Create Droplets](https://raw.githubusercontent.com/sfarmani/tw-bot/master/img/create-droplets.png "Create Droplets")
 
 4. Select `Ubuntu` and from the dropdown select `18.04 (LTS) x64`
 5. Select `Basic plan` under `Shared CPU`
 6. Make sure to tick `Regular Intel with SSD` for the CPU options
 7. Select the most left option that says `$5/month`
 
-
+![Plan Options](https://raw.githubusercontent.com/sfarmani/tw-bot/master/img/plan-options.png "Plan Options")
 
 8. Select the location you want. The number doesn't matter.
 9. Select SSH keys. This is where we need to generate a private and public key with the `PuTTYgen` tool linked in the [Tools and links](#tools-and-links) section.
     - Open `PuTTYgen.exe` and press `Generate`.
     - Randomly move your mouse to generate a key.
     - Press `Save private key` and name it anything. Save it in a location you will remember and not delete. You can add a password, but its not required.
+    > If anyone ever asks for your private key, do not give it to them unless you trust the person.
     - Copy the generated text at the top.
     - Go back to Digital Ocean site and press New SSH Key.
     - Paste in the text you just copied and name it anything you want.
@@ -120,19 +123,21 @@ Once you've chosen your VPS, then we can begin setting it up. I will use Digital
 12. Open up `PuTTY.exe` to setup access to the server.
     - `Connection > SSH > Auth`
         - Private key file for authentication: Browse for the `private key` you saved earlier.
+        
+        ![Browse private key in putty](https://raw.githubusercontent.com/sfarmani/tw-bot/master/img/putty-privatekey.png "Browse private key in putty")
 
     - `Session`
         - Host Name: `root@ip.address.here`
         - Saved Sessions: Type a random name to save under.
         - Click `Save`
 13. To open a session to your server, `double click` the name you saved under.
-    - The first time you run the server, it will give you 2 prompts. Just press `yes` and `ok`
-
-    - If you put a password in the `PuTTYgen.exe` step, then enter the password
+    > The first time you run the server, it will give you 2 prompts. Just press `yes` and `ok`
+    > 
+    > If you put a password in the `PuTTYgen.exe` step, then enter the password
 14. Open `WinSCP` ([Tools and links](#tools-and-links))
-    - If you didn't install `WinSCP` until this point, it will ask if you want to import any sites. Select the name you saved it as in `PuTTY`.
-
-    - If you already installed it, then you can press `Tools > Import Sites...` and select the name you saved in `PuTTY`
+    > If you didn't install `WinSCP` until this point, it will ask if you want to import any sites. Select the name you saved it as in `PuTTY`.
+    > 
+    > If you already installed it, then you can press `Tools > Import Sites...` and select the name you saved in `PuTTY`
 
     - With the site highlighted, press `Login` to open a session of your server.
 
@@ -154,7 +159,7 @@ sudo apt-get dist-upgrade -y
 sudo apt-get install unzip git build-essential m4 libgmp3-dev cmake libbz2-dev zlib1g-dev -y
 ```
 
-- If at any point it takes you to a pink screen, just press enter and it will pick the default.
+> If at any point it takes you to a pink screen, just press enter and it will pick the default.
 
 ## Start set-up
 
@@ -169,9 +174,9 @@ For now we are done with `PuTTY`.
 
 ### Edit files with `WinSCP`
 1. Open `WinSCP` and `Login`
-    - If you followed the step in the end of setting up `WinSCP`, you should be able to see files that start with a dot. If you don't, just press `CTRL + ALT + H`
+    > If you followed the step in the end of setting up `WinSCP`, you should be able to see files that start with a dot. If you don't, just press `CTRL + ALT + H`
 2. Find the file named `.bashrc` and double click it. An editor should pop up and now you can edit files.
-    - First time opening a file might prompt you to choose an editor. For easy access, you can just select internal editor.
+    > First time opening a file might prompt you to choose an editor. For easy access, you can just select internal editor.
 3. Scroll down to the area where it says `some more ls aliases` and paste in the following after it.
 ```bash
 alias startbot="cd ~/aura-bot/ ; nohup aura++ > aura.log 2>&1 &"
@@ -199,7 +204,7 @@ fi
 
 7. Download the zip file for Warcraft III files to your desktop from the [Tools and links](#tools-and-links) section.
     - Transfer the zip file to your server by dragging the file to the right hand side of the `WinSCP` window.
-    - We will unzip it later.
+    > We will unzip it later.
 
 8. Double click `aura.cfg` to edit.
 
@@ -213,18 +218,18 @@ bnet_firstchannel
 bnet_rootadmins
 ```
 > If you have not already done so, create an account on Eurobattle.net for your bot. If you have any capital letters in your password, make them all lower-case when entering it in the `aura.cfg` file.
-
+> 
 > Everything else should be self-explanatory. If it is not, please refer to the comments on the `.cfg` file.
-
+> 
 > Save the editor and close it (`CTRL + S`).
 
 
 10. Navigate to `mapcfgs/`
 11. Find the 2 `.cfg` files. They are config files for loading maps.
-    - They are not required but recommended to use if you have a player-base using your bot and want them to always play the latest version only.
+    > They are not required but recommended to use if you have a player-base using your bot and want them to always play the latest version only.
 12. Edit the files respectively; one is for the korean map, the other is for the english map. (TWRPG specific)
 > Each time you upload a new version of the map, you need to edit these files to update the version number.
-
+> 
 > Then in game whisper the bot the !load command to reload the config file. This will be explained again later in the [Maintenance](#maintenance) section
 
 ### Compile the host-bot
