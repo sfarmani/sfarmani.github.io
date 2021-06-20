@@ -1,0 +1,24 @@
+.markdown-body{
+  color: var(--main-text-color);
+}
+
+.markdown-body a{
+    color: var(--link-text-color);
+}
+
+.markdown-body code{
+    background-color: var(--code-bg-color);
+}
+
+:not(pre)>code[class*=language-], pre[class*=language-] {
+    background: #3b3b3c;
+}
+
+code[class*=language-], pre[class*=language-] {
+    color: #fff !important;
+    text-shadow: none !important;
+}
+
+.language-css .token.string, .style .token.string, .token.entity, .token.operator, .token.url {
+    background: none;
+}

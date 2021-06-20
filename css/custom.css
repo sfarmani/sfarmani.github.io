@@ -1,13 +1,22 @@
+:root{
+    --main-text-color: #c9d1d9;
+    --link-text-color: #6fabef;
+    --code-bg-color: #f0f6fc26;
+    --not-quite-black: #23272A;
+    --dark-not-black: #2C2F33;
+    --donate-text-color: #FFB61E;
+}
+
 .not_quite_black{
-    background: #23272A !important;
+    background: var(--not-quite-black) !important;
 }
 
 .dark_not_black{
-    background: #2C2F33 !important;
+    background: var(--dark-not-black) !important;
 }
 
 .donate{
-    color: #FFB61E !important;
+    color: var(--donate-text-color) !important;
 }
 
 .search_box{
@@ -20,6 +29,10 @@
   font-weight: 700 !important;
   color: #5a5c69 !important;
   background-color: #f6c23e !important;
+}
+
+.md-content{
+    width: 80%;
 }
 
 .fullpackfont{
