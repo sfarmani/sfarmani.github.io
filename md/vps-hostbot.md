@@ -94,18 +94,18 @@ Once you've chosen your VPS, then we can begin setting it up. I will use Digital
 2. Once you are done setting up a credit card, it will probably ask you to jump in.
     - We don't want to do that, so we will skip it by click on the link that says `Explore our control panel`.
 
-    <img src="../img/skip-quickstart.png" alt="Skip to control panel" style="max-width:40%">
+    <img src="img/skip-quickstart.png" alt="Skip to control panel" style="max-width: 50%">
 
 3. Click on `Create` and select `Droplets`
 
-    <img src="../img/create-droplets.png" alt="Create Droplets" style="max-width:40%" width="400">
+    <img src="img/create-droplets.png" alt="Create Droplets" style="max-width: 50%">
 
 4. Select `Ubuntu` and from the dropdown select `18.04 (LTS) x64`
 5. Select `Basic plan` under `Shared CPU`
 6. Make sure to tick `Regular Intel with SSD` for the CPU options
 7. Select the most left option that says `$5/month`
 
-    <img src="../img/plan-options.png" alt="Plan Options" style="max-width:40%" width="400">
+    <img src="img/plan-options.png" alt="Plan Options" style="max-width: 50%">
 
 8. Select the location you want. The number doesn't matter.
 9. Select SSH keys. This is where we need to generate a private and public key with the `PuTTYgen` tool linked in the [Tools and links](#tools-and-links) section.
@@ -124,7 +124,7 @@ Once you've chosen your VPS, then we can begin setting it up. I will use Digital
     - `Connection > SSH > Auth`
         - Private key file for authentication: Browse for the `private key` you saved earlier.
         
-        <img src="../img/putty-privatekey.png" alt="Browse private key in putty" style="max-width:40%" width="400">
+        <img src="img/putty-privatekey.png" alt="Browse private key in putty" style="max-width: 50%">
 
     - `Session`
         - Host Name: `root@ip.address.here`
