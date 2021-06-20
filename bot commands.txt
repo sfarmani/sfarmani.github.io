@@ -1,0 +1,100 @@
+==================================
+Whispered to bot/outside of lobby:
+==================================
+!map [map name] (loads a map file with the given file name or searches for a map with the given words/letters)
+!unhost (unhosts a lobby - also works while in lobby without whispering)
+!pub [game name] (creates a public game with the given game name as the lobby's name)
+!priv [game name] (same as !pub but creates a private game)
+!load [Config file name] (Loads a config file, which then loads a map)
+!addadmin [player name] (only works for root admins. Adds a new admin to the bot. Admins are below root admins and cannot add new admins)
+!ban/!addban [player name] (Bans a given player)
+!channel [channel name] (Only rootadmin can use - Moves the bot to a different channel)
+!checkadmin [player name] (Checks if an admin exists)
+!checkban [Player name] (Checks if a player is banned)
+!countadmins (Gives you the count of admins)
+!countbans (Gives you the count of bans)
+!deladmin [player name] (deletes an admin)
+!unban/!delban [player name] (Removes a ban)
+!countmaps/!countmap (counts how many maps there are)
+!countcfgs/!countcfg (counts how many configs there are)
+!deletecfg (Deletes a config file)
+!deletemap (deletes a map)
+!privby (hosts a private game by other player so they can be game owner)
+!pubby (hosts a public game by other player so they can be game owner)
+!reload (only root admins can use this - reloads the bot configuration file (not map config files) only reloads some things. Does not reload a newly added root admin)
+!say [message] (makes the bot say a message. Only works in lobby)
+!saygame [game number][message] (Sends a message to the selected game)
+!saygames [message] (sends a message to all the games in play)
+!restart (restarts the bot. only root admins can do this. cannot restart bot if there's a game in progress. can use !restart force if you need to.)
+!w [player name][message] (whispers a player using the bot)
+!disable (only root admins can use. Disables the creation of a any new games. Games already in lobby will be unhosted)
+!enable (only root admins can use. Enables the creation of any new games.)
+!exit/!quit (exits the bot from wc3. basically goes offline)
+
+===============
+While in Lobby:
+===============
+!close [slot number] (1 - Red, etc. Closes the given slot)
+!closeall (Closes all the open slots. does not kick anyone)
+!hold [player name] (Holds a player name for a slot)
+!open [slot number] (1 - Red, etc. Opens a slot)
+!openall (Opens all the closed slots)
+!sp (shuffles the slots)
+!start/!s (starts the game)
+!startn/!sn (starts the game)
+!swap [slot number1][slot number2] (Swaps the players around)
+!unhold [player name] (unholds a player)
+!abort/!a (aborts the countdown to starting the game)
+!owner [player name] (sets the game owner)
+!comp [slot number][skill number] (sets the selected slot number to be a computer of a skill level of the chosen skill number: 0 - easy, 1 - normal, 2 - insane)
+!fakeplayer/!fp (adds a fakeplayer, can add however many is missing)
+!deletefake (removes a fakeplayer)
+
+==============
+While in game:
+==============
+!end (only game owner can do this - unless the root admin is also present - close the game)
+!banlast (bans the last player that just left the game)
+!drop (drops the currently lagging player from the game)
+
+================================
+Works both in-game and in lobby:
+================================
+!kick [player name] (kicks a player from the game)
+!ping (Gives each player's ping status)
+!from (Gives each player's location)
+!latency [number] (sets the latency to the number)
+!synclimit [number] (sets synclimit to the number)
+!mute [player name] (Mutes the selected player)
+!muteall (mutes all non-admins)
+!unmute [player name] (unmutes player)
+!unmuteall (unmutes everyone)
+
+===================
+Non-admin commands:
+===================
+!stats (get player stats)
+!getgame/!g [game number] (Gets game info of the selected game)
+!getgames (Gives all games info)
+!getplayers/!gp [game number] (gets all the players inside of selected game)
+!checkme
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
