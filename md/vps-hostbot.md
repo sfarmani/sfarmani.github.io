@@ -11,7 +11,9 @@ Setting up a `Warcraft III 1.28.5 hostbot` can be stressful and if you don't hav
 
 Unfortunately, a hostbot on a server is not a free service (unless you use AWS Ec2 or Google Compute Engine - I will cover those in the [Choosing a VPS](#choosing-a-vps) section).
 
-If you would like to setup a bot on your local PC, then you can follow [this guide]() instead.
+> If you would like to setup a bot on your local PC, there are lots of guides to follow online. Searching something along the lines of `wc3 ghost++ tutorial` or `wc3 ghostone tutorial` will probably yield results. Keep in mind that you will have to port-forward at some point so if your modem doesn't allow that, then you may not be able to host at all.
+> 
+> Also note that if you decide to go with ghost++, then you should use [this repository](https://github.com/Shiox/ghostpp).
 
 [↑ Back to table of contents ↑](#table-of-contents)
 
@@ -75,12 +77,12 @@ Amazon and Google offer some VPS services as well, some of which provide up to 1
 
 Although that sounds great, I believe there are some downsides to using them.
 
-### Pro's
+### PROs
 \+ Since its a free trial for 1 year, its great practice and doesn't cost anything (as long as you are within their conditions)
 
 \+ Has lots of locations to choose from
 
-### Con's
+### CONs
 \- Hard to use interface, not very intuitive.
 
 \- Has extra steps to configuring the hostbot (port forwarding - firewall setup)
