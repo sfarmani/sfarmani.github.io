@@ -20,6 +20,8 @@ If you would like to setup a bot on your local PC, then you can follow [this gui
 4. [aura-bot files - forked by me](https://github.com/sfarmani/aura-bot)
 5. [Warcraft III 1.28.5 files](https://drive.google.com/file/d/1M9_IOUpMwFdQl9eeQwsvdvVqp8uxgU-I/view?usp=sharing) - Put together with only the essential files
 
+[↑ Back to table of contents ↑](#table-of-contents)
+
 # Choosing a VPS
 If you are not interested in choosing your own VPS and want to go with [Digital Ocean](https://www.digitalocean.com), then you can just skip this section and go to [VPS setup](#vps-setup).
 
@@ -36,6 +38,8 @@ Things to consider when choosing a VPS
 2. [OS available](#os-available)
 3. [Pricing](#pricing)
 4. [VPS Specs](#vps-specs)
+
+[↑ Back to table of contents ↑](#table-of-contents)
 
 ## Locations available
 Before you choose any VPS, first make sure that the VPS has the locations you are looking for. To research, a simple google search is all that is required.
@@ -82,6 +86,8 @@ Although that sounds great, I believe there are some downsides to using them.
 \- Has restrictions and conditions in order to get the free trial.
 
 \- For the Google Compute Engine, some [countries are banned](https://support.google.com/cloudidentity/answer/2891389?hl=en#:~:text=However%2C%20Google%20restricts%20access%20to,%2C%20North%20Korea%2C%20and%20Syria.) from using it, so players from those regions can't connect to your bot.
+
+[↑ Back to table of contents ↑](#table-of-contents)
 
 # VPS Setup
 Once you've chosen your VPS, then we can begin setting it up. I will use Digital Ocean as examples.
@@ -144,6 +150,8 @@ Once you've chosen your VPS, then we can begin setting it up. I will use Digital
     - Now press `CTRL + ALT + H` to show hidden files (we will need this for later)
 
 Now that you have access to your server, we can begin setting up your hostbot
+
+[↑ Back to table of contents ↑](#table-of-contents)
 
 # Host-bot Setup
 Before we actually start, we need to do a little bit of server updating
@@ -256,6 +264,8 @@ rm -rf wc3.zip
 7. Type in `:wq` and press `Enter`. This time you have to type it instead of pasting. This will save and close the file.
 8. Within the next minute, your hostbot will start
 > You can close `PuTTY` and `WinSCP` at this point and log into your Warcraft III (your own account) and test your bot
+
+[↑ Back to table of contents ↑](#table-of-contents)
 
 # Maintenance
 Here are some tips to maintaining your hostbot
