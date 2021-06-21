@@ -272,7 +272,7 @@ rm -rf wc3.zip
 # Maintenance
 Here are some tips to maintaining your hostbot
 
-[List of Bot Commands]()
+[List of Bot Commands](https://github.com/sfarmani/sfarmani.github.io/blob/master/bot%20commands.txt)
 
 ## Map uploading
 1. Open `WinSCP` and navigate to `aura-bot/maps/`
