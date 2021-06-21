@@ -13,6 +13,8 @@ Unfortunately, a hostbot on a server is not a free service (unless you use AWS E
 
 If you would like to setup a bot on your local PC, then you can follow [this guide]() instead.
 
+[↑ Back to table of contents ↑](#table-of-contents)
+
 # Tools and links
 1. [PuTTY](https://the.earth.li/~sgtatham/putty/latest/w64/putty.exe) - To access your VPS terminal through SSH
 2. [PuTTYgen](https://the.earth.li/~sgtatham/putty/latest/w64/puttygen.exe) - To generate a private and public key
