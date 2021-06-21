@@ -289,3 +289,5 @@ If your bot happends to be stuck/not responding, you can restart your bot throug
 3. Type `Kill processID`
 
 Within the next minute, it will start the bot again automatically.
+
+[↑ Back to table of contents ↑](#table-of-contents)
