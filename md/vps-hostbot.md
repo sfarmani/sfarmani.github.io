@@ -292,4 +292,29 @@ If your bot happends to be stuck/not responding, you can restart your bot throug
 
 Within the next minute, it will start the bot again automatically.
 
+## Editing Config files
+
+### aura.cfg
+The comments in your aura.cfg file should help clarify what you need to do for a certain field.
+
+After you edit the file, make sure to restart your bot. (see [here](#host-bot-restarting)) 
+
+### mapcfgs
+You should only be editing files in this folder once you upload a new map. Then you would go into their respective `.cfg` file and update the version number.
+
+After that, make sure you load the map config again by:
+1. logging into Warcraft III
+2. Whispering your bot: `/w botname !load twre` (replace `twre` for whatever your config file is named)
+
+## Alias commands
+Here is an explanation of the alias commands
+
+|   Command  |                                                                                                    Explanation                                                                                                    |
+|:----------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| `startbot` | Pretty self explanatory, it starts the bot manually. Be careful to not use it when there is already another instance running. You will usually not have to use this as the crontab task will do it automatically. |
+|    `fa`    |                                       Stands for "Find Aura". It spits out an ID of the process. You can use that ID to kill the process. (see [here](#host-bot-restarting))                                      |
+|  `botlog`  |                                    Opens the bot's logs and follows it as things get written to it. It is useful to see if any errors occur. To exit the logs, press `CTRL + C`                                   |
+|    `ea`    |                                     Edits the aliases. If you are more familiar with Ubuntu/Linux/etc. you can edit the aliases to add more. Make sure to run `sa` right after                                    |
+|    `sa`    |                                                                                   Loads in the aliases once they are edited/etc.                                                                                  |
+
 [↑ Back to table of contents ↑](#table-of-contents)
