@@ -1,4 +1,6 @@
 # Table of Contents
+Please make sure to go through the guide thoroughly as it does include everything you may need.
+
 1. [Introduction](#introduction)
 2. [Tools and links](#tools-and-links)
 3. [Choosing a VPS](#choosing-a-vps)
@@ -77,19 +79,15 @@ Amazon and Google offer some VPS services as well, some of which provide up to 1
 
 Although that sounds great, I believe there are some downsides to using them.
 
-### PROs
-\+ Since its a free trial for 1 year, its great practice and doesn't cost anything (as long as you are within their conditions)
 
-\+ Has lots of locations to choose from
+|                                                                PROs                                                               |                                                       CONs                                                       |
+|:---------------------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------:|
+| + Since it's a free trial for 1 year, it's great practice and doesn't cost anything (as long as you are within their condditions) | - Hard to use interface, not very intuitive                                                                      |
+| + Has lots of locations to choose from                                                                                            | - Has extra steps to configuring (portforwarding - firewall setup)                                              |
+|                                                                                                                                   | - Has restrictions and conditions in order to get the free trial, which means upgrading is going to cost you     |
+|                                                                                                                                   | - For the Google Compute Engine, some [countries are banned](https://support.google.com/cloudidentity/answer/2891389?hl=en#:~:text=However%2C%20Google%20restricts%20access%20to,%2C%20North%20Korea%2C%20and%20Syria.) from using it, so players from those regions can't connect to your bot. |
 
-### CONs
-\- Hard to use interface, not very intuitive.
-
-\- Has extra steps to configuring the hostbot (port forwarding - firewall setup)
-
-\- Has restrictions and conditions in order to get the free trial.
-
-\- For the Google Compute Engine, some [countries are banned](https://support.google.com/cloudidentity/answer/2891389?hl=en#:~:text=However%2C%20Google%20restricts%20access%20to,%2C%20North%20Korea%2C%20and%20Syria.) from using it, so players from those regions can't connect to your bot.
+> To portforward, make sure to allow all IP addresses and all ports (or just ports 6112-6126) for both UDP and TCP
 
 [↑ Back to table of contents ↑](#table-of-contents)
 
