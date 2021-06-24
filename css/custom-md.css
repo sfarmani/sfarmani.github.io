@@ -11,7 +11,7 @@
 }
 
 :not(pre)>code[class*=language-], pre[class*=language-] {
-    background: #3b3b3c;
+    background: var(--code-block-bg-color);
 }
 
 code[class*=language-], pre[class*=language-] {
@@ -21,4 +21,12 @@ code[class*=language-], pre[class*=language-] {
 
 .language-css .token.string, .style .token.string, .token.entity, .token.operator, .token.url {
     background: none;
+}
+
+.markdown-body table tr {
+    background-color: var(--code-block-bg-color);
+}
+
+.markdown-body table tr:nth-child(2n) {
+    background-color: var(--code-block-bg-alt-color);
 }
