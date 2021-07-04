@@ -29,7 +29,7 @@ $(function () {
             'damage', 'armor', 'mainstat', 'allstat', 'strength', 'agility', 'intelligence', 'hp', 'mp', 'attackspeedpercent', 'movespeed', 'movespeedpercent',
             'dodgechancepercent', 'skilldamagepercent', 'critchancepercent', 'critmultiplier', 'periodicdamagepercent', 'mdpercent', 'drpercent', 'dtpercent', 'dt',
             'healingpercent', 'healingreceivedpercent', 'hpregen', 'mpregen', 'affinityiwpercent', 'affinityflamepercent', 'affinityearthpercent', 'affinitywlpercent',
-            'expreceivedpercent', 'revivaltimepercent', 'damagedealtpercent'
+            'expgainpercent', 'revivaltimepercent', 'damagedealtpercent', 'aadamagepercent'
         ];
     var dom =
         "<'row'<'col-sm-4 col-md-2'i>>" +
@@ -219,12 +219,13 @@ $(function () {
                             }
                         }
                         if (stat === 'damage') str.push(`<font color="#ff8c00">${plusminus}${val} Damage</font>`);
+                        if (stat === 'aadamagepercent') str.push(`<font color="#ff8c00">${plusminus}${val}% Auto-attack Damage</font>`);
                         if (stat === 'armor') str.push(`<font color="#ff8c00">${plusminus}${val} Armor</font>`);
                         if (stat === 'mainstat') str.push(`<font color="#ff8c00">${plusminus}${val} Main Stat</font>`);
                         if (stat === 'allstat') str.push(`<font color="#ff8c00">${plusminus}${val} All Stats</font>`);
-                        if (stat === 'strength') str.push(`<font color="#ff8c00">${plusminus}${val} STR</font>`);
-                        if (stat === 'agility') str.push(`<font color="#ff8c00">${plusminus}${val} AGI</font>`);
-                        if (stat === 'intelligence') str.push(`<font color="#ff8c00">${plusminus}${val} INT</font>`);
+                        if (stat === 'str') str.push(`<font color="#ff8c00">${plusminus}${val} STR</font>`);
+                        if (stat === 'agi') str.push(`<font color="#ff8c00">${plusminus}${val} AGI</font>`);
+                        if (stat === 'int') str.push(`<font color="#ff8c00">${plusminus}${val} INT</font>`);
                         if (stat === 'hp') str.push(`<font color="#ff8c00">${plusminus}${val} HP</font>`);
                         if (stat === 'mp') str.push(`<font color="#ff8c00">${plusminus}${val} MP</font>`);
                         if (stat === 'attackspeedpercent') str.push(`<font color="#ff8c00">${plusminus}${val}% Attack Speed</font>`);
@@ -240,7 +241,7 @@ $(function () {
                         if (stat === 'dtpercent') str.push(`<font color="#40e0d0">${plusminus}${val}% Damage Taken</font>`);
                         if (stat === 'dt') str.push(`<font color="#40e0d0">${plusminus}${val} Damage Taken</font>`);
                         if (stat === 'damagedealtpercent') str.push(`<font color="#40e0d0">${plusminus}${val}% Damage Dealt</font>`);
-                        if (stat === 'healingpercent') str.push(`<font color="#ff8c00">${plusminus}${val}% Healing</font>`);
+                        if (stat === 'healingpercent') str.push(`<font color="#ff8c00">${plusminus}${val}% Healing Done</font>`);
                         if (stat === 'healreceivedpercent') str.push(`<font color="#ff1493">${plusminus}${val}% Healing Received</font>`);
                         if (stat === 'hpregen') str.push(`<font color="#40e0d0">${plusminus}${val} HP regen</font>`);
                         if (stat === 'mpregen') str.push(`<font color="#40e0d0">${plusminus}${val} MP regen</font>`);
@@ -248,7 +249,7 @@ $(function () {
                         if (stat === 'affinityflamepercent') str.push(`<font color="#f8ae9c">${plusminus}${val}% Flame Affinity</font>`);
                         if (stat === 'affinityearthpercent') str.push(`<font color="#dfbf9f">${plusminus}${val}% Earth Affinity</font>`);
                         if (stat === 'affinitywlpercent') str.push(`<font color="#b5fbba">${plusminus}${val}% Wind/Lightning Affinity</font>`);
-                        if (stat === 'expreceivedpercent') str.push(`<font color="#40e0d0">${plusminus}${val}% EXP Received</font>`);
+                        if (stat === 'expgainpercent') str.push(`<font color="#40e0d0">${plusminus}${val}% EXP Gain</font>`);
                         if (stat === 'revivaltimepercent') str.push(`<font color="#40e0d0">${plusminus}${val}% Revival Time</font>`);
                     });
                     return str.join('<br>');
@@ -360,6 +361,7 @@ $(function () {
     //// Refresh column widths on click ////
     jQuery('.refreshColumns').on('click', function () {
         items_table.columns.adjust().draw(false);
+        items_table.colResize.redraw();
     });
 });
 
