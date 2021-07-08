@@ -8,22 +8,22 @@ $(function () {
     // 3 = Name
     // 4 = Korean Name
     // 5 = Drop Rate
-    // 6 = Item Type
-    // 7 = Dropped By
-    // 8 = Used In
-    // 9 = Stats
-    // 10 = Passive
-    // 11 = Active
-    // 12 = Character Specialties
-    // 13 = Recipe
-    // 14 = Drops
-    // 15 = Notes
+    // 6 = Item Grade
+    // 7 = Item Type
+    // 8 = Dropped By
+    // 9 = Used In
+    // 10 = Stats
+    // 11 = Passive
+    // 12 = Active
+    // 13 = Character Specialties
+    // 14 = Recipe
+    // 15 = Drops
+    // 16 = Notes
 
-    // localStorage.clear();
+    localStorage.clear();
     if ([null, "null"].includes(localStorage.getItem("items_columns"))){
-        localStorage.setItem("items_columns", JSON.stringify([1, 3, 5, 6, 9, 10, 11]));
+        localStorage.setItem("items_columns", JSON.stringify([3, 5, 6, 7, 10, 11, 12, 14]));
     }
-    var trolls = ['[HEALED]', '[Air]'];
     var possibleStats =
         [
             'damage', 'armor', 'mainstat', 'allstat', 'strength', 'agility', 'intelligence', 'hp', 'mp', 'attackspeedpercent', 'movespeed', 'movespeedpercent',
@@ -31,6 +31,26 @@ $(function () {
             'healingpercent', 'healingreceivedpercent', 'hpregen', 'mpregen', 'affinityiwpercent', 'affinityflamepercent', 'affinityearthpercent', 'affinitywlpercent',
             'expgainpercent', 'revivaltimepercent', 'damagedealtpercent', 'aadamagepercent'
         ];
+
+    var grades = {
+        1: {
+            name: 'Deltirama',
+            color: 'C39BE1'
+        },
+        2: {
+            name: 'Neptinos',
+            color: '9BE1E1'
+        },
+        3: {
+            name: 'Gnosis',
+            color: 'DC143C'
+        },
+        4: {
+            name: 'Alteia',
+            color: '99FF99'
+        }
+    };
+
     var dom =
         "<'row'<'col-sm-4 col-md-2'i>>" +
         "<'row'<'col-auto mr-3 ml-3'f><'col-md-1 mr-md-auto'l><'col-auto'p>>" +
@@ -42,8 +62,6 @@ $(function () {
     $.ajaxSetup({ async: false });
     $.getJSON(items_url, function (json) { items = json });
     $.ajaxSetup({ async: true });
-
-    items = $.grep(items, function (x) { return !trolls.includes(x.type) });
 
     var items_table = $('#items').DataTable({
         responsive: true,
@@ -101,7 +119,7 @@ $(function () {
             });
 
             //// Name, Korean Name, Item Type ////
-            var column_ids = [3, 4, 6];
+            var column_ids = [3, 4, 6, 7];
 
             //// Replace 3 above headers to dropdowns and enable searching for them ////
             column_ids.forEach(function(id){
@@ -185,6 +203,12 @@ $(function () {
                     }
                     return str.join('<br>');
                 } 
+            },
+            { data: "grade", title: "Item Grade", 
+                render: function(data){
+                    var color = grades[data.grade].color;
+                    return `<font color="#${color}">${data}</font>`;
+                }
             },
             { data: "type", title: "Item Type", 
                 render: function(data){
