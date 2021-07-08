@@ -20,7 +20,7 @@ $(function () {
     // 15 = Drops
     // 16 = Notes
 
-    localStorage.clear();
+    // localStorage.clear();
     if ([null, "null"].includes(localStorage.getItem("items_columns"))){
         localStorage.setItem("items_columns", JSON.stringify([3, 5, 6, 7, 10, 11, 12, 14]));
     }
@@ -133,6 +133,10 @@ $(function () {
                         column.search(val ? '^' + val + '$' : '', true, false).draw();
                     });
                 column.data().unique().sort().each(function (d, j) {
+                    if (column_name == "Item Grade"){
+                        if (d == 0) d = 'none';
+                        else d = grades[d].name;
+                    }
                     select.append('<option value="' + d + '">' + d + '</option>');
                 });
 
