@@ -206,6 +206,7 @@ $(function () {
             },
             { data: "grade", title: "Item Grade", 
                 render: function(data){
+                    if (data.grade == 0) return "<i style='color: #5a7da0'>none</i>";
                     var color = grades[data.grade].color;
                     return `<font color="#${color}">${data}</font>`;
                 }
