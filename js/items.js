@@ -121,7 +121,7 @@ $(function () {
             //// Name, Korean Name, Item Type ////
             var column_ids = [3, 4, 6, 7];
 
-            //// Replace 3 above headers to dropdowns and enable searching for them ////
+            //// Replace 4 above headers to dropdowns and enable searching for them ////
             column_ids.forEach(function(id){
                 var column = this_table.column(id);
                 var column_name = item_column_names[id];
@@ -390,7 +390,6 @@ $(function () {
     //// Refresh column widths on click ////
     jQuery('.refreshColumns').on('click', function () {
         items_table.columns.adjust().draw(false);
-        items_table.colResize.redraw();
     });
 });
 

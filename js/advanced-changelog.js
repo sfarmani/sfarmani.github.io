@@ -20,13 +20,7 @@ $(function () {
     $.ajaxSetup({ async: true });
 
 
-
-    var bugs_events_misc_table;
-    var items_table;
-    var monsters_table;
-    var heroes_table;
-
-    bugs_events_misc_table = $('#bugs_events_misc').DataTable({
+    var bugs_events_misc_table = $('#bugs_events_misc').DataTable({
         responsive: true,
         columnDefs: [
             { targets: '_all', defaultContent: "<i style='color: #5a7da0'>none</i>" }
@@ -48,7 +42,7 @@ $(function () {
         ]
     });
 
-    items_table = $('#items').DataTable({
+    var items_table = $('#items').DataTable({
         responsive: true,
         columnDefs: [
             { targets: '_all', defaultContent: "<i style='color: #5a7da0'>none</i>" }
@@ -68,7 +62,7 @@ $(function () {
         ]
     });
 
-    monsters_table = $('#monsters').DataTable({
+    var monsters_table = $('#monsters').DataTable({
         responsive: true,
         columnDefs: [
             { targets: '_all', defaultContent: "<i style='color: #5a7da0'>none</i>" }
@@ -88,7 +82,7 @@ $(function () {
         ]
     });
 
-    heroes_table = $('#heroes').DataTable({
+    var heroes_table = $('#heroes').DataTable({
         responsive: true,
         columnDefs: [
             { targets: '_all', defaultContent: "<i style='color: #5a7da0'>none</i>" }
