@@ -26,7 +26,7 @@ $(function () {
     }
     var possibleStats =
         [
-            'damage', 'armor', 'mainstat', 'allstat', 'strength', 'agility', 'intelligence', 'hp', 'mp', 'attackspeedpercent', 'movespeed', 'movespeedpercent',
+            'damage', 'armor', 'mainstat', 'allstat', 'str', 'agi', 'int', 'hp', 'mp', 'attackspeedpercent', 'movespeed', 'movespeedpercent',
             'dodgechancepercent', 'skilldamagepercent', 'critchancepercent', 'critmultiplier', 'periodicdamagepercent', 'mdpercent', 'drpercent', 'dtpercent', 'dt',
             'healingpercent', 'healingreceivedpercent', 'hpregen', 'mpregen', 'affinityiwpercent', 'affinityflamepercent', 'affinityearthpercent', 'affinitywlpercent',
             'expgainpercent', 'revivaltimepercent', 'damagedealtpercent', 'aadamagepercent'
