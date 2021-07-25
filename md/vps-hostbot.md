@@ -1,4 +1,6 @@
 # Table of Contents
+Before we start, I kindly ask to disable adblockers. I promise that the ads are non-invasive
+
 Please make sure to go through the guide thoroughly as it does include everything you may need.
 
 1. [Introduction](#introduction)
