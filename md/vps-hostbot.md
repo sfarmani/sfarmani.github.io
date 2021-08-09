@@ -1,7 +1,7 @@
 # Table of Contents
-Before we start, I kindly ask to disable adblockers. I promise that the ads are non-invasive
+### Before we start, I kindly ask to disable adblockers. I promise that the ads are non-invasive
 
-Please make sure to go through the guide thoroughly as it does include everything you may need.
+## Please make sure to go through the guide thoroughly as it does include everything you may need.
 
 1. [Introduction](#introduction)
 2. [Tools and links](#tools-and-links)
@@ -11,9 +11,9 @@ Please make sure to go through the guide thoroughly as it does include everythin
 6. [Maintenance](#maintenance)
 
 # Introduction
-Setting up a `Warcraft III 1.28.5 hostbot` can be stressful and if you don't have any coding experience it can dissuade you from trying. My hope is that anyone can make a hostbot with this tutorial.
+### Setting up a `Warcraft III 1.28.5 hostbot` can be stressful and if you don't have any coding experience it can dissuade you from trying. My hope is that anyone can make a hostbot with this tutorial.
 
-Unfortunately, a hostbot on a server is not a free service (unless you use AWS Ec2 or Google Compute Engine - I will cover those in the [Choosing a VPS](#choosing-a-vps) section).
+### Unfortunately, a hostbot on a server is not a free service (unless you use AWS Ec2 or Google Compute Engine - I will cover those in the [Choosing a VPS](#choosing-a-vps) section).
 
 > If you would like to setup a bot on your local PC, there are lots of guides to follow online. Searching something along the lines of `wc3 ghost++ tutorial` or `wc3 ghostone tutorial` will probably yield results. Keep in mind that you will have to port-forward at some point so if your modem doesn't allow that, then you may not be able to host at all.
 > 
@@ -31,7 +31,7 @@ Unfortunately, a hostbot on a server is not a free service (unless you use AWS E
 [↑ Back to table of contents ↑](#table-of-contents)
 
 # Choosing a VPS
-If you are not interested in choosing your own VPS and want to go with [Digital Ocean](https://www.digitalocean.com), then you can just skip this section and go to [VPS setup](#vps-setup).
+## If you are not interested in choosing your own VPS and want to go with [Digital Ocean](https://www.digitalocean.com), then you can just skip this section and go to [VPS setup](#vps-setup).
 
 Choosing a Virtual Private Server (VPS) is very important and it depends on a couple of factors.
 
