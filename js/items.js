@@ -355,6 +355,12 @@ $(function () {
         ]
     });
 
+    items_table.on('page.dt', function () {
+        $('html, body').animate({
+            scrollTop: $('#items_wrapper').offset().top
+        }, 'fast');
+    });
+
     jQuery('.load_message').toggle();
 
     var sidebar = $("#sidebar");

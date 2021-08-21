@@ -252,12 +252,30 @@ $(function () {
             $('table#heroes').children().remove();
         }
         ////////////////////////////////////////////// for heroes table END //////////////////////////////////////////////
+        // scroll to top when pagination button clicked
+        _.compact([bug_event_misc_table, items_table, monsters_table, heroes_table]).forEach(function(table){
+            let wrapper = '';
+            switch(table){
+                case bug_event_misc_table: wrapper = '.bugs_wrapper'; break;
+                case items_table: wrapper = '.items_wrapper'; break;
+                case monsters_table: wrapper = '.monsters_wrapper'; break;
+                case heroes_table: wrapper = '.heroes_wrapper'; break;
+                default: wrapper = '.dataTables_wrapper'; break;
+            }
+            table.on('page.dt', function () {
+                $('html, body').animate({
+                    scrollTop: $(wrapper).offset().top
+                }, 'fast');
+            });
+        });
+        // refresh column widths when the button is clicked
         $('.refreshColumns').on('click', function () {
             bug_event_misc_table.columns.adjust().draw(false);
             items_table.columns.adjust().draw(false);
             monsters_table.columns.adjust().draw(false);
             heroes_table.columns.adjust().draw(false);
         });
+        // searching on all tables
         $.fn.dataTable.tables({ api: true }).search($('.search_all input').val()).draw();
         if ($.fn.DataTable.isDataTable('#bugs_events_misc') || $.fn.DataTable.isDataTable('#items') || $.fn.DataTable.isDataTable('#monsters') || $.fn.DataTable.isDataTable('#heroes')) {
             if ($('.search_all').hasClass('d-none')) {

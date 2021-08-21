@@ -106,6 +106,22 @@ $(function () {
         filterColumn($(this));
     });
 
+    _.compact([bugs_events_misc_table, items_table, monsters_table, heroes_table]).forEach(function (table) {
+        let wrapper = '';
+        switch (table) {
+            case bugs_events_misc_table: wrapper = '.bugs_wrapper'; break;
+            case items_table: wrapper = '.items_wrapper'; break;
+            case monsters_table: wrapper = '.monsters_wrapper'; break;
+            case heroes_table: wrapper = '.heroes_wrapper'; break;
+            default: wrapper = '.dataTables_wrapper'; break;
+        }
+        table.on('page.dt', function () {
+            $('html, body').animate({
+                scrollTop: $(wrapper).offset().top
+            }, 'fast');
+        });
+    });
+
     $('.refreshColumns').on('click', function () {
         bugs_events_misc_table.columns.adjust().draw(false);
         items_table.columns.adjust().draw(false);

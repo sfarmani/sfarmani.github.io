@@ -230,13 +230,18 @@ $(function () {
         }
         //// for hero-skills table END ////
 
+        heroSkills_table.on('page.dt', function () {
+            $('html, body').animate({
+                scrollTop: $('#hero-skills_wrapper').offset().top
+            }, 'fast');
+        });
+
         //// Refresh column widths on click ////
         jQuery('.refreshColumns').on('click', function () {
             heroInfo_table.columns.adjust().draw(false);
             heroSkills_table.columns.adjust().draw(false);
         });
     });
-
     var sidebar = $("#sidebar");
     var hamburger = $('#navTrigger');
 
