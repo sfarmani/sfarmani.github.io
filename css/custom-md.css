@@ -30,3 +30,13 @@ code[class*=language-], pre[class*=language-] {
 .markdown-body table tr:nth-child(2n) {
     background-color: var(--code-block-bg-alt-color);
 }
+
+details[open] summary::after {
+  content: attr(data-open);
+  font-size: 22px;
+}
+
+details:not([open]) summary::after {
+  content: attr(data-close);
+  font-size: 22px;
+}

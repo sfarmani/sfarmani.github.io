@@ -31,8 +31,10 @@
 [↑ Back to table of contents ↑](#table-of-contents)
 
 # Choosing a VPS
-## If you are not interested in choosing your own VPS and want to go with [Digital Ocean](https://www.digitalocean.com), then you can just skip this section and go to [VPS setup](#vps-setup).
+## If you are not interested in choosing your own VPS and want to go with [Digital Ocean](https://www.digitalocean.com), you can skip this section and jump to [VPS setup](#vps-setup).
 
+<details>
+    <summary data-open="Hide" data-close="Click to show"></summary>
 Choosing a Virtual Private Server (VPS) is very important and it depends on a couple of factors.
 
 I personally chose SkySilk as it worked for me, however it may not work for everyone as it has limited locations available.
@@ -92,12 +94,13 @@ Although that sounds great, I believe there are some downsides to using them.
 > To portforward, make sure to allow all IP addresses and all ports (or just ports 6112-6126) for both UDP and TCP
 
 [↑ Back to table of contents ↑](#table-of-contents)
+</details>
 
 # VPS Setup
 Once you've chosen your VPS, then we can begin setting it up. I will use Digital Ocean as examples.
 
 1. Navigate to your VPS's site (for [Digital Ocean](https://www.digitalocean.com)) and sign up with an account.
-    > It will immediately require you to enter a your Credit Card/PayPal information.
+    > It will immediately require you to enter a Credit Card/PayPal information.
     > 
     > It won't charge you until you make an instance of a server and use it for about a month.
     > This should be true for all other VPS's
@@ -106,7 +109,7 @@ Once you've chosen your VPS, then we can begin setting it up. I will use Digital
 
     <img src="img/skip-quickstart.png" alt="Skip to control panel" style="max-width: 50%">
 
-3. Click on `Create` and select `Droplets`
+3. Click on <kbd>Create</kbd> and select `Droplets`
 
     <img src="img/create-droplets.png" alt="Create Droplets" style="max-width: 50%">
 
@@ -119,16 +122,16 @@ Once you've chosen your VPS, then we can begin setting it up. I will use Digital
 
 8. Select the location you want. The number doesn't matter.
 9. Select SSH keys. This is where we need to generate a private and public key with the `PuTTYgen` tool linked in the [Tools and links](#tools-and-links) section.
-    - Open `PuTTYgen.exe` and press `Generate`.
+    - Open `PuTTYgen.exe` and press <kbd>Generate</kbd>.
     - Randomly move your mouse to generate a key.
-    - Press `Save private key` and name it anything. Save it in a location you will remember and not delete. You can add a password, but its not required.
+    - Press <kbd>Save private key</kbd> and name it anything. Save it in a location you will remember and not delete. You can add a password, but its not required.
     > If anyone ever asks for your private key, do not give it to them unless you trust the person.
     - Copy the generated text at the top.
     - Go back to Digital Ocean site and press New SSH Key.
     - Paste in the text you just copied and name it anything you want.
     - You can now close `PuTTYgen.exe`
 
-10. Once you have all that, you can press `Create Droplet`.
+10. Once you have all that, you can press <kbd>Create Droplet</kbd>.
 11. Wait for your server to finish starting up and find its `IP address` and copy it.
 12. Open up `PuTTY.exe` to setup access to the server.
     - `Connection > SSH > Auth`
@@ -139,9 +142,9 @@ Once you've chosen your VPS, then we can begin setting it up. I will use Digital
     - `Session`
         - Host Name: `root@ip.address.here`
         - Saved Sessions: Type a random name to save under.
-        - Click `Save`
+        - Click <kbd>Save</kbd>
 13. To open a session to your server, `double click` the name you saved under.
-    > The first time you run the server, it will give you 2 prompts. Just press `yes` and `ok`
+    > The first time you run the server, it will give you 2 prompts. Just press <kbd>Yes</kbd> and <kbd>ok</kbd>
     > 
     > If you put a password in the `PuTTYgen.exe` step, then enter the password
 14. Open `WinSCP` ([Tools and links](#tools-and-links))
@@ -149,9 +152,9 @@ Once you've chosen your VPS, then we can begin setting it up. I will use Digital
     > 
     > If you already installed it, then you can press `Tools > Import Sites...` and select the name you saved in `PuTTY`
 
-    - With the site highlighted, press `Login` to open a session of your server.
+    - With the site highlighted, press <kbd>Login</kbd> to open a session of your server.
 
-    - Now press `CTRL + ALT + H` to show hidden files (we will need this for later)
+    - Now press <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>H</kbd> to show hidden files (we will need this for later)
 
 Now that you have access to your server, we can begin setting up your hostbot
 
@@ -186,7 +189,7 @@ For now we are done with `PuTTY`.
 
 ### Edit files with `WinSCP`
 1. Open `WinSCP` and `Login`
-    > If you followed the step in the end of setting up `WinSCP`, you should be able to see files that start with a dot. If you don't, just press `CTRL + ALT + H`
+    > If you followed the step in the end of setting up `WinSCP`, you should be able to see files that start with a dot. If you don't, just press <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>H</kbd>
 2. Find the file named `.bashrc` and double click it. An editor should pop up and now you can edit files.
     > First time opening a file might prompt you to choose an editor. For easy access, you can just select internal editor.
 3. Scroll down to the area where it says `some more ls aliases` and paste in the following after it.
@@ -197,7 +200,7 @@ alias sa="source ~/.bashrc"
 alias fa="ps -ef | grep aura++ | grep -v grep"
 alias botlog="tail -f -n 100 ~/aura-bot/aura.log"
 ```
-> Save the editor and close it (`CTRL + S`).
+> Save the editor and close it (<kbd>CTRL</kbd> + <kbd>S</kbd>).
 
 4. Find the file named `restart_aura.sh` and double click it.
 5. Paste the following:
@@ -210,7 +213,7 @@ then
         cd ~/aura-bot/ && nohup aura++ > aura.log 2>&1 &
 fi
 ```
-> Save the editor and close it (`CTRL + S`).
+> Save the editor and close it (<kbd>CTRL</kbd> + <kbd>S</kbd>).
 
 6. Navigate to `aura-bot/` and create a new `folder`. Name it `maps`. This is the folder you will upload your maps into.
 
@@ -233,7 +236,7 @@ bnet_rootadmins
 > 
 > Everything else should be self-explanatory. If it is not, please refer to the comments on the `.cfg` file.
 > 
-> Save the editor and close it (`CTRL + S`).
+> Save the editor and close it (<kbd>CTRL</kbd> + <kbd>S</kbd>).
 
 
 10. Navigate to `mapcfgs/`
@@ -264,8 +267,8 @@ rm -rf wc3.zip
 3. Press the letter `i`. You should see the bottom left change to say `- INSERT -`. This will allow you to start typing.
 4. Use the arrow keys to move your cursor down to the very bottom, then to the very right. Now press `Enter` to create a new line.
 5. Paste in this line: `*/1 * * * * ~/restart_aura.sh > /dev/null`
-6. Press `ESC`. The `- INSERT -` text at the bottom left should now be gone.
-7. Type in `:wq` and press `Enter`. This time you have to type it instead of pasting. This will save and close the file.
+6. Press <kbd>ESC</kbd>. The `- INSERT -` text at the bottom left should now be gone.
+7. Type in `:wq` and press <kbd>Enter</kbd>. This time you have to type it instead of pasting. This will save and close the file.
 8. Within the next minute, your hostbot will start
 > You can close `PuTTY` and `WinSCP` at this point and log into your Warcraft III (your own account) and test your bot
 
@@ -286,7 +289,7 @@ Here are some tips to maintaining your hostbot
 In order to restart the bot, it is recommended to login into Warcraft III and whisper the command: `/w botname !exit`
 
 If your bot happends to be stuck/not responding, you can restart your bot through the server.
-1. Open `PuTTY`, type in `fa` - its an alias for finding the aura-bot's process ID.
+1. Open `PuTTY`, type in `fa` - its an alias for finding the aura-bot's process ID. ([alias commands](#alias-commands))
 2. The very first number from the left is the process ID.
 3. Type `Kill processID`
 
