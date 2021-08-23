@@ -31,10 +31,10 @@
 [↑ Back to table of contents ↑](#table-of-contents)
 
 # Choosing a VPS
-## If you are not interested in choosing your own VPS and want to go with [Digital Ocean](https://www.digitalocean.com), you can skip this section and jump to [VPS setup](#vps-setup).
+## If you are not interested in choosing your own Virtual Private Server (VPS) and want to go with [Digital Ocean](https://www.digitalocean.com), you can skip this section and jump to [VPS setup](#vps-setup).
 
 <details>
-    <summary data-open="Hide" data-close="Click to show"></summary>
+    <summary data-open="Hide" data-close="View VPS selection"></summary>
 Choosing a Virtual Private Server (VPS) is very important and it depends on a couple of factors.
 
 I personally chose SkySilk as it worked for me, however it may not work for everyone as it has limited locations available.
