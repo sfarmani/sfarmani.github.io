@@ -153,7 +153,9 @@ function filterColumn(ele) {
         item.collapse('hide');
     }
     // Filter the columns
-    table.DataTable().column(i).search( $(`#${column}`).val() ).draw();
+    let searchVal = $(`#${column}`).val();
+    table.DataTable().column(i).search(searchVal, true, false).draw();
+    // table.DataTable().column(i).search( $(`#${column}`).val(), true, true ).draw();
 }
 
 function render_text(str){
