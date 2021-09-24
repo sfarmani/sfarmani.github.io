@@ -159,7 +159,12 @@ $(function () {
                             return `<img width="100%" src="${img_url}.jpg">`;
                         }
                     },
-                    {  data: "hotkey", title: "Hotkey",
+                    { data: "proc_rate", title: "Proc Co-Efficient", 
+                        render: function (data) {
+                            return `<font color="#4e9396">${data}</font>`;
+                        }
+                    },
+                    { data: "hotkey", title: "Hotkey",
                         render: function (data) {
                             return `<font color="#ffff00">${data}</font>`;
                         }
