@@ -159,7 +159,7 @@ $(function () {
                             return `<img width="100%" src="${img_url}.jpg">`;
                         }
                     },
-                    { data: "proc_rate", title: "Proc Co-Efficient", 
+                    { data: "proc_rate", title: "Proc Co-efficient", 
                         render: function (data) {
                             return `<font color="#4e9396">${data}</font>`;
                         }
