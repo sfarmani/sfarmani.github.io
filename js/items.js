@@ -27,9 +27,10 @@ $(function () {
     var possibleStats =
         [
             'damage', 'armor', 'mainstat', 'allstat', 'str', 'agi', 'int', 'hp', 'mp', 'attackspeedpercent', 'movespeed', 'movespeedpercent',
-            'dodgechancepercent', 'skilldamagepercent', 'critchancepercent', 'critmultiplier', 'periodicdamagepercent', 'mdpercent', 'drpercent', 'dtpercent', 'dt',
-            'healingpercent', 'healingreceivedpercent', 'hpregen', 'mpregen', 'affinityiwpercent', 'affinityflamepercent', 'affinityearthpercent', 'affinitywlpercent',
-            'expgainpercent', 'revivaltimepercent', 'damagedealtpercent', 'aadamagepercent'
+            'dodgechancepercent', 'skilldamagepercent', 'critchancepercent', 'critmultiplier', 'periodicdamagepercent', 'mdpercent', 'drpercent',
+            'dtpercent', 'dt', 'healingpercent', 'healingreceivedpercent', 'hpregen', 'mpregen', 'affinityiwpercent', 'affinityflamepercent',
+            'affinityearthpercent', 'affinitywlpercent', 'affinitylightpercent', 'affinitydarkpercent', 'expgainpercent', 'revivaltimepercent',
+            'damagedealtpercent', 'aadamagepercent'
         ];
 
     var grades = {
@@ -48,6 +49,10 @@ $(function () {
         4: {
             name: 'Alteia',
             color: '99FF99'
+        },
+        4: {
+            name: 'Arcana',
+            color: '733CBE'
         }
     };
 
@@ -278,6 +283,8 @@ $(function () {
                         if (stat === 'affinityflamepercent') str.push(`<font color="#f8ae9c">${plusminus}${val}% Flame Affinity</font>`);
                         if (stat === 'affinityearthpercent') str.push(`<font color="#dfbf9f">${plusminus}${val}% Earth Affinity</font>`);
                         if (stat === 'affinitywlpercent') str.push(`<font color="#b5fbba">${plusminus}${val}% Wind/Lightning Affinity</font>`);
+                        if (stat === 'affinitylightpercent') str.push(`<font color="#b5fbba">${plusminus}${val}% Light Affinity</font>`);
+                        if (stat === 'affinitydarkpercent') str.push(`<font color="#b5fbba">${plusminus}${val}% Dark Affinity</font>`);
                         if (stat === 'expgainpercent') str.push(`<font color="#40e0d0">${plusminus}${val}% EXP Gain</font>`);
                         if (stat === 'revivaltimepercent') str.push(`<font color="#40e0d0">${plusminus}${val}% Revival Time</font>`);
                     });
