@@ -50,7 +50,7 @@ $(function () {
             name: 'Alteia',
             color: '99FF99'
         },
-        4: {
+        5: {
             name: 'Arcana',
             color: '733CBE'
         }
