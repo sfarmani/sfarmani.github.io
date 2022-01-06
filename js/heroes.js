@@ -161,6 +161,7 @@ $(function () {
                     },
                     { data: "proc_rate", title: "Proc Co-efficient", 
                         render: function (data) {
+                            if (data == 0) return "<i style='color: #5a7da0'>none</i>";
                             return `<font color="#4e9396">${data || 1}</font>`;
                         }
                     },
