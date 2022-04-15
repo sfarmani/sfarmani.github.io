@@ -1,10 +1,4 @@
-
 $(function () {
-    var e = document.createElement('div');
-    e.id = 'raiqTMytBXhb';
-    e.style.display = 'none';
-    document.body.appendChild(e);
-    
     var sidebar = $("#sidebar");
     var hamburger = $('#navTrigger');
 
