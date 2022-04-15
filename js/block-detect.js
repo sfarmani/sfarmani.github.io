@@ -1,6 +1,6 @@
 $(function () {
 
-    if (!$('.adsbygoogle').length) {
+    if (!$('.adsbygoogle').children('ins').length) {
         $('div#yLBWgYVzweDb').addClass("show-modal");
         $('body').addClass("modal-open");
     }
