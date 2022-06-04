@@ -23,13 +23,11 @@ $(function () {
                 },
                 { data: "usages", title: "Usage", 
                     render: function(data){
-                        var result = [`<font color="#e48282">`];
+                        var result = [];
                         data.forEach(function(d){
                             result.push(d.replace(/\`([^\`]*)\`/gm, '<code>$1</code>'));
-                            if (data.length > 1) result.push("<br>");
                         });
-                        result.push(`</font>`);
-                        return result;
+                        return `<font color="#e48282">${result.join("<br>")}</font>`;
                     }
                 },
                 { data: "desc", title: "Description", 
