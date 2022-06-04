@@ -21,9 +21,9 @@ $(function () {
                         return `<font color="#eade2c">${data}</font>`;
                     }
                 },
-                { data: "usage", title: "Usage", 
+                { data: "usages", title: "Usage", 
                     render: function(data){
-                        return `<font color="#e48282">${data}</font>`;
+                        return `<font color="#e48282">${data.join("\n")}</font>`;
                     }
                 },
                 { data: "desc", title: "Description", 
@@ -31,17 +31,11 @@ $(function () {
                         return `<font color="#fff">${data}</font>`;
                     }
                 },
-                { data: "aliases", title: "Aliases", 
-                    render: function(data){
-                        return `<font color="#22bacc">${data}</font>`;
-                    }
-                },
                 { data: "category", title: "Category", 
                     render: function(data){
                         return `<font color="#22bacc">${data}</font>`;
                     }
-                },
-                { data: "cooldown", title: "Cooldown" }
+                }
             ]
         });
     });
