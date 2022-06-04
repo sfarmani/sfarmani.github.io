@@ -23,7 +23,13 @@ $(function () {
                 },
                 { data: "usages", title: "Usage", 
                     render: function(data){
-                        return `<font color="#e48282">${data.join("<br>")}</font>`;
+                        var result = [`<font color="#e48282">`];
+                        data.forEach(function(d){
+                            result.push(d.replace(/\`([^\`]*)\`/gm, '<code>$1</code>'));
+                            if (data.length > 1) result.push("<br>");
+                        });
+                        result.push(`</font>`);
+                        return result;
                     }
                 },
                 { data: "desc", title: "Description", 

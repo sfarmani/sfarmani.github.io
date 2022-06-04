@@ -33,6 +33,12 @@
   width: auto;
 }
 
+code {
+  background-color: #16181a;
+  padding: 3px;
+  border-radius: 5px;
+}
+
 .close-button {
   float: right;
   width: 1.5rem;
