@@ -12,8 +12,8 @@
     {
         "command": "/ban",
         "usages": [
-            "/ban `mentioned_user`",
-            "/ban `user_id`"
+            "/ban `mentioned_user` `reason`",
+            "/ban `user_id` `reason`"
         ],
         "desc": "Bans a member from the guild. REQUIRES ADMIN",
         "category": "Moderation"
