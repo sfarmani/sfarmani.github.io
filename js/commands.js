@@ -23,7 +23,7 @@ $(function () {
                 },
                 { data: "usages", title: "Usage", 
                     render: function(data){
-                        return `<font color="#e48282">${data.join("\n")}</font>`;
+                        return `<font color="#e48282">${data.join("<br>")}</font>`;
                     }
                 },
                 { data: "desc", title: "Description", 
