@@ -258,6 +258,7 @@ cd aura-bot
 unzip wc3.zip
 rm -rf wc3.zip
 ```
+
 > For compiling the bot. You can also read find these same commands in the [Tools and links](#tools-and-links) section.
 ```bash
 cd ~/aura-bot/StormLib/
