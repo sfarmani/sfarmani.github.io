@@ -262,18 +262,29 @@ rm -rf wc3.zip
 > For compiling the bot. You can also read find these same commands in the [Tools and links](#tools-and-links) section.
 ```bash
 cd ~/aura-bot/StormLib/
+
 mkdir build
+
 cd build
+
 cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_DYNAMIC_MODULE=1 ..
+
 make
+
 sudo make install
+
 
 cd ~/aura-bot/bncsutil/src/bncsutil/
+
 make
+
 sudo make install
 
+
 cd ~/aura-bot/
+
 make
+
 sudo make install
 ```
 
