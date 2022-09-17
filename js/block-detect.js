@@ -5,7 +5,7 @@ $(function () {
         $('body').addClass("modal-open");
     }
 
-    $('.close-button').on('click', function () {
+    $('.close-button, .ok-button').on('click', function () {
         $('div#yLBWgYVzweDb').removeClass("show-modal");
         $('body').removeClass("modal-open");
     });
