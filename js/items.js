@@ -368,7 +368,7 @@ $(function () {
         }, 'fast');
     });
 
-    jQuery('.load_message').toggle();
+    // jQuery('.load_message').toggle();
 
     var sidebar = $("#sidebar");
     var hamburger = $('#navTrigger');

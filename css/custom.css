@@ -21,59 +21,10 @@
     color: var(--donate-text-color) !important;
 }
 
-.modal {
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
-}
-
-.modal-content {
-  position: absolute;
-  top: 45%;
-  left: 20%;
-  width: auto;
-}
-
 code {
   background-color: #16181a;
   padding: 3px;
   border-radius: 5px;
-}
-
-.close-button {
-  float: right;
-  width: 1.5rem;
-  line-height: 1.5rem;
-  text-align: center;
-  cursor: pointer;
-  border-radius: 0.25rem;
-  background-color: lightgray;
-}
-
-.ok-button {
-  line-height: 1.5rem;
-  text-align: center;
-  cursor: pointer;
-  border-radius: 0.25rem;
-  background-color: lightblue;
-  display: inline-block;
-  padding: 10px;
-  margin: 10px;
-}
-
-.close-button:hover {
-  background-color: darkgray;
-}
-
-.ok-button:hover {
-  background-color: lightskyblue;
-}
-
-.show-modal {
-  opacity: 1;
-  visibility: visible;
-  display: block;
-  transform: scale(1.0);
-  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 
 .search_box{
@@ -226,4 +177,30 @@ body {
 
 .pt-2_2{
   padding-top: 2.2rem !important;
+}
+
+/* modal for item viewer */
+#item-viewer {
+  padding: 0 !important;
+}
+
+#item-viewer .modal-dialog.modal-xl {
+  width: 100%;
+  max-width: none;
+  height: 100vh;
+  margin: 0;
+}
+
+#item-viewer .modal-content {
+  height: 100%;
+  border: 0;
+  border-radius: 0;
+}
+
+#item-viewer .modal-body {
+  overflow-y: auto;
+}
+
+.close, .close:hover {
+  color: white;
 }
