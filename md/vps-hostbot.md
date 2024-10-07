@@ -31,7 +31,7 @@
 [↑ Back to table of contents ↑](#table-of-contents)
 
 # Choosing a VPS
-## If you are not interested in choosing your own Virtual Private Server (VPS) and want to go with [Digital Ocean](https://www.digitalocean.com), you can skip this section and jump to [VPS setup](#vps-setup).
+## If you are not interested in choosing your own Virtual Private Server (VPS) and want to go with [Linode](https://www.linode.com), you can skip this section and jump to [VPS setup](#vps-setup).
 
 <details>
     <summary data-open="Hide" data-close="View VPS selection"></summary>
@@ -39,7 +39,8 @@ Choosing a Virtual Private Server (VPS) is very important and it depends on a co
 
 I personally chose SkySilk as it worked for me, however it may not work for everyone as it has limited locations available.
 
-For the purposes of this tutorial, I will be using [Digital Ocean](https://www.digitalocean.com) as the recommended VPS to rent.
+For the purposes of this tutorial, I will be using [Linode](https://www.linode.com) as the recommended VPS to rent.
+    > EDIT: In the past I had recommended Digital Ocean, but that is no longer viable as they do not use Ubuntu version 18.04 LTS. Please use Linode.
 
 I will also provide some simple factors to choosing your own VPS, as well as talking about some [pros and cons of free trial VPS's](#aws-ec2-and-google-compute-engine).
 
@@ -54,17 +55,19 @@ Things to consider when choosing a VPS
 ## Locations available
 Before you choose any VPS, first make sure that the VPS has the locations you are looking for. To research, a simple google search is all that is required.
 
-Using Digital Ocean as an example, searching up "Digital Ocean data center locations" will bring you to this [page](https://docs.digitalocean.com/products/platform/availability-matrix/). You can then replace Digital Ocean with any other VPS you had in mind.
+Using Linode as an example, searching up "Linode data center locations". You can then replace Linode with any other VPS you had in mind.
 
-One of the reasons Digital Ocean is my recommended is because it has a diverse set of locations.
+One of the reasons Linode is my recommended is because it has a diverse set of locations.
 
 ## OS available
 Most VPS would have the Operating System we will use in this tutorial, but its not a bad thing to just make sure.
 
 The OS we will use in this tutorial is Ubuntu 18.04
 
+It is important that we use 18.04 Ubuntu as newer versions do not work.
+
 ## Pricing
-A Virtual Private Server is a server that has the bare minimum so it shouldn't cost a lot. Digital Ocean's lowest VPS costs only `5 USD per month`.
+A Virtual Private Server is a server that has the bare minimum so it shouldn't cost a lot. Linode's lowest VPS costs only `5 USD per month`.
 
 As a recommendation, you shouldn't be paying anything over `10 USD per month`. `5 USD` is also a good minimum because anything lower could lead to not enough resources for the hostbot to run.
 
@@ -97,41 +100,42 @@ Although that sounds great, I believe there are some downsides to using them.
 </details>
 
 # VPS Setup
-Once you've chosen your VPS, then we can begin setting it up. I will use Digital Ocean as examples.
+Once you've chosen your VPS, then we can begin setting it up. I will use Linode as examples.
 
-1. Navigate to your VPS's site (for [Digital Ocean](https://www.digitalocean.com)) and sign up with an account.
+1. Navigate to your VPS's site (for [Linode](https://www.Linode.com)) and sign up with an account.
     > It will immediately require you to enter a Credit Card/PayPal information.
     > 
     > It won't charge you until you make an instance of a server and use it for about a month.
     > This should be true for all other VPS's
-2. Once you are done setting up a credit card, it will probably ask you to jump in.
-    - We don't want to do that, so we will skip it by click on the link that says `Explore our control panel`.
 
-    <img src="img/skip-quickstart.png" alt="Skip to control panel" style="max-width: 50%">
+2. Click on <kbd>Create</kbd> and select `Linode`
 
-3. Click on <kbd>Create</kbd> and select `Droplets`
+    <img src="img/create-linode.png" alt="Create Linode" style="max-width: 50%">
 
-    <img src="img/create-droplets.png" alt="Create Droplets" style="max-width: 50%">
+3. Select a location. (I chose Newark - there's lots to choose from)
 
-4. Select `Ubuntu` and from the dropdown select `18.04 (LTS) x64`
-5. Select `Basic plan` under `Shared CPU`
-6. Make sure to tick `Regular Intel with SSD` for the CPU options
-7. Select the most left option that says `$5/month`
+    <img src="img/select-region.png" alt="Select Region" style="max-width: 50%">
+
+4. Select `Ubuntu` and from the dropdown select `18.04 (LTS)`
+5. Select `Shared CPU`
+6. Choose the first plan `Nanode 1 GB` for `$5/month`
 
     <img src="img/plan-options.png" alt="Plan Options" style="max-width: 50%">
 
-8. Select the location you want. The number doesn't matter.
-9. Select SSH keys. This is where we need to generate a private and public key with the `PuTTYgen` tool linked in the [Tools and links](#tools-and-links) section.
+7. Skip `Details` and `Security` section (you can choose to do a password, its just harder. As long as you don't share the private keys to anyone, you should be secure.)
+
+8. In `SSH Keys` section, this is where we need to generate a private and public key with the `PuTTYgen` tool linked in the [Tools and links](#tools-and-links) section.
     - Open `PuTTYgen.exe` and press <kbd>Generate</kbd>.
     - Randomly move your mouse to generate a key.
     - Press <kbd>Save private key</kbd> and name it anything. Save it in a location you will remember and not delete. You can add a password, but its not required.
     > If anyone ever asks for your private key, do not give it to them unless you trust the person.
     - Copy the generated text at the top.
-    - Go back to Digital Ocean site and press New SSH Key.
+    - Go back to Linode site and press New SSH Key.
     - Paste in the text you just copied and name it anything you want.
     - You can now close `PuTTYgen.exe`
 
-10. Once you have all that, you can press <kbd>Create Droplet</kbd>.
+9. `VPC`, `Firewall`, `VLAN`, `Add-ons` are all empty.
+10. Once you have all that, you can press <kbd>Create Linode</kbd>.
 11. Wait for your server to finish starting up and find its `IP address` and copy it.
 12. Open up `PuTTY.exe` to setup access to the server.
     - `Connection > SSH > Auth`
