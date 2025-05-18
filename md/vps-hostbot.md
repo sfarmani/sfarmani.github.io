@@ -196,22 +196,24 @@ For now we are done with `PuTTY`.
 2. Find the file named `.bashrc` and double click it. An editor should pop up and now you can edit files.
     > First time opening a file might prompt you to choose an editor. For easy access, you can just select internal editor.
 3. Scroll down to the area where it says `some more ls aliases` and paste in the following after it.
+
 ```bash
 alias startbot="cd /root/aura-bot/ ; nohup aura --exec \"load twrpg\" --exec-as \"ign@server.eurobattle.net\" > /root/aura-bot/logs/aura_out.log 2>&1 &"
 alias ea="vi ~/.bashrc"
 alias sa="source ~/.bashrc"
 alias fa="ps -ef | grep aura | grep -v grep"
 alias botlog="tail -f -n 100 /root/aura-bot/logs/aura_out.log"
-
 export AURA_HOME="/root/aura-bot/"
 export AURABUILD_CPR=0
 export AURABUILD_DPP=0
 ```
+
 > replace where it says ign with your in game name
 > Save the editor and close it (<kbd>CTRL</kbd> + <kbd>S</kbd>).
 
 4. Find the file named `restart_aura.sh` and double click it.
 5. Paste the following:
+
 ```bash
 #!/bin/bash
 if ! pgrep -x "aura" > /dev/null
@@ -220,6 +222,7 @@ then
      cd /root/aura-bot ; nohup aura --exec "load twrpg" --exec-as "ign@server.eurobattle.net" > /root/aura-bot/logs/aura_out.log 2>&1 &
 fi
 ```
+
 > replace where it says ign with your in game name
 > Save the editor and close it (<kbd>CTRL</kbd> + <kbd>S</kbd>).
 
