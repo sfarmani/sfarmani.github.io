@@ -3,11 +3,6 @@
 
 ## Please make sure to go through the guide thoroughly as it does include everything you may need.
 
-## This guide is a newer version of made with @IceSandSlash's version of aura-bot. It boasts better optimization and ping
-## It also uses Ubuntu 24.04. Since 18.04 is not being supported anymore, its nice to upgrade.
-
-### If you would like to still use the old version, please [go here](https://sfarmani.github.io/vps-hostbot-legacy.html)
-
 1. [Introduction](#introduction)
 2. [Tools and links](#tools-and-links)
 3. [Choosing a VPS](#choosing-a-vps)
@@ -30,7 +25,7 @@
 1. [PuTTY](https://the.earth.li/~sgtatham/putty/latest/w64/putty.exe) - To access your VPS terminal through SSH
 2. [PuTTYgen](https://the.earth.li/~sgtatham/putty/latest/w64/puttygen.exe) - To generate a private and public key
 3. [WinSCP](https://winscp.net/eng/download.php) - For transfering files easier (as well as editing files easier)
-4. [aura-bot files](https://gitlab.com/ivojulca/aura-bot)
+4. [aura-bot files - forked by me](https://github.com/sfarmani/aura-bot)
 5. [Warcraft III 1.28.5 files](https://drive.google.com/file/d/1M9_IOUpMwFdQl9eeQwsvdvVqp8uxgU-I/view?usp=sharing) - Put together with only the essential files
 
 [↑ Back to table of contents ↑](#table-of-contents)
@@ -42,9 +37,10 @@
     <summary data-open="Hide" data-close="View VPS selection"></summary>
 Choosing a Virtual Private Server (VPS) is very important and it depends on a couple of factors.
 
-I personally chose Linode as it worked for me, however it may not work for everyone as it has limited locations available.
+I personally chose SkySilk as it worked for me, however it may not work for everyone as it has limited locations available.
 
 For the purposes of this tutorial, I will be using [Linode](https://www.linode.com) as the recommended VPS to rent.
+    > EDIT: In the past I had recommended Digital Ocean, but that is no longer viable as they do not use Ubuntu version 18.04 LTS. Please use Linode.
 
 I will also provide some simple factors to choosing your own VPS, as well as talking about some [pros and cons of free trial VPS's](#aws-ec2-and-google-compute-engine).
 
@@ -66,7 +62,9 @@ One of the reasons Linode is my recommended is because it has a diverse set of l
 ## OS available
 Most VPS would have the Operating System we will use in this tutorial, but its not a bad thing to just make sure.
 
-The OS we will use in this tutorial is Ubuntu 24.04
+The OS we will use in this tutorial is Ubuntu 18.04
+
+It is important that we use 18.04 Ubuntu as newer versions do not work.
 
 ## Pricing
 A Virtual Private Server is a server that has the bare minimum so it shouldn't cost a lot. Linode's lowest VPS costs only `5 USD per month`.
@@ -118,7 +116,7 @@ Once you've chosen your VPS, then we can begin setting it up. I will use Linode 
 
     <img src="img/select-region.png" alt="Select Region" style="max-width: 50%">
 
-4. Select `Ubuntu` and from the dropdown select `24.04 (LTS)`
+4. Select `Ubuntu` and from the dropdown select `18.04 (LTS)`
 5. Select `Shared CPU`
 6. Choose the first plan `Nanode 1 GB` for `$5/month`
 
@@ -174,7 +172,10 @@ In your `PuTTY` session, paste in the following command, one line at a time.
 - On `PuTTY`, you have to right click to paste.
 
 ```bash
-sudo apt-get update && apt-get install -y build-essential git libssl-dev libgmp3-dev libbz2-dev zlib1g-dev libcurl4-openssl-dev curl cmake
+sudo apt-get update -y
+sudo apt-get upgrade -y
+sudo apt-get dist-upgrade -y
+sudo apt-get install unzip git build-essential m4 libgmp3-dev cmake libbz2-dev zlib1g-dev -y
 ```
 
 > If at any point it takes you to a pink screen, just press enter and it will pick the default.
@@ -182,7 +183,7 @@ sudo apt-get update && apt-get install -y build-essential git libssl-dev libgmp3
 ## Start set-up
 
 ### Set-up `PuTTY` files
-1. In `PuTTY` paste in this line: `git clone https://gitlab.com/ivojulca/aura-bot.git`
+1. In `PuTTY` paste in this line: `git clone https://github.com/sfarmani/aura-bot.git`
 2. Paste these: 
 ```bash
 touch restart_aura.sh
@@ -197,94 +198,55 @@ For now we are done with `PuTTY`.
     > First time opening a file might prompt you to choose an editor. For easy access, you can just select internal editor.
 3. Scroll down to the area where it says `some more ls aliases` and paste in the following after it.
 ```bash
-alias startbot="cd /root/aura-bot/ ; nohup aura --exec \"load twrpg\" --exec-as \"ign@server.eurobattle.net\" > /root/aura-bot/logs/aura_out.log 2>&1 &"
+alias startbot="cd ~/aura-bot/ ; nohup aura++ > aura.log 2>&1 &"
 alias ea="vi ~/.bashrc"
 alias sa="source ~/.bashrc"
-alias fa="ps -ef | grep aura | grep -v grep"
-alias botlog="tail -f -n 100 /root/aura-bot/logs/aura_out.log"
-
-export AURA_HOME="/root/aura-bot/"
-export AURABUILD_CPR=0
-export AURABUILD_DPP=0
+alias fa="ps -ef | grep aura++ | grep -v grep"
+alias botlog="tail -f -n 100 ~/aura-bot/aura.log"
 ```
-> replace where it says ign with your in game name
 > Save the editor and close it (<kbd>CTRL</kbd> + <kbd>S</kbd>).
 
 4. Find the file named `restart_aura.sh` and double click it.
 5. Paste the following:
 ```bash
 #!/bin/bash
-if ! pgrep -x "aura" > /dev/null
+ps -ef | grep aura++ | grep -v grep
+if [ $? != 0 ]
 then
-     cp /root/aura-bot/logs/aura_out.log /root/aura-bot/logs/OLDaura_out.log
-     cd /root/aura-bot ; nohup aura --exec "load twrpg" --exec-as "ign@server.eurobattle.net" > /root/aura-bot/logs/aura_out.log 2>&1 &
+        cp ~/aura-bot/aura.log ~/aura-bot/OLDaura.log
+        cd ~/aura-bot/ && nohup aura++ > aura.log 2>&1 &
 fi
 ```
-> replace where it says ign with your in game name
 > Save the editor and close it (<kbd>CTRL</kbd> + <kbd>S</kbd>).
 
-6. Navigate to `aura-bot/` and create new folders:
-    - `maps` -> will store maps
-    - `logs` -> log files will go there
+6. Navigate to `aura-bot/` and create a new `folder`. Name it `maps`. This is the folder you will upload your maps into.
 
 7. Download the zip file for Warcraft III files to your desktop from the [Tools and links](#tools-and-links) section.
     - Transfer the zip file to your server by dragging the file to the right hand side of the `WinSCP` window.
     > We will unzip it later.
 
-8. Double click `config.ini` to edit.
+8. Double click `aura.cfg` to edit.
 
 9. Most parts are already edited and should stay the same. The only parts you should be editing are:
-> if you don't see something from below in your config.ini, add it in.
 ```
-### disable *rmk* and *end* commands
-hosting.early_end.enabled = no
-hosting.game_ready.mode = explicit
-bot.maps_path = maps
-bot.log_path = logs/aura.log
-net.host_port.only = 6115
-hosting.map_downloads.enabled = no
-net.has_buffer_bloat = no
-hosting.high_ping.warn_ms = 130
-hosting.high_ping.safe_ms = 90
-global_realm.locale_short = enUS
-bot.load_maps.cache.enabled = yes
-replace net.tcp_extensions.gproxy.reconnect_wait = 10 with net.tcp_extensions.gproxy_legacy.reconnect_wait = 10
+bot_virtualhostname
+bot_maxdownloadspeed
+bnet_username
+bnet_password
+bnet_firstchannel
+bnet_rootadmins
 ```
-> If you have not already done so, create an account on Eurobattle.net for your bot. If you have any capital letters in your password, make them all lower-case when entering it in the `config.ini` file.
+> If you have not already done so, create an account on Eurobattle.net for your bot. If you have any capital letters in your password, make them all lower-case when entering it in the `aura.cfg` file.
 > 
-> Everything else should be self-explanatory. If it is not, please refer to the comments on the `.ini` file.
+> Everything else should be self-explanatory. If it is not, please refer to the comments on the `.cfg` file.
 > 
 > Save the editor and close it (<kbd>CTRL</kbd> + <kbd>S</kbd>).
 
 
 10. Navigate to `mapcfgs/`
-    > you can create a new file called twre.ini and paste in this:
-```ini
-map.local_path = twrpgv0.70d_eng.w3x
-map.path = Maps\Download\twrpgv0.70d_eng.w3x
-map.title = The World RPG v0.70d
-map.cfg.schema_number = 4
-map.num_players = 12
-map.num_teams = 2
-map.slot_1 = 0 255 0 0 0 0 1 1 100 1
-map.slot_10 = 0 255 0 0 0 9 1 1 100 1
-map.slot_11 = 0 255 2 1 0 10 1 1 100 2
-map.slot_12 = 0 255 2 1 1 11 1 1 100 2
-map.slot_2 = 0 255 0 0 0 1 1 1 100 1
-map.slot_3 = 0 255 0 0 0 2 1 1 100 1
-map.slot_4 = 0 255 0 0 0 3 1 1 100 1
-map.slot_5 = 0 255 0 0 0 4 1 1 100 1
-map.slot_6 = 0 255 0 0 0 5 1 1 100 1
-map.slot_7 = 0 255 0 0 0 6 1 1 100 1
-map.slot_8 = 0 255 0 0 0 7 1 1 100 1
-map.slot_9 = 0 255 0 0 0 8 1 1 100 1
-map.options = 96
-map.num_disabled = 0
-```
-
-11. In `WinSCP`, go back to `aura-bot` base directory and find `aliases.ini`
-    - remove everything and replace it with `twrpg = twre.ini`
-
+11. Find the 2 `.cfg` files. They are config files for loading maps.
+    > They are not required but recommended to use if you have a player-base using your bot and want them to always play the latest version only.
+12. Edit the files respectively; one is for the korean map, the other is for the english map. (TWRPG specific)
 > Each time you upload a new version of the map, you need to edit these files to update the version number.
 > 
 > Then in game whisper the bot the !load command to reload the config file. This will be explained again later in the [Maintenance](#maintenance) section
@@ -301,8 +263,34 @@ unzip wc3.zip
 rm -rf wc3.zip
 ```
 
-> Compile the bot using the Linux instructions [here](https://gitlab.com/ivojulca/aura-bot/-/blob/master/BUILDING.md?ref_type=heads)
-> NOTE: Skip the `C++ Requests` and `D++ for Discord integration` sections
+> For compiling the bot. You can also read find these same commands in the [Tools and links](#tools-and-links) section.
+```bash
+cd ~/aura-bot/StormLib/
+
+mkdir build
+
+cd build
+
+cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_DYNAMIC_MODULE=1 ..
+
+make
+
+sudo make install
+
+
+cd ~/aura-bot/bncsutil/src/bncsutil/
+
+make
+
+sudo make install
+
+
+cd ~/aura-bot/
+
+make
+
+sudo make install
+```
 
 ### Set-up `crontab`
 1. In `PuTTY` type `crontab -e`
@@ -320,17 +308,16 @@ rm -rf wc3.zip
 # Maintenance
 Here are some tips to maintaining your hostbot
 
-[List of Bot Commands](https://gitlab.com/ivojulca/aura-bot/-/blob/master/COMMANDS.md?ref_type=heads)
+[List of Bot Commands](https://github.com/sfarmani/sfarmani.github.io/blob/master/bot%20commands.txt)
 
 ## Map uploading
 1. Open `WinSCP` and navigate to `aura-bot/maps/`
 2. From the left hand side of the window, find the map you want to upload and drag it over to the right hand side.
 3. Nagivate to `aura-bot/mapcfgs/` and edit the respective config file to update the version number.
-4. Log into Warcraft III and reload the map config file by typing: `/w botname !load twrpg`
+4. Log into Warcraft III and reload the map config file by typing: `/w botname !load twre`
 
 ## Host-bot restarting
-In order to restart the bot, it is recommended to login into Warcraft III and whisper the command: `/w botname !su exit`
-    - then in `PuTTy` type `botlog` to view the logs and find the command it tells you with !sudo
+In order to restart the bot, it is recommended to login into Warcraft III and whisper the command: `/w botname !exit`
 
 If your bot happends to be stuck/not responding, you can restart your bot through the server.
 1. Open `PuTTY`, type in `fa` - its an alias for finding the aura-bot's process ID. ([alias commands](#alias-commands))
@@ -341,17 +328,17 @@ Within the next minute, it will start the bot again automatically.
 
 ## Editing Config files
 
-### config.ini
-The comments in your config.ini file should help clarify what you need to do for a certain field.
+### aura.cfg
+The comments in your aura.cfg file should help clarify what you need to do for a certain field.
 
 After you edit the file, make sure to restart your bot. (see [here](#host-bot-restarting)) 
 
 ### mapcfgs
-You should only be editing files in this folder once you upload a new map. Then you would go into their respective `.ini` file and update the version number.
+You should only be editing files in this folder once you upload a new map. Then you would go into their respective `.cfg` file and update the version number.
 
 After that, make sure you load the map config again by:
 1. logging into Warcraft III
-2. Whispering your bot: `/w botname !load twrpg` (replace `twrpg` for whatever your config file is named)
+2. Whispering your bot: `/w botname !load twre` (replace `twre` for whatever your config file is named)
 
 ## Alias commands
 Here is an explanation of the alias commands
