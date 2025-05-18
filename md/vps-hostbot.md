@@ -197,7 +197,7 @@ For now we are done with `PuTTY`.
     > First time opening a file might prompt you to choose an editor. For easy access, you can just select internal editor.
 3. Scroll down to the area where it says `some more ls aliases` and paste in the following after it.
 
-```bash
+```
 alias startbot="cd /root/aura-bot/ ; nohup aura --exec \"load twrpg\" --exec-as \"ign@server.eurobattle.net\" > /root/aura-bot/logs/aura_out.log 2>&1 &"
 alias ea="vi ~/.bashrc"
 alias sa="source ~/.bashrc"
@@ -214,7 +214,7 @@ export AURABUILD_DPP=0
 4. Find the file named `restart_aura.sh` and double click it.
 5. Paste the following:
 
-```bash
+```
 #!/bin/bash
 if ! pgrep -x "aura" > /dev/null
 then
