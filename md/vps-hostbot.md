@@ -198,7 +198,7 @@ For now we are done with `PuTTY`.
 3. Scroll down to the area where it says `some more ls aliases` and paste in the following after it.
 
 ```bash
-alias startbot="cd /root/aura-bot/ ; nohup aura --exec \"load twrpg\" --exec-as \"ign@server.eurobattle.net\" > /root/aura-bot/logs/aura_out.log 2>&1 &"
+alias startbot="cd /root/aura-bot/ ; nohup aura --homedir \"/root/aura-bot\" --exec \"load twrpg\" --exec-as \"ign@server.eurobattle.net\" > /root/aura-bot/logs/aura_out.log 2>&1 &"
 alias ea="vi ~/.bashrc"
 alias sa="source ~/.bashrc"
 alias fa="ps -ef | grep aura | grep -v grep"
@@ -219,7 +219,7 @@ export AURABUILD_DPP=0
 if ! pgrep -x "aura" > /dev/null
 then
      cp /root/aura-bot/logs/aura_out.log /root/aura-bot/logs/OLDaura_out.log
-     cd /root/aura-bot ; nohup aura --exec "load twrpg" --exec-as "ign@server.eurobattle.net" > /root/aura-bot/logs/aura_out.log 2>&1 &
+     cd /root/aura-bot ; nohup aura --homedir "/root/aura-bot" --exec "load twrpg" --exec-as "ign@server.eurobattle.net" > /root/aura-bot/logs/aura_out.log 2>&1 &
 fi
 ```
 
@@ -312,6 +312,7 @@ hosting.commands.broadcast.trigger = !
 ```ini
 bot.load_maps.cache.enabled = yes
 hosting.early_end.enabled = no
+realm_13.commands.custom_listgames.permissions = verified
 ```
 
 10. Find the key `net.tcp_extensions.gproxy.reconnect_wait` and replace it with `net.tcp_extensions.gproxy_legacy.reconnect_wait` (change value from 5 to 10)
