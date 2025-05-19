@@ -384,7 +384,10 @@ rm -rf wc3.zip
 ```
 
 > Compile the bot
+
 > You can use the offical instructions from [here](https://gitlab.com/ivojulca/aura-bot/-/blob/master/BUILDING.md?ref_type=heads) as well
+
+> For our purposes, we are skipping `C++ Requests` and `D++ for Discord integration`, so please use the commands below instead
 
 ```bash
 cd /root/aura-bot/deps/StormLib
