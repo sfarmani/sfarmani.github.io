@@ -3,10 +3,10 @@
 
 ## Please make sure to read the guide thoroughly as it does include everything you may need.
 
-## This guide is a newer version for @IceSandSlash's re-write of aura-bot.
+## This guide is a newer version for @IceSandslash's re-write of aura-bot.
 ### It boasts better optimization and ping, along with other [features](https://gitlab.com/ivojulca/aura-bot/-/blob/master/FEATURES.md?ref_type=heads)
 ### It also uses Ubuntu 24.04. Since 18.04 is not being supported anymore, its nice to upgrade.
-### Huge shout out to @IceSandSlash, they've done an amazing job with the bot!
+### Huge shout out to @IceSandslash, they've done an amazing job with the bot!
 ### Please checkout their repo for more info on their bot: https://gitlab.com/ivojulca/aura-bot
 
 #### If you would like to still use the old version, please [go here](https://sfarmani.github.io/vps-hostbot-legacy.html)
@@ -437,7 +437,7 @@ If a command needs sudo access, it will tell you when you try to use it =]
 > note: all these commands assume you are whispering the bot: /w botname !su etc...
 
 ## Bot updating
-Every now and then a new update may come out from the developer (@IceSandSlash)
+Every now and then a new update may come out from the developer (@IceSandslash)
 If you would like to update your bot to the latest version follow these steps:
 1. open `PuTTY`
 2. type the following:
