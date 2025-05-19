@@ -297,6 +297,16 @@ hosting.log_chat = always
 hosting.log_remote.mode = none
 ```
 
+> Change your bot's trigger by searching everywhere that says "trigger". By default, the trigger is .
+
+```ini
+global_realm.commands.trigger = !
+global_realm.commands.broadcast.trigger = !
+
+hosting.commands.trigger = !
+hosting.commands.broadcast.trigger = !
+```
+
 > These are configs that aren't in the config-example.ini file already. Add them to the bottom of the config.ini file:
 
 ```ini
@@ -399,12 +409,27 @@ sudo make install
 8. Within the next minute, your hostbot will start
 > You can close `PuTTY` and `WinSCP` at this point and log into your Warcraft III (your own account) and test your bot
 
+9. After the first time the bot starts, log into wc3 and type `/w botname !su import aliases`
+10. Go back to `PuTTY` and type in `botlog`, which will open the logs and show you a command to paste
+> It'll look like `!sudo <NUMBERS> import aliases`. Copy that
+11. Back in wc3, type in `/w botname <paste>`.
+12. Restart bot using restart instructions in [Maintenance](#maintenance)
+
 [↑ Back to table of contents ↑](#table-of-contents)
 
 # Maintenance
 Here are some tips to maintaining your hostbot
 
 [List of Bot Commands](https://gitlab.com/ivojulca/aura-bot/-/blob/master/COMMANDS.md?ref_type=heads)
+
+## Sudo usage
+A new feature was introduced in this version of aura-bot, which is called sudo. It is a feature that prevents others from 
+using bot owner exclusive commands. When you want to use a command that require sudo, type in `!su commandname value`
+where `commandname` is the name of the command you want to execute, and `value` is the parameter you want to enter.
+For example if you want to import aliases: `!su import aliases`
+Afterwards, the bot will tell you to check your bot's logs in the console.
+The console will tell you a command to copy and paste. It will look like this: `!sudo <NUMBERS> import aliases`
+> note: all these commands assume you are whispering the bot: /w botname !su etc...
 
 ## Map uploading
 1. Open `WinSCP` and navigate to `aura-bot/maps/`
