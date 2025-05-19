@@ -238,6 +238,7 @@ fi
 
 9. Go through the config file, search for each key below and edit the value to be the same as below.
 > read the comments to ensure you understand the setting and select the correct choices for your own needs.
+
 ```ini
 game.install_path = wc3
 game.install_version = 1.28
@@ -279,6 +280,7 @@ net.game_discovery.udp.broadcast.enabled = no
 ```
 
 > these settings should be uncommented so they work:
+
 ```ini
 realm_13.exe_auth.version_details = 0 5 28 1
 realm_13.exe_auth.version_hash = 201 63 116 96
@@ -286,6 +288,7 @@ realm_13.exe_auth.info = war3.exe 08/12/16 18:47:21 471040
 ```
 
 > edit these as you wish - just know it needs to be filled out:
+
 ```ini
 hosting.self.virtual_player.name = botname         -> you can use color codes (|cFF008000Lee), but that takes up character spaces
 hosting.game_start.count_down_interval = 0
@@ -295,6 +298,7 @@ hosting.log_remote.mode = none
 ```
 
 > These are configs that aren't in the config-example.ini file already. Add them to the bottom of the config.ini file:
+
 ```ini
 bot.load_maps.cache.enabled = yes
 hosting.early_end.enabled = no
@@ -310,7 +314,8 @@ hosting.early_end.enabled = no
 
 
 11. Navigate to `mapcfgs/`
-    > Create a new file called twre.ini and paste in this:
+> Create a new file called twre.ini and paste in this:
+
 ```ini
 map.local_path = twrpgv0.70d_eng.w3x
 map.path = Maps\Download\twrpgv0.70d_eng.w3x
