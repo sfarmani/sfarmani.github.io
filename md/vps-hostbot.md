@@ -1,12 +1,15 @@
 # Table of Contents
 ### Before we start, I kindly ask to disable adblockers. I promise that the ads are non-invasive
 
-## Please make sure to go through the guide thoroughly as it does include everything you may need.
+## Please make sure to read the guide thoroughly as it does include everything you may need.
 
-## This guide is a newer version of made with @IceSandSlash's version of aura-bot. It boasts better optimization and ping
-## It also uses Ubuntu 24.04. Since 18.04 is not being supported anymore, its nice to upgrade.
+## This guide is a newer version for @IceSandSlash's re-write of aura-bot.
+### It boasts better optimization and ping, along with other [features](https://gitlab.com/ivojulca/aura-bot/-/blob/master/FEATURES.md?ref_type=heads)
+### It also uses Ubuntu 24.04. Since 18.04 is not being supported anymore, its nice to upgrade.
+### Huge shout out to @IceSandSlash, they've done an amazing job with the bot!
+### Please checkout their repo for more info on their bot: https://gitlab.com/ivojulca/aura-bot
 
-### If you would like to still use the old version, please [go here](https://sfarmani.github.io/vps-hostbot-legacy.html)
+#### If you would like to still use the old version, please [go here](https://sfarmani.github.io/vps-hostbot-legacy.html)
 
 1. [Introduction](#introduction)
 2. [Tools and links](#tools-and-links)
