@@ -206,7 +206,17 @@ alias ea="vi ~/.bashrc"
 alias sa="source ~/.bashrc"
 alias fa="ps -ef | grep aura | grep -v grep"
 alias botlog="tail -f -n 100 /root/aura-bot/logs/aura_out.log"
-alias stopbot="kill \`pgrep aura\` ; echo 'aura-bot process stopped'"
+
+function stopbot() {
+        PID=`ps -eaf | grep aura | grep -v grep | awk '{print $2}'`
+        if [[ "" !=  "$PID" ]]; then
+                echo "killing $PID"
+                kill $PID
+        else
+                echo "No aura-bot process running at the moment"
+        fi
+}
+
 export AURA_HOME="/root/aura-bot/"
 export AURABUILD_CPR=0
 export AURABUILD_DPP=0
@@ -460,11 +470,9 @@ Then restart the bot after its done re-compiling.
 
 ## Host-bot restarting
 If your bot happens to be stuck/not responding, you can restart your bot through the server.
-1. Open `PuTTY`, type in `fa` - its an alias for finding the aura-bot's process ID. ([alias commands](#alias-commands))
-2. The very first number from the left is the process ID.
-3. Type `Kill processID`
+- Open `PuTTY`, type in `stopbot` ([alias commands](#alias-commands))
 
-Within the next minute, it will start the bot again automatically.
+Within the next minute, it will start the bot again automatically (if you have crontab setup correctly).
 
 ## Editing Config files
 
