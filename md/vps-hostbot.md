@@ -430,7 +430,23 @@ where `commandname` is the name of the command you want to execute, and `value` 
 For example if you want to import aliases: `!su import aliases`
 Afterwards, the bot will tell you to check your bot's logs in the console.
 The console will tell you a command to copy and paste. It will look like this: `!sudo <NUMBERS> import aliases`
+If a command needs sudo access, it will tell you when you try to use it =]
 > note: all these commands assume you are whispering the bot: /w botname !su etc...
+
+## Bot updating
+Every now and then a new update may come out from the developer (@IceSandSlash)
+If you would like to update your bot to the latest version follow these steps:
+1. open `PuTTY`
+2. type the following:
+
+```bash
+cd /root/aura-bot
+git pull
+make clean && make
+sudo make install
+```
+
+Then restart the bot after its done re-compiling.
 
 ## Map uploading
 1. Open `WinSCP` and navigate to `aura-bot/maps/`
@@ -439,10 +455,7 @@ The console will tell you a command to copy and paste. It will look like this: `
 4. Log into Warcraft III and reload the map config file by typing: `/w botname !load twrpg`
 
 ## Host-bot restarting
-In order to restart the bot, it is recommended to login into Warcraft III and whisper the command: `/w botname !su exit`
-    - then in `PuTTy` type `botlog` to view the logs and find the command it tells you with !sudo
-
-If your bot happends to be stuck/not responding, you can restart your bot through the server.
+If your bot happens to be stuck/not responding, you can restart your bot through the server.
 1. Open `PuTTY`, type in `fa` - its an alias for finding the aura-bot's process ID. ([alias commands](#alias-commands))
 2. The very first number from the left is the process ID.
 3. Type `Kill processID`
