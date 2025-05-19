@@ -206,6 +206,7 @@ alias ea="vi ~/.bashrc"
 alias sa="source ~/.bashrc"
 alias fa="ps -ef | grep aura | grep -v grep"
 alias botlog="tail -f -n 100 /root/aura-bot/logs/aura_out.log"
+alias stopbot="kill \`pgrep aura\` ; echo 'aura-bot process stopped'"
 export AURA_HOME="/root/aura-bot/"
 export AURABUILD_CPR=0
 export AURABUILD_DPP=0
