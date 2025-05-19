@@ -208,7 +208,7 @@ export AURABUILD_CPR=0
 export AURABUILD_DPP=0
 ```
 
-> replace where it says ign with your in game name
+> replace where it says ign with your in game name (not the bot's name, the bot OWNER name)
 > Save the editor and close it (<kbd>CTRL</kbd> + <kbd>S</kbd>).
 
 4. Find the file named `restart_aura.sh` and double click it.
@@ -234,25 +234,74 @@ fi
     - Transfer the zip file to your server by dragging the file to the right hand side of the `WinSCP` window.
     > We will unzip it later.
 
-8. Double click `config.ini` to edit.
+8. Find `config-example.ini` file and copy and paste it. Rename the copied to `config.ini`. Double click `config.ini` to edit.
 
-9. Most parts are already edited and should stay the same. The only parts you should be editing are:
-> if you don't see something from below in your config.ini, add it in.
-```
-### disable *rmk* and *end* commands
-hosting.early_end.enabled = no
+9. Go through the config file, search for each key below and edit the value to be the same as below.
+> read the comments to ensure you understand the setting and select the correct choices for your own needs.
+```ini
+game.install_path = wc3
+game.install_version = 1.28
+hosting.game_versions.main = 1.28
 hosting.game_ready.mode = explicit
+hosting.latency.default = 10
 bot.maps_path = maps
 bot.log_path = logs/aura.log
 net.host_port.only = 6115
+net.lag_screen.enabled = no
+net.stop_lag.sync_limit.default = 10
 hosting.map_downloads.enabled = no
 net.has_buffer_bloat = no
 hosting.high_ping.warn_ms = 130
 hosting.high_ping.safe_ms = 90
+hosting.ip_filter.flood_handler = none
+hosting.name_filter.unsafe_handler = none
+hosting.expiry.lobby.timeout = 300
+hosting.expiry.owner.timeout = 200
+ui.notify_joins.enabled = no
+hosting.game_over.player_count = 0
+global_realm.game_version = 1.28
+global_realm.flood.wrap = 255
+global_realm.flood.max_size = 255
 global_realm.locale_short = enUS
-bot.load_maps.cache.enabled = yes
-replace net.tcp_extensions.gproxy.reconnect_wait = 10 with net.tcp_extensions.gproxy_legacy.reconnect_wait = 10
+
+realm_1.enabled = no
+realm_5.enabled = no
+realm_9.enabled = no
+realm_10.enabled = no
+realm_14.enabled = no
+realm_17.enabled = no
+realm_21.enabled = no
+
+realm_13.username = botnamehere
+realm_13.password = botpasswordhere
+
+net.game_discovery.udp.broadcast.enabled = no
 ```
+
+> these settings should be uncommented so they work:
+```ini
+realm_13.exe_auth.version_details = 0 5 28 1
+realm_13.exe_auth.version_hash = 201 63 116 96
+realm_13.exe_auth.info = war3.exe 08/12/16 18:47:21 471040
+```
+
+> edit these as you wish - just know it needs to be filled out:
+```ini
+hosting.self.virtual_player.name = botname         -> you can use color codes (|cFF008000Lee), but that takes up character spaces
+hosting.game_start.count_down_interval = 0
+hosting.game_start.count_down_ticks = 0
+hosting.log_chat = always
+hosting.log_remote.mode = none
+```
+
+> These are configs that aren't in the config-example.ini file already. Add them to the bottom of the config.ini file:
+```ini
+bot.load_maps.cache.enabled = yes
+hosting.early_end.enabled = no
+```
+
+10. Find the key `net.tcp_extensions.gproxy.reconnect_wait` and replace it with `net.tcp_extensions.gproxy_legacy.reconnect_wait` (change value from 5 to 10)
+
 > If you have not already done so, create an account on Eurobattle.net for your bot. If you have any capital letters in your password, make them all lower-case when entering it in the `config.ini` file.
 > 
 > Everything else should be self-explanatory. If it is not, please refer to the comments on the `.ini` file.
@@ -260,8 +309,8 @@ replace net.tcp_extensions.gproxy.reconnect_wait = 10 with net.tcp_extensions.gp
 > Save the editor and close it (<kbd>CTRL</kbd> + <kbd>S</kbd>).
 
 
-10. Navigate to `mapcfgs/`
-    > you can create a new file called twre.ini and paste in this:
+11. Navigate to `mapcfgs/`
+    > Create a new file called twre.ini and paste in this:
 ```ini
 map.local_path = twrpgv0.70d_eng.w3x
 map.path = Maps\Download\twrpgv0.70d_eng.w3x
@@ -285,12 +334,12 @@ map.options = 96
 map.num_disabled = 0
 ```
 
-11. In `WinSCP`, go back to `aura-bot` base directory and find `aliases.ini`
+12. In `WinSCP`, go back to `aura-bot` base directory and find `aliases.ini`
     - remove everything and replace it with `twrpg = twre.ini`
 
 > Each time you upload a new version of the map, you need to edit these files to update the version number.
 > 
-> Then in game whisper the bot the !load command to reload the config file. This will be explained again later in the [Maintenance](#maintenance) section
+> Then in game whisper the bot the !load command to load the config file. This will be explained again later in the [Maintenance](#maintenance) section
 
 ### Compile the host-bot
 We are done with `WinSCP` and can go back to `PuTTY`
@@ -304,8 +353,35 @@ unzip wc3.zip
 rm -rf wc3.zip
 ```
 
-> Compile the bot using the Linux instructions [here](https://gitlab.com/ivojulca/aura-bot/-/blob/master/BUILDING.md?ref_type=heads)
-> NOTE: Skip the `C++ Requests` and `D++ for Discord integration` sections
+> Compile the bot
+> You can use the offical instructions from [here](https://gitlab.com/ivojulca/aura-bot/-/blob/master/BUILDING.md?ref_type=heads) as well
+
+```bash
+cd /root/aura-bot/deps/StormLib
+mkdir build
+cd build
+cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=1 ..
+make
+sudo make install
+```
+
+```bash
+cd /root/aura-bot/deps/bncsutil/src/bncsutil
+make
+sudo make install
+```
+
+```bash
+cd /root/aura-bot/deps/miniupnpc
+make
+sudo make install
+```
+
+```bash
+cd /root/aura-bot
+make
+sudo make install
+```
 
 ### Set-up `crontab`
 1. In `PuTTY` type `crontab -e`
