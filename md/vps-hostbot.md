@@ -452,6 +452,18 @@ If a command needs sudo access, it will tell you when you try to use it =]
 
 ## Bot updating
 Every now and then a new update may come out from the developer (@IceSandslash)
+
+### !! IMPORTANT !! BEFORE UPDATING !!
+
+always check to see if the build is passing or failing.
+
+If it is failing, **DO NOT** do the steps below, wait for it to pass, then update.
+
+You can check just by going to https://gitlab.com/ivojulca/aura-bot and checking if there is a green check mark or red x:
+<img src="img/greencheck.png" alt="Green Check Mark" style="max-width: 50%">
+
+<img src="img/redx.png" alt="Red X" style="max-width: 50%">
+
 If you would like to update your bot to the latest version follow these steps:
 1. open `PuTTY`
 2. type the following:
