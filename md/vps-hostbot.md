@@ -177,7 +177,7 @@ In your `PuTTY` session, paste in the following command, one line at a time.
 - On `PuTTY`, you have to right click to paste.
 
 ```bash
-sudo apt-get update && apt-get install -y build-essential git libssl-dev libgmp3-dev libbz2-dev zlib1g-dev libcurl4-openssl-dev curl cmake
+sudo apt-get update && apt-get install -y unzip build-essential git libssl-dev libgmp3-dev libbz2-dev zlib1g-dev libcurl4-openssl-dev curl cmake
 ```
 
 > If at any point it takes you to a pink screen, just press enter and it will pick the default.
@@ -413,6 +413,11 @@ sudo make install
 ```bash
 cd /root/aura-bot
 make
+```
+
+after above `make` is done, do the following
+
+```bash
 sudo make install
 ```
 
