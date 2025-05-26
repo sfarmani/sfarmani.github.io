@@ -170,6 +170,12 @@ Now that you have access to your server, we can begin setting up your hostbot
 [↑ Back to table of contents ↑](#table-of-contents)
 
 # Host-bot Setup
+
+1. [Set-up `PuTTY` files](#set-up-putty-files)
+2. [Edit files with `WinSCP`](#edit-files-with-winscp)
+3. [Compile the host-bot](#compile-the-host-bot)
+4. [Set-up `crontab`](#set-up-crontab)
+
 Before we actually start, we need to do a little bit of server updating
 
 In your `PuTTY` session, paste in the following command, one line at a time.
@@ -454,7 +460,14 @@ Here are some tips to maintaining your hostbot
 
 [List of Bot Commands](https://gitlab.com/ivojulca/aura-bot/-/blob/master/COMMANDS.md?ref_type=heads)
 
-## Sudo usage
+1. [Sudo Usage](#sudo-usage)
+2. [Bot Updating](#bot-updating)
+3. [Map Uploading](#map-uploading)
+4. [Host-bot Restarting](#host-bot-restarting)
+5. [Editing Config files](#editing-config-files)
+6. [Alias commands](#alias-commands)
+
+## Sudo Usage
 A new feature was introduced in this version of aura-bot, which is called sudo. It is a feature that prevents others from 
 using bot owner exclusive commands. When you want to use a command that require sudo, type in `!su commandname value`
 where `commandname` is the name of the command you want to execute, and `value` is the parameter you want to enter.
@@ -464,7 +477,7 @@ The console will tell you a command to copy and paste. It will look like this: `
 If a command needs sudo access, it will tell you when you try to use it =]
 > note: all these commands assume you are whispering the bot: /w botname !su etc...
 
-## Bot updating
+## Bot Updating
 Every now and then a new update may come out from the developer (@IceSandslash)
 
 ### !! IMPORTANT !! BEFORE UPDATING !!
@@ -491,13 +504,13 @@ sudo make install
 
 Then restart the bot after its done re-compiling.
 
-## Map uploading
+## Map Uploading
 1. Open `WinSCP` and navigate to `aura-bot/maps/`
 2. From the left hand side of the window, find the map you want to upload and drag it over to the right hand side.
 3. Nagivate to `aura-bot/mapcfgs/` and edit the respective config file to update the version number.
 4. Log into Warcraft III and reload the map config file by typing: `/w botname !load twrpg`
 
-## Host-bot restarting
+## Host-bot Restarting
 If your bot happens to be stuck/not responding, you can restart your bot through the server.
 - Open `PuTTY`, type in `stopbot` ([alias commands](#alias-commands))
 
