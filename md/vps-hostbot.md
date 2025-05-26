@@ -287,13 +287,22 @@ realm_14.enabled = no
 realm_17.enabled = no
 realm_21.enabled = no
 
-realm_13.username = botnamehere
-realm_13.password = botpasswordhere
-
 net.game_discovery.udp.broadcast.enabled = no
 ```
 
+> These are settings for eurobattlenet realm: Make sure to fill them out!!
+
+```ini
+realm_13.username = bot_name_here
+realm_13.password = bot_password_here
+
+realm_13.sudo_user = your_IGN_here
+realm_13.admin_user = your_IGN_here
+```
+
 > these settings should be uncommented so they work:
+
+> Remove the hashtag infront of these: 
 
 ```ini
 realm_13.exe_auth.version_details = 0 5 28 1
@@ -331,14 +340,14 @@ realm_13.commands.custom_listgames.permissions = verified
 
 10. Find the key `net.tcp_extensions.gproxy.reconnect_wait` and replace it with `net.tcp_extensions.gproxy_legacy.reconnect_wait` (change value from 5 to 10)
 
-> If you have not already done so, create an account on Eurobattle.net for your bot. If you have any capital letters in your password, make them all lower-case when entering it in the `config.ini` file.
+11. If you have not already done so, create an account on Eurobattle.net for your bot. If you have any capital letters in your password, make them all lower-case when entering it in the `config.ini` file.
 > 
 > Everything else should be self-explanatory. If it is not, please refer to the comments on the `.ini` file.
 > 
 > Save the editor and close it (<kbd>CTRL</kbd> + <kbd>S</kbd>).
 
 
-11. Navigate to `mapcfgs/`
+12. Navigate to `mapcfgs/`
 > Create a new file called twre.ini and paste in this:
 
 ```ini
@@ -364,7 +373,7 @@ map.options = 96
 map.num_disabled = 0
 ```
 
-12. In `WinSCP`, go back to `aura-bot` base directory and find `aliases.ini`
+13. In `WinSCP`, go back to `aura-bot` base directory and find `aliases.ini`
     - remove everything and replace it with `twrpg = twre.ini`
 
 > Each time you upload a new version of the map, you need to edit these files to update the version number.
